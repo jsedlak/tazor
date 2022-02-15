@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using Tazor.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
