@@ -1,0 +1,79 @@
+﻿@inject NavigationManager Navigation
+<li class="relative block" @onmouseenter="OnMouseEnter" @onmouseleave="OnMouseLeave">
+    <a href=@Href target=@Target title=@Text class=@(GetCssClass())>
+        @LeftIcon
+        @Text
+        @RightIcon
+    </a>
+    @if (IsMouseOver && ChildContent != null)
+    {
+        <div style="min-width:150px;" class="absolute block top-full left-0 bg-blue-800 shadow text-white">
+            <ul>
+                @ChildContent
+            </ul>
+        </div>
+    }
+</li>
+@code {
+    [Parameter]
+    public string Href { get; set; } = null!;
+
+    [Parameter]
+    public string? Target { get; set; }
+
+    [Parameter]
+    public RenderFragment? LeftIcon { get; set; }
+
+    [Parameter]
+    public RenderFragment? RightIcon { get; set; }
+
+    [Parameter]
+    public string Text { get; set; } = null!;
+
+    [Parameter]
+    public bool IsMouseOver { get; set; } = false;
+
+    [Parameter]
+    public string TextSize { get; set; } = "";
+
+    [Parameter]
+    public EventCallback<bool>? IsMouseOverChanged { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string Background { get; set; } = "bg-blue-400";
+
+    [Parameter]
+    public string BackgroundHover { get; set; } = "bg-blue-800";
+
+    private string GetCssClass()
+    {
+        var cssClass = "px-4 py-2 text-white block whitespace-nowrap";
+        var isActive = new Uri(Navigation.Uri).AbsolutePath.Equals(Href, StringComparison.OrdinalIgnoreCase);
+
+        return $"{cssClass} " +
+         ((isActive || IsMouseOver) ? BackgroundHover : Background) +
+         " " +
+         (!string.IsNullOrWhiteSpace(TextSize) ? $"text-{TextSize}" : string.Empty);
+    }
+
+    private async void OnMouseEnter()
+    {
+        IsMouseOver = true;
+        if (IsMouseOverChanged != null)
+        {
+            await IsMouseOverChanged?.InvokeAsync(true);
+        }
+    }
+
+    private async void OnMouseLeave()
+    {
+        IsMouseOver = false;
+        if (IsMouseOverChanged != null)
+        {
+            await IsMouseOverChanged?.InvokeAsync(true);
+        }
+    }
+}

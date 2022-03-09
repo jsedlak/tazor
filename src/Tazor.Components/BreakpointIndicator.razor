@@ -1,0 +1,27 @@
+﻿@inject BreakpointInterop BreakpointInterop
+<div class="breakpoint-indicator @Class">
+    @(Value ?? "N/A")
+</div>
+
+@code {
+    [Parameter]
+    public string Value { get; set; } = null!;
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    public EventCallback<string>? ValueChanged { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        BreakpointInterop.BreakpointChanged += (s, args) =>
+        {
+            Value = args.Breakpoint;
+            ValueChanged?.InvokeAsync(Value);
+            StateHasChanged();
+        };
+
+        await BreakpointInterop.Initialize();
+        
+    }
+}

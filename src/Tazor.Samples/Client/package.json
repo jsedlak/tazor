@@ -1,0 +1,9 @@
+{
+    "devDependencies": {
+        "autoprefixer": "^9",
+        "gulp": "^4.0.2",
+        "gulp-postcss": "^7",
+        "precss": "^4.0.0",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    }
+}

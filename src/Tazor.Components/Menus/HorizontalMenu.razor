@@ -1,0 +1,9 @@
+﻿<nav class="flex">
+    <ul class="flex gap-2 items-center">
+        @ChildContent
+    </ul>
+</nav>
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

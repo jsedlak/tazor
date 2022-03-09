@@ -15,5 +15,9 @@
     <ProjectReference Include="..\Shared\Tazor.Samples.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 
 </Project>
