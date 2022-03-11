@@ -1,13 +1,13 @@
 ﻿@inject NavigationManager Navigation
 <li class="relative block" @onmouseenter="OnMouseEnter" @onmouseleave="OnMouseLeave">
-    <a href=@Href target=@Target title=@Text class=@(GetCssClass())>
+    <a href=@Href target=@Target title=@Text class=@(GetCssClass()) @onclick="OnClick" @onclick:preventDefault="true">
         @LeftIcon
         @Text
         @RightIcon
     </a>
-    @if (IsMouseOver && ChildContent != null)
+    @if (IsSubMenuVisible && ChildContent != null)
     {
-        <div style="min-width:150px;" class="absolute block top-full left-0 bg-blue-800 shadow text-white">
+        <div style="min-width:150px;" class=@($"z-10 {GetDropdownCssClass()} shadow text-white")>
             <ul>
                 @ChildContent
             </ul>
@@ -22,6 +22,12 @@
     public string? Target { get; set; }
 
     [Parameter]
+    public Orientation Orientation { get; set; } = Orientation.Horizontal;
+
+    [Parameter]
+    public MenuMode Mode { get; set; } = MenuMode.Hover;
+
+    [Parameter]
     public RenderFragment? LeftIcon { get; set; }
 
     [Parameter]
@@ -31,13 +37,19 @@
     public string Text { get; set; } = null!;
 
     [Parameter]
-    public bool IsMouseOver { get; set; } = false;
-
-    [Parameter]
     public string TextSize { get; set; } = "";
 
     [Parameter]
+    public bool IsMouseOver { get; set; } = false;
+
+    [Parameter]
     public EventCallback<bool>? IsMouseOverChanged { get; set; }
+
+    [Parameter]
+    public bool IsSubMenuVisible { get; set; } = false;
+
+    [Parameter]
+    public EventCallback<bool>? IsSubMenuVisibleChanged { get; set; }
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
@@ -48,15 +60,58 @@
     [Parameter]
     public string BackgroundHover { get; set; } = "bg-blue-800";
 
+    private string GetDropdownCssClass()
+    {
+        switch (Orientation)
+        {
+            case Orientation.Horizontal:
+                if (Mode == MenuMode.Hover)
+                {
+                    return "absolute block top-full left-0";
+                }
+                else
+                {
+                    return "block";
+                }
+            case Orientation.Vertical:
+                if (Mode == MenuMode.Hover)
+                {
+                    return "absolute block top-0 left-full";
+                }
+                else
+                {
+                    return "block";
+                }
+        }
+
+        return "";
+    }
+
     private string GetCssClass()
     {
         var cssClass = "px-4 py-2 text-white block whitespace-nowrap";
         var isActive = new Uri(Navigation.Uri).AbsolutePath.Equals(Href, StringComparison.OrdinalIgnoreCase);
 
         return $"{cssClass} " +
-         ((isActive || IsMouseOver) ? BackgroundHover : Background) +
-         " " +
-         (!string.IsNullOrWhiteSpace(TextSize) ? $"text-{TextSize}" : string.Empty);
+        ((isActive || IsMouseOver || IsSubMenuVisible) ? BackgroundHover : Background) +
+        " " +
+        (!string.IsNullOrWhiteSpace(TextSize) ? $"text-{TextSize}" : string.Empty);
+    }
+
+    private async void OnClick()
+    {
+        if (Mode != MenuMode.Click || ChildContent == null)
+        {
+            Navigation.NavigateTo(Href);
+            return;
+        }
+
+        IsSubMenuVisible = !IsSubMenuVisible;
+
+        if (IsSubMenuVisibleChanged != null)
+        {
+            await IsSubMenuVisibleChanged?.InvokeAsync(IsSubMenuVisible);
+        }
     }
 
     private async void OnMouseEnter()
@@ -66,6 +121,17 @@
         {
             await IsMouseOverChanged?.InvokeAsync(true);
         }
+
+        if (Mode != MenuMode.Hover)
+        {
+            return;
+        }
+
+        IsSubMenuVisible = true;
+        if (IsSubMenuVisibleChanged != null)
+        {
+            await IsSubMenuVisibleChanged?.InvokeAsync(true);
+        }
     }
 
     private async void OnMouseLeave()
@@ -73,7 +139,18 @@
         IsMouseOver = false;
         if (IsMouseOverChanged != null)
         {
-            await IsMouseOverChanged?.InvokeAsync(true);
+            await IsMouseOverChanged?.InvokeAsync(false);
+        }
+
+        if (Mode != MenuMode.Hover)
+        {
+            return;
+        }
+
+        IsSubMenuVisible = false;
+        if (IsSubMenuVisibleChanged != null)
+        {
+            await IsSubMenuVisibleChanged?.InvokeAsync(true);
         }
     }
 }

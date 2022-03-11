@@ -1,0 +1,30 @@
+@inject IJSRuntime JSRuntime
+<Switch IsChecked=@IsDarkModeEnabled IsCheckedChanged="OnHandleChange" />
+
+@code {
+    [Parameter]
+    public bool IsDarkModeEnabled { get; set; } = true;
+
+    public EventCallback<bool>? IsDarkModeEnabledChanged { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        IsDarkModeEnabled = await JSRuntime.InvokeAsync<bool>("getDarkMode");
+        Console.WriteLine($"IsDarkModeEnabled = {IsDarkModeEnabled}");
+        StateHasChanged();
+    }
+
+    public async void OnHandleChange(bool newValue)
+    {
+        IsDarkModeEnabled = newValue;
+
+        if (IsDarkModeEnabledChanged != null)
+        {
+            await IsDarkModeEnabledChanged?.InvokeAsync(newValue);
+        }
+
+        Console.WriteLine($"Dark Mode: {newValue}");
+        await JSRuntime.InvokeVoidAsync("setDarkMode", IsDarkModeEnabled);
+        StateHasChanged();
+    }
+}

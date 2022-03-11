@@ -4,17 +4,20 @@
 <header class="py-10 bg-blue-900">
     <div class="flex justify-between items-center container mx-auto">
         <div role="banner">
-            <h1 class="text-4xl text-white">Tazor</h1>
+            <h1 class="text-6xl text-white">Tazor</h1>
         </div>
         <HorizontalMenu>
             <MenuItem Href="/" Text="Home" Background="bg-blue-900" BackgroundHover="bg-blue-700" />
             <MenuItem Href="/docs" Text="Docs" Background="bg-blue-900" BackgroundHover="bg-blue-700">
                 <MenuItem Href="/docs/menus" Text="Menus" TextSize="sm" Background="bg-blue-900" BackgroundHover="bg-blue-700" />
+                <MenuItem Href="/docs/content" Text="Content" TextSize="sm" Background="bg-blue-900" BackgroundHover="bg-blue-700" />
+                <MenuItem Href="/docs/datagrid" Text="DataGrid" TextSize="sm" Background="bg-blue-900" BackgroundHover="bg-blue-700" />
                 <MenuItem Href="/docs/utilities" Text="Utilities" TextSize="sm" Background="bg-blue-900" BackgroundHover="bg-blue-700" />
             </MenuItem>
             <MenuItem Href="/about" Text="About" Background="bg-blue-900" BackgroundHover="bg-blue-700" />
             <OnlineStatusIndicator />
-                <BreakpointIndicator Class="uppercase text-white" />
+            <BreakpointIndicator Class="uppercase text-white" />
+            <DarkModeSwitch />
         </HorizontalMenu>
     </div>
 </header>
