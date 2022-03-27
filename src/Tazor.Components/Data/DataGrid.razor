@@ -75,6 +75,8 @@
                 <tr class=@($"summary {Theme.TableSummaryRow}")>
                     @foreach (var col in Columns)
                     {
+                        if(!col.IsVisible) { continue; }
+
                         <td class=@Theme.TableCell>
                             @if (col.Summary != null)
                             {
