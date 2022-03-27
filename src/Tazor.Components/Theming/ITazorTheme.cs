@@ -30,4 +30,6 @@ public interface ITazorTheme : ITheme {
     string TableToolbar { get; set; }
 
     string TableCell { get; set; }
+
+    string CodeBlock { get; set; }
 }

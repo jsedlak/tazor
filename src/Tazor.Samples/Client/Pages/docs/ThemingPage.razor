@@ -1,0 +1,29 @@
+@page "/docs/theming"
+@inject ITazorTheme Theme
+<PageTitle>Theming - Tazor Components</PageTitle>
+<div class="container mt-5 mb-5 mx-auto">
+    <PageHeader>Theming</PageHeader>
+
+    <p class="">Tazor comes with built-in theming support that can be extended and used by your own code.</p>
+    <p>Tazor components use the <code>ITazorTheme</code> injected service to style all the components. This, as well as the <code>IBaseTheme</code> can be extended through configuration and/or code to support additionally properties.</p>
+
+    <h2 class="text-2xl font-medium mt-5 mb-3">Custom Properties</h2>
+    <p>Let's say we want to add an "IntroParagraph" style with some extra line spacing and slightly bigger text. We can accomplish this in one of two ways.</p>
+
+    <h3 class="text-xl font-medium mt-5 mb-3">Key/Value Access</h3>
+    <p>The simplest way is to configure the theme during injection and add the property.</p>
+
+    <pre class=@Theme.CodeBlock>builder.Services.AddTazorTheme(
+    primaryColor: "blue",
+    configureTheme: (theme) =&gt; {
+        theme["IntroParagraph"] = "leading-loose text-lg";
+    }
+);</pre>
+
+    <div class="border border-blue-200 rounded p-3 mt-3 mb-3">
+        <p class=@(Theme["IntroParagraph"])>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <h3 class="text-xl font-medium mt-5 mb-3">Property Access</h3>
+    <p>At the end of the day, the theming is provided by a simple class that gets injected. We are free to extend these classes or inject new ones that fit our needs.</p>
+</div>
