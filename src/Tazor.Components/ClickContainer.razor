@@ -1,0 +1,25 @@
+﻿@inject IJSRuntime JS
+<div id=@_id>
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public Action OnClickedOutside { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    private Guid _id = Guid.NewGuid();
+
+    protected override Task OnInitializedAsync () {
+        JS.InvokeAsync<object>("addClickCheckEvent",  _id, DotNetObjectReference.Create(this));
+        return base.OnInitializedAsync ();
+    }
+
+    [JSInvokable]
+    public void InvokeClickOutside () {
+        Console.WriteLine("ClickContainer => InvokeClickOutside");
+        OnClickedOutside?.Invoke ();
+    }
+}

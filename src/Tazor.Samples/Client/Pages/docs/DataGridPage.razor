@@ -1,0 +1,42 @@
+@page "/docs/datagrid"
+@using Tazor.Components.Data
+
+<PageTitle>DataGrid - Tazor Components</PageTitle>
+<div class="container mt-5 mb-5 mx-auto">
+    <PageHeader>DataGrid</PageHeader>
+
+    <DataGrid SummaryRow=@SummaryRowMode.VisibleItems Items=@_items Columns=@_columns />
+</div>
+
+@code {
+    private class ProductDataItem
+    {
+        public int Id { get; set; }
+
+        public string Title { get; set; } = null!;
+
+        public DateTimeOffset Created { get; set; }
+
+        public double Cost { get; set; }
+    }
+
+    private IEnumerable<ProductDataItem> _items = Enumerable.Range(1, 100).Select(m => new ProductDataItem {
+            Id = m,
+            Title = $"Product #{m}",
+            Cost = m * 10,
+            Created = DateTimeOffset.Now
+        });
+
+    private IEnumerable<Column<ProductDataItem>> _columns = new[]
+            {
+        new Column<ProductDataItem>{ Title = "Id", Field = m => m.Id },
+        new Column<ProductDataItem>{ Title = "Title", Field = m => m.Title },
+        new Column<ProductDataItem>{ 
+            Title = "Cost", 
+            Field = m => m.Cost, 
+            FieldRenderer = v => ((double)v).ToString("C2"), 
+            Summary = m => m.Sum(p => p.Cost).ToString("C2") 
+        },
+        new Column<ProductDataItem>{ Title = "Created", Field = m => m.Created.ToUniversalTime().ToString() },
+    };
+}

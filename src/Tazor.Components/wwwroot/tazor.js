@@ -79,3 +79,13 @@ window.addResizeListener = function (dotNetRef) {
 
   updateDotNet();
 };
+
+window.addClickCheckEvent = function (elementId, dotnetHelper) {
+    window.addEventListener("click", (e) => {
+        var element = document.getElementById(elementId);
+
+        if (!element.contains(e.target)) {
+            dotnetHelper.invokeMethodAsync("InvokeClickOutside");
+        }
+    });
+}

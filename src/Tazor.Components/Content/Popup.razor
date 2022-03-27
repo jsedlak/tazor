@@ -1,0 +1,24 @@
+﻿<ClickContainer OnClickedOutside="OnHandleClickedOutside">
+<div class=@($"absolute dark:bg-blue-800 shadow p-5 {GetCssClass()}")>
+    @ChildContent
+</div>
+</ClickContainer>
+
+@code {
+    [Parameter]
+    public bool IsOpen { get; set; } = true;
+
+    [Parameter]
+    public EventCallback<bool> IsOpenChanged { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    private string GetCssClass() => IsOpen ? "block" : "hidden";
+
+    private async void OnHandleClickedOutside()
+    {
+        IsOpen = false;
+        await IsOpenChanged.InvokeAsync(IsOpen);
+    }
+}

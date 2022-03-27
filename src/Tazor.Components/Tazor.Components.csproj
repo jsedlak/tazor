@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Automotive\" />
     <Folder Include="Breakpoint\" />
     <Folder Include="Navigation\" />
     <Folder Include="OnlineStatus\" />
