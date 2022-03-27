@@ -10,7 +10,7 @@ public class TazorTheme : ITazorTheme
 
     public TazorTheme(IBaseTheme baseTheme)
     {
-        BaseTheme = baseTheme;
+        Base = baseTheme;
     }
 
     public string[] GetKeys()
@@ -20,11 +20,11 @@ public class TazorTheme : ITazorTheme
 
     public virtual string CompileFromBase(string input)
     {
-        var props = BaseTheme.GetKeys();
+        var props = Base.GetKeys();
 
         foreach (var prop in props)
         {
-            var propValue = BaseTheme[prop];
+            var propValue = Base[prop];
 
             if (propValue == null)
             {
@@ -43,7 +43,7 @@ public class TazorTheme : ITazorTheme
         set { _classMappings[index] = CompileFromBase(value); }
     }
 
-    public IBaseTheme BaseTheme { get; set; }
+    public IBaseTheme Base { get; set; }
 
     public string ComponentHeader
     {
@@ -75,6 +75,12 @@ public class TazorTheme : ITazorTheme
         set { this[nameof(TableFooter)] = value; }
     }
 
+    public string TableSummary
+    {
+        get { return this[nameof(TableSummary)]; }
+        set { this[nameof(TableSummary)] = value; }
+    }
+
     public string TableHeaderCell
     {
         get { return this[nameof(TableHeaderCell)]; }
@@ -103,10 +109,5 @@ public class TazorTheme : ITazorTheme
     {
         get { return this[nameof(TableCell)]; }
         set { this[nameof(TableCell)] = value; }
-    }
-
-    public string CodeBlock {
-        get { return this[nameof(CodeBlock)]; }
-        set { this[nameof(CodeBlock)] = value; }
     }
 }

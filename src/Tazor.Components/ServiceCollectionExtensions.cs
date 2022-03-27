@@ -27,7 +27,17 @@ public static class ServiceCollectionExtensions
             ErrorColor = "red",
             InfoColor = "blue",
             ComponentPadding = "p-3",
-            ComponentSpacing = "mb-5 mt-5"
+            ComponentSpacing = "mb-5 mt-5",
+            Paragraph = "mt-3 mb-3",
+            Lead = "mt-3 mb-3 leading-loose text-lg",
+            Heading1 = "font-medium text-4xl",
+            Heading2 = "font-medium text-2xl",
+            Heading3 = "font-medium text-xl",
+            Heading4 = "font-medium text-lg",
+            Callout = $"border border-{primaryColor}-200 rounded p-3 mt-3 mb-3",
+            Quote = $"border-l-4 border-{primaryColor}-200 mx-5 my-3 pl-3 text-justified",
+            InlineCode = "inline font-monospace text-sm bg-gray-200 dark:bg-gray-800 border border-gray-500 rounded",
+            CodeBlock = "mb-5 mt-5 p-3 font-monospace text-sm bg-gray-200 dark:bg-gray-800 border border-gray-500 rounded",
         };
 
         if(configureBase != null) {
@@ -38,16 +48,17 @@ public static class ServiceCollectionExtensions
         {
             var theme = new TazorTheme(baseTheme)
             {
-                ComponentHeader = "bg-{PrimaryColor}-500 text-white {ComponentPadding}",
-                CodeBlock = "{ComponentPadding} {ComponentSpacing} font-monospace text-sm bg-gray-200 dark:bg-gray-800 border border-gray-500 rounded",
+                ComponentHeader = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-700 text-white {ComponentPadding}",
+                
                 Table = "min-w-full",
                 TableSpacing = "{ComponentSpacing}",
-                TableHeader = "bg-{PrimaryColor}-500 text-white",
-                TableFooter = "bg-{PrimaryColor}-500 text-white {ComponentPadding}",
+                TableHeader = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-800 text-white",
+                TableFooter = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-700 text-white {ComponentPadding}",
+                TableSummary = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-800 text-white {ComponentPadding}",
                 TableCell = "{ComponentPadding}",
                 TableHeaderCell = "{ComponentPadding} font-medium cursor-pointer text-sm",
-                TableEvenRow = "text-sm text-gray-900 dark:text-white font-light whitespace-nowrap",
-                TableOddRow = "text-sm text-gray-900 dark:text-white font-light whitespace-nowrap",
+                TableEvenRow = "bg-gray-100 dark:bg-gray-800 text-sm text-gray-900 dark:text-white font-light whitespace-nowrap",
+                TableOddRow = "bg-gray-200 dark:bg-gray-900 text-sm text-gray-900 dark:text-white font-light whitespace-nowrap",
                 TableToolbar = "bg-{PrimaryColor}-700 text-white {ComponentPadding} flex justify-between items-center"  
             };
 

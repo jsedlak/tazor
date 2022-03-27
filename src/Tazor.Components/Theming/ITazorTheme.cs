@@ -1,7 +1,7 @@
 namespace Tazor.Components.Theming;
 
 public interface ITazorTheme : ITheme {
-    IBaseTheme BaseTheme { get; set; }
+    IBaseTheme Base { get; set; }
 
     string ComponentHeader { get; set; }
 
@@ -19,6 +19,10 @@ public interface ITazorTheme : ITheme {
     string TableFooter { get; set; }
 
     /// <summary>
+    /// Gets or Sets the style for the summary row of the table
+    string TableSummary { get; set; }
+
+    /// <summary>
     /// Gets or Sets the classes that style the header cell for each column
     /// </summary>
     string TableHeaderCell { get; set; }
@@ -30,6 +34,4 @@ public interface ITazorTheme : ITheme {
     string TableToolbar { get; set; }
 
     string TableCell { get; set; }
-
-    string CodeBlock { get; set; }
 }
