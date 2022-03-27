@@ -15,5 +15,7 @@ namespace Tazor.Components.Data
         public bool IsRemovable { get; set; } = true;
 
         public Func<IEnumerable<TItem>, string>? Summary { get; set; }
+
+        public SortDirection Sort { get; set; } = SortDirection.None;
     }
 }

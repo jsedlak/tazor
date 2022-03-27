@@ -26,7 +26,7 @@ namespace Tazor.Components
 
         public static string TableFooter { get; set; } = ComponentHeader;
 
-        public static string TableColumnHeader { get; set; } = "text-sm px-5 py-4";
+        public static string TableColumnHeaderCell { get; set; } = "font-medium cursor-pointer text-sm px-5 py-4";
 
         public static string TableEvenRow { get; set; } = "text-sm text-gray-900 dark:text-white font-light px-6 py-4 whitespace-nowrap";
 

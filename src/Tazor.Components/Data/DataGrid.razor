@@ -38,7 +38,24 @@
                 {
                     if (col.IsVisible)
                     {
-                        <td class=@Theme.TableColumnHeader>@col.Title</td>
+                        <td class=@Theme.TableColumnHeaderCell @onclick=@(() => { HandleSortChange(col); })>
+                            <div class="flex justify-between items-center">
+                                <span class="inline-block">@col.Title</span>
+
+                                @if(col.Sort == SortDirection.Ascending)
+                                {
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                                    </svg>
+                                }
+                                else if(col.Sort == SortDirection.Descending)
+                                {
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+                                    </svg>
+                                }
+                                </div>
+                        </td>
                     }
                 }
             </tr>
@@ -46,7 +63,16 @@
         <tbody>
             @{
                 var rowCount = 1;
-                var visibleItems = Items.Skip((CurrentPage - 1) * NumberPerPage).Take(NumberPerPage);
+                var visibleItems = Items.AsQueryable();
+                
+                foreach(var sortCol in Columns.Where(m => m.Sort != SortDirection.None))
+                {
+                    visibleItems = sortCol.Sort == SortDirection.Ascending ? visibleItems.OrderBy(sortCol.Field) : visibleItems.OrderByDescending(sortCol.Field);
+                }
+                
+                visibleItems = visibleItems.Skip((CurrentPage - 1) * NumberPerPage).Take(NumberPerPage);
+
+                
             }
             @foreach (var item in visibleItems)
             {
@@ -108,7 +134,34 @@
     [Parameter]
     public SummaryRowMode SummaryRow { get; set; }
 
+    [Parameter]
+    public bool EnableMultiSort { get; set; } = false;
+
     private bool _isColumnPopupOpen = false;
 
     private string CetColumnPopupClass() => _isColumnPopupOpen ? "block" : "hidden";
+
+    private void HandleSortChange(Column<TItem> col)
+    {
+        switch(col.Sort)
+        {
+            case SortDirection.None:
+                col.Sort = SortDirection.Ascending;
+                break;
+            case SortDirection.Ascending:
+                col.Sort = SortDirection.Descending;
+                break;
+            case SortDirection.Descending:
+                col.Sort = SortDirection.None;
+                break;
+        }
+
+        if(!EnableMultiSort)
+        {
+            foreach(var otherColumn in Columns.Where(m => m != col))
+            {
+                otherColumn.Sort = SortDirection.None;
+            }
+        }
+    }
 }

@@ -5,7 +5,7 @@
     [Parameter]
     public bool IsDarkModeEnabled { get; set; } = true;
 
-    public EventCallback<bool>? IsDarkModeEnabledChanged { get; set; }
+    public EventCallback<bool> IsDarkModeEnabledChanged { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -18,10 +18,7 @@
     {
         IsDarkModeEnabled = newValue;
 
-        if (IsDarkModeEnabledChanged != null)
-        {
-            await IsDarkModeEnabledChanged?.InvokeAsync(newValue);
-        }
+        await IsDarkModeEnabledChanged.InvokeAsync(newValue);
 
         Console.WriteLine($"Dark Mode: {newValue}");
         await JSRuntime.InvokeVoidAsync("setDarkMode", IsDarkModeEnabled);

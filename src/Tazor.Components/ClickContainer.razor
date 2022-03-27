@@ -5,10 +5,10 @@
 
 @code {
     [Parameter]
-    public Action OnClickedOutside { get; set; }
+    public Action? OnClickedOutside { get; set; }
 
     [Parameter]
-    public RenderFragment ChildContent { get; set; }
+    public RenderFragment? ChildContent { get; set; }
 
     private Guid _id = Guid.NewGuid();
 

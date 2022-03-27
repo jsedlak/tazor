@@ -5,6 +5,37 @@
 <div class="container mt-5 mb-5 mx-auto">
     <PageHeader>DataGrid</PageHeader>
 
+    <p class="leading-loose">The DataGrid control is a general purpose grid/table control with several options for controlling sorting, filtering and paging behavior.</p>
+
+    <h2 class="text-xl mt-5 mb-3 font-medium">Parameters</h2>
+
+    <ul class="list-disc list-inside ml-3">
+        <li class="mb-3">
+            <strong>Items</strong>
+            <p>An <code>IEnumerable&lt;TItem&gt;</code> of items that are to be displayed.</p>
+        </li>
+        <li class="mb-3">
+            <strong>Columns</strong>
+            <p>An <code>IEnumerable&lt;Column&lt;TItem&gt;&gt;</code> of Column descriptors that represent all the possible columns to be displayed in the grid.</p>
+        </li>
+        <li class="mb-3">
+            <strong>NumberPerPage</strong>
+            <p>The number of items to display on each page.</p>
+        </li>
+        <li class="mb-3">
+            <strong>CurrentPage</strong>
+            <p>The current page being displayed.</p>
+        </li>
+        <li class="mb-3">
+            <strong>SummaryRow</strong>
+            <p>Whether or not the summary row is visible and how it is controlled (a summary of all items or only those that are visible).</p>
+        </li>
+        <li class="mb-3">
+            <strong>EnableMultiSort</strong>
+            <p>When enabled, multiple columns may be sorted at the same time. Sort order for multisort is driven by column order.</p>
+        </li>
+    </ul>
+
     <DataGrid SummaryRow=@SummaryRowMode.VisibleItems Items=@_items Columns=@_columns />
 </div>
 

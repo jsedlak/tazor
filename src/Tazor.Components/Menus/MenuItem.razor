@@ -43,13 +43,13 @@
     public bool IsMouseOver { get; set; } = false;
 
     [Parameter]
-    public EventCallback<bool>? IsMouseOverChanged { get; set; }
+    public EventCallback<bool> IsMouseOverChanged { get; set; }
 
     [Parameter]
     public bool IsSubMenuVisible { get; set; } = false;
 
     [Parameter]
-    public EventCallback<bool>? IsSubMenuVisibleChanged { get; set; }
+    public EventCallback<bool> IsSubMenuVisibleChanged { get; set; }
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
@@ -108,19 +108,14 @@
 
         IsSubMenuVisible = !IsSubMenuVisible;
 
-        if (IsSubMenuVisibleChanged != null)
-        {
-            await IsSubMenuVisibleChanged?.InvokeAsync(IsSubMenuVisible);
-        }
+        await IsSubMenuVisibleChanged.InvokeAsync(IsSubMenuVisible);
     }
 
     private async void OnMouseEnter()
     {
         IsMouseOver = true;
-        if (IsMouseOverChanged != null)
-        {
-            await IsMouseOverChanged?.InvokeAsync(true);
-        }
+        
+        await IsMouseOverChanged.InvokeAsync(true);
 
         if (Mode != MenuMode.Hover)
         {
@@ -128,19 +123,14 @@
         }
 
         IsSubMenuVisible = true;
-        if (IsSubMenuVisibleChanged != null)
-        {
-            await IsSubMenuVisibleChanged?.InvokeAsync(true);
-        }
+        await IsSubMenuVisibleChanged.InvokeAsync(true);
+        
     }
 
     private async void OnMouseLeave()
     {
         IsMouseOver = false;
-        if (IsMouseOverChanged != null)
-        {
-            await IsMouseOverChanged?.InvokeAsync(false);
-        }
+        await IsMouseOverChanged.InvokeAsync(false);
 
         if (Mode != MenuMode.Hover)
         {
@@ -148,9 +138,7 @@
         }
 
         IsSubMenuVisible = false;
-        if (IsSubMenuVisibleChanged != null)
-        {
-            await IsSubMenuVisibleChanged?.InvokeAsync(true);
-        }
+        await IsSubMenuVisibleChanged.InvokeAsync(true);
+        
     }
 }
