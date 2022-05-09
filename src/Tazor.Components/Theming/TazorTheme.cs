@@ -110,4 +110,13 @@ public class TazorTheme : ITazorTheme
         get { return this[nameof(TableCell)]; }
         set { this[nameof(TableCell)] = value; }
     }
+
+    /// <summary>
+    /// Gets or Sets the class for the dialog window
+    /// </summary>
+    public string DialogWindow
+    {
+        get { return this[nameof(DialogWindow)]; }
+        set { this[nameof(DialogWindow)] = value; }
+    }
 }

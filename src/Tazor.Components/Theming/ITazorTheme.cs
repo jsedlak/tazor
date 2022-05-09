@@ -34,4 +34,9 @@ public interface ITazorTheme : ITheme {
     string TableToolbar { get; set; }
 
     string TableCell { get; set; }
+
+    /// <summary>
+    /// Gets or Sets the classes that style the dialog window
+    /// </summary>
+    string DialogWindow { get; set; }
 }

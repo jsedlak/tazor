@@ -1,0 +1,55 @@
+﻿@inject ITazorTheme Theme
+@if (IsVisible)
+{
+    <div class="fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full">
+        <div class=@($"relative top-10 mx-auto w-96 shadow-lg {Theme.DialogWindow}")>
+            <div class="flex justify-between items-center mb-3 pb-2 border-b border-b-white">
+                <div>
+                    <h3>@Title</h3>
+                    @if (!string.IsNullOrWhiteSpace(Subtitle))
+                    {
+                        <span class="block text-sm opacity-50">@Subtitle</span>
+                    }
+                </div>
+                <div>
+                    <a @onclick="OnCloseRequested" class="cursor-pointer opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                @Content
+            </div>
+            <div class="mt-3 flex items-center gap-4">
+                @Footer
+            </div>
+        </div>
+    </div>
+}
+@code {
+    [Parameter]
+    public bool IsVisible { get; set; } = false;
+
+    [Parameter]
+    public EventCallback<bool> IsVisibleChanged { get; set; }
+
+    [Parameter]
+    public string Title { get; set; } = null!;
+
+    [Parameter]
+    public string? Subtitle { get; set; }
+
+    [Parameter]
+    public RenderFragment Content { get; set; }
+
+    [Parameter]
+    public RenderFragment Footer { get; set; }
+
+    private async Task OnCloseRequested()
+    {
+        IsVisible = false;
+        await IsVisibleChanged.InvokeAsync(false);
+    }
+}

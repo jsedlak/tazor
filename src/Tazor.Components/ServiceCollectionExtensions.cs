@@ -28,6 +28,7 @@ public static class ServiceCollectionExtensions
             InfoColor = "blue",
             ComponentPadding = "p-3",
             ComponentSpacing = "mb-5 mt-5",
+            ComponentBackground = "bg-gray-500",
             Paragraph = "mt-3 mb-3",
             Lead = "mt-3 mb-3 leading-loose text-lg",
             Heading1 = "font-medium text-4xl",
@@ -59,7 +60,8 @@ public static class ServiceCollectionExtensions
                 TableHeaderCell = "{ComponentPadding} font-medium cursor-pointer text-sm",
                 TableEvenRow = "bg-gray-100 dark:bg-gray-800 text-sm text-gray-900 dark:text-white font-light whitespace-nowrap",
                 TableOddRow = "bg-gray-200 dark:bg-gray-900 text-sm text-gray-900 dark:text-white font-light whitespace-nowrap",
-                TableToolbar = "bg-{PrimaryColor}-700 text-white {ComponentPadding} flex justify-between items-center"  
+                TableToolbar = "bg-{PrimaryColor}-700 text-white {ComponentPadding} flex justify-between items-center",
+                DialogWindow = "{ComponentBackground} {ComponentPadding} rounded"
             };
 
             if(configureTheme != null) {

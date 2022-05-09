@@ -94,13 +94,20 @@
                         {
                             var columnFieldValue = col.Field.Compile()(item);
                             <td class=@Theme.TableCell>
-                                @if (col.FieldRenderer != null)
+                                @if (col.Renderer != null)
                                 {
-                                    @col.FieldRenderer(columnFieldValue)
+                                    @col.Renderer(item)
                                 }
                                 else
                                 {
-                                    @(columnFieldValue.ToString())
+                                    @if (col.Format != null)
+                                    {
+                                        @(string.Format("{0:" + col.Format + "}", columnFieldValue))
+                                    }
+                                    else
+                                    {
+                                        @(columnFieldValue.ToString())
+                                    }
                                 }
                             </td>
                         }

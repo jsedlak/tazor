@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using Microsoft.AspNetCore.Components;
+using System.Linq.Expressions;
 
 namespace Tazor.Components.Data
 {
@@ -8,7 +9,7 @@ namespace Tazor.Components.Data
 
         public Expression<Func<TItem, object>> Field { get; set; } = null!;
 
-        public Func<object, string>? FieldRenderer { get; set; }
+        public Func<TItem, RenderFragment>? Renderer { get; set; }
 
         public bool IsVisible { get; set; } = true;
 
@@ -17,5 +18,7 @@ namespace Tazor.Components.Data
         public Func<IEnumerable<TItem>, string>? Summary { get; set; }
 
         public SortDirection Sort { get; set; } = SortDirection.None;
+
+        public string? Format { get; set; }
     }
 }

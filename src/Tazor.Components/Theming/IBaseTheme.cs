@@ -17,6 +17,8 @@ public interface IBaseTheme : ITheme {
 
     string ComponentPadding { get; set; }
 
+    string ComponentBackground { get; set; }
+
     string Paragraph { get; set; }
 
     string Lead { get; set; }
@@ -36,4 +38,6 @@ public interface IBaseTheme : ITheme {
     string CodeBlock { get; set; }
 
     string InlineCode { get; set; }
+
+    
 }
