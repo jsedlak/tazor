@@ -9,7 +9,9 @@ namespace Tazor.Components.Data
 
         public Expression<Func<TItem, object>> Field { get; set; } = null!;
 
-        public Func<TItem, RenderFragment>? Renderer { get; set; }
+        public Type? Component { get; set; }
+
+        public Func<TItem, MarkupString>? Markup { get; set; }
 
         public bool IsVisible { get; set; } = true;
 

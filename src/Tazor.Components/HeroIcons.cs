@@ -33,4 +33,9 @@ public static class HeroIcons
     {
         return new MarkupString(Icons.HeroIcons_Edit.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
     }
+
+    public static MarkupString Delete(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Delete.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
 }

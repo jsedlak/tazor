@@ -3,4 +3,27 @@
 <PageTitle>Content - Tazor Components</PageTitle>
 <div class="container mt-5 mb-5 mx-auto">
     <PageHeader>Content</PageHeader>
+
+    <h2 class="text-2xl mb-3">Buttons</h2>
+    <div class="mb-2 flex items-center gap-2">
+        <Button>
+            @(HeroIcons.DocumentAdd())
+            <span>Button With Icon</span>
+        </Button>
+
+        <Button ThemeColor="red">
+            <span>ThemeColor=red</span>
+        </Button>
+
+        <Button ThemeColor="green">
+            <span>ThemeColor=green</span>
+        </Button>
+
+        
+    </div>
+
+    <Button Block Justify=@JustifyContent.Center>
+        @(HeroIcons.DocumentAdd())
+        <span>Test Justify / Block</span>
+    </Button>
 </div>

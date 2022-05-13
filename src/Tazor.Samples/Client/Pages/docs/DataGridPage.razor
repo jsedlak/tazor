@@ -65,7 +65,7 @@
         new Column<ProductDataItem>{ 
             Title = "Cost", 
             Field = m => m.Cost, 
-            Renderer = (item) => b => { b.AddMarkupContent(0, item.Cost.ToString("C2")); },
+            Markup = m => new MarkupString(m.Cost.ToString("C2")),
             Summary = m => m.Sum(p => p.Cost).ToString("C2") 
         },
         new Column<ProductDataItem>{ Title = "Created", Field = m => m.Created, Format = "yyyy-MM-dd" },

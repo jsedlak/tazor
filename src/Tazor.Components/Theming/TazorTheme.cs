@@ -119,4 +119,22 @@ public class TazorTheme : ITazorTheme
         get { return this[nameof(DialogWindow)]; }
         set { this[nameof(DialogWindow)] = value; }
     }
+
+    /// <summary>
+    /// Gets or Sets the class for the button
+    /// </summary>
+    public string Button
+    {
+        get { return this[nameof(Button)]; }
+        set { this[nameof(Button)] = value; }
+    }
+
+    /// <summary>
+    /// Gets or Sets the class for the inside content of a button
+    /// </summary>
+    public string ButtonInner
+    {
+        get { return this[nameof(ButtonInner)]; }
+        set { this[nameof(ButtonInner)] = value; }
+    }
 }

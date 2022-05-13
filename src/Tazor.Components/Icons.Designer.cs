@@ -105,6 +105,17 @@ namespace Tazor.Components {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;{CssClass}&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
+        ///  &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16&quot; /&gt;
+        ///&lt;/svg&gt;.
+        /// </summary>
+        internal static string HeroIcons_Delete {
+            get {
+                return ResourceManager.GetString("HeroIcons_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;{CssClass}&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;&lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z&quot; /&gt;&lt;/svg&gt;.
         /// </summary>
         internal static string HeroIcons_DocumentAdd {

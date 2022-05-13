@@ -39,4 +39,14 @@ public interface ITazorTheme : ITheme {
     /// Gets or Sets the classes that style the dialog window
     /// </summary>
     string DialogWindow { get; set; }
+
+    /// <summary>
+    /// Gets or Sets the classes that style the button
+    /// </summary>
+    string Button { get; set; }
+
+    /// <summary>
+    /// Gets or Sets the class for the inside content of a button
+    /// </summary>
+    string ButtonInner { get; set; }
 }

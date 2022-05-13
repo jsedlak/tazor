@@ -1,0 +1,77 @@
+@inject ITazorTheme Theme
+@inject NavigationManager Navigation
+<a class=@($"{Theme.Button} {GetColorClass()} {GetWidthClass()}") @onclick=@HandleClick>
+    <div class=@($"{Theme.ButtonInner} {GetAlignmentClass()}")>
+        @ChildContent
+    </div>
+</a>
+@code {
+    [Parameter]
+    public string? ThemeColor { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; } = null;
+
+    [Parameter]
+    public string? Href { get; set; } = null;
+
+    [Parameter]
+    public EventCallback Clicked { get; set; }
+
+    [Parameter]
+    public RenderFragment? Icon { get; set; } = null;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    [Parameter]
+    public bool Block { get; set; } = false;
+
+    [Parameter]
+    public JustifyContent Justify { get; set; } = JustifyContent.Center;
+
+    private async Task HandleClick()
+    {
+        if(!string.IsNullOrWhiteSpace(Href))
+        {
+            Navigation.NavigateTo(Href);
+        }
+        else
+        {
+            await Clicked.InvokeAsync();
+        }
+    }
+
+    private string GetAlignmentClass()
+    {
+        switch(Justify)
+        {
+            case JustifyContent.Center:
+                return "justify-center";
+            case JustifyContent.End:
+                return "justify-end";
+            case JustifyContent.SpaceBetween:
+                return "justify-between";
+            case JustifyContent.SpaceAround:
+                return "justify-around";
+            case JustifyContent.SpaceEvenly:
+                return "justify-evenly";
+            case JustifyContent.Start:
+            default:
+                return "justify-start";
+        }
+    }
+
+    private string GetWidthClass()
+    {
+        return Block ? "w-full" : "";
+    }
+
+    private string GetColorClass() {
+        if(!string.IsNullOrWhiteSpace(ThemeColor)) {
+            return $"bg-{ThemeColor}-500 text-white hover:bg-{ThemeColor}-700";
+        }
+
+        return $"bg-{Theme.Base.PrimaryColor}-500 text-white hover:bg-{Theme.Base.PrimaryColor}-700";
+    }
+}

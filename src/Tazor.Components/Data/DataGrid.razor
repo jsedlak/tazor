@@ -68,6 +68,11 @@
                         </td>
                     }
                 }
+
+                @if(OnEdit != null || OnDelete != null) 
+                {
+                    <td class=@Theme.TableHeaderCell>Actions</td>
+                }
             </tr>
         </thead>
         <tbody>
@@ -94,9 +99,13 @@
                         {
                             var columnFieldValue = col.Field.Compile()(item);
                             <td class=@Theme.TableCell>
-                                @if (col.Renderer != null)
+                                @if (col.Component != null)
                                 {
-                                    @col.Renderer(item)
+                                    <DynamicComponent Type=@col.Component Parameters=@(new Dictionary<string,object>(){ {"Item", item}}) />
+                                }
+                                else if(col.Markup != null)
+                                {
+                                    @(col.Markup(item))
                                 }
                                 else
                                 {
@@ -111,6 +120,26 @@
                                 }
                             </td>
                         }
+                    }
+
+                    @if(OnEdit != null || OnDelete != null) 
+                    {
+                        <td class=@Theme.TableCell>
+                            <div class="flex items-center gap-2">
+                                @if (OnEdit != null)
+                                {
+                                    <a onclick=@(() => OnEdit(item))>
+                                        @(Tazor.Components.HeroIcons.Edit())
+                                    </a>
+                                }
+                                @if (OnDelete != null)
+                                {
+                                    <a onclick=@(() => OnDelete(item))>
+                                        @(Tazor.Components.HeroIcons.Delete())
+                                    </a>
+                                }
+                            </div>
+                        </td>
                     }
                 </tr>
                 rowCount++;
@@ -159,6 +188,12 @@
 
     [Parameter]
     public bool EnableMultiSort { get; set; } = false;
+
+    [Parameter]
+    public Action<TItem>? OnEdit { get; set; }
+
+    [Parameter]
+    public Action<TItem>? OnDelete { get; set; }
 
     private bool _isColumnPopupOpen = false;
 
