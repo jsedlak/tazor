@@ -1,9 +1,8 @@
-﻿namespace Tazor.Components.Data
+﻿namespace Tazor.Components.Data;
+
+public enum SortDirection
 {
-    public enum SortDirection
-    {
-        None,
-        Ascending,
-        Descending
-    }
+    None,
+    Ascending,
+    Descending
 }

@@ -103,6 +103,10 @@
                                 {
                                     <DynamicComponent Type=@col.Component Parameters=@(new Dictionary<string,object>(){ {"Item", item}}) />
                                 }
+                                @*else if(col.Renderer != null)
+                                {
+                                    @col.Renderer
+                                }*@
                                 else if(col.Markup != null)
                                 {
                                     @(col.Markup(item))
@@ -171,6 +175,9 @@
     </div>
 </div>
 @code {
+    //[Parameter]
+    //public IEnumerable<CommandItem> ItemCommands { get; set; } = Enumerable.Empty<CommandItem>();
+
     [Parameter]
     public int NumberPerPage { get; set; } = 10;
 

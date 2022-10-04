@@ -22,5 +22,7 @@ namespace Tazor.Components.Data
         public SortDirection Sort { get; set; } = SortDirection.None;
 
         public string? Format { get; set; }
+
+        //public virtual RenderFragment? Renderer { get; set; }
     }
 }
