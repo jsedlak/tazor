@@ -1,12 +1,12 @@
 ﻿namespace Tazor.Http;
 
-public interface IHttpMessenger
+public interface IHttpMessenger : IHttpRequestCanSetRouting
 {
-    Task<TModel?> GetAsync<TModel>(string requestUri);
+    Task<TModel?> GetSerializedAsync<TModel>(string requestUri, IDictionary<string, string>? headers = null);
 
-    Task<HttpResponseMessage> PostAsync<TModel>(string requestUri, TModel model);
+    Task<HttpResponseMessage> PostSerializedAsync<TModel>(string requestUri, TModel model, IDictionary<string, string>? headers = null);
 
-    Task<HttpResponseMessage> PutAsync<TModel>(string requestUri, TModel model);
+    Task<HttpResponseMessage> PutSerializedAsync<TModel>(string requestUri, TModel model, IDictionary<string, string>? headers = null);
 
-    Task<HttpResponseMessage> DeleteAsync(string requestUri);
+    Task<HttpResponseMessage> DeleteSerializedAsync(string requestUri, IDictionary<string, string>? headers = null);
 }

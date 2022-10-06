@@ -1,9 +1,17 @@
 ﻿@inject NavigationManager Navigation
 <li class="relative block" @onmouseenter="OnMouseEnter" @onmouseleave="OnMouseLeave">
-    <a href=@Href target=@Target title=@Text class=@(GetCssClass()) @onclick="OnClick" @onclick:preventDefault="true">
-        @LeftIcon
-        @Text
-        @RightIcon
+    <a href=@Href target=@Target title=@Text class=@(GetCssClass()) @onclick="OnClicked" @onclick:preventDefault="true">
+        <div class="flex items-center justify-between">
+            @if (LeftIcon != null)
+            {
+                @((MarkupString)LeftIcon)
+            }
+            @Text
+            @if (RightIcon != null)
+            {
+                @((MarkupString)RightIcon)
+            }
+        </div>
     </a>
     @if (IsSubMenuVisible && ChildContent != null)
     {
@@ -15,6 +23,9 @@
     }
 </li>
 @code {
+    [Parameter]
+    public EventCallback<MenuItem> OnClick { get; set; }
+
     [Parameter]
     public string Href { get; set; } = null!;
 
@@ -28,10 +39,10 @@
     public MenuMode Mode { get; set; } = MenuMode.Hover;
 
     [Parameter]
-    public RenderFragment? LeftIcon { get; set; }
+    public MarkupString? LeftIcon { get; set; }
 
     [Parameter]
-    public RenderFragment? RightIcon { get; set; }
+    public MarkupString? RightIcon { get; set; }
 
     [Parameter]
     public string Text { get; set; } = null!;
@@ -98,11 +109,18 @@
         (!string.IsNullOrWhiteSpace(TextSize) ? $"text-{TextSize}" : string.Empty);
     }
 
-    private async void OnClick()
+    private async void OnClicked()
     {
         if (Mode != MenuMode.Click || ChildContent == null)
         {
-            Navigation.NavigateTo(Href);
+            if (string.IsNullOrWhiteSpace(Href))
+            {
+                await OnClick.InvokeAsync(this);
+            }
+            else
+            {
+                Navigation.NavigateTo(Href);
+            }
             return;
         }
 
@@ -114,7 +132,7 @@
     private async void OnMouseEnter()
     {
         IsMouseOver = true;
-        
+
         await IsMouseOverChanged.InvokeAsync(true);
 
         if (Mode != MenuMode.Hover)
@@ -124,7 +142,7 @@
 
         IsSubMenuVisible = true;
         await IsSubMenuVisibleChanged.InvokeAsync(true);
-        
+
     }
 
     private async void OnMouseLeave()
@@ -139,6 +157,6 @@
 
         IsSubMenuVisible = false;
         await IsSubMenuVisibleChanged.InvokeAsync(true);
-        
+
     }
 }

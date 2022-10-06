@@ -10,7 +10,7 @@ public class NewtonsoftSerializer : ISerializer
     {
         _settings = new JsonSerializerSettings
         {
-            TypeNameHandling = TypeNameHandling.All
+            TypeNameHandling = TypeNameHandling.Objects
         };
     }
 

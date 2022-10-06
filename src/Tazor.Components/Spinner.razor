@@ -1,0 +1,12 @@
+﻿<div class="flex items-center">    
+    @((MarkupString)Icon)
+    <span>@Text</span>
+</div>
+
+@code {
+    [Parameter]
+    public MarkupString Icon { get; set; } = HeroIcons.TailwindSpinner();
+
+    [Parameter]
+    public string Text { get; set; } = "Loading...";
+}

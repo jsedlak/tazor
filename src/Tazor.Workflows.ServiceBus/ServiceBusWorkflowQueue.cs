@@ -14,7 +14,7 @@ namespace Tazor.Workflows
             _serializer = serializer;
         }
 
-        public async Task Enqueue(Guid templateId, object? data = null, string? customQueueName = null)
+        public async Task EnqueueAsync(Guid templateId, object? data = null, string? customQueueName = null)
         {
             var request = new WorkflowRequest
             {
