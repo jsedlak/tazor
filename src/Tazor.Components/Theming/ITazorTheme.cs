@@ -36,6 +36,11 @@ public interface ITazorTheme : ITheme {
     string TableCell { get; set; }
 
     /// <summary>
+    /// Gets or Sets the class for a panel / section of content
+    /// </summary>
+    string Panel { get; set; }
+
+    /// <summary>
     /// Gets or Sets the classes that style the dialog window
     /// </summary>
     string DialogWindow { get; set; }

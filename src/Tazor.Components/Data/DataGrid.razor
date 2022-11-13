@@ -97,7 +97,7 @@
                     {
                         if (col.IsVisible)
                         {
-                            var columnFieldValue = col.Field.Compile()(item);
+                            
                             <td class=@Theme.TableCell>
                                 @if (col.Component != null)
                                 {
@@ -111,8 +111,9 @@
                                 {
                                     @(col.Markup(item))
                                 }
-                                else
+                                else if(col.Field != null)
                                 {
+                                    var columnFieldValue = col.Field.Compile()(item) ?? (object)string.Empty;
                                     @if (col.Format != null)
                                     {
                                         @(string.Format("{0:" + col.Format + "}", columnFieldValue))
