@@ -58,4 +58,94 @@ public static class HeroIcons
     {
         return new MarkupString(Icons.HeroIcons_Spinner.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
     }
+
+    public static MarkupString UserGroup(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_UserGroup.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString User(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_User.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString UserMinus(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_UserMinus.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString UserPlus(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_UserPlus.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString Calculator(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Calculator.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentArrowDown(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentArrowDown.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentArrowUp(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentArrowUp.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentExcel(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentExcel.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentCheck(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentCheck.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentClone(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentClone.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentSearch(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentSearch.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentMinus(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentMinus.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentPlus(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentPlus.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentText(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentText.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString Link(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Link.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString X(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_X.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString XMark(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_XMark.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString Check(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Check.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
 }
