@@ -1,42 +1,45 @@
 ﻿@typeparam TItem
 @inject ITazorTheme Theme
 <div class=@Theme.TableSpacing>
-    <div class=@Theme.TableToolbar>
-        <div>
-            <span class="text-xs">Search will go here</span>
-        </div>
-        <div>
-            <div class="relative">
-                <ClickContainer OnClickedOutside=@(() => { _isColumnPopupOpen = false; StateHasChanged(); })>
-                    <a class="cursor-pointer" title="Columns" @onclick=@(() => { _isColumnPopupOpen =
-                        !_isColumnPopupOpen; })>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-6 w-6" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                        </svg>
-                    </a>
-                    <div class=@($"top-100 right-0 mt-5 absolute dark:bg-blue-800 shadow p-2 {CetColumnPopupClass()}")>
-                        @foreach (var col in Columns)
-                        {
-                            if (!col.IsRemovable) { continue; }
-                            <div class="px-5 py-2 flex items-center">
-                                <span class="mr-3">
-                                    <Switch IsChecked=@col.IsVisible IsCheckedChanged=@((bool newValue) => {
-                                    Console.WriteLine($"{col.Title} => {newValue}"); col.IsVisible = newValue;
-                                    StateHasChanged(); }) />
-                                </span>
-                                <span class="text-sm">
-                                    @col.Title
-                                </span>
-                            </div>
-                        }
-                    </div>
-                </ClickContainer>
+    @if (!HideToolbar)
+    {
+        <div class=@Theme.TableToolbar>
+            <div>
+                @Toolbar
             </div>
+            <div>
+                <div class="relative">
+                    <ClickContainer OnClickedOutside=@(() => { _isColumnPopupOpen = false; StateHasChanged(); })>
+                        <a class="cursor-pointer" title="Columns" @onclick=@(() => { _isColumnPopupOpen =
+                       !_isColumnPopupOpen; })>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-6 w-6" fill="none"
+                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </a>
+                        <div class=@($"top-100 right-0 mt-5 absolute dark:bg-blue-800 shadow p-2 {CetColumnPopupClass()}")>
+                            @foreach (var col in Columns)
+                            {
+                                if (!col.IsRemovable) { continue; }
+                                <div class="px-5 py-2 flex items-center">
+                                    <span class="mr-3">
+                                        <Switch IsChecked=@col.IsVisible IsCheckedChanged=@((bool newValue) => {
+                                        Console.WriteLine($"{col.Title} => {newValue}"); col.IsVisible = newValue;
+                                        StateHasChanged(); }) />
+                                    </span>
+                                    <span class="text-sm">
+                                        @col.Title
+                                    </span>
+                                </div>
+                            }
+                        </div>
+                    </ClickContainer>
+                </div>
 
+            </div>
         </div>
-    </div>
+    }
     <table class=@Theme.Table>
         <thead class=@Theme.TableHeader>
             <tr>
@@ -51,17 +54,17 @@
                                 @if (col.Sort == SortDirection.Ascending)
                                 {
                                     <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2 h-6 w-6" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                                  d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
                                     </svg>
                                 }
                                 else if (col.Sort == SortDirection.Descending)
                                 {
                                     <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2 h-6 w-6" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+                                  d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
                                     </svg>
                                 }
                             </div>
@@ -69,7 +72,7 @@
                     }
                 }
 
-                @if(OnEdit != null || OnDelete != null) 
+                @if (OnEdit != null || OnDelete != null)
                 {
                     <td class=@Theme.TableHeaderCell>Actions</td>
                 }
@@ -97,21 +100,21 @@
                     {
                         if (col.IsVisible)
                         {
-                            
+
                             <td class=@Theme.TableCell>
                                 @if (col.Component != null)
                                 {
                                     <DynamicComponent Type=@col.Component Parameters=@(new Dictionary<string,object>(){ {"Item", item}}) />
                                 }
                                 @*else if(col.Renderer != null)
-                                {
-                                    @col.Renderer
-                                }*@
-                                else if(col.Markup != null)
+                    {
+                    @col.Renderer
+                    }*@
+                                else if (col.Markup != null)
                                 {
                                     @(col.Markup(item))
                                 }
-                                else if(col.Field != null)
+                                else if (col.Field != null)
                                 {
                                     var columnFieldValue = col.Field.Compile()(item) ?? (object)string.Empty;
                                     @if (col.Format != null)
@@ -127,7 +130,7 @@
                         }
                     }
 
-                    @if(OnEdit != null || OnDelete != null) 
+                    @if (OnEdit != null || OnDelete != null)
                     {
                         <td class=@Theme.TableCell>
                             <div class="flex items-center gap-2">
@@ -172,12 +175,14 @@
     </table>
     <div class=@Theme.TableFooter>
         <Pager NumberOfVisiblePages=5 @bind-CurrentPage=@CurrentPage Pages=@((int)Math.Ceiling((double)Items.Count() /
-            NumberPerPage)) />
+               NumberPerPage)) />
     </div>
 </div>
 @code {
     //[Parameter]
     //public IEnumerable<CommandItem> ItemCommands { get; set; } = Enumerable.Empty<CommandItem>();
+    [Parameter]
+    public RenderFragment Toolbar { get; set; }
 
     [Parameter]
     public int NumberPerPage { get; set; } = 10;
@@ -202,6 +207,9 @@
 
     [Parameter]
     public Action<TItem>? OnDelete { get; set; }
+
+    [Parameter]
+    public bool HideToolbar { get; set; } = false;
 
     private bool _isColumnPopupOpen = false;
 

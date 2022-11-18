@@ -1,0 +1,21 @@
+﻿@typeparam TModel
+<input type="text" value=@Value onchange=@OnChanged class="px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white" />
+@code {
+    [Parameter]
+    public TModel Value { get; set; }
+
+    [Parameter]
+    public EventCallback<TModel> ValueChanged { get; set; }
+
+    private async  Task OnChanged(ChangeEventArgs args)
+    {
+        if(args.Value == null)
+        {
+            await ValueChanged.InvokeAsync(default(TModel));
+        }
+        else 
+        {
+           await ValueChanged.InvokeAsync((TModel)args.Value);
+        }
+    }
+}

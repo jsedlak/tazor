@@ -148,4 +148,25 @@ public static class HeroIcons
     {
         return new MarkupString(Icons.HeroIcons_Check.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
     }
+
+    public static MarkupString Download(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Download.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString Upload(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Upload.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString Filter(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Filter.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString Processor(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Processor.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
 }

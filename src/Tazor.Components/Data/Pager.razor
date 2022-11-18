@@ -1,24 +1,16 @@
 ﻿<div>
     <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-        <a @onclick=@(() => ChangePage(CurrentPage - 1)) class=@($"cursor-pointer relative inline-flex items-center px-2 py-2 rounded-l-md border text-sm font-medium {BackgroundCssClass}")>
-            <span class="sr-only">Previous</span>
-            <!-- Heroicon name: solid/chevron-left -->
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-            </svg>
-        </a>
-
         @{
             var min = CurrentPage - NumberOfVisiblePages / 2;
             var max = CurrentPage + NumberOfVisiblePages / 2;
 
-            if(min <= 0)
+            if (min <= 0)
             {
                 max += 1 - min;
                 min = 1;
             }
 
-            if(max > Pages)
+            if (max > Pages)
             {
                 min -= max - Pages;
             }
@@ -27,23 +19,38 @@
             max = Math.Min(max, Pages);
         }
 
-        @for(var i = min; i <= max; i++)
+        @if (max - min > 1)
         {
-            int pageIndex = i;
-            <a @onclick=@(() => ChangePage(pageIndex)) class=@($"cursor-pointer z-10 relative inline-flex items-center px-4 py-2 text-sm font-medium {GetPageClass(i)}")>
-                &nbsp;
-                @i
-                &nbsp;
+            <a @onclick=@(() => ChangePage(CurrentPage - 1)) class=@($"cursor-pointer relative inline-flex items-center px-2 py-2 rounded-l-md border text-sm font-medium {BackgroundCssClass}")>
+                <span class="sr-only">Previous</span>
+                <!-- Heroicon name: solid/chevron-left -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+            </a>
+
+
+
+
+            @for (var i = min; i <= max; i++)
+            {
+                int pageIndex = i;
+                <a @onclick=@(() => ChangePage(pageIndex)) class=@($"cursor-pointer z-10 relative inline-flex items-center px-4 py-2 text-sm font-medium {GetPageClass(i)}")>
+                    &nbsp;
+                    @i
+                    &nbsp;
+                </a>
+            }
+
+
+            <a @onclick=@(() => ChangePage(CurrentPage + 1)) class=@($"cursor-pointer relative inline-flex items-center px-2 py-2 rounded-r-md border text-sm font-medium {BackgroundCssClass}")>
+                <span class="sr-only">Next</span>
+                <!-- Heroicon name: solid/chevron-right -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
             </a>
         }
-
-        <a @onclick=@(() => ChangePage(CurrentPage + 1)) class=@($"cursor-pointer relative inline-flex items-center px-2 py-2 rounded-r-md border text-sm font-medium {BackgroundCssClass}")>
-            <span class="sr-only">Next</span>
-            <!-- Heroicon name: solid/chevron-right -->
-            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-            </svg>
-        </a>
     </nav>
 </div>
 @code {
@@ -57,7 +64,7 @@
     public EventCallback<int> CurrentPageChanged { get; set; }
 
     [Parameter]
-    public int NumberOfVisiblePages { get; set; } = 5; 
+    public int NumberOfVisiblePages { get; set; } = 5;
 
     private string BackgroundCssClass = "border-blue-800 bg-white dark:bg-blue-700 text-gray-500 dark:text-white";
     private string SelectedBackgroundCssClass = "dark:bg-gray-200 text-blue-500 dark:bg-blue-500 dark:text-white";
@@ -70,7 +77,7 @@
     private async void ChangePage(int pageIndex)
     {
         CurrentPage = Math.Clamp(pageIndex, 1, Pages);
-        
+
         await CurrentPageChanged.InvokeAsync(CurrentPage);
     }
 }
