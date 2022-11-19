@@ -54,4 +54,22 @@ public interface ITazorTheme : ITheme {
     /// Gets or Sets the class for the inside content of a button
     /// </summary>
     string ButtonInner { get; set; }
+
+    #region Menu
+    string Menu { get; set; }
+
+    string HorizontalMenu { get; set; }
+
+    string VerticalMenu { get; set; }
+
+    string MenuHeadingItem { get; set; }
+
+    string MenuHeadingAnchor { get; set; }
+
+    string MenuDropdownWrapper { get; set; }
+
+    string MenuItem { get; set; }
+
+    string MenuAnchor { get; set; }
+    #endregion
 }

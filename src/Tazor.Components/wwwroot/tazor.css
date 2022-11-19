@@ -1,0 +1,10 @@
+﻿.tazor-submenu { display: none;
+                 position: absolute;
+                 top: 95%;
+                 left: 0;
+                 min-width: 150px;
+}
+
+.tazor-menu-list-item:hover > .tazor-submenu {
+    display: block;
+}

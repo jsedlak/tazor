@@ -1,7 +1,7 @@
 ﻿@inject NavigationManager Navigation
 @inject ITazorTheme Theme
-<li class=@($"relative block tazor-menu-list-item {Theme.MenuItem}")>
-    <a href=@Href target=@Target title=@Text class=@($"tazor-menu-anchor {Theme.MenuAnchor}") @onclick="OnClicked" @onclick:preventDefault="true">
+<li class=@($"relative block tazor-menu-list-item {Theme.MenuHeadingItem}")>
+    <a href=@Href target=@Target title=@Text class=@($"tazor-menu-anchor {Theme.MenuHeadingAnchor}") @onclick="OnClicked" @onclick:preventDefault="true">
         <div class="flex items-center justify-between">
             @if (LeftIcon != null)
             {
@@ -25,7 +25,7 @@
 </li>
 @code {
     [Parameter]
-    public EventCallback<MenuItem> OnClick { get; set; }
+    public EventCallback<MenuHeading> OnClick { get; set; }
 
     [Parameter]
     public string Href { get; set; } = null!;

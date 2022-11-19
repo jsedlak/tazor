@@ -64,7 +64,15 @@ public static class ServiceCollectionExtensions
                 Panel = "{ComponentBackground} {ComponentSpacing} {ComponentPadding} rounded",
                 DialogWindow = "{ComponentBackground} {ComponentPadding} rounded",
                 Button = "cursor-pointer px-3 py-2 inline-block rounded",
-                ButtonInner = "flex items-center gap-1 w-full"
+                ButtonInner = "flex items-center gap-1 w-full",
+                Menu = "",
+                MenuAnchor = "cursor-pointer whitespace-nowrap",
+                MenuDropdownWrapper = "bg-{PrimaryColor}-500 text-white p-3",
+                MenuItem = "mb-2",
+                MenuHeadingAnchor = "cursor-pointer whitespace-nowrap",
+                MenuHeadingItem = "hover:bg-{PrimaryColor}-500 text-white px-5 py-2 rounded-t rounded-b hover:rounded-b-none",
+                VerticalMenu = "",
+                HorizontalMenu = ""
             };
 
             if(configureTheme != null) {

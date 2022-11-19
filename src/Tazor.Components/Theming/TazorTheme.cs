@@ -143,4 +143,54 @@ public class TazorTheme : ITazorTheme
         get { return this[nameof(ButtonInner)]; }
         set { this[nameof(ButtonInner)] = value; }
     }
+
+    #region Menu
+    public string Menu
+    {
+        get { return this[nameof(Menu)]; }
+        set { this[nameof(Menu)] = value; }
+    }
+
+    public string HorizontalMenu
+    {
+        get { return this[nameof(HorizontalMenu)]; }
+        set { this[nameof(HorizontalMenu)] = value; }
+    }
+
+    public string VerticalMenu
+    {
+        get { return this[nameof(VerticalMenu)]; }
+        set { this[nameof(VerticalMenu)] = value; }
+    }
+
+    public string MenuHeadingItem
+    {
+        get { return this[nameof(MenuHeadingItem)]; }
+        set { this[nameof(MenuHeadingItem)] = value; }
+    }
+
+    public string MenuHeadingAnchor
+    {
+        get { return this[nameof(MenuHeadingAnchor)]; }
+        set { this[nameof(MenuHeadingAnchor)] = value; }
+    }
+
+    public string MenuDropdownWrapper
+    {
+        get { return this[nameof(MenuDropdownWrapper)]; }
+        set { this[nameof(MenuDropdownWrapper)] = value; }
+    }
+
+    public string MenuItem
+    {
+        get { return this[nameof(MenuItem)]; }
+        set { this[nameof(MenuItem)] = value; }
+    }
+
+    public string MenuAnchor
+    {
+        get { return this[nameof(MenuAnchor)]; }
+        set { this[nameof(MenuAnchor)] = value; }
+    }
+    #endregion
 }
