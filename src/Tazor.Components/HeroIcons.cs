@@ -169,4 +169,8 @@ public static class HeroIcons
         return new MarkupString(Icons.HeroIcons_Processor.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
     }
 
+    public static MarkupString CreditCard(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_CreditCard.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
 }
