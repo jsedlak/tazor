@@ -2,7 +2,7 @@
 @if (IsVisible)
 {
     <div class="fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full">
-        <div class=@($"relative top-10 mx-auto w-96 shadow-lg {Theme.DialogWindow}")>
+        <div class=@($"relative top-10 mx-auto {Theme.DialogWindow}")>
             <div class="flex justify-between items-center mb-3 pb-2 border-b border-b-white">
                 <div>
                     <h3>@Title</h3>
@@ -22,7 +22,7 @@
             <div>
                 @Content
             </div>
-            <div class="mt-3 flex items-center gap-4">
+            <div class="mt-3 flex justify-end items-center gap-4">
                 @Footer
             </div>
         </div>
