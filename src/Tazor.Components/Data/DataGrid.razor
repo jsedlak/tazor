@@ -136,15 +136,21 @@
                             <div class="flex items-center gap-2">
                                 @if (OnEdit != null)
                                 {
-                                    <a onclick=@(() => OnEdit(item))>
-                                        @(Tazor.Components.HeroIcons.Edit())
-                                    </a>
+                                    if (RequestShowEdit == null || RequestShowEdit(item))
+                                    {
+                                        <a onclick=@(() => OnEdit(item))>
+                                            @(Tazor.Components.HeroIcons.Edit())
+                                        </a>
+                                    }
                                 }
                                 @if (OnDelete != null)
                                 {
-                                    <a onclick=@(() => OnDelete(item))>
-                                        @(Tazor.Components.HeroIcons.Delete())
-                                    </a>
+                                    if (RequestShowDelete == null || RequestShowDelete(item))
+                                    {
+                                        <a onclick=@(() => OnDelete(item))>
+                                            @(Tazor.Components.HeroIcons.Delete())
+                                        </a>
+                                    }
                                 }
                             </div>
                         </td>
@@ -210,6 +216,12 @@
 
     [Parameter]
     public bool HideToolbar { get; set; } = false;
+
+    [Parameter]
+    public Func<TItem, bool>? RequestShowDelete { get; set; }
+
+    [Parameter]
+    public Func<TItem, bool>? RequestShowEdit { get; set; }
 
     private bool _isColumnPopupOpen = false;
 
