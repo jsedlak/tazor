@@ -193,4 +193,10 @@ public class TazorTheme : ITazorTheme
         set { this[nameof(MenuAnchor)] = value; }
     }
     #endregion
+
+    public string TextBox
+    {
+        get { return this[nameof(TextBox)]; }
+        set { this[nameof(TextBox)] = value; }
+    }
 }

@@ -50,7 +50,7 @@ public static class ServiceCollectionExtensions
             var theme = new TazorTheme(baseTheme)
             {
                 ComponentHeader = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-700 text-white {ComponentPadding}",
-                
+
                 Table = "min-w-full",
                 TableSpacing = "{ComponentSpacing}",
                 TableHeader = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-800 text-white",
@@ -72,7 +72,8 @@ public static class ServiceCollectionExtensions
                 MenuHeadingAnchor = "cursor-pointer whitespace-nowrap",
                 MenuHeadingItem = "hover:bg-{PrimaryColor}-500 text-white px-5 py-2 rounded-t rounded-b hover:rounded-b-none",
                 VerticalMenu = "",
-                HorizontalMenu = ""
+                HorizontalMenu = "",
+                TextBox = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white"
             };
 
             if(configureTheme != null) {

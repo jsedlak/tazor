@@ -72,4 +72,6 @@ public interface ITazorTheme : ITheme {
 
     string MenuAnchor { get; set; }
     #endregion
+
+    string TextBox { get; set; }
 }
