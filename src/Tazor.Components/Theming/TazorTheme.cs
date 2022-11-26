@@ -199,4 +199,10 @@ public class TazorTheme : ITazorTheme
         get { return this[nameof(TextBox)]; }
         set { this[nameof(TextBox)] = value; }
     }
+
+    public string SelectInput
+    {
+        get { return this[nameof(SelectInput)]; }
+        set { this[nameof(SelectInput)] = value; }
+    }
 }

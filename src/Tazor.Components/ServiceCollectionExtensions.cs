@@ -73,7 +73,8 @@ public static class ServiceCollectionExtensions
                 MenuHeadingItem = "hover:bg-{PrimaryColor}-500 text-white px-5 py-2 rounded-t rounded-b hover:rounded-b-none",
                 VerticalMenu = "",
                 HorizontalMenu = "",
-                TextBox = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white"
+                TextBox = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white",
+                SelectInput = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white"                
             };
 
             if(configureTheme != null) {

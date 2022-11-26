@@ -143,6 +143,7 @@
                                         </a>
                                     }
                                 }
+
                                 @if (OnDelete != null)
                                 {
                                     if (RequestShowDelete == null || RequestShowDelete(item))
@@ -151,6 +152,13 @@
                                             @(Tazor.Components.HeroIcons.Delete())
                                         </a>
                                     }
+                                }
+
+                                @foreach(var ci in AdditionalActions)
+                                {
+                                    <a onclick=@(() => ActionRequested(item, ci)) title=@ci.Title>
+                                        @(ci.Icon)
+                                    </a>
                                 }
                             </div>
                         </td>
@@ -213,6 +221,12 @@
 
     [Parameter]
     public Action<TItem>? OnDelete { get; set; }
+
+    [Parameter]
+    public IEnumerable<CommandItem> AdditionalActions { get; set; } = Enumerable.Empty<CommandItem>();
+
+    [Parameter]
+    public Action<TItem, CommandItem> ActionRequested { get; set; }
 
     [Parameter]
     public bool HideToolbar { get; set; } = false;

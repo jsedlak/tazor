@@ -173,4 +173,9 @@ public static class HeroIcons
     {
         return new MarkupString(Icons.HeroIcons_CreditCard.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
     }
+
+    public static MarkupString ArrowsUpDown(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_ArrowsUpDown.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
 }

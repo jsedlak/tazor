@@ -8,7 +8,5 @@ public class CommandItem
 
     public string Key { get; set; } = null!;
 
-    public RenderFragment? Icon { get; set; }
-
-    public string Color { get; set; }
+    public MarkupString Icon { get; set; }
 }

@@ -74,4 +74,6 @@ public interface ITazorTheme : ITheme {
     #endregion
 
     string TextBox { get; set; }
+
+    string SelectInput { get; set; }
 }
