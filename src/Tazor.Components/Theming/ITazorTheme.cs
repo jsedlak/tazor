@@ -76,4 +76,6 @@ public interface ITazorTheme : ITheme {
     string TextBox { get; set; }
 
     string SelectInput { get; set; }
+
+    string SubLabel { get; set; }
 }

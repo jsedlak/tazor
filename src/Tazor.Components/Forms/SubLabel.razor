@@ -1,4 +1,5 @@
-﻿<label class="mb-1 block text-xs">
+﻿@inject ITazorTheme Theme
+<label class=@Theme.SubLabel>
     @ChildContent
 </label>
 

@@ -74,7 +74,8 @@ public static class ServiceCollectionExtensions
                 VerticalMenu = "",
                 HorizontalMenu = "",
                 TextBox = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white",
-                SelectInput = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white"                
+                SelectInput = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white",
+                SubLabel = "mb-2 block text-sm"
             };
 
             if(configureTheme != null) {

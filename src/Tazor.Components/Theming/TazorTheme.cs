@@ -205,4 +205,10 @@ public class TazorTheme : ITazorTheme
         get { return this[nameof(SelectInput)]; }
         set { this[nameof(SelectInput)] = value; }
     }
+
+    public string SubLabel
+    {
+        get { return this[nameof(SubLabel)]; }
+        set { this[nameof(SubLabel)] = value; }
+    }
 }
