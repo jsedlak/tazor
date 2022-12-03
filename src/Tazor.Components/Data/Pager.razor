@@ -19,7 +19,7 @@
             max = Math.Min(max, Pages);
         }
 
-        @if (max - min > 1)
+        @if (max - min > 0)
         {
             <a @onclick=@(() => ChangePage(CurrentPage - 1)) class=@($"cursor-pointer relative inline-flex items-center px-2 py-2 rounded-l-md border text-sm font-medium {BackgroundCssClass}")>
                 <span class="sr-only">Previous</span>
