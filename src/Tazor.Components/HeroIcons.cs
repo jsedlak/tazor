@@ -178,4 +178,29 @@ public static class HeroIcons
     {
         return new MarkupString(Icons.HeroIcons_ArrowsUpDown.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
     }
+
+    public static MarkupString ClipboardDocumentList(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_ClipboardDocumentList.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString ClipboardDocument(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_ClipboardDocument.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString Clipboard(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_Clipboard.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString DocumentDuplicate(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_DocumentDuplicate.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+    public static MarkupString ExternalLink(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString(Icons.HeroIcons_ExternalLink.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
 }
