@@ -35,6 +35,11 @@
 
     private async Task HandleClick()
     {
+        if(Disabled) 
+        { 
+            return; 
+        }
+
         if(!string.IsNullOrWhiteSpace(Href))
         {
             Navigation.NavigateTo(Href);
