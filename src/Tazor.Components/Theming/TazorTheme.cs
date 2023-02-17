@@ -69,6 +69,12 @@ public class TazorTheme : ITazorTheme
         set { this[nameof(TableHeader)] = value; }
     }
 
+    public string TableBody
+    {
+        get { return this[nameof(TableBody)]; }
+        set { this[nameof(TableBody)] = value; }
+    }
+
     public string TableFooter
     {
         get { return this[nameof(TableFooter)]; }
@@ -124,6 +130,42 @@ public class TazorTheme : ITazorTheme
     {
         get { return this[nameof(DialogWindow)]; }
         set { this[nameof(DialogWindow)] = value; }
+    }
+
+    /// <summary>
+    /// Gets or Sets the classes that style the overlay behind the dialog window
+    /// </summary>
+    public string DialogOverlay
+    {
+        get { return this[nameof(DialogOverlay)]; }
+        set { this[nameof(DialogOverlay)] = value; }
+    }
+
+    /// <summary>
+    /// Gets or Sets the classes for the inside div of the dialog
+    /// </summary>
+    public string DialogWindowInner
+    {
+        get { return this[nameof(DialogWindowInner)]; }
+        set { this[nameof(DialogWindowInner)] = value; }
+    }
+
+    public string DialogHeader
+    {
+        get { return this[nameof(DialogHeader)]; }
+        set { this[nameof(DialogHeader)] = value; }
+    }
+
+    public string DialogContent
+    {
+        get { return this[nameof(DialogContent)]; }
+        set { this[nameof(DialogContent)] = value; }
+    }
+
+    public string DialogFooter
+    {
+        get { return this[nameof(DialogFooter)]; }
+        set { this[nameof(DialogFooter)] = value; }
     }
 
     /// <summary>
@@ -204,6 +246,12 @@ public class TazorTheme : ITazorTheme
     {
         get { return this[nameof(SelectInput)]; }
         set { this[nameof(SelectInput)] = value; }
+    }
+
+    public string Label
+    {
+        get { return this[nameof(Label)]; }
+        set { this[nameof(Label)] = value; }
     }
 
     public string SubLabel

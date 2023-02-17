@@ -13,6 +13,8 @@ public interface ITazorTheme : ITheme {
     /// Gets or Sets the classes that style the header of the table or grid
     string TableHeader { get; set; }
 
+    string TableBody { get; set; }
+
     /// <summary>
     /// Gets or Sets the classes that style the footer of a table or grid
     /// </summary>
@@ -46,6 +48,22 @@ public interface ITazorTheme : ITheme {
     string DialogWindow { get; set; }
 
     /// <summary>
+    /// Gets or Sets the classes that style the overlay behind the dialog window
+    /// </summary>
+    string DialogOverlay { get; set; }
+
+    /// <summary>
+    /// Gets or Sets the classes for the inside div of the dialog
+    /// </summary>
+    string DialogWindowInner { get; set; }
+
+    string DialogHeader { get; set; }
+
+    string DialogContent { get; set; }
+
+    string DialogFooter { get; set; }
+
+    /// <summary>
     /// Gets or Sets the classes that style the button
     /// </summary>
     string Button { get; set; }
@@ -76,6 +94,8 @@ public interface ITazorTheme : ITheme {
     string TextBox { get; set; }
 
     string SelectInput { get; set; }
+
+    string Label { get; set; }
 
     string SubLabel { get; set; }
 }

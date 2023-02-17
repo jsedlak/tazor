@@ -62,7 +62,12 @@ public static class ServiceCollectionExtensions
                 TableOddRow = "bg-gray-200 dark:bg-gray-900 text-sm text-gray-900 dark:text-white font-light whitespace-nowrap",
                 TableToolbar = "bg-{PrimaryColor}-700 text-white {ComponentPadding} flex justify-between items-center",
                 Panel = "{ComponentBackground} {ComponentSpacing} {ComponentPadding} rounded",
-                DialogWindow = "{ComponentBackground} {ComponentPadding} rounded",
+                DialogOverlay = "fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full",
+                DialogWindow = "relative top-10 mx-auto  {ComponentBackground} {ComponentPadding} rounded",
+                DialogWindowInner = "",
+                DialogHeader = "flex justify-between items-center mb-3 pb-2 border-b border-b-white",
+                DialogContent = "",
+                DialogFooter = "mt-3 flex justify-end items-center gap-4",
                 Button = "cursor-pointer px-3 py-2 inline-block rounded",
                 ButtonInner = "flex items-center gap-1 w-full",
                 Menu = "",
@@ -75,6 +80,7 @@ public static class ServiceCollectionExtensions
                 HorizontalMenu = "",
                 TextBox = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white",
                 SelectInput = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white",
+                Label = "mb-1 block",
                 SubLabel = "mb-2 block text-sm"
             };
 
