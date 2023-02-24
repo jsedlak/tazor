@@ -139,7 +139,7 @@
                                     if (RequestShowEdit == null || RequestShowEdit(item))
                                     {
                                         <a onclick=@(() => OnEdit(item))>
-                                            @(Tazor.Components.HeroIcons.Edit())
+                                            @(Tazor.Components.HeroIcons.PencilSquare())
                                         </a>
                                     }
                                 }
@@ -149,7 +149,7 @@
                                     if (RequestShowDelete == null || RequestShowDelete(item))
                                     {
                                         <a onclick=@(() => OnDelete(item))>
-                                            @(Tazor.Components.HeroIcons.Delete())
+                                            @(Tazor.Components.HeroIcons.Trash())
                                         </a>
                                     }
                                 }

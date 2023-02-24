@@ -81,7 +81,13 @@ public static class ServiceCollectionExtensions
                 TextBox = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white",
                 SelectInput = "px-3 py-2 w-full border rounded dark:border-gray-900 dark:bg-gray-800 dark:text-white",
                 Label = "mb-1 block",
-                SubLabel = "mb-2 block text-sm"
+                SubLabel = "mb-2 block text-sm",
+
+                AlertGlobal = "my-3 rounded px-4 py-3 shadow-md flex items-center justify-between",
+                AlertError = "bg-red-100 border-l-4 border-red-500 text-red-700",
+                AlertInfo = "bg-blue-100 border-l-4 border-blue-500 text-blue-700",
+                AlertSuccess = "bg-green-100 border-l-4 border-green-500 text-green-700",
+                AlertWarning = "bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700"
             };
 
             if(configureTheme != null) {

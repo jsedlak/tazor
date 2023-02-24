@@ -22,14 +22,14 @@ namespace Tazor.Components {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Icons {
+    internal class HeroIconsOutlineResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Icons() {
+        internal HeroIconsOutlineResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Tazor.Components {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Tazor.Components.Icons", typeof(Icons).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Tazor.Components.HeroIconsOutlineResources", typeof(HeroIconsOutlineResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,2648 +61,2630 @@ namespace Tazor.Components {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;svg class=&quot;{CssClass}&quot; viewBox=&quot;0 -28.5 256 256&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; preserveAspectRatio=&quot;xMidYMid&quot;&gt;&lt;g&gt;&lt;path d=&quot;M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Brands_Discord {
-            get {
-                return ResourceManager.GetString("Brands_Discord", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.70 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_AcademicCap {
+        internal static string AcademicCap {
             get {
-                return ResourceManager.GetString("HeroIcons_AcademicCap", resourceCulture);
+                return ResourceManager.GetString("AcademicCap", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_AdjustmentsHorizontal {
+        internal static string AdjustmentsHorizontal {
             get {
-                return ResourceManager.GetString("HeroIcons_AdjustmentsHorizontal", resourceCulture);
+                return ResourceManager.GetString("AdjustmentsHorizontal", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_AdjustmentsVertical {
+        internal static string AdjustmentsVertical {
             get {
-                return ResourceManager.GetString("HeroIcons_AdjustmentsVertical", resourceCulture);
+                return ResourceManager.GetString("AdjustmentsVertical", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArchiveBox {
+        internal static string ArchiveBox {
             get {
-                return ResourceManager.GetString("HeroIcons_ArchiveBox", resourceCulture);
+                return ResourceManager.GetString("ArchiveBox", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArchiveBoxArrowDown {
+        internal static string ArchiveBoxArrowDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ArchiveBoxArrowDown", resourceCulture);
+                return ResourceManager.GetString("ArchiveBoxArrowDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.12 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ArchiveBoxXMark {
+        internal static string ArchiveBoxXMark {
             get {
-                return ResourceManager.GetString("HeroIcons_ArchiveBoxXMark", resourceCulture);
+                return ResourceManager.GetString("ArchiveBoxXMark", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowDown {
+        internal static string ArrowDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowDown", resourceCulture);
+                return ResourceManager.GetString("ArrowDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowDownCircle {
+        internal static string ArrowDownCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowDownCircle", resourceCulture);
+                return ResourceManager.GetString("ArrowDownCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowDownLeft {
+        internal static string ArrowDownLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowDownLeft", resourceCulture);
+                return ResourceManager.GetString("ArrowDownLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowDownOnSquare {
+        internal static string ArrowDownOnSquare {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowDownOnSquare", resourceCulture);
+                return ResourceManager.GetString("ArrowDownOnSquare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m-6 3.75l3 3m0 0l3-3m-3 3V1.5m6 9h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowDownOnSquareStack {
+        internal static string ArrowDownOnSquareStack {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowDownOnSquareStack", resourceCulture);
+                return ResourceManager.GetString("ArrowDownOnSquareStack", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowDownRight {
+        internal static string ArrowDownRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowDownRight", resourceCulture);
+                return ResourceManager.GetString("ArrowDownRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowDownTray {
+        internal static string ArrowDownTray {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowDownTray", resourceCulture);
+                return ResourceManager.GetString("ArrowDownTray", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowLeft {
+        internal static string ArrowLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowLeft", resourceCulture);
+                return ResourceManager.GetString("ArrowLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowLeftCircle {
+        internal static string ArrowLeftCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowLeftCircle", resourceCulture);
+                return ResourceManager.GetString("ArrowLeftCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowLeftOnRectangle {
+        internal static string ArrowLeftOnRectangle {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowLeftOnRectangle", resourceCulture);
+                return ResourceManager.GetString("ArrowLeftOnRectangle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowLongDown {
+        internal static string ArrowLongDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowLongDown", resourceCulture);
+                return ResourceManager.GetString("ArrowLongDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowLongLeft {
+        internal static string ArrowLongLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowLongLeft", resourceCulture);
+                return ResourceManager.GetString("ArrowLongLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowLongRight {
+        internal static string ArrowLongRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowLongRight", resourceCulture);
+                return ResourceManager.GetString("ArrowLongRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowLongUp {
+        internal static string ArrowLongUp {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowLongUp", resourceCulture);
+                return ResourceManager.GetString("ArrowLongUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowPath {
+        internal static string ArrowPath {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowPath", resourceCulture);
+                return ResourceManager.GetString("ArrowPath", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ArrowPathRoundedSquare {
+        internal static string ArrowPathRoundedSquare {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowPathRoundedSquare", resourceCulture);
+                return ResourceManager.GetString("ArrowPathRoundedSquare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowRight {
+        internal static string ArrowRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowRight", resourceCulture);
+                return ResourceManager.GetString("ArrowRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowRightCircle {
+        internal static string ArrowRightCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowRightCircle", resourceCulture);
+                return ResourceManager.GetString("ArrowRightCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowRightOnRectangle {
+        internal static string ArrowRightOnRectangle {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowRightOnRectangle", resourceCulture);
+                return ResourceManager.GetString("ArrowRightOnRectangle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowSmallDown {
+        internal static string ArrowSmallDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowSmallDown", resourceCulture);
+                return ResourceManager.GetString("ArrowSmallDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowSmallLeft {
+        internal static string ArrowSmallLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowSmallLeft", resourceCulture);
+                return ResourceManager.GetString("ArrowSmallLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowSmallRight {
+        internal static string ArrowSmallRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowSmallRight", resourceCulture);
+                return ResourceManager.GetString("ArrowSmallRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowSmallUp {
+        internal static string ArrowSmallUp {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowSmallUp", resourceCulture);
+                return ResourceManager.GetString("ArrowSmallUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowsPointingIn {
+        internal static string ArrowsPointingIn {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowsPointingIn", resourceCulture);
+                return ResourceManager.GetString("ArrowsPointingIn", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowsPointingOut {
+        internal static string ArrowsPointingOut {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowsPointingOut", resourceCulture);
+                return ResourceManager.GetString("ArrowsPointingOut", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowsRightLeft {
+        internal static string ArrowsRightLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowsRightLeft", resourceCulture);
+                return ResourceManager.GetString("ArrowsRightLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowsUpDown {
+        internal static string ArrowsUpDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowsUpDown", resourceCulture);
+                return ResourceManager.GetString("ArrowsUpDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowTopRightOnSquare {
+        internal static string ArrowTopRightOnSquare {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowTopRightOnSquare", resourceCulture);
+                return ResourceManager.GetString("ArrowTopRightOnSquare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 6L9 12.75l4.286-4.286a11.948 11.948 0 014.306 6.43l.776 2.898m0 0l3.182-5.511m-3.182 5.51l-5.511-3.181&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowTrendingDown {
+        internal static string ArrowTrendingDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowTrendingDown", resourceCulture);
+                return ResourceManager.GetString("ArrowTrendingDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowTrendingUp {
+        internal static string ArrowTrendingUp {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowTrendingUp", resourceCulture);
+                return ResourceManager.GetString("ArrowTrendingUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUp {
+        internal static string ArrowUp {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUp", resourceCulture);
+                return ResourceManager.GetString("ArrowUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUpCircle {
+        internal static string ArrowUpCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUpCircle", resourceCulture);
+                return ResourceManager.GetString("ArrowUpCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 19.5l-15-15m0 0v11.25m0-11.25h11.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUpLeft {
+        internal static string ArrowUpLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUpLeft", resourceCulture);
+                return ResourceManager.GetString("ArrowUpLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUpOnSquare {
+        internal static string ArrowUpOnSquare {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUpOnSquare", resourceCulture);
+                return ResourceManager.GetString("ArrowUpOnSquare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.5 7.5h-.75A2.25 2.25 0 004.5 9.75v7.5a2.25 2.25 0 002.25 2.25h7.5a2.25 2.25 0 002.25-2.25v-7.5a2.25 2.25 0 00-2.25-2.25h-.75m0-3l-3-3m0 0l-3 3m3-3v11.25m6-2.25h.75a2.25 2.25 0 012.25 2.25v7.5a2.25 2.25 0 01-2.25 2.25h-7.5a2.25 2.25 0 01-2.25-2.25v-.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUpOnSquareStack {
+        internal static string ArrowUpOnSquareStack {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUpOnSquareStack", resourceCulture);
+                return ResourceManager.GetString("ArrowUpOnSquareStack", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUpRight {
+        internal static string ArrowUpRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUpRight", resourceCulture);
+                return ResourceManager.GetString("ArrowUpRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUpTray {
+        internal static string ArrowUpTray {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUpTray", resourceCulture);
+                return ResourceManager.GetString("ArrowUpTray", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 15l-6 6m0 0l-6-6m6 6V9a6 6 0 0112 0v3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUturnDown {
+        internal static string ArrowUturnDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUturnDown", resourceCulture);
+                return ResourceManager.GetString("ArrowUturnDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUturnLeft {
+        internal static string ArrowUturnLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUturnLeft", resourceCulture);
+                return ResourceManager.GetString("ArrowUturnLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 15l6-6m0 0l-6-6m6 6H9a6 6 0 000 12h3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUturnRight {
+        internal static string ArrowUturnRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUturnRight", resourceCulture);
+                return ResourceManager.GetString("ArrowUturnRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 9l6-6m0 0l6 6m-6-6v12a6 6 0 01-12 0v-3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ArrowUturnUp {
+        internal static string ArrowUturnUp {
             get {
-                return ResourceManager.GetString("HeroIcons_ArrowUturnUp", resourceCulture);
+                return ResourceManager.GetString("ArrowUturnUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; d=&quot;M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_AtSymbol {
+        internal static string AtSymbol {
             get {
-                return ResourceManager.GetString("HeroIcons_AtSymbol", resourceCulture);
+                return ResourceManager.GetString("AtSymbol", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Backspace {
+        internal static string Backspace {
             get {
-                return ResourceManager.GetString("HeroIcons_Backspace", resourceCulture);
+                return ResourceManager.GetString("Backspace", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 16.811c0 .864-.933 1.405-1.683.977l-7.108-4.062a1.125 1.125 0 010-1.953l7.108-4.062A1.125 1.125 0 0121 8.688v8.123zM11.25 16.811c0 .864-.933 1.405-1.683.977l-7.108-4.062a1.125 1.125 0 010-1.953L9.567 7.71a1.125 1.125 0 011.683.977v8.123z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Backward {
+        internal static string Backward {
             get {
-                return ResourceManager.GetString("HeroIcons_Backward", resourceCulture);
+                return ResourceManager.GetString("Backward", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.7 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Banknotes {
+        internal static string Banknotes {
             get {
-                return ResourceManager.GetString("HeroIcons_Banknotes", resourceCulture);
+                return ResourceManager.GetString("Banknotes", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 9h16.5m-16.5 6.75h16.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bars2 {
+        internal static string Bars2 {
             get {
-                return ResourceManager.GetString("HeroIcons_Bars2", resourceCulture);
+                return ResourceManager.GetString("Bars2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bars3 {
+        internal static string Bars3 {
             get {
-                return ResourceManager.GetString("HeroIcons_Bars3", resourceCulture);
+                return ResourceManager.GetString("Bars3", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bars3BottomLeft {
+        internal static string Bars3BottomLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_Bars3BottomLeft", resourceCulture);
+                return ResourceManager.GetString("Bars3BottomLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bars3BottomRight {
+        internal static string Bars3BottomRight {
             get {
-                return ResourceManager.GetString("HeroIcons_Bars3BottomRight", resourceCulture);
+                return ResourceManager.GetString("Bars3BottomRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bars3CenterLeft {
+        internal static string Bars3CenterLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_Bars3CenterLeft", resourceCulture);
+                return ResourceManager.GetString("Bars3CenterLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bars4 {
+        internal static string Bars4 {
             get {
-                return ResourceManager.GetString("HeroIcons_Bars4", resourceCulture);
+                return ResourceManager.GetString("Bars4", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BarsArrowDown {
+        internal static string BarsArrowDown {
             get {
-                return ResourceManager.GetString("HeroIcons_BarsArrowDown", resourceCulture);
+                return ResourceManager.GetString("BarsArrowDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BarsArrowUp {
+        internal static string BarsArrowUp {
             get {
-                return ResourceManager.GetString("HeroIcons_BarsArrowUp", resourceCulture);
+                return ResourceManager.GetString("BarsArrowUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Battery0 {
+        internal static string Battery0 {
             get {
-                return ResourceManager.GetString("HeroIcons_Battery0", resourceCulture);
+                return ResourceManager.GetString("Battery0", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5H18V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Battery100 {
+        internal static string Battery100 {
             get {
-                return ResourceManager.GetString("HeroIcons_Battery100", resourceCulture);
+                return ResourceManager.GetString("Battery100", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Battery50 {
+        internal static string Battery50 {
             get {
-                return ResourceManager.GetString("HeroIcons_Battery50", resourceCulture);
+                return ResourceManager.GetString("Battery50", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Beaker {
+        internal static string Beaker {
             get {
-                return ResourceManager.GetString("HeroIcons_Beaker", resourceCulture);
+                return ResourceManager.GetString("Beaker", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bell {
+        internal static string Bell {
             get {
-                return ResourceManager.GetString("HeroIcons_Bell", resourceCulture);
+                return ResourceManager.GetString("Bell", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BellAlert {
+        internal static string BellAlert {
             get {
-                return ResourceManager.GetString("HeroIcons_BellAlert", resourceCulture);
+                return ResourceManager.GetString("BellAlert", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.143 17.082a24.248 24.248 0 003.844.148m-3.844-.148a23.856 23.856 0 01-5.455-1.31 8.964 8.964 0 002.3-5.542m3.155 6.852a3 3 0 005.667 1.97m1.965-2.277L21 21m-4.225-4.225a23.81 23.81 0 003.536-1.003A8.967 8.967 0 0118 9.75V9A6 6 0 006.53 6.53m10.245 10.245L6.53 6.53M3 3l3.53 3.53&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BellSlash {
+        internal static string BellSlash {
             get {
-                return ResourceManager.GetString("HeroIcons_BellSlash", resourceCulture);
+                return ResourceManager.GetString("BellSlash", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M10.5 8.25h3l-3 4.5h3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BellSnooze {
+        internal static string BellSnooze {
             get {
-                return ResourceManager.GetString("HeroIcons_BellSnooze", resourceCulture);
+                return ResourceManager.GetString("BellSnooze", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bolt {
+        internal static string Bolt {
             get {
-                return ResourceManager.GetString("HeroIcons_Bolt", resourceCulture);
+                return ResourceManager.GetString("Bolt", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M11.412 15.655L9.75 21.75l3.745-4.012M9.257 13.5H3.75l2.659-2.849m2.048-2.194L14.25 2.25 12 10.5h8.25l-4.707 5.043M8.457 8.457L3 3m5.457 5.457l7.086 7.086m0 0L21 21&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BoltSlash {
+        internal static string BoltSlash {
             get {
-                return ResourceManager.GetString("HeroIcons_BoltSlash", resourceCulture);
+                return ResourceManager.GetString("BoltSlash", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Bookmark {
+        internal static string Bookmark {
             get {
-                return ResourceManager.GetString("HeroIcons_Bookmark", resourceCulture);
+                return ResourceManager.GetString("Bookmark", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 3l1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 011.743-1.342 48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664L19.5 19.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BookmarkSlash {
+        internal static string BookmarkSlash {
             get {
-                return ResourceManager.GetString("HeroIcons_BookmarkSlash", resourceCulture);
+                return ResourceManager.GetString("BookmarkSlash", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BookmarkSquare {
+        internal static string BookmarkSquare {
             get {
-                return ResourceManager.GetString("HeroIcons_BookmarkSquare", resourceCulture);
+                return ResourceManager.GetString("BookmarkSquare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BookOpen {
+        internal static string BookOpen {
             get {
-                return ResourceManager.GetString("HeroIcons_BookOpen", resourceCulture);
+                return ResourceManager.GetString("BookOpen", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Briefcase {
+        internal static string Briefcase {
             get {
-                return ResourceManager.GetString("HeroIcons_Briefcase", resourceCulture);
+                return ResourceManager.GetString("Briefcase", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0112 12.75zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 01-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.0 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_BugAnt {
+        internal static string BugAnt {
             get {
-                return ResourceManager.GetString("HeroIcons_BugAnt", resourceCulture);
+                return ResourceManager.GetString("BugAnt", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BuildingLibrary {
+        internal static string BuildingLibrary {
             get {
-                return ResourceManager.GetString("HeroIcons_BuildingLibrary", resourceCulture);
+                return ResourceManager.GetString("BuildingLibrary", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_BuildingOffice {
+        internal static string BuildingOffice {
             get {
-                return ResourceManager.GetString("HeroIcons_BuildingOffice", resourceCulture);
+                return ResourceManager.GetString("BuildingOffice", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z&quot;/&gt;  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_BuildingOffice2 {
+        internal static string BuildingOffice2 {
             get {
-                return ResourceManager.GetString("HeroIcons_BuildingOffice2", resourceCulture);
+                return ResourceManager.GetString("BuildingOffice2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_BuildingStorefront {
+        internal static string BuildingStorefront {
             get {
-                return ResourceManager.GetString("HeroIcons_BuildingStorefront", resourceCulture);
+                return ResourceManager.GetString("BuildingStorefront", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Cake {
+        internal static string Cake {
             get {
-                return ResourceManager.GetString("HeroIcons_Cake", resourceCulture);
+                return ResourceManager.GetString("Cake", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Calculator {
+        internal static string Calculator {
             get {
-                return ResourceManager.GetString("HeroIcons_Calculator", resourceCulture);
+                return ResourceManager.GetString("Calculator", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Calendar {
+        internal static string Calendar {
             get {
-                return ResourceManager.GetString("HeroIcons_Calendar", resourceCulture);
+                return ResourceManager.GetString("Calendar", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_CalendarDays {
+        internal static string CalendarDays {
             get {
-                return ResourceManager.GetString("HeroIcons_CalendarDays", resourceCulture);
+                return ResourceManager.GetString("CalendarDays", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 0 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Camera {
+        internal static string Camera {
             get {
-                return ResourceManager.GetString("HeroIcons_Camera", resourceCulture);
+                return ResourceManager.GetString("Camera", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ChartBar {
+        internal static string ChartBar {
             get {
-                return ResourceManager.GetString("HeroIcons_ChartBar", resourceCulture);
+                return ResourceManager.GetString("ChartBar", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChartBarSquare {
+        internal static string ChartBarSquare {
             get {
-                return ResourceManager.GetString("HeroIcons_ChartBarSquare", resourceCulture);
+                return ResourceManager.GetString("ChartBarSquare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z&quot;/&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChartPie {
+        internal static string ChartPie {
             get {
-                return ResourceManager.GetString("HeroIcons_ChartPie", resourceCulture);
+                return ResourceManager.GetString("ChartPie", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.3 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ChatBubbleBottomCenter {
+        internal static string ChatBubbleBottomCenter {
             get {
-                return ResourceManager.GetString("HeroIcons_ChatBubbleBottomCenter", resourceCulture);
+                return ResourceManager.GetString("ChatBubbleBottomCenter", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ChatBubbleBottomCenterText {
+        internal static string ChatBubbleBottomCenterText {
             get {
-                return ResourceManager.GetString("HeroIcons_ChatBubbleBottomCenterText", resourceCulture);
+                return ResourceManager.GetString("ChatBubbleBottomCenterText", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.0 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ChatBubbleLeft {
+        internal static string ChatBubbleLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ChatBubbleLeft", resourceCulture);
+                return ResourceManager.GetString("ChatBubbleLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ChatBubbleLeftEllipsis {
+        internal static string ChatBubbleLeftEllipsis {
             get {
-                return ResourceManager.GetString("HeroIcons_ChatBubbleLeftEllipsis", resourceCulture);
+                return ResourceManager.GetString("ChatBubbleLeftEllipsis", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ChatBubbleLeftRight {
+        internal static string ChatBubbleLeftRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ChatBubbleLeftRight", resourceCulture);
+                return ResourceManager.GetString("ChatBubbleLeftRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChatBubbleOvalLeft {
+        internal static string ChatBubbleOvalLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ChatBubbleOvalLeft", resourceCulture);
+                return ResourceManager.GetString("ChatBubbleOvalLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.97 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ChatBubbleOvalLeftEllipsis {
+        internal static string ChatBubbleOvalLeftEllipsis {
             get {
-                return ResourceManager.GetString("HeroIcons_ChatBubbleOvalLeftEllipsis", resourceCulture);
+                return ResourceManager.GetString("ChatBubbleOvalLeftEllipsis", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.5 12.75l6 6 9-13.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Check {
+        internal static string Check {
             get {
-                return ResourceManager.GetString("HeroIcons_Check", resourceCulture);
+                return ResourceManager.GetString("Check", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_CheckBadge {
+        internal static string CheckBadge {
             get {
-                return ResourceManager.GetString("HeroIcons_CheckBadge", resourceCulture);
+                return ResourceManager.GetString("CheckBadge", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CheckCircle {
+        internal static string CheckCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_CheckCircle", resourceCulture);
+                return ResourceManager.GetString("CheckCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronDoubleDown {
+        internal static string ChevronDoubleDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronDoubleDown", resourceCulture);
+                return ResourceManager.GetString("ChevronDoubleDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronDoubleLeft {
+        internal static string ChevronDoubleLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronDoubleLeft", resourceCulture);
+                return ResourceManager.GetString("ChevronDoubleLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronDoubleRight {
+        internal static string ChevronDoubleRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronDoubleRight", resourceCulture);
+                return ResourceManager.GetString("ChevronDoubleRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronDoubleUp {
+        internal static string ChevronDoubleUp {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronDoubleUp", resourceCulture);
+                return ResourceManager.GetString("ChevronDoubleUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 8.25l-7.5 7.5-7.5-7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronDown {
+        internal static string ChevronDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronDown", resourceCulture);
+                return ResourceManager.GetString("ChevronDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 19.5L8.25 12l7.5-7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronLeft {
+        internal static string ChevronLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronLeft", resourceCulture);
+                return ResourceManager.GetString("ChevronLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 4.5l7.5 7.5-7.5 7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronRight {
+        internal static string ChevronRight {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronRight", resourceCulture);
+                return ResourceManager.GetString("ChevronRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.5 15.75l7.5-7.5 7.5 7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronUp {
+        internal static string ChevronUp {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronUp", resourceCulture);
+                return ResourceManager.GetString("ChevronUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ChevronUpDown {
+        internal static string ChevronUpDown {
             get {
-                return ResourceManager.GetString("HeroIcons_ChevronUpDown", resourceCulture);
+                return ResourceManager.GetString("ChevronUpDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_CircleStack {
+        internal static string CircleStack {
             get {
-                return ResourceManager.GetString("HeroIcons_CircleStack", resourceCulture);
+                return ResourceManager.GetString("CircleStack", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Clipboard {
+        internal static string Clipboard {
             get {
-                return ResourceManager.GetString("HeroIcons_Clipboard", resourceCulture);
+                return ResourceManager.GetString("Clipboard", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5A3.375 3.375 0 006.375 7.5H5.25m11.9-3.66 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ClipboardDocument {
+        internal static string ClipboardDocument {
             get {
-                return ResourceManager.GetString("HeroIcons_ClipboardDocument", resourceCulture);
+                return ResourceManager.GetString("ClipboardDocument", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ClipboardDocumentCheck {
+        internal static string ClipboardDocumentCheck {
             get {
-                return ResourceManager.GetString("HeroIcons_ClipboardDocumentCheck", resourceCulture);
+                return ResourceManager.GetString("ClipboardDocumentCheck", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ClipboardDocumentList {
+        internal static string ClipboardDocumentList {
             get {
-                return ResourceManager.GetString("HeroIcons_ClipboardDocumentList", resourceCulture);
+                return ResourceManager.GetString("ClipboardDocumentList", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Clock {
+        internal static string Clock {
             get {
-                return ResourceManager.GetString("HeroIcons_Clock", resourceCulture);
+                return ResourceManager.GetString("Clock", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Cloud {
+        internal static string Cloud {
             get {
-                return ResourceManager.GetString("HeroIcons_Cloud", resourceCulture);
+                return ResourceManager.GetString("Cloud", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 9.75v6.75m0 0l-3-3m3 3l3-3m-8.25 6a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CloudArrowDown {
+        internal static string CloudArrowDown {
             get {
-                return ResourceManager.GetString("HeroIcons_CloudArrowDown", resourceCulture);
+                return ResourceManager.GetString("CloudArrowDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CloudArrowUp {
+        internal static string CloudArrowUp {
             get {
-                return ResourceManager.GetString("HeroIcons_CloudArrowUp", resourceCulture);
+                return ResourceManager.GetString("CloudArrowUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CodeBracket {
+        internal static string CodeBracket {
             get {
-                return ResourceManager.GetString("HeroIcons_CodeBracket", resourceCulture);
+                return ResourceManager.GetString("CodeBracket", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CodeBracketSquare {
+        internal static string CodeBracketSquare {
             get {
-                return ResourceManager.GetString("HeroIcons_CodeBracketSquare", resourceCulture);
+                return ResourceManager.GetString("CodeBracketSquare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Cog {
+        internal static string Cog {
             get {
-                return ResourceManager.GetString("HeroIcons_Cog", resourceCulture);
+                return ResourceManager.GetString("Cog", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Cog6Tooth {
+        internal static string Cog6Tooth {
             get {
-                return ResourceManager.GetString("HeroIcons_Cog6Tooth", resourceCulture);
+                return ResourceManager.GetString("Cog6Tooth", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Cog8Tooth {
+        internal static string Cog8Tooth {
             get {
-                return ResourceManager.GetString("HeroIcons_Cog8Tooth", resourceCulture);
+                return ResourceManager.GetString("Cog8Tooth", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CommandLine {
+        internal static string CommandLine {
             get {
-                return ResourceManager.GetString("HeroIcons_CommandLine", resourceCulture);
+                return ResourceManager.GetString("CommandLine", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ComputerDesktop {
+        internal static string ComputerDesktop {
             get {
-                return ResourceManager.GetString("HeroIcons_ComputerDesktop", resourceCulture);
+                return ResourceManager.GetString("ComputerDesktop", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CpuChip {
+        internal static string CpuChip {
             get {
-                return ResourceManager.GetString("HeroIcons_CpuChip", resourceCulture);
+                return ResourceManager.GetString("CpuChip", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CreditCard {
+        internal static string CreditCard {
             get {
-                return ResourceManager.GetString("HeroIcons_CreditCard", resourceCulture);
+                return ResourceManager.GetString("CreditCard", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Cube {
+        internal static string Cube {
             get {
-                return ResourceManager.GetString("HeroIcons_Cube", resourceCulture);
+                return ResourceManager.GetString("Cube", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CubeTransparent {
+        internal static string CubeTransparent {
             get {
-                return ResourceManager.GetString("HeroIcons_CubeTransparent", resourceCulture);
+                return ResourceManager.GetString("CubeTransparent", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 7.5l.415-.207a.75.75 0 011.085.67V10.5m0 0h6m-6 0h-1.5m1.5 0v5.438c0 .354.161.697.473.865a3.751 3.751 0 005.452-2.553c.083-.409-.263-.75-.68-.75h-.745M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CurrencyBangladeshi {
+        internal static string CurrencyBangladeshi {
             get {
-                return ResourceManager.GetString("HeroIcons_CurrencyBangladeshi", resourceCulture);
+                return ResourceManager.GetString("CurrencyBangladeshi", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CurrencyDollar {
+        internal static string CurrencyDollar {
             get {
-                return ResourceManager.GetString("HeroIcons_CurrencyDollar", resourceCulture);
+                return ResourceManager.GetString("CurrencyDollar", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.25 7.756a4.5 4.5 0 100 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CurrencyEuro {
+        internal static string CurrencyEuro {
             get {
-                return ResourceManager.GetString("HeroIcons_CurrencyEuro", resourceCulture);
+                return ResourceManager.GetString("CurrencyEuro", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.121 7.629A3 3 0 009.017 9.43c-.023.212-.002.425.028.636l.506 3.541a4.5 4.5 0 01-.43 2.65L9 16.5l1.539-.513a2.25 2.25 0 011.422 0l.655.218a2.25 2.25 0 001.718-.122L15 15.75M8.25 12H12m9 0a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CurrencyPound {
+        internal static string CurrencyPound {
             get {
-                return ResourceManager.GetString("HeroIcons_CurrencyPound", resourceCulture);
+                return ResourceManager.GetString("CurrencyPound", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CurrencyRupee {
+        internal static string CurrencyRupee {
             get {
-                return ResourceManager.GetString("HeroIcons_CurrencyRupee", resourceCulture);
+                return ResourceManager.GetString("CurrencyRupee", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 7.5l3 4.5m0 0l3-4.5M12 12v5.25M15 12H9m6 3H9m12-3a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CurrencyYen {
+        internal static string CurrencyYen {
             get {
-                return ResourceManager.GetString("HeroIcons_CurrencyYen", resourceCulture);
+                return ResourceManager.GetString("CurrencyYen", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CursorArrowRays {
+        internal static string CursorArrowRays {
             get {
-                return ResourceManager.GetString("HeroIcons_CursorArrowRays", resourceCulture);
+                return ResourceManager.GetString("CursorArrowRays", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_CursorArrowRipple {
+        internal static string CursorArrowRipple {
             get {
-                return ResourceManager.GetString("HeroIcons_CursorArrowRipple", resourceCulture);
+                return ResourceManager.GetString("CursorArrowRipple", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DevicePhoneMobile {
+        internal static string DevicePhoneMobile {
             get {
-                return ResourceManager.GetString("HeroIcons_DevicePhoneMobile", resourceCulture);
+                return ResourceManager.GetString("DevicePhoneMobile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 002.25-2.25v-15a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 4.5v15a2.25 2.25 0 002.25 2.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DeviceTablet {
+        internal static string DeviceTablet {
             get {
-                return ResourceManager.GetString("HeroIcons_DeviceTablet", resourceCulture);
+                return ResourceManager.GetString("DeviceTablet", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Document {
+        internal static string Document {
             get {
-                return ResourceManager.GetString("HeroIcons_Document", resourceCulture);
+                return ResourceManager.GetString("Document", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DocumentArrowDown {
+        internal static string DocumentArrowDown {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentArrowDown", resourceCulture);
+                return ResourceManager.GetString("DocumentArrowDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12l-3-3m0 0l-3 3m3-3v6m-1.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DocumentArrowUp {
+        internal static string DocumentArrowUp {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentArrowUp", resourceCulture);
+                return ResourceManager.GetString("DocumentArrowUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DocumentChartBar {
+        internal static string DocumentChartBar {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentChartBar", resourceCulture);
+                return ResourceManager.GetString("DocumentChartBar", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DocumentCheck {
+        internal static string DocumentCheck {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentCheck", resourceCulture);
+                return ResourceManager.GetString("DocumentCheck", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_DocumentDuplicate {
+        internal static string DocumentDuplicate {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentDuplicate", resourceCulture);
+                return ResourceManager.GetString("DocumentDuplicate", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 1 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_DocumentMagnifyingGlass {
+        internal static string DocumentMagnifyingGlass {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentMagnifyingGlass", resourceCulture);
+                return ResourceManager.GetString("DocumentMagnifyingGlass", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DocumentMinus {
+        internal static string DocumentMinus {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentMinus", resourceCulture);
+                return ResourceManager.GetString("DocumentMinus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DocumentPlus {
+        internal static string DocumentPlus {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentPlus", resourceCulture);
+                return ResourceManager.GetString("DocumentPlus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_DocumentText {
+        internal static string DocumentText {
             get {
-                return ResourceManager.GetString("HeroIcons_DocumentText", resourceCulture);
+                return ResourceManager.GetString("DocumentText", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_EllipsisHorizontal {
+        internal static string EllipsisHorizontal {
             get {
-                return ResourceManager.GetString("HeroIcons_EllipsisHorizontal", resourceCulture);
+                return ResourceManager.GetString("EllipsisHorizontal", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_EllipsisHorizontalCircle {
+        internal static string EllipsisHorizontalCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_EllipsisHorizontalCircle", resourceCulture);
+                return ResourceManager.GetString("EllipsisHorizontalCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_EllipsisVertical {
+        internal static string EllipsisVertical {
             get {
-                return ResourceManager.GetString("HeroIcons_EllipsisVertical", resourceCulture);
+                return ResourceManager.GetString("EllipsisVertical", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Envelope {
+        internal static string Envelope {
             get {
-                return ResourceManager.GetString("HeroIcons_Envelope", resourceCulture);
+                return ResourceManager.GetString("Envelope", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_EnvelopeOpen {
+        internal static string EnvelopeOpen {
             get {
-                return ResourceManager.GetString("HeroIcons_EnvelopeOpen", resourceCulture);
+                return ResourceManager.GetString("EnvelopeOpen", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ExclamationCircle {
+        internal static string ExclamationCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_ExclamationCircle", resourceCulture);
+                return ResourceManager.GetString("ExclamationCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ExclamationTriangle {
+        internal static string ExclamationTriangle {
             get {
-                return ResourceManager.GetString("HeroIcons_ExclamationTriangle", resourceCulture);
+                return ResourceManager.GetString("ExclamationTriangle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z&quot;/&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 12a3 3 0 11-6 0 3 3 0 016 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Eye {
+        internal static string Eye {
             get {
-                return ResourceManager.GetString("HeroIcons_Eye", resourceCulture);
+                return ResourceManager.GetString("Eye", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 11.25l1.5 1.5.75-.75V8.758l2.276-.61a3 3 0 10-3.675-3.675l-.61 2.277H12l-.75.75 1.5 1.5M15 11.25l-8.47 8.47c-.34.34-.8.53-1.28.53s-.94.19-1.28.53l-.97.97-.75-.75.97-.97c.34-.34.53-.8.53-1.28s.19-.94.53-1.28L12.75 9M15 11.25L12.75 9&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_EyeDropper {
+        internal static string EyeDropper {
             get {
-                return ResourceManager.GetString("HeroIcons_EyeDropper", resourceCulture);
+                return ResourceManager.GetString("EyeDropper", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.24 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_EyeSlash {
+        internal static string EyeSlash {
             get {
-                return ResourceManager.GetString("HeroIcons_EyeSlash", resourceCulture);
+                return ResourceManager.GetString("EyeSlash", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.182 16.318A4.486 4.486 0 0012.016 15a4.486 4.486 0 00-3.198 1.318M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.3 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_FaceFrown {
+        internal static string FaceFrown {
             get {
-                return ResourceManager.GetString("HeroIcons_FaceFrown", resourceCulture);
+                return ResourceManager.GetString("FaceFrown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z&quot;/&gt; &lt;/sv [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_FaceSmile {
+        internal static string FaceSmile {
             get {
-                return ResourceManager.GetString("HeroIcons_FaceSmile", resourceCulture);
+                return ResourceManager.GetString("FaceSmile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.6 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Film {
+        internal static string Film {
             get {
-                return ResourceManager.GetString("HeroIcons_Film", resourceCulture);
+                return ResourceManager.GetString("Film", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33&quot;/&gt; &lt;/sv [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_FingerPrint {
+        internal static string FingerPrint {
             get {
-                return ResourceManager.GetString("HeroIcons_FingerPrint", resourceCulture);
+                return ResourceManager.GetString("FingerPrint", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z&quot;/&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z&quot;/&gt; [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Fire {
+        internal static string Fire {
             get {
-                return ResourceManager.GetString("HeroIcons_Fire", resourceCulture);
+                return ResourceManager.GetString("Fire", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Flag {
+        internal static string Flag {
             get {
-                return ResourceManager.GetString("HeroIcons_Flag", resourceCulture);
+                return ResourceManager.GetString("Flag", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Folder {
+        internal static string Folder {
             get {
-                return ResourceManager.GetString("HeroIcons_Folder", resourceCulture);
+                return ResourceManager.GetString("Folder", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_FolderArrowDown {
+        internal static string FolderArrowDown {
             get {
-                return ResourceManager.GetString("HeroIcons_FolderArrowDown", resourceCulture);
+                return ResourceManager.GetString("FolderArrowDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 13.5H9m4.06-7.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_FolderMinus {
+        internal static string FolderMinus {
             get {
-                return ResourceManager.GetString("HeroIcons_FolderMinus", resourceCulture);
+                return ResourceManager.GetString("FolderMinus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_FolderOpen {
+        internal static string FolderOpen {
             get {
-                return ResourceManager.GetString("HeroIcons_FolderOpen", resourceCulture);
+                return ResourceManager.GetString("FolderOpen", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 10.5v6m3-3H9m4.06-7.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_FolderPlus {
+        internal static string FolderPlus {
             get {
-                return ResourceManager.GetString("HeroIcons_FolderPlus", resourceCulture);
+                return ResourceManager.GetString("FolderPlus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Forward {
+        internal static string Forward {
             get {
-                return ResourceManager.GetString("HeroIcons_Forward", resourceCulture);
+                return ResourceManager.GetString("Forward", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Funnel {
+        internal static string Funnel {
             get {
-                return ResourceManager.GetString("HeroIcons_Funnel", resourceCulture);
+                return ResourceManager.GetString("Funnel", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12.75 8.25v7.5m6-7.5h-3V12m0 0v3.75m0-3.75H18M9.75 9.348c-1.03-1.464-2.698-1.464-3.728 0-1.03 1.465-1.03 3.84 0 5.304 1.03 1.464 2.699 1.464 3.728 0V12h-1.5M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Gif {
+        internal static string Gif {
             get {
-                return ResourceManager.GetString("HeroIcons_Gif", resourceCulture);
+                return ResourceManager.GetString("Gif", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.12 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Gift {
+        internal static string Gift {
             get {
-                return ResourceManager.GetString("HeroIcons_Gift", resourceCulture);
+                return ResourceManager.GetString("Gift", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 3.75v16.5M2.25 12h19.5M6.375 17.25a4.875 4.875 0 004.875-4.875V12m6.375 5.25a4.875 4.875 0 01-4.875-4.875V12m-9 8.25h16.5a1.5 1.5 0 001.5-1.5V5.25a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v13.5a1.5 1.5 0 001.5 1.5zm12.621-9.44c-1.409 1.41-4.242 1.061-4.242 1.061s-.349-2.833 1.06-4.242a2.25 2. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_GiftTop {
+        internal static string GiftTop {
             get {
-                return ResourceManager.GetString("HeroIcons_GiftTop", resourceCulture);
+                return ResourceManager.GetString("GiftTop", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_GlobeAlt {
+        internal static string GlobeAlt {
             get {
-                return ResourceManager.GetString("HeroIcons_GlobeAlt", resourceCulture);
+                return ResourceManager.GetString("GlobeAlt", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_GlobeAmericas {
+        internal static string GlobeAmericas {
             get {
-                return ResourceManager.GetString("HeroIcons_GlobeAmericas", resourceCulture);
+                return ResourceManager.GetString("GlobeAmericas", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.8 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_GlobeAsiaAustralia {
+        internal static string GlobeAsiaAustralia {
             get {
-                return ResourceManager.GetString("HeroIcons_GlobeAsiaAustralia", resourceCulture);
+                return ResourceManager.GetString("GlobeAsiaAustralia", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.05 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_GlobeEuropeAfrica {
+        internal static string GlobeEuropeAfrica {
             get {
-                return ResourceManager.GetString("HeroIcons_GlobeEuropeAfrica", resourceCulture);
+                return ResourceManager.GetString("GlobeEuropeAfrica", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 013.15 0v1.5m-3.15 0l.075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 013.15 0V15M6.9 7.575a1.575 1.575 0 10-3.15 0v8.175a6.75 6.75 0 006.75 6.75h2.018a5.25 5.25 0 003.712-1.538l1.732-1.732a5.25 5.25 0 001.538-3.712l.003-2.024a.668.668 0 01.1 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_HandRaised {
+        internal static string HandRaised {
             get {
-                return ResourceManager.GetString("HeroIcons_HandRaised", resourceCulture);
+                return ResourceManager.GetString("HandRaised", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.5 15h2.25m8.024-9.75c.011.05.028.1.052.148.591 1.2.924 2.55.924 3.977a8.96 8.96 0 01-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398C20.613 14.547 19.833 15 19 15h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_HandThumbDown {
+        internal static string HandThumbDown {
             get {
-                return ResourceManager.GetString("HeroIcons_HandThumbDown", resourceCulture);
+                return ResourceManager.GetString("HandThumbDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_HandThumbUp {
+        internal static string HandThumbUp {
             get {
-                return ResourceManager.GetString("HeroIcons_HandThumbUp", resourceCulture);
+                return ResourceManager.GetString("HandThumbUp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Hashtag {
+        internal static string Hashtag {
             get {
-                return ResourceManager.GetString("HeroIcons_Hashtag", resourceCulture);
+                return ResourceManager.GetString("Hashtag", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Heart {
+        internal static string Heart {
             get {
-                return ResourceManager.GetString("HeroIcons_Heart", resourceCulture);
+                return ResourceManager.GetString("Heart", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Home {
+        internal static string Home {
             get {
-                return ResourceManager.GetString("HeroIcons_Home", resourceCulture);
+                return ResourceManager.GetString("Home", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_HomeModern {
+        internal static string HomeModern {
             get {
-                return ResourceManager.GetString("HeroIcons_HomeModern", resourceCulture);
+                return ResourceManager.GetString("HomeModern", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Identification {
+        internal static string Identification {
             get {
-                return ResourceManager.GetString("HeroIcons_Identification", resourceCulture);
+                return ResourceManager.GetString("Identification", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Inbox {
+        internal static string Inbox {
             get {
-                return ResourceManager.GetString("HeroIcons_Inbox", resourceCulture);
+                return ResourceManager.GetString("Inbox", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 3.75H6.912a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013- [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_InboxArrowDown {
+        internal static string InboxArrowDown {
             get {
-                return ResourceManager.GetString("HeroIcons_InboxArrowDown", resourceCulture);
+                return ResourceManager.GetString("InboxArrowDown", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.875 14.25l1.214 1.942a2.25 2.25 0 001.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 011.872 1.002l.164.246a2.25 2.25 0 001.872 1.002h2.092a2.25 2.25 0 001.872-1.002l.164-.246A2.25 2.25 0 0116.954 9h4.636M2.41 9a2.25 2.25 0 00-.16.832V12a2.25 2.25 0 002.25 2.25h15A [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_InboxStack {
+        internal static string InboxStack {
             get {
-                return ResourceManager.GetString("HeroIcons_InboxStack", resourceCulture);
+                return ResourceManager.GetString("InboxStack", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_InformationCircle {
+        internal static string InformationCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_InformationCircle", resourceCulture);
+                return ResourceManager.GetString("InformationCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Key {
+        internal static string Key {
             get {
-                return ResourceManager.GetString("HeroIcons_Key", resourceCulture);
+                return ResourceManager.GetString("Key", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Language {
+        internal static string Language {
             get {
-                return ResourceManager.GetString("HeroIcons_Language", resourceCulture);
+                return ResourceManager.GetString("Language", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.712 4.33a9.027 9.027 0 011.652 1.306c.51.51.944 1.064 1.306 1.652M16.712 4.33l-3.448 4.138m3.448-4.138a9.014 9.014 0 00-9.424 0M19.67 7.288l-4.138 3.448m4.138-3.448a9.014 9.014 0 010 9.424m-4.138-5.976a3.736 3.736 0 00-.88-1.388 3.737 3.737 0 00-1.388-.88m2.268 2.268a3.765 3.765 0 010 2.528m-2.268 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Lifebuoy {
+        internal static string Lifebuoy {
             get {
-                return ResourceManager.GetString("HeroIcons_Lifebuoy", resourceCulture);
+                return ResourceManager.GetString("Lifebuoy", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_LightBulb {
+        internal static string LightBulb {
             get {
-                return ResourceManager.GetString("HeroIcons_LightBulb", resourceCulture);
+                return ResourceManager.GetString("LightBulb", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Link {
+        internal static string Link {
             get {
-                return ResourceManager.GetString("HeroIcons_Link", resourceCulture);
+                return ResourceManager.GetString("Link", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ListBullet {
+        internal static string ListBullet {
             get {
-                return ResourceManager.GetString("HeroIcons_ListBullet", resourceCulture);
+                return ResourceManager.GetString("ListBullet", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_LockClosed {
+        internal static string LockClosed {
             get {
-                return ResourceManager.GetString("HeroIcons_LockClosed", resourceCulture);
+                return ResourceManager.GetString("LockClosed", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_LockOpen {
+        internal static string LockOpen {
             get {
-                return ResourceManager.GetString("HeroIcons_LockOpen", resourceCulture);
+                return ResourceManager.GetString("LockOpen", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_MagnifyingGlass {
+        internal static string MagnifyingGlass {
             get {
-                return ResourceManager.GetString("HeroIcons_MagnifyingGlass", resourceCulture);
+                return ResourceManager.GetString("MagnifyingGlass", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_MagnifyingGlassCircle {
+        internal static string MagnifyingGlassCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_MagnifyingGlassCircle", resourceCulture);
+                return ResourceManager.GetString("MagnifyingGlassCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM13.5 10.5h-6&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_MagnifyingGlassMinus {
+        internal static string MagnifyingGlassMinus {
             get {
-                return ResourceManager.GetString("HeroIcons_MagnifyingGlassMinus", resourceCulture);
+                return ResourceManager.GetString("MagnifyingGlassMinus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_MagnifyingGlassPlus {
+        internal static string MagnifyingGlassPlus {
             get {
-                return ResourceManager.GetString("HeroIcons_MagnifyingGlassPlus", resourceCulture);
+                return ResourceManager.GetString("MagnifyingGlassPlus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.31 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Map {
+        internal static string Map {
             get {
-                return ResourceManager.GetString("HeroIcons_Map", resourceCulture);
+                return ResourceManager.GetString("Map", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 10.5a3 3 0 11-6 0 3 3 0 016 0z&quot;/&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_MapPin {
+        internal static string MapPin {
             get {
-                return ResourceManager.GetString("HeroIcons_MapPin", resourceCulture);
+                return ResourceManager.GetString("MapPin", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Megaphone {
+        internal static string Megaphone {
             get {
-                return ResourceManager.GetString("HeroIcons_Megaphone", resourceCulture);
+                return ResourceManager.GetString("Megaphone", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Microphone {
+        internal static string Microphone {
             get {
-                return ResourceManager.GetString("HeroIcons_Microphone", resourceCulture);
+                return ResourceManager.GetString("Microphone", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.5 12h-15&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Minus {
+        internal static string Minus {
             get {
-                return ResourceManager.GetString("HeroIcons_Minus", resourceCulture);
+                return ResourceManager.GetString("Minus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_MinusCircle {
+        internal static string MinusCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_MinusCircle", resourceCulture);
+                return ResourceManager.GetString("MinusCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M18 12H6&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_MinusSmall {
+        internal static string MinusSmall {
             get {
-                return ResourceManager.GetString("HeroIcons_MinusSmall", resourceCulture);
+                return ResourceManager.GetString("MinusSmall", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Moon {
+        internal static string Moon {
             get {
-                return ResourceManager.GetString("HeroIcons_Moon", resourceCulture);
+                return ResourceManager.GetString("Moon", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_MusicalNote {
+        internal static string MusicalNote {
             get {
-                return ResourceManager.GetString("HeroIcons_MusicalNote", resourceCulture);
+                return ResourceManager.GetString("MusicalNote", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Newspaper {
+        internal static string Newspaper {
             get {
-                return ResourceManager.GetString("HeroIcons_Newspaper", resourceCulture);
+                return ResourceManager.GetString("Newspaper", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_NoSymbol {
+        internal static string NoSymbol {
             get {
-                return ResourceManager.GetString("HeroIcons_NoSymbol", resourceCulture);
+                return ResourceManager.GetString("NoSymbol", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_PaintBrush {
+        internal static string PaintBrush {
             get {
-                return ResourceManager.GetString("HeroIcons_PaintBrush", resourceCulture);
+                return ResourceManager.GetString("PaintBrush", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PaperAirplane {
+        internal static string PaperAirplane {
             get {
-                return ResourceManager.GetString("HeroIcons_PaperAirplane", resourceCulture);
+                return ResourceManager.GetString("PaperAirplane", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PaperClip {
+        internal static string PaperClip {
             get {
-                return ResourceManager.GetString("HeroIcons_PaperClip", resourceCulture);
+                return ResourceManager.GetString("PaperClip", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 5.25v13.5m-7.5-13.5v13.5&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Pause {
+        internal static string Pause {
             get {
-                return ResourceManager.GetString("HeroIcons_Pause", resourceCulture);
+                return ResourceManager.GetString("Pause", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.25 9v6m-4.5 0V9M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PauseCircle {
+        internal static string PauseCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_PauseCircle", resourceCulture);
+                return ResourceManager.GetString("PauseCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Pencil {
+        internal static string Pencil {
             get {
-                return ResourceManager.GetString("HeroIcons_Pencil", resourceCulture);
+                return ResourceManager.GetString("Pencil", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PencilSquare {
+        internal static string PencilSquare {
             get {
-                return ResourceManager.GetString("HeroIcons_PencilSquare", resourceCulture);
+                return ResourceManager.GetString("PencilSquare", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Phone {
+        internal static string Phone {
             get {
-                return ResourceManager.GetString("HeroIcons_Phone", resourceCulture);
+                return ResourceManager.GetString("Phone", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_PhoneArrowDownLeft {
+        internal static string PhoneArrowDownLeft {
             get {
-                return ResourceManager.GetString("HeroIcons_PhoneArrowDownLeft", resourceCulture);
+                return ResourceManager.GetString("PhoneArrowDownLeft", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M20.25 3.75v4.5m0-4.5h-4.5m4.5 0l-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_PhoneArrowUpRight {
+        internal static string PhoneArrowUpRight {
             get {
-                return ResourceManager.GetString("HeroIcons_PhoneArrowUpRight", resourceCulture);
+                return ResourceManager.GetString("PhoneArrowUpRight", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_PhoneXMark {
+        internal static string PhoneXMark {
             get {
-                return ResourceManager.GetString("HeroIcons_PhoneXMark", resourceCulture);
+                return ResourceManager.GetString("PhoneXMark", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z&quot;/&gt; &lt; [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Photo {
+        internal static string Photo {
             get {
-                return ResourceManager.GetString("HeroIcons_Photo", resourceCulture);
+                return ResourceManager.GetString("Photo", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Play {
+        internal static string Play {
             get {
-                return ResourceManager.GetString("HeroIcons_Play", resourceCulture);
+                return ResourceManager.GetString("Play", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PlayCircle {
+        internal static string PlayCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_PlayCircle", resourceCulture);
+                return ResourceManager.GetString("PlayCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 7.5V18M15 7.5V18M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 013 16.811z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PlayPause {
+        internal static string PlayPause {
             get {
-                return ResourceManager.GetString("HeroIcons_PlayPause", resourceCulture);
+                return ResourceManager.GetString("PlayPause", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 4.5v15m7.5-7.5h-15&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Plus {
+        internal static string Plus {
             get {
-                return ResourceManager.GetString("HeroIcons_Plus", resourceCulture);
+                return ResourceManager.GetString("Plus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PlusCircle {
+        internal static string PlusCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_PlusCircle", resourceCulture);
+                return ResourceManager.GetString("PlusCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 6v12m6-6H6&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PlusSmall {
+        internal static string PlusSmall {
             get {
-                return ResourceManager.GetString("HeroIcons_PlusSmall", resourceCulture);
+                return ResourceManager.GetString("PlusSmall", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M5.636 5.636a9 9 0 1012.728 0M12 3v9&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Power {
+        internal static string Power {
             get {
-                return ResourceManager.GetString("HeroIcons_Power", resourceCulture);
+                return ResourceManager.GetString("Power", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PresentationChartBar {
+        internal static string PresentationChartBar {
             get {
-                return ResourceManager.GetString("HeroIcons_PresentationChartBar", resourceCulture);
+                return ResourceManager.GetString("PresentationChartBar", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_PresentationChartLine {
+        internal static string PresentationChartLine {
             get {
-                return ResourceManager.GetString("HeroIcons_PresentationChartLine", resourceCulture);
+                return ResourceManager.GetString("PresentationChartLine", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Printer {
+        internal static string Printer {
             get {
-                return ResourceManager.GetString("HeroIcons_Printer", resourceCulture);
+                return ResourceManager.GetString("Printer", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_PuzzlePiece {
+        internal static string PuzzlePiece {
             get {
-                return ResourceManager.GetString("HeroIcons_PuzzlePiece", resourceCulture);
+                return ResourceManager.GetString("PuzzlePiece", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.8 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_QrCode {
+        internal static string QrCode {
             get {
-                return ResourceManager.GetString("HeroIcons_QrCode", resourceCulture);
+                return ResourceManager.GetString("QrCode", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_QuestionMarkCircle {
+        internal static string QuestionMarkCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_QuestionMarkCircle", resourceCulture);
+                return ResourceManager.GetString("QuestionMarkCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_QueueList {
+        internal static string QueueList {
             get {
-                return ResourceManager.GetString("HeroIcons_QueueList", resourceCulture);
+                return ResourceManager.GetString("QueueList", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 7.5l16.5-4.125M12 6.75c-2.708 0-5.363.224-7.948.655C2.999 7.58 2.25 8.507 2.25 9.574v9.176A2.25 2.25 0 004.5 21h15a2.25 2.25 0 002.25-2.25V9.574c0-1.067-.75-1.994-1.802-2.169A48.329 48.329 0 0012 6.75zm-1.683 6.443l-.005.005-.006-.005.006-.005.005.005zm-.005 2.127l-.005-.006.005-.005.005.005-.00 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Radio {
+        internal static string Radio {
             get {
-                return ResourceManager.GetString("HeroIcons_Radio", resourceCulture);
+                return ResourceManager.GetString("Radio", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ReceiptPercent {
+        internal static string ReceiptPercent {
             get {
-                return ResourceManager.GetString("HeroIcons_ReceiptPercent", resourceCulture);
+                return ResourceManager.GetString("ReceiptPercent", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 9.75h4.875a2.625 2.625 0 010 5.25H12M8.25 9.75L10.5 7.5M8.25 9.75L10.5 12m9-7.243V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ReceiptRefund {
+        internal static string ReceiptRefund {
             get {
-                return ResourceManager.GetString("HeroIcons_ReceiptRefund", resourceCulture);
+                return ResourceManager.GetString("ReceiptRefund", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 1 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_RectangleGroup {
+        internal static string RectangleGroup {
             get {
-                return ResourceManager.GetString("HeroIcons_RectangleGroup", resourceCulture);
+                return ResourceManager.GetString("RectangleGroup", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_RectangleStack {
+        internal static string RectangleStack {
             get {
-                return ResourceManager.GetString("HeroIcons_RectangleStack", resourceCulture);
+                return ResourceManager.GetString("RectangleStack", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.3 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_RocketLaunch {
+        internal static string RocketLaunch {
             get {
-                return ResourceManager.GetString("HeroIcons_RocketLaunch", resourceCulture);
+                return ResourceManager.GetString("RocketLaunch", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Rss {
+        internal static string Rss {
             get {
-                return ResourceManager.GetString("HeroIcons_Rss", resourceCulture);
+                return ResourceManager.GetString("Rss", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Scale {
+        internal static string Scale {
             get {
-                return ResourceManager.GetString("HeroIcons_Scale", resourceCulture);
+                return ResourceManager.GetString("Scale", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.848 8.25l1.536.887M7.848 8.25a3 3 0 11-5.196-3 3 3 0 015.196 3zm1.536.887a2.165 2.165 0 011.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 11-5.196 3 3 3 0 015.196-3zm1.536-.887a2.165 2.165 0 001.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Scissors {
+        internal static string Scissors {
             get {
-                return ResourceManager.GetString("HeroIcons_Scissors", resourceCulture);
+                return ResourceManager.GetString("Scissors", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21.75 17.25v-.228a4.5 4.5 0 00-.12-1.03l-2.268-9.64a3.375 3.375 0 00-3.285-2.602H7.923a3.375 3.375 0 00-3.285 2.602l-2.268 9.64a4.5 4.5 0 00-.12 1.03v.228m19.5 0a3 3 0 01-3 3H5.25a3 3 0 01-3-3m19.5 0a3 3 0 00-3-3H5.25a3 3 0 00-3 3m16.5 0h.008v.008h-.008v-.008zm-3 0h.008v.008h-.008v-.008z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Server {
+        internal static string Server {
             get {
-                return ResourceManager.GetString("HeroIcons_Server", resourceCulture);
+                return ResourceManager.GetString("Server", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_ServerStack {
+        internal static string ServerStack {
             get {
-                return ResourceManager.GetString("HeroIcons_ServerStack", resourceCulture);
+                return ResourceManager.GetString("ServerStack", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Share {
+        internal static string Share {
             get {
-                return ResourceManager.GetString("HeroIcons_Share", resourceCulture);
+                return ResourceManager.GetString("Share", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ShieldCheck {
+        internal static string ShieldCheck {
             get {
-                return ResourceManager.GetString("HeroIcons_ShieldCheck", resourceCulture);
+                return ResourceManager.GetString("ShieldCheck", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ShieldExclamation {
+        internal static string ShieldExclamation {
             get {
-                return ResourceManager.GetString("HeroIcons_ShieldExclamation", resourceCulture);
+                return ResourceManager.GetString("ShieldExclamation", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ShoppingBag {
+        internal static string ShoppingBag {
             get {
-                return ResourceManager.GetString("HeroIcons_ShoppingBag", resourceCulture);
+                return ResourceManager.GetString("ShoppingBag", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ShoppingCart {
+        internal static string ShoppingCart {
             get {
-                return ResourceManager.GetString("HeroIcons_ShoppingCart", resourceCulture);
+                return ResourceManager.GetString("ShoppingCart", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.79M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Signal {
+        internal static string Signal {
             get {
-                return ResourceManager.GetString("HeroIcons_Signal", resourceCulture);
+                return ResourceManager.GetString("Signal", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 3l8.735 8.735m0 0a.374.374 0 11.53.53m-.53-.53l.53.53m0 0L21 21M14.652 9.348a3.75 3.75 0 010 5.304m2.121-7.425a6.75 6.75 0 010 9.546m2.121-11.667c3.808 3.807 3.808 9.98 0 13.788m-9.546-4.242a3.733 3.733 0 01-1.06-2.122m-1.061 4.243a6.75 6.75 0 01-1.625-6.929m-.496 9.05c-3.068-3.067-3.664-7.67-1.79- [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_SignalSlash {
+        internal static string SignalSlash {
             get {
-                return ResourceManager.GetString("HeroIcons_SignalSlash", resourceCulture);
+                return ResourceManager.GetString("SignalSlash", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.25 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Sparkles {
+        internal static string Sparkles {
             get {
-                return ResourceManager.GetString("HeroIcons_Sparkles", resourceCulture);
+                return ResourceManager.GetString("Sparkles", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_SpeakerWave {
+        internal static string SpeakerWave {
             get {
-                return ResourceManager.GetString("HeroIcons_SpeakerWave", resourceCulture);
+                return ResourceManager.GetString("SpeakerWave", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.531V19.94a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.506-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.395C2.806 8.757 3.63 8.25 4.51 8.25H6.75z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_SpeakerXMark {
+        internal static string SpeakerXMark {
             get {
-                return ResourceManager.GetString("HeroIcons_SpeakerXMark", resourceCulture);
+                return ResourceManager.GetString("SpeakerXMark", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Square2Stack {
+        internal static string Square2Stack {
             get {
-                return ResourceManager.GetString("HeroIcons_Square2Stack", resourceCulture);
+                return ResourceManager.GetString("Square2Stack", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Square3Stack3D {
+        internal static string Square3Stack3D {
             get {
-                return ResourceManager.GetString("HeroIcons_Square3Stack3D", resourceCulture);
+                return ResourceManager.GetString("Square3Stack3D", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Squares2X2 {
+        internal static string Squares2X2 {
             get {
-                return ResourceManager.GetString("HeroIcons_Squares2X2", resourceCulture);
+                return ResourceManager.GetString("Squares2X2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_SquaresPlus {
+        internal static string SquaresPlus {
             get {
-                return ResourceManager.GetString("HeroIcons_SquaresPlus", resourceCulture);
+                return ResourceManager.GetString("SquaresPlus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.3 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Star {
+        internal static string Star {
             get {
-                return ResourceManager.GetString("HeroIcons_Star", resourceCulture);
+                return ResourceManager.GetString("Star", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Stop {
+        internal static string Stop {
             get {
-                return ResourceManager.GetString("HeroIcons_Stop", resourceCulture);
+                return ResourceManager.GetString("Stop", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_StopCircle {
+        internal static string StopCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_StopCircle", resourceCulture);
+                return ResourceManager.GetString("StopCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Sun {
+        internal static string Sun {
             get {
-                return ResourceManager.GetString("HeroIcons_Sun", resourceCulture);
+                return ResourceManager.GetString("Sun", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.4 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Swatch {
+        internal static string Swatch {
             get {
-                return ResourceManager.GetString("HeroIcons_Swatch", resourceCulture);
+                return ResourceManager.GetString("Swatch", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.7 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_TableCells {
+        internal static string TableCells {
             get {
-                return ResourceManager.GetString("HeroIcons_TableCells", resourceCulture);
+                return ResourceManager.GetString("TableCells", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z&quot;/&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6 6h.008v.008H6V6z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Tag {
+        internal static string Tag {
             get {
-                return ResourceManager.GetString("HeroIcons_Tag", resourceCulture);
+                return ResourceManager.GetString("Tag", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Ticket {
+        internal static string Ticket {
             get {
-                return ResourceManager.GetString("HeroIcons_Ticket", resourceCulture);
+                return ResourceManager.GetString("Ticket", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Trash {
+        internal static string Trash {
             get {
-                return ResourceManager.GetString("HeroIcons_Trash", resourceCulture);
+                return ResourceManager.GetString("Trash", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5 [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Trophy {
+        internal static string Trophy {
             get {
-                return ResourceManager.GetString("HeroIcons_Trophy", resourceCulture);
+                return ResourceManager.GetString("Trophy", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048- [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Truck {
+        internal static string Truck {
             get {
-                return ResourceManager.GetString("HeroIcons_Truck", resourceCulture);
+                return ResourceManager.GetString("Truck", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Tv {
+        internal static string Tv {
             get {
-                return ResourceManager.GetString("HeroIcons_Tv", resourceCulture);
+                return ResourceManager.GetString("Tv", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_User {
+        internal static string User {
             get {
-                return ResourceManager.GetString("HeroIcons_User", resourceCulture);
+                return ResourceManager.GetString("User", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_UserCircle {
+        internal static string UserCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_UserCircle", resourceCulture);
+                return ResourceManager.GetString("UserCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_UserGroup {
+        internal static string UserGroup {
             get {
-                return ResourceManager.GetString("HeroIcons_UserGroup", resourceCulture);
+                return ResourceManager.GetString("UserGroup", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M22 10.5h-6m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_UserMinus {
+        internal static string UserMinus {
             get {
-                return ResourceManager.GetString("HeroIcons_UserMinus", resourceCulture);
+                return ResourceManager.GetString("UserMinus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_UserPlus {
+        internal static string UserPlus {
             get {
-                return ResourceManager.GetString("HeroIcons_UserPlus", resourceCulture);
+                return ResourceManager.GetString("UserPlus", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Users {
+        internal static string Users {
             get {
-                return ResourceManager.GetString("HeroIcons_Users", resourceCulture);
+                return ResourceManager.GetString("Users", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M4.745 3A23.933 23.933 0 003 12c0 3.183.62 6.22 1.745 9M19.5 3c.967 2.78 1.5 5.817 1.5 9s-.533 6.22-1.5 9M8.25 8.885l1.444-.89a.75.75 0 011.105.402l2.402 7.206a.75.75 0 001.104.401l1.445-.889m-8.25.75l.213.09a1.687 1.687 0 002.062-.617l4.45-6.676a1.688 1.688 0 012.062-.618l.213.09&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Variable {
+        internal static string Variable {
             get {
-                return ResourceManager.GetString("HeroIcons_Variable", resourceCulture);
+                return ResourceManager.GetString("Variable", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; d=&quot;M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_VideoCamera {
+        internal static string VideoCamera {
             get {
-                return ResourceManager.GetString("HeroIcons_VideoCamera", resourceCulture);
+                return ResourceManager.GetString("VideoCamera", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M12 18.75H4.5a2.25 2.25 0 01-2.25-2.25V9m12.841 9.091L16.5 19.5m-1.409-1.409c.407-.407.659-.97.659-1.591v-9a2.25 2.25 0 00-2.25-2.25h-9c-.621 0-1.184.252-1.591.659m12.182 12.182L2.909 5.909M1.5 4.5l1.409 1.409&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_VideoCameraSlash {
+        internal static string VideoCameraSlash {
             get {
-                return ResourceManager.GetString("HeroIcons_VideoCameraSlash", resourceCulture);
+                return ResourceManager.GetString("VideoCameraSlash", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ViewColumns {
+        internal static string ViewColumns {
             get {
-                return ResourceManager.GetString("HeroIcons_ViewColumns", resourceCulture);
+                return ResourceManager.GetString("ViewColumns", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5m0 9V18A2.25 2.25 0 0118 20.25h-1.5m-9 0H6A2.25 2.25 0 013.75 18v-1.5M15 12a3 3 0 11-6 0 3 3 0 016 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_ViewfinderCircle {
+        internal static string ViewfinderCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_ViewfinderCircle", resourceCulture);
+                return ResourceManager.GetString("ViewfinderCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Wallet {
+        internal static string Wallet {
             get {
-                return ResourceManager.GetString("HeroIcons_Wallet", resourceCulture);
+                return ResourceManager.GetString("Wallet", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Wifi {
+        internal static string Wifi {
             get {
-                return ResourceManager.GetString("HeroIcons_Wifi", resourceCulture);
+                return ResourceManager.GetString("Wifi", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_Window {
+        internal static string Window {
             get {
-                return ResourceManager.GetString("HeroIcons_Window", resourceCulture);
+                return ResourceManager.GetString("Window", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z&quot;/&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linej [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_Wrench {
+        internal static string Wrench {
             get {
-                return ResourceManager.GetString("HeroIcons_Wrench", resourceCulture);
+                return ResourceManager.GetString("Wrench", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HeroIcons_WrenchScrewdriver {
+        internal static string WrenchScrewdriver {
             get {
-                return ResourceManager.GetString("HeroIcons_WrenchScrewdriver", resourceCulture);
+                return ResourceManager.GetString("WrenchScrewdriver", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_XCircle {
+        internal static string XCircle {
             get {
-                return ResourceManager.GetString("HeroIcons_XCircle", resourceCulture);
+                return ResourceManager.GetString("XCircle", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot; class=&quot;{CssClass}&quot; aria-hidden=&quot;true&quot;&gt;   &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M6 18L18 6M6 6l12 12&quot;/&gt; &lt;/svg&gt;.
         /// </summary>
-        internal static string HeroIcons_XMark {
+        internal static string XMark {
             get {
-                return ResourceManager.GetString("HeroIcons_XMark", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;svg class=&quot;animate-spin -ml-1 mr-3 {CssClass} text-white&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;circle class=&quot;opacity-25&quot; cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;4&quot;&gt;&lt;/circle&gt;&lt;path class=&quot;opacity-75&quot; fill=&quot;currentColor&quot; d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;.
-        /// </summary>
-        internal static string Tailwind_Spinner {
-            get {
-                return ResourceManager.GetString("Tailwind_Spinner", resourceCulture);
+                return ResourceManager.GetString("XMark", resourceCulture);
             }
         }
     }

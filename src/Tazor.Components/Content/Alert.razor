@@ -1,0 +1,85 @@
+﻿@inject ITazorTheme Theme
+<div class=@($"{_cssClass} {Class ?? string.Empty}") role="alert">
+    <div class="flex items-center">
+        <div class="flex-shrink-0">
+            @if (Icon != null)
+            {
+                @Icon
+            }
+            else if (Type == AlertType.Info)
+            {
+                @HeroIcons.InformationCircle("", "w-6 h-6")
+            }
+            else if (Type == AlertType.Success)
+            {
+                @HeroIcons.Check("", "w-6 h-6")
+            }
+            else if (Type == AlertType.Warning)
+            {
+                @HeroIcons.Bolt("", "w-6 h-6")
+            }
+            else if (Type == AlertType.Error)
+            {
+                @HeroIcons.XMark("", "w-6 h-6")
+            }
+            else
+            {
+                @HeroIcons.QuestionMarkCircle("", "w-6 h-6")
+            }
+        </div>
+        <div class="ml-4">
+            @if (!string.IsNullOrWhiteSpace(Title))
+            {
+                <div class="text-sm font-semibold">@Title</div>
+            }
+            <div class="text-sm">
+                @if (Content != null)
+                {
+                    @Content
+                }
+            </div>
+        </div>
+    </div>
+    <div class="text-sm font-medium">
+        @if (Link != null)
+        {
+            @Link
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; } = null;
+
+    [Parameter]
+    public RenderFragment? Icon { get; set; } = null;
+
+    [Parameter]
+    public RenderFragment? Content { get; set; } = null;
+
+    [Parameter]
+    public RenderFragment? Link { get; set; } = null;
+
+    [Parameter]
+    public AlertType Type { get; set; } = AlertType.Info;
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    private string _cssClass { get; set; } = "rounded m-3 flex items-center justify-start bg-green-100 border-l-4 border-green-500 text-green-700 px-4 py-3 shadow-md";
+
+    protected override void OnInitialized()
+    {
+        if (Type == AlertType.Custom)
+        {
+            _cssClass = $"{Theme.AlertGlobal} {Class ?? string.Empty}";
+        }
+        else
+        {
+            var alertClass = Theme[$"Alert{Type.ToString()}"];
+            _cssClass = $"{Theme.AlertGlobal} {alertClass} {Class ?? string.Empty}";
+        }
+    }
+}
+

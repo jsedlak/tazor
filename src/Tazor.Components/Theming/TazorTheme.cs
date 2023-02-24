@@ -259,4 +259,36 @@ public class TazorTheme : ITazorTheme
         get { return this[nameof(SubLabel)]; }
         set { this[nameof(SubLabel)] = value; }
     }
+
+    #region Alerts
+    public string AlertGlobal
+    {
+        get { return this[nameof(AlertGlobal)]; }
+        set { this[nameof(AlertGlobal)] = value; }
+    }
+
+    public string AlertInfo
+    {
+        get { return this[nameof(AlertInfo)]; }
+        set { this[nameof(AlertInfo)] = value; }
+    }
+
+    public string AlertWarning
+    {
+        get { return this[nameof(AlertWarning)]; }
+        set { this[nameof(AlertWarning)] = value; }
+    }
+
+    public string AlertError
+    {
+        get { return this[nameof(AlertError)]; }
+        set { this[nameof(AlertError)] = value; }
+    }
+
+    public string AlertSuccess
+    {
+        get { return this[nameof(AlertSuccess)]; }
+        set { this[nameof(AlertSuccess)] = value; }
+    }
+    #endregion
 }

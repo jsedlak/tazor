@@ -98,4 +98,14 @@ public interface ITazorTheme : ITheme {
     string Label { get; set; }
 
     string SubLabel { get; set; }
+
+    string AlertGlobal { get; set; }
+
+    string AlertInfo { get; set; }
+
+    string AlertWarning { get; set; }
+
+    string AlertError { get; set; }
+
+    string AlertSuccess { get; set; }
 }

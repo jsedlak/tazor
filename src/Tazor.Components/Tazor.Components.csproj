@@ -23,17 +23,44 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="HeroIconsOutlineResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HeroIconsOutlineResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="HeroIconsSolidResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HeroIconsSolidResources.resx</DependentUpon>
+    </Compile>
     <Compile Update="Icons.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Icons.resx</DependentUpon>
     </Compile>
+    <Compile Update="TazorIcons.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TazorIcons.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="HeroIconsOutlineResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HeroIconsOutlineResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="HeroIconsSolidResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HeroIconsSolidResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Icons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TazorIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TazorIcons.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
