@@ -108,4 +108,23 @@ public interface ITazorTheme : ITheme {
     string AlertError { get; set; }
 
     string AlertSuccess { get; set; }
+
+    string PagerWrapper { get; set; }
+
+    // relative z-0 inline-flex rounded-md shadow-sm -space-x-px
+    string Pager { get; set; }
+
+    // cursor-pointer relative inline-flex items-center px-2 py-2 rounded-l-md border text-sm font-medium 
+    // border-blue-800 bg-white dark:bg-blue-700 text-gray-500 dark:text-white
+    string PagerPreviousButton { get; set; }
+
+    // cursor-pointer z-10 relative inline-flex items-center px-4 py-2 text-sm font-medium 
+    string PagerButton { get; set; }
+
+    // dark:bg-gray-200 text-blue-500 dark:bg-blue-500 dark:text-white
+    string PagerButtonActive { get; set; }
+
+    // cursor-pointer relative inline-flex items-center px-2 py-2 rounded-r-md border text-sm font-medium
+    // border-blue-800 bg-white dark:bg-blue-700 text-gray-500 dark:text-white
+    string PagerNextButton { get; set; }
 }

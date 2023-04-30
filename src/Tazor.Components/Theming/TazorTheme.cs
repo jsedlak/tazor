@@ -291,4 +291,49 @@ public class TazorTheme : ITazorTheme
         set { this[nameof(AlertSuccess)] = value; }
     }
     #endregion
+
+    #region Pager 
+    public string PagerWrapper
+    {
+        get { return this[nameof(PagerWrapper)]; }
+        set { this[nameof(PagerWrapper)] = value; }
+    }
+
+    // relative z-0 inline-flex rounded-md shadow-sm -space-x-px
+    public string Pager
+    {
+        get { return this[nameof(Pager)]; }
+        set { this[nameof(Pager)] = value; }
+    }
+
+    // cursor-pointer relative inline-flex items-center px-2 py-2 rounded-l-md border text-sm font-medium 
+    // border-blue-800 bg-white dark:bg-blue-700 text-gray-500 dark:text-white
+    public string PagerPreviousButton
+    {
+        get { return this[nameof(PagerPreviousButton)]; }
+        set { this[nameof(PagerPreviousButton)] = value; }
+    }
+
+    // cursor-pointer z-10 relative inline-flex items-center px-4 py-2 text-sm font-medium 
+    public string PagerButton
+    {
+        get { return this[nameof(PagerButton)]; }
+        set { this[nameof(PagerButton)] = value; }
+    }
+
+    // dark:bg-gray-200 text-blue-500 dark:bg-blue-500 dark:text-white
+    public string PagerButtonActive
+    {
+        get { return this[nameof(PagerButtonActive)]; }
+        set { this[nameof(PagerButtonActive)] = value; }
+    }
+
+    // cursor-pointer relative inline-flex items-center px-2 py-2 rounded-r-md border text-sm font-medium
+    // border-blue-800 bg-white dark:bg-blue-700 text-gray-500 dark:text-white
+    public string PagerNextButton
+    {
+        get { return this[nameof(PagerNextButton)]; }
+        set { this[nameof(PagerNextButton)] = value; }
+    }
+    #endregion
 }

@@ -1,5 +1,6 @@
-﻿<div>
-    <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+﻿@inject ITazorTheme Theme
+<div class=@Theme.PagerWrapper>
+    <nav class=@Theme.PagerWrapper aria-label="Pagination">
         @{
             var min = CurrentPage - NumberOfVisiblePages / 2;
             var max = CurrentPage + NumberOfVisiblePages / 2;
@@ -21,12 +22,9 @@
 
         @if (max - min > 0)
         {
-            <a @onclick=@(() => ChangePage(CurrentPage - 1)) class=@($"cursor-pointer relative inline-flex items-center px-2 py-2 rounded-l-md border text-sm font-medium {BackgroundCssClass}")>
+            <a @onclick=@(() => ChangePage(CurrentPage - 1)) class=@Theme.PagerPreviousButton>
                 <span class="sr-only">Previous</span>
-                <!-- Heroicon name: solid/chevron-left -->
-                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                </svg>
+                @HeroIcons.ChevronLeft("inline-block")
             </a>
 
 
@@ -35,20 +33,13 @@
             @for (var i = min; i <= max; i++)
             {
                 int pageIndex = i;
-                <a @onclick=@(() => ChangePage(pageIndex)) class=@($"cursor-pointer z-10 relative inline-flex items-center px-4 py-2 text-sm font-medium {GetPageClass(i)}")>
-                    &nbsp;
-                    @i
-                    &nbsp;
-                </a>
+                <a @onclick=@(() => ChangePage(pageIndex)) class=@(GetPageClass(i))>@i</a>
             }
 
 
-            <a @onclick=@(() => ChangePage(CurrentPage + 1)) class=@($"cursor-pointer relative inline-flex items-center px-2 py-2 rounded-r-md border text-sm font-medium {BackgroundCssClass}")>
+            <a @onclick=@(() => ChangePage(CurrentPage + 1)) class=@Theme.PagerNextButton >
                 <span class="sr-only">Next</span>
-                <!-- Heroicon name: solid/chevron-right -->
-                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                </svg>
+                @HeroIcons.ChevronRight("inline-block")
             </a>
         }
     </nav>
@@ -66,12 +57,9 @@
     [Parameter]
     public int NumberOfVisiblePages { get; set; } = 5;
 
-    private string BackgroundCssClass = "border-blue-800 bg-white dark:bg-blue-700 text-gray-500 dark:text-white";
-    private string SelectedBackgroundCssClass = "dark:bg-gray-200 text-blue-500 dark:bg-blue-500 dark:text-white";
-
     private string GetPageClass(int pageIndex)
     {
-        return pageIndex == CurrentPage ? SelectedBackgroundCssClass : BackgroundCssClass;
+        return pageIndex == CurrentPage ? Theme.PagerButtonActive : Theme.PagerButton;
     }
 
     private async void ChangePage(int pageIndex)

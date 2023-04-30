@@ -87,7 +87,15 @@ public static class ServiceCollectionExtensions
                 AlertError = "bg-red-100 border-l-4 border-red-500 text-red-700",
                 AlertInfo = "bg-blue-100 border-l-4 border-blue-500 text-blue-700",
                 AlertSuccess = "bg-green-100 border-l-4 border-green-500 text-green-700",
-                AlertWarning = "bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700"
+                AlertWarning = "bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700",
+
+                PagerWrapper = "",
+                Pager = "flex items-center space-x-2",
+                PagerPreviousButton = "px-4 py-2 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-{PrimaryColor}-100",
+                PagerNextButton = "px-4 py-2 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-{PrimaryColor}-100",
+                PagerButton = "px-4 py-2 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-{PrimaryColor}-100",
+                PagerButtonActive = "px-4 py-2 font-medium text-gray-900 bg-{PrimaryColor}-100 rounded-md"
+
             };
 
             if(configureTheme != null) {
