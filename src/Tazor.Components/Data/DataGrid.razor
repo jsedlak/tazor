@@ -104,12 +104,20 @@
                             <td class=@Theme.TableCell>
                                 @if (col.Component != null)
                                 {
-                                    <DynamicComponent Type=@col.Component Parameters=@(new Dictionary<string,object>(){ {"Item", item}}) />
+                                    var componentPropValues = new Dictionary<string, object>();
+                                    var componentProps = col.Component.GetProperties();
+
+                                    if(componentProps.Any(m => m.Name.Equals("Item", StringComparison.OrdinalIgnoreCase)))
+                                    {
+                                        componentPropValues.Add("Item", item);
+                                    }
+                                    if(componentProps.Any(m => m.Name.Equals("Tag", StringComparison.OrdinalIgnoreCase)))
+                                    {
+                                        componentPropValues.Add("Tag", col.Tag ?? (object)"");
+                                    }
+
+                                    <DynamicComponent Type=@col.Component Parameters=@componentPropValues />
                                 }
-                                @*else if(col.Renderer != null)
-                    {
-                    @col.Renderer
-                    }*@
                                 else if (col.Markup != null)
                                 {
                                     @(col.Markup(item))

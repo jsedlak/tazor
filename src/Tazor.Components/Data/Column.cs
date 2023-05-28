@@ -23,6 +23,8 @@ namespace Tazor.Components.Data
 
         public string? Format { get; set; }
 
+        public object? Tag { get; set; }
+
         //public virtual RenderFragment? Renderer { get; set; }
     }
 }
