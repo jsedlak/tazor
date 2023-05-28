@@ -31,6 +31,7 @@ public class BreakpointInterop : IAsyncDisposable
     [JSInvokable]
     public void BreakpointReached(BreakpointParams breakpointParams)
     {
+        CurrentBreakpoint = breakpointParams.Breakpoint;
         BreakpointChanged?.Invoke(this, breakpointParams);
     }
 
@@ -39,4 +40,6 @@ public class BreakpointInterop : IAsyncDisposable
         _reference?.Dispose();
         return ValueTask.CompletedTask;
     }
+
+    public string CurrentBreakpoint { get; private set; } = "";
 }

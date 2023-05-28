@@ -222,6 +222,9 @@
     public SummaryRowMode SummaryRow { get; set; }
 
     [Parameter]
+    public bool Sortable { get; set; } = true;
+
+    [Parameter]
     public bool EnableMultiSort { get; set; } = false;
 
     [Parameter]
@@ -251,6 +254,11 @@
 
     private void HandleSortChange(Column<TItem> col)
     {
+        if (!Sortable)
+        {
+            return;
+        }
+
         switch (col.Sort)
         {
             case SortDirection.None:

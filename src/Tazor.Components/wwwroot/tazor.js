@@ -42,13 +42,9 @@ window.breakpoints = {
 };
 
 window.getBreakpoint = function () {
-  var bp;
-
   var sortedKeys = Object.keys(window.breakpoints).sort((a, b) => {
     return window.breakpoints[a] - window.breakpoints[b];
   });
-
-  console.log({ sortedKeys });
 
   for (var index = sortedKeys.length - 1; index >= 0; index--) {
     var key = sortedKeys[index];
