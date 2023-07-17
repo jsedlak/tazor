@@ -52,6 +52,7 @@ public static class ServiceCollectionExtensions
                 ComponentHeader = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-700 text-white {ComponentPadding}",
 
                 Table = "min-w-full",
+                TableBody = "",
                 TableSpacing = "{ComponentSpacing}",
                 TableHeader = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-800 text-white",
                 TableFooter = "bg-{PrimaryColor}-500 dark:bg-{PrimaryColor}-700 text-white {ComponentPadding}",
@@ -94,8 +95,13 @@ public static class ServiceCollectionExtensions
                 PagerPreviousButton = "px-4 py-2 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-{PrimaryColor}-100",
                 PagerNextButton = "px-4 py-2 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-{PrimaryColor}-100",
                 PagerButton = "px-4 py-2 font-medium text-gray-500 rounded-md hover:text-gray-900 hover:bg-{PrimaryColor}-100",
-                PagerButtonActive = "px-4 py-2 font-medium text-gray-900 bg-{PrimaryColor}-100 rounded-md"
+                PagerButtonActive = "px-4 py-2 font-medium text-gray-900 bg-{PrimaryColor}-100 rounded-md",
 
+                TabNavWrapper = "flex space-x-4",
+                TabNavSelectedLink = "px-3 py-2 text-primary-500 hover:text-primary-700 bg-gray-50 hover:bg-gray-100 rounded-md transition duration-300 ease-in-out",
+                TabNavLink = "px-3 py-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-md transition duration-300 ease-in-out",
+                TabNavItem = "",
+                TabNavSelectedItem = ""
             };
 
             if(configureTheme != null) {

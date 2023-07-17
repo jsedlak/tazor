@@ -1,0 +1,38 @@
+﻿@inject ITazorTheme Theme
+@inject NavigationManager Navigation
+<div class=@Theme.TabNavWrapper>
+    @foreach (var item in Items)
+    {
+        var itemClass = item == SelectedItem ? Theme.TabNavSelectedItem : Theme.TabNavItem;
+        var linkClass = item == SelectedItem ? Theme.TabNavSelectedLink : Theme.TabNavLink;
+
+        <div class=@itemClass>
+            <a class=@linkClass @onclick=@(async () => await HandleTabClicked(item))>
+                @item.LeftIcon
+                @item.Text
+                @item.RightIcon
+            </a>
+        </div>
+    }
+</div>
+@code {
+    [Parameter]
+    public IEnumerable<NavItem> Items { get; set; } = Enumerable.Empty<NavItem>();
+
+    [Parameter]
+    public NavItem? SelectedItem { get; set; }
+
+    [Parameter]
+    public EventCallback<NavItem> SelectedItemChanged { get; set; }
+
+    private async Task HandleTabClicked(NavItem item)
+    {
+        if (SelectedItem == item)
+        {
+            return;
+        }
+
+        SelectedItem = item;
+        await SelectedItemChanged.InvokeAsync(item);
+    }
+}

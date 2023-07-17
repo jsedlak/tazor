@@ -336,4 +336,31 @@ public class TazorTheme : ITazorTheme
         set { this[nameof(PagerNextButton)] = value; }
     }
     #endregion
+
+    #region Tab Nav
+    public string TabNavWrapper {
+        get { return this[nameof(TabNavWrapper)]; }
+        set { this[nameof(TabNavWrapper)] = value; }
+    }
+
+    public string TabNavSelectedItem {
+        get { return this[nameof(TabNavSelectedItem)]; }
+        set { this[nameof(TabNavSelectedItem)] = value; }
+    }
+
+    public string TabNavItem {
+        get { return this[nameof(TabNavItem)]; }
+        set { this[nameof(TabNavItem)] = value; }
+    }
+
+    public string TabNavSelectedLink {
+        get { return this[nameof(TabNavSelectedLink)]; }
+        set { this[nameof(TabNavSelectedLink)] = value; }
+    }
+
+    public string TabNavLink {
+        get { return this[nameof(TabNavLink)]; }
+        set { this[nameof(TabNavLink)] = value; }
+    }
+    #endregion
 }

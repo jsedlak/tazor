@@ -127,4 +127,14 @@ public interface ITazorTheme : ITheme {
     // cursor-pointer relative inline-flex items-center px-2 py-2 rounded-r-md border text-sm font-medium
     // border-blue-800 bg-white dark:bg-blue-700 text-gray-500 dark:text-white
     string PagerNextButton { get; set; }
+
+    string TabNavWrapper { get; set; }
+
+    string TabNavSelectedItem { get; set; }
+
+    string TabNavItem { get; set; }
+
+    string TabNavSelectedLink { get; set; }
+
+    string TabNavLink { get; set; }
 }
