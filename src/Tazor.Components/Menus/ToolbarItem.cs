@@ -15,5 +15,5 @@ public class ToolbarItem
 
     public string Text { get; set; } = string.Empty;
 
-    public Action<ToolbarItem> OnClick { get; set; }
+    public Func<ToolbarItem, Task>? OnClick { get; set; }
 }
