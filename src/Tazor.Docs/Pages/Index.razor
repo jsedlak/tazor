@@ -1,0 +1,30 @@
+﻿@page "/"
+
+<PageTitle>Tazor Docs</PageTitle>
+
+
+<h1 class="text-4xl font-semibold mt-8 mb-4">Getting Started</h1>
+
+<p class="leading-loose text-lg">
+    Tazor is a simple UI toolkit for Blazor, built on TailwindCSS v3. The goal is to create a handful of components that may be used to create an application.
+</p>
+
+@*INSTALLING TAZOR*@
+<h2 class="text-2xl font-semibold mt-8 mb-4">Installing Tazor</h2>
+
+<p>Add the package, <code>Tailwind.Components</code></p>
+
+@*USING TAZOR*@
+<h2 class="text-2xl font-semibold mt-8 mb-4">Using Tazor</h2>
+
+<p>Add Tazor in the <code>Program.cs</code> of your Blazor Client (or Blazor Server) project.</p>
+
+<pre class="my-2 p-3 bg-gray-300 text-gray-900 dark:bg-gray-800 dark:text-gray-50 rounded">
+builder.Services.AddTazor();
+</pre>
+
+<p>Link to the Tazor javascript at the end of the document, before the <code>&lt;/body&gt;</code> tag.</p>
+
+<pre class="my-2 p-3 bg-gray-300 text-gray-900 dark:bg-gray-800 dark:text-gray-50 rounded">
+&lt;script src="_content/Tazor.Components/tazor.js"&gt;&lt;/script&gt;
+</pre>

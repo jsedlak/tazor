@@ -1,5 +1,8 @@
 @inject IJSRuntime JSRuntime
-<Switch IsChecked=@IsDarkModeEnabled IsCheckedChanged="OnHandleChange" />
+<a class="inline-block cursor-pointer" onclick=@(() => OnHandleChange(!IsDarkModeEnabled))>
+    @HeroIcons.LightBulb(" w-5 h-5")
+</a>
+@*<Switch IsChecked=@IsDarkModeEnabled IsCheckedChanged="OnHandleChange" />*@
 
 @code {
     [Parameter]
@@ -10,7 +13,6 @@
     protected override async Task OnInitializedAsync()
     {
         IsDarkModeEnabled = await JSRuntime.InvokeAsync<bool>("getDarkMode");
-        Console.WriteLine($"IsDarkModeEnabled = {IsDarkModeEnabled}");
         StateHasChanged();
     }
 
@@ -20,7 +22,6 @@
 
         await IsDarkModeEnabledChanged.InvokeAsync(newValue);
 
-        Console.WriteLine($"Dark Mode: {newValue}");
         await JSRuntime.InvokeVoidAsync("setDarkMode", IsDarkModeEnabled);
         StateHasChanged();
     }

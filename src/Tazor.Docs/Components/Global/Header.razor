@@ -1,0 +1,263 @@
+@inherits LayoutComponentBase
+
+<ClickContainer OnClickedOutside=@(() => { _selectedTab = ""; StateHasChanged(); })>
+    <div class="mb-20">
+        <div class="flex items-center justify-between py-10 container mx-auto">
+            <div role="banner">
+                <a href="/">
+                    <img src="/img/logo.svg" class="max-h-10 w-auto dark:hidden" />
+                    <img src="/img/logo-white.svg" class="max-h-10 w-auto hidden dark:block" />
+                </a>
+            </div>
+            <nav role="menu">
+                <ul class="flex gap-6">
+                    <li>
+                        <a href="/" class="flex items-center gap-2 cursor-pointer font-semibold ">
+                            Getting Started
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick=@(() => SelectTab(ComponentsTab)) class="flex items-center gap-2 cursor-pointer font-semibold ">
+                            Components
+                            @HeroIcons.ChevronDown("inline-block w-4 h-4")
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick=@(() => SelectTab(UtilitiesTab)) class="flex items-center gap-2 cursor-pointer font-semibold ">
+                            Utilities
+                            @HeroIcons.ChevronDown("inline-block w-4 h-4")
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick=@(() => SelectTab(ContentTab)) class="flex items-center gap-2 cursor-pointer font-semibold ">
+                            Content
+                            @HeroIcons.ChevronDown("inline-block w-4 h-4")
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="flex gap-2">
+                        <DarkModeSwitch />
+                        <a href="https://github.com/jsedlak/tazor">
+                            <img src="/img/github-mark.svg" class="w-5 h-5 dark:hidden" />
+                            <img src="/img/github-mark-white.svg" class="w-5 h-5 hidden dark:block" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        @if (_selectedTab == ComponentsTab)
+        {
+            <div class="w-full shadow-lg py-10">
+                <div class="grid grid-cols-3 gap-6 container mx-auto">
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.TableCells("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Data Grid @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Data Grid is a component for displaying data in a table.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.ArrowLeftOnRectangle("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Flyout @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">A top level flyout section for collapsing functionality to either side of the screen.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.BarsArrowDown("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">ComboBox @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">
+                                A dropdown list for displaying custom content, allowing for searching and selection.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.Window("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Dialog @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Data Grid is a component for displaying data in a table.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.ChatBubbleBottomCenter("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Popover @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Hover popups to display custom content.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.EllipsisHorizontal("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Tabs @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Data Grid is a component for displaying data in a table.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.CheckCircle("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Switch @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">The now classic switch component replacing checkboxes everywhere.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.Forward("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Paging @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Paging controls</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.Forward("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Breadcrumbs @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Leaving a trail as visitors delve ever deeper.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.Forward("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Command Palette @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Allow users to search or enter commands globally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (_selectedTab == UtilitiesTab)
+        {
+            <div class="w-full shadow-lg py-10">
+                <div class="grid grid-cols-3 gap-6 container mx-auto">
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.LightBulb("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Dark Mode Switcher @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Quickly enable toggling dark/light mode with memory.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.ArrowRightOnRectangle("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Click Container @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Know when a click has happened outside your component.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.ViewColumns("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Breakpoint Indicator @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Know when the browser has hit commonly used breakpoints.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+
+        @if (_selectedTab == ContentTab)
+        {
+            <div class="w-full shadow-lg py-10">
+                <div class="grid grid-cols-3 gap-6 container mx-auto">
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.LightBulb("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Theming @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">
+                                Custom theming the Tazor way.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.ShieldCheck("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Hero Icons @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">
+                                Easy access to all the hero icons.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@BrandIcons.Discord("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Brand Icons @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">
+                                Easy access to common brand icons.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.ExclamationTriangle("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Alerts @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Simple inline messaging</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.ExclamationTriangle("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Badges @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">Tags, badges, labels, all fall under this.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.ExclamationTriangle("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Buttons @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">For clicking.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div>@HeroIcons.CodeBracketSquare("w-10 h-10")</div>
+                        <div>
+                            <a href="/" class="font-semibold">Code Block @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <p class="text-sm opacity-80">For showing off your programming skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</ClickContainer>
+
+@code {
+    private string _selectedTab = "";
+
+    private void SelectTab(string tab)
+    {
+        if (_selectedTab == tab)
+        {
+            _selectedTab = "";
+        }
+        else
+        {
+            _selectedTab = tab;
+        }
+        StateHasChanged();
+    }
+
+    private string ComponentsTab => "components";
+    private string UtilitiesTab => "utilities";
+    private string ContentTab => "content";
+}

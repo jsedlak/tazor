@@ -17,15 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{50B86881-C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Http", "src\Tazor.Http\Tazor.Http.csproj", "{DA9BD30E-616A-413F-AE07-8F38AD1F9D34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Core", "src\Tazor.Core\Tazor.Core.csproj", "{095B2B11-C011-46D2-946F-B996B09D6667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Core", "src\Tazor.Core\Tazor.Core.csproj", "{095B2B11-C011-46D2-946F-B996B09D6667}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{CC962938-2713-4DFE-BB7F-4906A2A5EBF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Tests", "tests\Tazor.Tests\Tazor.Tests.csproj", "{B07FCE7D-0F7D-4126-ABC3-132EE3BFA832}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Tests", "tests\Tazor.Tests\Tazor.Tests.csproj", "{B07FCE7D-0F7D-4126-ABC3-132EE3BFA832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Workflows.ServiceBus", "src\Tazor.Workflows.ServiceBus\Tazor.Workflows.ServiceBus.csproj", "{6C4E5A95-C40A-44BF-87A3-8F58EBF21B96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Workflows.ServiceBus", "src\Tazor.Workflows.ServiceBus\Tazor.Workflows.ServiceBus.csproj", "{6C4E5A95-C40A-44BF-87A3-8F58EBF21B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Workflows.Mongo", "src\Tazor.Workflows.Mongo\Tazor.Workflows.Mongo.csproj", "{45E9195E-35EE-4ADB-A092-154087BB87AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Workflows.Mongo", "src\Tazor.Workflows.Mongo\Tazor.Workflows.Mongo.csproj", "{45E9195E-35EE-4ADB-A092-154087BB87AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Docs", "src\Tazor.Docs\Tazor.Docs.csproj", "{048DD5BC-E2F6-4019-8271-342FF1CC7648}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{45E9195E-35EE-4ADB-A092-154087BB87AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45E9195E-35EE-4ADB-A092-154087BB87AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45E9195E-35EE-4ADB-A092-154087BB87AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{048DD5BC-E2F6-4019-8271-342FF1CC7648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048DD5BC-E2F6-4019-8271-342FF1CC7648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048DD5BC-E2F6-4019-8271-342FF1CC7648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048DD5BC-E2F6-4019-8271-342FF1CC7648}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{B07FCE7D-0F7D-4126-ABC3-132EE3BFA832} = {CC962938-2713-4DFE-BB7F-4906A2A5EBF0}
 		{6C4E5A95-C40A-44BF-87A3-8F58EBF21B96} = {50B86881-C7A8-409C-B6B2-F1969C62F122}
 		{45E9195E-35EE-4ADB-A092-154087BB87AA} = {50B86881-C7A8-409C-B6B2-F1969C62F122}
+		{048DD5BC-E2F6-4019-8271-342FF1CC7648} = {851896C8-C6F7-473E-ADA8-9B006C9D69AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C42AE6EA-BA30-4C05-9FB3-1CE5FB2B307C}
