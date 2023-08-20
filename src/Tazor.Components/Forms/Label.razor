@@ -1,9 +1,9 @@
-﻿@inject ITazorTheme Theme
-<label class=@Theme.Label>
+﻿@inject IThemeManager Theme
+<label class=@Theme.Current.Forms.Label>
     @ChildContent
 </label>
 
 @code {
     [Parameter]
-    public RenderFragment ChildContent { get; set; }
+    public RenderFragment ChildContent { get; set; } = null!;
 }

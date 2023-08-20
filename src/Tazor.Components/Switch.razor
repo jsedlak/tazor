@@ -1,5 +1,8 @@
-<div @onclick="OnSwitchClicked" class=@($"mt-1 mb-1 md:w-14 md:h-7 w-12 h-6 flex items-center rounded-full p-1 cursor-pointer duration-300 ease-in-out {_backgroundClass}")>
-    <div class=@($"bg-white dark:bg-blue-500 md:w-6 md:h-6 h-5 w-5 rounded-full shadow-md duration-300 ease-in-out {_translationClass}")></div>
+@inject IThemeManager Theme
+<div class=@Theme.Current.Switch.Wrapper>
+    <div @onclick="OnSwitchClicked" class=@_trackClass>
+        <div class=@_knobClass></div>
+    </div>
 </div>
 @code {
     [Parameter]
@@ -8,8 +11,8 @@
     [Parameter]
     public EventCallback<bool> IsCheckedChanged { get; set; }
 
-    private string _backgroundClass = "bg-gray-300 dark:bg-gray-700";
-    private string _translationClass = "transform";
+    private string _trackClass = "";
+    private string _knobClass = "";
 
     private async Task OnSwitchClicked()
     {
@@ -20,8 +23,8 @@
 
     private void UpdateCssClasses()
     {
-        _translationClass = IsChecked ? "transform translate-x-6" : "transform";
-        _backgroundClass = IsChecked ? "bg-gray-300 dark:bg-gray-700" : "bg-gray-300 dark:bg-gray-700";
+        _knobClass = IsChecked ? Theme.Current.Switch.KnobSelected : Theme.Current.Switch.Knob;
+        _trackClass = IsChecked ? Theme.Current.Switch.TrackSelected : Theme.Current.Switch.Track;
     }
 
     protected override void OnInitialized()

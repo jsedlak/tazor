@@ -1,9 +1,9 @@
 ﻿@typeparam TItem
-@inject ITazorTheme Theme
-<div class=@Theme.TableSpacing>
+@inject IThemeManager Theme
+<div class=@Theme.Current.Table.Wrapper>
     @if (!HideToolbar)
     {
-        <div class=@Theme.TableToolbar>
+        <div class=@Theme.Current.Table.Toolbar>
             <div>
                 @Toolbar
             </div>
@@ -12,11 +12,7 @@
                     <ClickContainer OnClickedOutside=@(() => { _isColumnPopupOpen = false; StateHasChanged(); })>
                         <a class="cursor-pointer" title="Columns" @onclick=@(() => { _isColumnPopupOpen =
                        !_isColumnPopupOpen; })>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-6 w-6" fill="none"
-                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                            </svg>
+                            @HeroIcons.TableCells(Theme.Current.Content.Icon)
                         </a>
                         <div class=@($"top-100 right-0 mt-5 absolute dark:bg-blue-800 shadow p-2 {CetColumnPopupClass()}")>
                             @foreach (var col in Columns)
@@ -40,45 +36,37 @@
             </div>
         </div>
     }
-    <table class=@Theme.Table>
-        <thead class=@Theme.TableHeader>
+    <table class=@Theme.Current.Table.TableElement>
+        <thead class=@Theme.Current.Table.Header>
             <tr>
                 @foreach (var col in Columns)
                 {
                     if (col.IsVisible)
                     {
-                        <td class=@Theme.TableHeaderCell @onclick=@(() => { HandleSortChange(col); })>
+                        <th class=@Theme.Current.Table.HeaderCell @onclick=@(() => { HandleSortChange(col); })>
                             <div class="flex justify-between items-center">
                                 <span class="inline-block">@col.Title</span>
 
                                 @if (col.Sort == SortDirection.Ascending)
                                 {
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2 h-6 w-6" fill="none"
-                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
-                                    </svg>
+                                    @HeroIcons.BarsArrowUp(Theme.Current.Table.SortingIcon)
                                 }
                                 else if (col.Sort == SortDirection.Descending)
                                 {
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2 h-6 w-6" fill="none"
-                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
-                                    </svg>
+                                    @HeroIcons.BarsArrowDown(Theme.Current.Table.SortingIcon)
                                 }
                             </div>
-                        </td>
+                        </th>
                     }
                 }
 
                 @if (OnEdit != null || OnDelete != null)
                 {
-                    <td class=@Theme.TableHeaderCell>Actions</td>
+                    <th class=@Theme.Current.Table.HeaderCell>Actions</th>
                 }
             </tr>
         </thead>
-        <tbody class=@Theme.TableBody>
+        <tbody class=@Theme.Current.Table.Body>
             @{
                 var rowCount = 1;
                 var visibleItems = Items.AsQueryable();
@@ -95,13 +83,13 @@
             }
             @foreach (var item in visibleItems)
             {
-                <tr class=@(rowCount % 2 == 0 ? Theme.TableEvenRow : Theme.TableOddRow)>
+                <tr class=@(rowCount % 2 == 0 ? Theme.Current.Table.EvenRow : Theme.Current.Table.OddRow)>
                     @foreach (var col in Columns)
                     {
                         if (col.IsVisible)
                         {
 
-                            <td class=@Theme.TableCell>
+                            <td class=@Theme.Current.Table.Cell>
                                 @if (col.Component != null)
                                 {
                                     var componentPropValues = new Dictionary<string, object>();
@@ -140,7 +128,7 @@
 
                     @if (OnEdit != null || OnDelete != null)
                     {
-                        <td class=@Theme.TableCell>
+                        <td class=@Theme.Current.Table.Cell>
                             <div class="flex items-center gap-2">
                                 @if (OnEdit != null)
                                 {
@@ -177,13 +165,13 @@
         </tbody>
         @if (SummaryRow != SummaryRowMode.Hidden)
         {
-            <tfoot class=@Theme.TableSummary>
+            <tfoot class=@Theme.Current.Table.SummaryRow>
                 <tr>
                     @foreach (var col in Columns)
                     {
                         if (!col.IsVisible) { continue; }
 
-                        <td class=@Theme.TableCell>
+                        <td class=@Theme.Current.Table.SummaryCell>
                             @if (col.Summary != null)
                             {
                                 @col.Summary(SummaryRow == SummaryRowMode.AllItems ? Items : visibleItems)
@@ -195,7 +183,7 @@
             </tfoot>
         }
     </table>
-    <div class=@Theme.TableFooter>
+    <div class=@Theme.Current.Table.Footer>
         <Pager NumberOfVisiblePages=5 @bind-CurrentPage=@CurrentPage Pages=@((int)Math.Ceiling((double)Items.Count() /
                NumberPerPage)) />
     </div>

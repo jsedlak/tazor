@@ -1,8 +1,26 @@
-namespace Tazor.Components.Theming;
+﻿namespace Tazor.Components.Theming;
 
-public interface ITheme {
+public interface ITheme
+{
+    string Name { get; set; }
 
-    string this[string index] { get; set; }
+    TableTheme Table { get; set; }
 
-    string[] GetKeys();
+    bool IsDefault { get; set; }
+
+    FormsTheme Forms { get; set; }
+
+    DialogTheme Dialog { get; set; }
+
+    ContentTheme Content { get; set; }
+
+    PagerTheme Pager { get; set; }
+
+    TabNavTheme TabNav { get; set; }
+
+    DropdownTheme Dropdown { get; set; }
+
+    FlyoutTheme Flyout { get; set; }
+
+    SwitchTheme Switch { get; set; }
 }

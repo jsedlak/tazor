@@ -1,4 +1,4 @@
-﻿@inject ITazorTheme Theme
+﻿@inject IThemeManager Theme
 <div class=@($"{_cssClass} {Class ?? string.Empty}") role="alert">
     <div class="flex items-center">
         <div class="flex-shrink-0">
@@ -73,12 +73,27 @@
     {
         if (Type == AlertType.Custom)
         {
-            _cssClass = $"{Theme.AlertGlobal} {Class ?? string.Empty}";
+            _cssClass = $"{Theme.Current.Content.AlertGlobal} {Class ?? string.Empty}";
         }
         else
         {
-            var alertClass = Theme[$"Alert{Type.ToString()}"];
-            _cssClass = $"{Theme.AlertGlobal} {alertClass} {Class ?? string.Empty}";
+            var alertClass = "";
+            switch(Type)
+            {
+                case AlertType.Success:
+                    alertClass = Theme.Current.Content.AlertSuccess;
+                    break;
+                case AlertType.Error:
+                    alertClass = Theme.Current.Content.AlertError;
+                    break;
+                case AlertType.Warning:
+                    alertClass = Theme.Current.Content.AlertWarning;
+                    break;
+                case AlertType.Info:
+                    alertClass = Theme.Current.Content.AlertInfo;
+                    break;
+            }
+            _cssClass = $"{Theme.Current.Content.AlertGlobal} {alertClass} {Class ?? string.Empty}";
         }
     }
 }

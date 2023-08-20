@@ -1,0 +1,8 @@
+﻿@inject IThemeManager Theme
+<pre class=@Theme.Current.Content.CodeBlock>
+    @Code
+</pre>
+@code {
+    [Parameter]
+    public string Code { get; set; } = null!;
+}

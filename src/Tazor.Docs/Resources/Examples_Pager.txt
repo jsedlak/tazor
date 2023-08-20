@@ -1,0 +1,5 @@
+<Pager @bind-CurrentPage=_currentPage NumberOfVisiblePages="10" Pages="500" />
+
+@code {
+    private int _currentPage = 35;
+}

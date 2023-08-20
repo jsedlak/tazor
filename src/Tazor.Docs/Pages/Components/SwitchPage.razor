@@ -1,0 +1,31 @@
+﻿@page "/components/switch"
+
+<PageTitle>Switch - Tazor Docs</PageTitle>
+
+<PageHead Title="Switch" />
+
+<p class="leading-loose mb-4">
+    Switch is a component resembling an "iPhone switch" replicates the appearance and functionality of the toggle switch commonly found in iOS interfaces. Users can interact with this component to turn a setting or option on or off, with the switch visually reflecting the current state. It provides an intuitive way to control binary choices within a Blazor web application, mimicking the familiar user experience seen on Apple's mobile devices.
+</p>
+
+<TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
+@if (_selectedExampleNavItem?.Key == "demo")
+{
+    <Switch @bind-IsChecked=@_isSwitched />
+
+    <p>Switch Value: @_isSwitched</p>
+}
+else {
+<CodeBlock Code=@Resources.Examples_Switch />
+}
+
+@code {
+    private bool _isSwitched = true;
+
+    private NavItem? _selectedExampleNavItem;
+    private IEnumerable<NavItem> _exampleNavItems = new[]
+    {
+        new NavItem("Demo"),
+        new NavItem("Code")
+    };
+}

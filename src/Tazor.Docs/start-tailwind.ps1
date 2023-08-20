@@ -1,1 +1,1 @@
-.\tailwindcss.exe -i ./Styles/app.css -o ./wwwroot/css/app.css --watch
+﻿.\tailwindcss.exe -i ./Styles/app.css -o ./wwwroot/css/app.css --watch

@@ -1,4 +1,5 @@
 @inherits LayoutComponentBase
+@inject NavigationManager Navigation
 
 <ClickContainer OnClickedOutside=@(() => { _selectedTab = ""; StateHasChanged(); })>
     <div class="mb-20">
@@ -56,7 +57,7 @@
                     <div class="flex items-center gap-2">
                         <div>@HeroIcons.TableCells("w-10 h-10")</div>
                         <div>
-                            <a href="/" class="font-semibold">Data Grid @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <a href="/components/datagrid" class="font-semibold">Data Grid @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
                             <p class="text-sm opacity-80">Data Grid is a component for displaying data in a table.</p>
                         </div>
                     </div>
@@ -106,7 +107,7 @@
                     <div class="flex items-center gap-2">
                         <div>@HeroIcons.CheckCircle("w-10 h-10")</div>
                         <div>
-                            <a href="/" class="font-semibold">Switch @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <a href="/components/switch" class="font-semibold">Switch @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
                             <p class="text-sm opacity-80">The now classic switch component replacing checkboxes everywhere.</p>
                         </div>
                     </div>
@@ -114,7 +115,7 @@
                     <div class="flex items-center gap-2">
                         <div>@HeroIcons.Forward("w-10 h-10")</div>
                         <div>
-                            <a href="/" class="font-semibold">Paging @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
+                            <a href="/components/pager" class="font-semibold">Pager @HeroIcons.ArrowLongRight("inline-block w-4 h-4")</a>
                             <p class="text-sm opacity-80">Paging controls</p>
                         </div>
                     </div>
@@ -255,9 +256,20 @@
             _selectedTab = tab;
         }
         StateHasChanged();
+
+
     }
 
     private string ComponentsTab => "components";
     private string UtilitiesTab => "utilities";
     private string ContentTab => "content";
+
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += (sender, args) =>
+        {
+            _selectedTab = "";
+            StateHasChanged();
+        };
+    }
 }

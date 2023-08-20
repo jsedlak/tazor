@@ -1,0 +1,11 @@
+﻿{
+  "tazor": {
+    "themes": [
+      {
+        "name": "tazor-default",
+        "path": "themes/tazor.theme.json",
+        "isDefault":  true
+      }
+    ]
+  }
+}

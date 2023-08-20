@@ -1,13 +1,13 @@
-@inject ITazorTheme Theme
+@inject IThemeManager Theme
 @inject NavigationManager Navigation
-<a class=@($"{Theme.Button} {GetColorClass()} {GetWidthClass()}") @onclick=@HandleClick>
-    <div class=@($"{Theme.ButtonInner} {GetAlignmentClass()}")>
+<a class=@($"{Theme.Current.Content.Button} {GetColorClass()} {GetWidthClass()}") @onclick=@HandleClick>
+    <div class=@($"{Theme.Current.Content.ButtonInner} {GetAlignmentClass()}")>
         @ChildContent
     </div>
 </a>
 @code {
     [Parameter]
-    public string? ThemeColor { get; set; }
+    public string ThemeColor { get; set; } = "indigo";
 
     [Parameter]
     public string? Title { get; set; } = null;
@@ -35,12 +35,12 @@
 
     private async Task HandleClick()
     {
-        if(Disabled) 
-        { 
-            return; 
+        if (Disabled)
+        {
+            return;
         }
 
-        if(!string.IsNullOrWhiteSpace(Href))
+        if (!string.IsNullOrWhiteSpace(Href))
         {
             Navigation.NavigateTo(Href);
         }
@@ -52,7 +52,7 @@
 
     private string GetAlignmentClass()
     {
-        switch(Justify)
+        switch (Justify)
         {
             case JustifyContent.Center:
                 return "justify-center";
@@ -75,23 +75,17 @@
         return Block ? "w-full" : "";
     }
 
-    private string GetColorClass() {
-        if(!string.IsNullOrWhiteSpace(ThemeColor)) {
-            if (Disabled)
-            {
-                return $"bg-{ThemeColor}-300 text-white hover:bg-{ThemeColor}-700";
-            }
-            else
-            {
-                return $"bg-{ThemeColor}-500 text-white hover:bg-{ThemeColor}-700";
-            }
+    private string GetColorClass()
+    {
+
+        if (Disabled)
+        {
+            return $"bg-{ThemeColor}-300 text-white hover:bg-{ThemeColor}-700";
+        }
+        else
+        {
+            return $"bg-{ThemeColor}-500 text-white hover:bg-{ThemeColor}-700";
         }
 
-        if(Disabled) 
-        {
-            return $"bg-{Theme.Base.PrimaryColor}-300 text-white hover:bg-{Theme.Base.PrimaryColor}-700"; 
-        }
-        
-        return $"bg-{Theme.Base.PrimaryColor}-500 text-white hover:bg-{Theme.Base.PrimaryColor}-700";
     }
 }

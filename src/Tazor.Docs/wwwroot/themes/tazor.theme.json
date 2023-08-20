@@ -1,0 +1,75 @@
+﻿{
+  "content": {
+    "icon": "inline-block w-5 h-5",
+    "codeBlock": "bg-gray-100 dark:bg-gray-800 rounded p-3 my-4 text-sm",
+    "screenReader": "sr-only",
+    "componentHeader": "",
+    "panel": "",
+    "button": "",
+    "buttonInner": "",
+    "alertGlobal": "",
+    "alertInfo": "",
+    "alertWarning": "",
+    "alertError": "",
+    "alertSuccess": ""
+  },
+  "dialog": {
+    "window": "",
+    "overlay": "",
+    "windowInner": "",
+    "header": "",
+    "content": "",
+    "footer": ""
+  },
+  "table": {
+    "wrapper": "min-w-full rounded bg-gray-50 dark:bg-gray-800 overflow-x-auto",
+    "tableElement": "min-w-full",
+    "toolbar": "p-3 flex justify-between items-center",
+    "header": "bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-gray-50",
+    "headerCell": "px-3 py-3.5 text-left text-sm font-semibold cursor-pointer",
+    "body": "divide-y divide-gray-200 bg-white dark:bg-gray-800",
+    "cell": "whitespace-nowrap px-3 py-4 text-sm text-gray-500 dark:text-gray-50",
+    "footer": "p-3",
+    "sortingIcon": "inline-block w-5 h-5 ml-2"
+  },
+  "pager": {
+    "wrapper": "",
+    "nav": "flex items-center gap-2",
+    "previousButton": "py-2 px-3 rounded text-sm cursor-pointer",
+    "nextButton": "py-2 px-3 rounded text-sm cursor-pointer",
+    "buttonActive": "py-2 px-3 rounded text-sm bg-indigo-500 text-white cursor-pointer",
+    "button": "py-2 px-3 rounded text-sm cursor-pointer",
+    "nextPreviousText": "sr-only"
+  },
+  "tabNav": {
+    "wrapper": "flex items-center gap-2 my-2 rounded bg-gray-100 border-t-2 border-gray-100 dark:bg-gray-800 dark:border-gray-800",
+    "selectedItem": "border-b-2 border-indigo-500 py-2 px-3 cursor-pointer text-sm",
+    "item": "py-2 px-3 cursor-pointer border-b-2 border-gray-100 text-sm dark:border-gray-800",
+    "selectedLink": "",
+    "link": ""
+  },
+  "forms": {
+    "label": "",
+    "subLabel": "",
+    "textBox": "",
+    "selectInput": ""
+  },
+  "dropdown": {
+    "button": "",
+    "panel": "",
+    "item": "",
+    "link": ""
+  },
+  "flyout": {
+    "overlay": "",
+    "panel": "",
+    "content": ""
+  },
+  "switch": {
+    "wrapper": "",
+    "track": "bg-gray-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-",
+    "trackSelected": "bg-indigo-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-",
+    "knob": "translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out",
+    "knobSelected": "translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+  } 
+}

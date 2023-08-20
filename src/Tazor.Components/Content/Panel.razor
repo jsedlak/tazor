@@ -1,5 +1,5 @@
-@inject ITazorTheme Theme
-<section class=@Theme.Panel>
+@inject IThemeManager Theme
+<section class=@Theme.Current.Content.Panel>
     @ChildContent
 </section>
 

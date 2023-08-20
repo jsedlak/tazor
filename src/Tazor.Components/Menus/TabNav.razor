@@ -1,10 +1,10 @@
-﻿@inject ITazorTheme Theme
+﻿@inject IThemeManager Theme
 @inject NavigationManager Navigation
-<div class=@Theme.TabNavWrapper>
+<div class=@Theme.Current.TabNav.Wrapper>
     @foreach (var item in Items)
     {
-        var itemClass = item == SelectedItem ? Theme.TabNavSelectedItem : Theme.TabNavItem;
-        var linkClass = item == SelectedItem ? Theme.TabNavSelectedLink : Theme.TabNavLink;
+        var itemClass = item == SelectedItem ? Theme.Current.TabNav.SelectedItem : Theme.Current.TabNav.Item;
+        var linkClass = item == SelectedItem ? Theme.Current.TabNav.SelectedLink : Theme.Current.TabNav.Link;
 
         <div class=@itemClass>
             <a class=@linkClass @onclick=@(async () => await HandleTabClicked(item))>
@@ -34,5 +34,13 @@
 
         SelectedItem = item;
         await SelectedItemChanged.InvokeAsync(item);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Items.Any())
+        {
+            await HandleTabClicked(Items.First());
+        }
     }
 }

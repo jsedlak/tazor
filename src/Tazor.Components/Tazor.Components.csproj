@@ -6,6 +6,25 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Automotive\**" />
+    <Compile Remove="Breakpoint\**" />
+    <Compile Remove="Navigation\**" />
+    <Compile Remove="OnlineStatus\**" />
+    <Content Remove="Automotive\**" />
+    <Content Remove="Breakpoint\**" />
+    <Content Remove="Navigation\**" />
+    <Content Remove="OnlineStatus\**" />
+    <EmbeddedResource Remove="Automotive\**" />
+    <EmbeddedResource Remove="Breakpoint\**" />
+    <EmbeddedResource Remove="Navigation\**" />
+    <EmbeddedResource Remove="OnlineStatus\**" />
+    <None Remove="Automotive\**" />
+    <None Remove="Breakpoint\**" />
+    <None Remove="Navigation\**" />
+    <None Remove="OnlineStatus\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -13,13 +32,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Automotive\" />
-    <Folder Include="Breakpoint\" />
-    <Folder Include="Navigation\" />
-    <Folder Include="OnlineStatus\" />
+    <ProjectReference Include="..\Tazor.Core\Tazor.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

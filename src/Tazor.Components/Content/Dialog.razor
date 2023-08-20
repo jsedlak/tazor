@@ -1,13 +1,13 @@
-﻿@inject ITazorTheme Theme
+﻿@inject IThemeManager Theme
 @if (IsVisible)
 {
     <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class=@Theme.DialogOverlay></div>
+        <div class=@Theme.Current.Dialog.Overlay></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                <div class=@Theme.DialogWindow>
-                    <div class=@Theme.DialogWindowInner>
-                        <header class=@Theme.DialogHeader>
+                <div class=@Theme.Current.Dialog.Window>
+                    <div class=@Theme.Current.Dialog.WindowInner>
+                        <header class=@Theme.Current.Dialog.Header>
                             @if (Header != null)
                             {
                                 @Header
@@ -33,10 +33,10 @@
                             }
 
                         </header>
-                        <div class=@Theme.DialogContent>
+                        <div class=@Theme.Current.Dialog.Content>
                             @Content
                         </div>
-                        <footer class=@Theme.DialogFooter>
+                        <footer class=@Theme.Current.Dialog.Footer>
                             @Footer
                         </footer>
                     </div>
