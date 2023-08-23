@@ -22,7 +22,20 @@ public class ContentTheme
 
     public string AlertSuccess { get; set; } = string.Empty;
 
+    public string AlertIcon { get; set; } = string.Empty;
+
     public string Icon { get; set; } = string.Empty;
 
     public string CodeBlock { get; set; } = string.Empty;
+
+    public string Section { get; set; } = string.Empty;
+
+    public string Header1 { get; set; } = string.Empty;
+
+    public string Header2 { get; set; } = string.Empty;
+    
+    public string Header3 { get; set; } = string.Empty;
+    
+    public string Header4 { get; set; } = string.Empty;
+
 }

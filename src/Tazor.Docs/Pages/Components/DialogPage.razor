@@ -1,0 +1,35 @@
+﻿@page "/components/dialog"
+
+<PageTitle>Dialog - Tazor Docs</PageTitle>
+
+<PageHead Title="Dialog" />
+
+<p class="leading-loose mb-4">The DataGrid is a Blazor component designed for presenting tabular data in a web application. It offers built-in features for paging and sorting data, enhancing the user experience and making it easier to navigate and analyze large datasets. Users can interact with the DataGrid to view different sections of data, and they can also arrange the data in ascending or descending order based on specific columns for better organization and analysis. This component simplifies the process of creating dynamic, interactive tables in Blazor web applications, providing a convenient way to display and manipulate data.</p>
+
+<TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
+@if (_selectedExampleNavItem?.Key == "demo")
+{
+    <Button Clicked=@(() => { _showDialog = true; StateHasChanged(); })>
+        @HeroIcons.Window("inline-block w-5 h-5")
+        Show Dialog
+    </Button>
+    <Dialog @bind-IsVisible=_showDialog Title="Sample Dialog">
+        <Content>
+            <p class="leading">This is a dialog!</p>
+        </Content>
+    </Dialog>
+}
+else {
+<CodeBlock Code=@Resources.Examples_DataGrid />
+}
+
+@code {
+    private bool _showDialog;
+
+    private NavItem? _selectedExampleNavItem;
+    private IEnumerable<NavItem> _exampleNavItems = new[]
+    {
+        new NavItem("Demo"),
+        new NavItem("Code")
+    };
+}

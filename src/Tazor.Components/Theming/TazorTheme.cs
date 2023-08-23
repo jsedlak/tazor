@@ -22,5 +22,7 @@ public class TazorTheme : ITheme
 
     public SwitchTheme Switch { get; set; } = new();
 
+    public ButtonTheme Button { get; set; } = new();
+
     public bool IsDefault { get; set; }
 }

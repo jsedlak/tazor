@@ -1,13 +1,11 @@
 @inject IThemeManager Theme
 @inject NavigationManager Navigation
-<a class=@($"{Theme.Current.Content.Button} {GetColorClass()} {GetWidthClass()}") @onclick=@HandleClick>
-    <div class=@($"{Theme.Current.Content.ButtonInner} {GetAlignmentClass()}")>
-        @ChildContent
-    </div>
+<a class=@($"{Theme.Current.Button.Global} {GetColorClass()} {GetWidthClass()}") @onclick=@HandleClick>
+    @ChildContent
 </a>
 @code {
     [Parameter]
-    public string ThemeColor { get; set; } = "indigo";
+    public ButtonType Type { get; set; } = ButtonType.Default;
 
     [Parameter]
     public string? Title { get; set; } = null;
@@ -26,9 +24,6 @@
 
     [Parameter]
     public bool Block { get; set; } = false;
-
-    [Parameter]
-    public JustifyContent Justify { get; set; } = JustifyContent.Center;
 
     [Parameter]
     public bool Disabled { get; set; }
@@ -50,26 +45,6 @@
         }
     }
 
-    private string GetAlignmentClass()
-    {
-        switch (Justify)
-        {
-            case JustifyContent.Center:
-                return "justify-center";
-            case JustifyContent.End:
-                return "justify-end";
-            case JustifyContent.SpaceBetween:
-                return "justify-between";
-            case JustifyContent.SpaceAround:
-                return "justify-around";
-            case JustifyContent.SpaceEvenly:
-                return "justify-evenly";
-            case JustifyContent.Start:
-            default:
-                return "justify-start";
-        }
-    }
-
     private string GetWidthClass()
     {
         return Block ? "w-full" : "";
@@ -77,15 +52,59 @@
 
     private string GetColorClass()
     {
+        var classNames = new List<string>();
 
-        if (Disabled)
+        if(Disabled)
         {
-            return $"bg-{ThemeColor}-300 text-white hover:bg-{ThemeColor}-700";
-        }
-        else
-        {
-            return $"bg-{ThemeColor}-500 text-white hover:bg-{ThemeColor}-700";
+            classNames.Add(Theme.Current.Button.Disabled);
         }
 
+        switch(Type)
+        {
+            case ButtonType.Default:
+                classNames.Add(Theme.Current.Button.Default);
+                break;
+            case ButtonType.DefaultOutline:
+                classNames.Add(Theme.Current.Button.DefaultOutline);
+                break;
+            case ButtonType.Primary:
+                classNames.Add(Theme.Current.Button.Primary);
+                break;
+            case ButtonType.PrimaryOutline:
+                classNames.Add(Theme.Current.Button.PrimaryOutline);
+                break;
+            case ButtonType.Success:
+                classNames.Add(Theme.Current.Button.Success);
+                break;
+            case ButtonType.SuccessOutline:
+                classNames.Add(Theme.Current.Button.SuccessOutline);
+                break;
+            case ButtonType.Warning:
+                classNames.Add(Theme.Current.Button.Warning);
+                break;
+            case ButtonType.WarningOutline:
+                classNames.Add(Theme.Current.Button.WarningOutline);
+                break;
+            case ButtonType.Error:
+                classNames.Add(Theme.Current.Button.Error);
+                break;
+            case ButtonType.ErrorOutline:
+                classNames.Add(Theme.Current.Button.ErrorOutline);
+                break;
+            case ButtonType.Info:
+                classNames.Add(Theme.Current.Button.Info);
+                break;
+            case ButtonType.InfoOutline:
+                classNames.Add(Theme.Current.Button.InfoOutline);
+                break;
+            case ButtonType.Link:
+                classNames.Add(Theme.Current.Button.Link);
+                break;
+            default:
+                classNames.Add(Theme.Current.Button.Default);
+                break;
+        }
+
+        return string.Join(" ", classNames);
     }
 }

@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Core", "src\Tazor.Cor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{CC962938-2713-4DFE-BB7F-4906A2A5EBF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Docs", "src\Tazor.Docs\Tazor.Docs.csproj", "{048DD5BC-E2F6-4019-8271-342FF1CC7648}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Docs", "src\Tazor.Docs\Tazor.Docs.csproj", "{048DD5BC-E2F6-4019-8271-342FF1CC7648}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Wasm", "src\Tazor.Wasm\Tazor.Wasm.csproj", "{A2F18695-BF83-46CD-85AD-F33626F96130}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tazor.Wasm", "src\Tazor.Wasm\Tazor.Wasm.csproj", "{A2F18695-BF83-46CD-85AD-F33626F96130}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

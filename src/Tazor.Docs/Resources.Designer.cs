@@ -61,6 +61,47 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;Alert Type=@AlertType.Info Title=&quot;Test Info Alert&quot;&gt;
+        ///    &lt;Content&gt;
+        ///        &lt;p class=&quot;leading&quot;&gt;This is an info alert!&lt;/p&gt;
+        ///    &lt;/Content&gt;
+        ///&lt;/Alert&gt;
+        ///
+        ///&lt;Alert Type=@AlertType.Success Title=&quot;Test Success Alert&quot;&gt;
+        ///    &lt;Content&gt;
+        ///        &lt;p class=&quot;leading&quot;&gt;This is a success alert!&lt;/p&gt;
+        ///    &lt;/Content&gt;
+        ///&lt;/Alert&gt;
+        ///
+        ///&lt;Alert Type=@AlertType.Warning Title=&quot;Test Warning Alert&quot;&gt;
+        ///    &lt;Content&gt;
+        ///        &lt;p class=&quot;leading&quot;&gt;This is an alert that is warning you!&lt;/p&gt;
+        ///    &lt;/Content&gt;
+        ///&lt;/Alert&gt;
+        ///
+        ///&lt;Alert Type=@AlertType.Erro [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Examples_Alerts {
+            get {
+                return ResourceManager.GetString("Examples_Alerts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;div class=&quot;grid grid-cols-5 gap-2&quot;&gt;
+        ///    @foreach(ButtonType bt in Enum.GetValues(typeof(ButtonType)))
+        ///    {
+        ///        &lt;Button Type=@bt&gt;@(Enum.GetName&lt;ButtonType&gt;(bt))&lt;/Button&gt;
+        ///    }
+        ///&lt;/div&gt;.
+        /// </summary>
+        public static string Examples_Buttons {
+            get {
+                return ResourceManager.GetString("Examples_Buttons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;DataGrid Items=_invoices Columns=_invoiceColumns /&gt;
         ///
         ///@code {

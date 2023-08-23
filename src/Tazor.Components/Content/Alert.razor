@@ -1,7 +1,7 @@
 ﻿@inject IThemeManager Theme
 <div class=@($"{_cssClass} {Class ?? string.Empty}") role="alert">
     <div class="flex items-center">
-        <div class="flex-shrink-0">
+        <div class=@($"flex-shrink-0 {Theme.Current.Content.AlertIcon}")>
             @if (Icon != null)
             {
                 @Icon
@@ -41,9 +41,9 @@
         </div>
     </div>
     <div class="text-sm font-medium">
-        @if (Link != null)
+        @if (LinkContent != null)
         {
-            @Link
+            @LinkContent
         }
     </div>
 </div>
@@ -59,7 +59,7 @@
     public RenderFragment? Content { get; set; } = null;
 
     [Parameter]
-    public RenderFragment? Link { get; set; } = null;
+    public RenderFragment? LinkContent { get; set; } = null;
 
     [Parameter]
     public AlertType Type { get; set; } = AlertType.Info;
@@ -67,7 +67,7 @@
     [Parameter]
     public string? Class { get; set; }
 
-    private string _cssClass { get; set; } = "rounded m-3 flex items-center justify-start bg-green-100 border-l-4 border-green-500 text-green-700 px-4 py-3 shadow-md";
+    private string _cssClass { get; set; } = "";
 
     protected override void OnInitialized()
     {

@@ -23,4 +23,6 @@ public interface ITheme
     FlyoutTheme Flyout { get; set; }
 
     SwitchTheme Switch { get; set; }
+
+    ButtonTheme Button { get; set; }
 }
