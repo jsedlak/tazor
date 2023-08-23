@@ -1,11 +1,11 @@
 @inject IJSRuntime JSRuntime
 <a class="inline-block cursor-pointer" onclick=@(() => OnHandleChange(!IsDarkModeEnabled))>
-    @if (IsDarkModeEnabled) { 
-        @HeroIcons.Moon(" w-5 h-5")
+    @if (IsDarkModeEnabled) {
+        @HeroIcons.LightBulb("w-5 h-5")
     }
     else
     {
-        @HeroIcons.Sun(" w-5 h-5")
+        @HeroIconsSolid.LightBulb("w-5 h-5")
     }
 </a>
 @*<Switch IsChecked=@IsDarkModeEnabled IsCheckedChanged="OnHandleChange" />*@
