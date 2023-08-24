@@ -14,13 +14,15 @@
 
 <p>Add the package, <code>Tailwind.Components</code></p>
 
+<p>Install the themes into <code>wwwroot</code></p>
+
 @*USING TAZOR*@
 <h2 class="text-2xl font-semibold mt-8 mb-4">Using Tazor</h2>
 
 <p>Add Tazor in the <code>Program.cs</code> of your Blazor Client (or Blazor Server) project.</p>
 
 <pre class="my-2 p-3 bg-gray-300 text-gray-900 dark:bg-gray-800 dark:text-gray-50 rounded">
-builder.Services.AddTazor();
+await builder.AddTazorAsync();
 </pre>
 
 <p>Link to the Tazor javascript at the end of the document, before the <code>&lt;/body&gt;</code> tag.</p>
