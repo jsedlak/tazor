@@ -1,4 +1,5 @@
 ﻿@page "/components/dialog"
+@using Tazor.Components.Forms
 
 <PageTitle>Dialog - Tazor Docs</PageTitle>
 
@@ -9,22 +10,35 @@
 <TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
 @if (_selectedExampleNavItem?.Key == "demo")
 {
-    <Button Clicked=@(() => { _showDialog = true; StateHasChanged(); })>
-        @HeroIcons.Window("inline-block w-5 h-5")
-        Show Dialog
-    </Button>
-    <Dialog @bind-IsVisible=_showDialog Title="Sample Dialog">
+    <div class="py-3">
+        <div class="flex gap-2">
+            <Switch @bind-IsChecked=_showCloseButton />
+            <Label>Show Close Button</Label>
+        </div>
+        <div class="mt-4">
+            <Button Clicked=@(() => { _showDialog = true; StateHasChanged(); })>
+                @HeroIcons.Window("inline-block w-5 h-5")
+                Show Dialog
+            </Button>
+        </div>
+    </div>
+    <Dialog HideCloseButton=!_showCloseButton @bind-IsVisible=_showDialog Title="Sample Dialog">
         <Content>
-            <p class="leading">This is a dialog!</p>
+            <p class="leading-loose">This is a dialog! See how it expands to fill the content?</p>
         </Content>
-    </Dialog>
+        <Footer>
+            <Button Block Type=@ButtonType.SuccessOutline Clicked=@(() => { _showDialog = false; StateHasChanged(); })>Confirm</Button>
+         </Footer>
+     </Dialog>
 }
-else {
-<CodeBlock Code=@Resources.Examples_DataGrid />
+else
+{
+    <CodeBlock Code=@Resources.Examples_DataGrid />
 }
 
 @code {
     private bool _showDialog;
+    private bool _showCloseButton = true;
 
     private NavItem? _selectedExampleNavItem;
     private IEnumerable<NavItem> _exampleNavItems = new[]

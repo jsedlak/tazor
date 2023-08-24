@@ -37,12 +37,13 @@
     "successOutline": "bg-transparent hover:bg-green-600 text-green-500 dark:text-green-200 hover:text-white border border-green-500"
   },
   "dialog": {
-    "window": "",
-    "overlay": "",
+    "window": "relative top-10 mx-auto bg-white dark:bg-gray-800 p-6 rounded",
+    "overlay": "fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full",
+    "placement": "flex items-center min-h-full justify-center p-4 text-center sm:items-center sm:p-0",
     "windowInner": "",
-    "header": "",
+    "header": "flex justify-between items-center mb-3 pb-2 border-b border-b-gray-200 dark:border-b-gray-500",
     "content": "",
-    "footer": ""
+    "footer": "mt-3 flex justify-end items-center gap-4"
   },
   "table": {
     "wrapper": "min-w-full rounded bg-gray-50 dark:bg-gray-800 overflow-x-auto",

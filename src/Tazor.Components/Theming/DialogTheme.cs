@@ -6,6 +6,8 @@ public class DialogTheme
 
     public string Overlay { get; set; } = string.Empty;
 
+    public string Placement { get; set; } = string.Empty;
+
     public string WindowInner { get; set; } = string.Empty;
 
     public string Header { get; set; } = string.Empty;

@@ -4,7 +4,7 @@
     <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class=@Theme.Current.Dialog.Overlay></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
-            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <div class=@Theme.Current.Dialog.Placement>
                 <div class=@Theme.Current.Dialog.Window>
                     <div class=@Theme.Current.Dialog.WindowInner>
                         <header class=@Theme.Current.Dialog.Header>
@@ -14,24 +14,18 @@
                             }
                             else if (!string.IsNullOrWhiteSpace(Title))
                             {
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <h3>@Title</h3>
-                                    </div>
-
-                                    @if (!HideCloseButton)
-                                    {
-                                        <div>
-                                            <a @onclick="OnCloseRequested" class="cursor-pointer opacity-75">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    }
+                                <h3>@Title</h3>
+                            }
+                            @if (!HideCloseButton)
+                            {
+                                <div>
+                                    <a @onclick="OnCloseRequested" class="cursor-pointer opacity-75">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </a>
                                 </div>
                             }
-
                         </header>
                         <div class=@Theme.Current.Dialog.Content>
                             @Content
