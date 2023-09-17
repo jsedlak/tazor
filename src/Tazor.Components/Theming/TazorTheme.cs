@@ -24,5 +24,7 @@ public class TazorTheme : ITheme
 
     public ButtonTheme Button { get; set; } = new();
 
+    public UtilityTheme Utility { get; set; } = new();
+
     public bool IsDefault { get; set; }
 }

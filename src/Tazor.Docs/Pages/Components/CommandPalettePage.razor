@@ -6,55 +6,28 @@
 
 <p class="leading-loose mb-4">The DataGrid is a Blazor component designed for presenting tabular data in a web application. It offers built-in features for paging and sorting data, enhancing the user experience and making it easier to navigate and analyze large datasets. Users can interact with the DataGrid to view different sections of data, and they can also arrange the data in ascending or descending order based on specific columns for better organization and analysis. This component simplifies the process of creating dynamic, interactive tables in Blazor web applications, providing a convenient way to display and manipulate data.</p>
 
-<TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
-@if (_selectedExampleNavItem?.Key == "demo")
-{
-    <DataGrid Items=_invoices Columns=_invoiceColumns />
-}
-else {
-<CodeBlock Code=@Resources.Examples_DataGrid />
-}
+<CommandPalette Commands=@_commands @bind-IsVisible=_isVisible />
 
 @code {
-    private class Invoice
-    {
-        public int Id { get; set; }
-
-        public string Customer { get; set; } = null!;
-
-        public double Amount { get; set; }
-
-        public bool Paid { get; set; }
-    }
-
-    private NavItem? _selectedExampleNavItem;
-    private IEnumerable<NavItem> _exampleNavItems = new[]
-    {
-        new NavItem("Demo"),
-        new NavItem("Code")
-    };
-
-    private IEnumerable<Invoice> _invoices = Enumerable.Empty<Invoice>();
-
-    private IEnumerable<Column<Invoice>> _invoiceColumns = new[]
-    {
-        new Column<Invoice> { Title = "Id", Field = m => m.Id },
-        new Column<Invoice> { Title = "Customer", Field = m => m.Customer },
-        new Column<Invoice> { Title = "Amount", Field = m => m.Amount, Format = "C" },
-        new Column<Invoice> { Title = "Paid", Field = m => m.Paid },
-    };
+    private IEnumerable<CommandDescription> _commands = Enumerable.Empty<CommandDescription>();
+    private bool _isVisible = true;
 
     protected override void OnInitialized()
     {
-        for (var i = 0; i < 25; i++)
+        _commands = new[]
         {
-            _invoices = _invoices.Append(new Invoice
-                {
-                    Id = i,
-                    Customer = "Customer " + i,
-                    Amount = i * 100,
-                    Paid = i % 2 == 0
-                });
-        }
+            new CommandDescription
+            {
+                CanExecute = (i) => int.TryParse(i, out int _i),
+                Name = "Search Invoices",
+                Describe = (i) => $"Search invoices for '{i}'"
+            },
+            new CommandDescription
+            {
+                CanExecute = (i) => true,
+                Name = "Search Customers",
+                Describe = (i) => $"Search customers for '{i}'"
+            }
+        };
     }
 }

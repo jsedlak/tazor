@@ -95,5 +95,17 @@
     "trackSelected": "bg-indigo-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-",
     "knob": "translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out",
     "knobSelected": "translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
-  } 
+  },
+  "utility": {
+    "commandPalette": {
+      "wrapper": "fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50",
+      "palette": "bg-white rounded-lg shadow-lg w-10/12",
+      "input": "w-full px-4 py-3 mb-4 border-b rounded-b-none rounded-lg focus:outline-none text-gray-800",
+      "list": "list-none",
+      "listItem": "flex gap-2 items-center py-2 px-4 hover:bg-gray-100 cursor-pointer text-gray-800",
+      "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800",
+      "commandName": "",
+      "commandDescription": "opacity-75 text-sm"
+    }
+  }
 }
