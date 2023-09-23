@@ -4,13 +4,17 @@
 
 <PageHead Title="Command Palette" />
 
-<p class="leading-loose mb-4">The DataGrid is a Blazor component designed for presenting tabular data in a web application. It offers built-in features for paging and sorting data, enhancing the user experience and making it easier to navigate and analyze large datasets. Users can interact with the DataGrid to view different sections of data, and they can also arrange the data in ascending or descending order based on specific columns for better organization and analysis. This component simplifies the process of creating dynamic, interactive tables in Blazor web applications, providing a convenient way to display and manipulate data.</p>
+<p class="leading-loose mb-4">
+    The command palette is a special modal that enables developers to create a list of commands that can be executed by the user.
+</p>
 
 <CommandPalette Commands=@_commands @bind-IsVisible=_isVisible />
 
+<Button Clicked=@(() => _isVisible = true)>Show Command Palette</Button>
+
 @code {
     private IEnumerable<CommandDescription> _commands = Enumerable.Empty<CommandDescription>();
-    private bool _isVisible = true;
+    private bool _isVisible = false;
 
     protected override void OnInitialized()
     {
