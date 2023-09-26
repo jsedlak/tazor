@@ -22,7 +22,10 @@
     "badgeInfo": "bg-blue-600 border-blue-800 text-white",
     "badgeWarning": "bg-yellow-600 border-yellow-800 text-white",
     "badgeSuccess": "bg-green-600 border-green-800 text-white",
-    "badgeError": "bg-red-600 border-red-800 text-white"
+    "badgeError": "bg-red-600 border-red-800 text-white",
+    "revealWrapper": "",
+    "revealHeader": "bg-indigo-600 text-white px-3 py-2 rounded cursor-pointer flex justify-between items-center",
+    "revealContent": "mt-2"
   },
   "button": {
     "global": "text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap",

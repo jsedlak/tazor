@@ -1,0 +1,65 @@
+﻿@page "/content/reveal"
+
+<PageTitle>Reveal - Tazor Docs</PageTitle>
+
+<PageHead Title="Reveal" />
+
+<p class="leading-loose mb-4">
+    Badges are used to display a small amount of information to the user. They are typically used to display a status or a count.
+</p>
+
+<TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
+@if (_selectedExampleNavItem?.Key == "demo")
+{
+    <Reveal Title="Reveal This">
+        <h1>Test</h1>
+        <p>Lorem ipsum.</p>
+    </Reveal>
+}
+else {
+<CodeBlock Code=@Resources.Examples_Badges />
+}
+
+@code {
+    private class Invoice
+    {
+        public int Id { get; set; }
+
+        public string Customer { get; set; } = null!;
+
+        public double Amount { get; set; }
+
+        public bool Paid { get; set; }
+    }
+
+    private NavItem? _selectedExampleNavItem;
+    private IEnumerable<NavItem> _exampleNavItems = new[]
+    {
+        new NavItem("Demo"),
+        new NavItem("Code")
+    };
+
+    private IEnumerable<Invoice> _invoices = Enumerable.Empty<Invoice>();
+
+    private IEnumerable<Column<Invoice>> _invoiceColumns = new[]
+    {
+        new Column<Invoice> { Title = "Id", Field = m => m.Id },
+        new Column<Invoice> { Title = "Customer", Field = m => m.Customer },
+        new Column<Invoice> { Title = "Amount", Field = m => m.Amount, Format = "C" },
+        new Column<Invoice> { Title = "Paid", Field = m => m.Paid },
+    };
+
+    protected override void OnInitialized()
+    {
+        for (var i = 0; i < 25; i++)
+        {
+            _invoices = _invoices.Append(new Invoice
+                {
+                    Id = i,
+                    Customer = "Customer " + i,
+                    Amount = i * 100,
+                    Paid = i % 2 == 0
+                });
+        }
+    }
+}

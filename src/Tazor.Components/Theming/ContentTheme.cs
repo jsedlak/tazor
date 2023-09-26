@@ -48,4 +48,10 @@ public class ContentTheme
 
     public string BadgeError { get; set; } = string.Empty;
 
+    public string RevealWrapper { get; set; } = string.Empty;
+
+    public string RevealHeader { get; set; } = string.Empty;
+
+    public string RevealContent { get; set; } = string.Empty;
+
 }
