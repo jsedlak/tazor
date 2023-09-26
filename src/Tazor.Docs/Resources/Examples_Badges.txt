@@ -1,0 +1,7 @@
+<div class="gap-4 flex">
+    <Badge Type="BadgeType.Info">Info</Badge>
+    <Badge Type="BadgeType.Success">Success</Badge>
+    <Badge Type="BadgeType.Warning">Warning</Badge>
+    <Badge Type="BadgeType.Error">Error</Badge>
+    <Badge Type="BadgeType.Custom" CustomClass="bg-indigo-600 border-indigo-800 text-white">Custom</Badge>
+</div>

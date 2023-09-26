@@ -38,4 +38,14 @@ public class ContentTheme
     
     public string Header4 { get; set; } = string.Empty;
 
+    public string BadgeGlobal { get; set; } = string.Empty;
+
+    public string BadgeInfo { get; set; } = string.Empty;
+
+    public string BadgeWarning { get; set; } = string.Empty;
+
+    public string BadgeSuccess { get; set; } = string.Empty;
+
+    public string BadgeError { get; set; } = string.Empty;
+
 }

@@ -17,7 +17,12 @@
     "header1": "text-2xl font-semibold mb-2",
     "header2": "text-xl font-semibold mb-2",
     "header3": "text-lg font-semibold mb-2",
-    "header4": "font-semibold mb-2"
+    "header4": "font-semibold mb-2",
+    "badgeGlobal": "inline px-2 py-1 text-xs rounded border",
+    "badgeInfo": "bg-blue-600 border-blue-800 text-white",
+    "badgeWarning": "bg-yellow-600 border-yellow-800 text-white",
+    "badgeSuccess": "bg-green-600 border-green-800 text-white",
+    "badgeError": "bg-red-600 border-red-800 text-white"
   },
   "button": {
     "global": "text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap",

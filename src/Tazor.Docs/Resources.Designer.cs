@@ -88,6 +88,21 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;div class=&quot;gap-4 flex&quot;&gt;
+        ///    &lt;Badge Type=&quot;BadgeType.Info&quot;&gt;Info&lt;/Badge&gt;
+        ///    &lt;Badge Type=&quot;BadgeType.Success&quot;&gt;Success&lt;/Badge&gt;
+        ///    &lt;Badge Type=&quot;BadgeType.Warning&quot;&gt;Warning&lt;/Badge&gt;
+        ///    &lt;Badge Type=&quot;BadgeType.Error&quot;&gt;Error&lt;/Badge&gt;
+        ///    &lt;Badge Type=&quot;BadgeType.Custom&quot; CustomClass=&quot;bg-indigo-600 border-indigo-800 text-white&quot;&gt;Custom&lt;/Badge&gt;
+        ///&lt;/div&gt;.
+        /// </summary>
+        public static string Examples_Badges {
+            get {
+                return ResourceManager.GetString("Examples_Badges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;div class=&quot;grid grid-cols-5 gap-2&quot;&gt;
         ///    @foreach(ButtonType bt in Enum.GetValues(typeof(ButtonType)))
         ///    {
