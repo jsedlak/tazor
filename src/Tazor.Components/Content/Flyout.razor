@@ -1,0 +1,108 @@
+﻿@inject IThemeManager Theme
+@if (IsVisible)
+{
+    <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class=@Theme.Current.Flyout.Overlay></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class=@GetPlacementClass()>
+                <div class=@GetWindowClass()>
+                    <div class=@Theme.Current.Flyout.WindowInner>
+                        <header class=@Theme.Current.Flyout.Header>
+                            @if (Header != null)
+                            {
+                                @Header
+                            }
+                            else if (!string.IsNullOrWhiteSpace(Title))
+                            {
+                                <h3>@Title</h3>
+                            }
+                            @if (!HideCloseButton)
+                            {
+                                <div>
+                                    <a @onclick="OnCloseRequested" class="cursor-pointer opacity-75">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            }
+                        </header>
+                        <div class=@Theme.Current.Flyout.Content>
+                            @Content
+                        </div>
+                        <footer class=@Theme.Current.Flyout.Footer>
+                            @Footer
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@code {
+    [Parameter]
+    public bool IsVisible { get; set; } = false;
+
+    [Parameter]
+    public EventCallback<bool> IsVisibleChanged { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public RenderFragment? Header { get; set; }
+
+    [Parameter]
+    public RenderFragment Content { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment Footer { get; set; } = null!;
+
+    [Parameter]
+    public PanelPlacement Placement { get; set; }
+
+    [Parameter]
+    public bool HideCloseButton { get; set; } = false;
+
+    private async Task OnCloseRequested()
+    {
+        IsVisible = false;
+        await IsVisibleChanged.InvokeAsync(false);
+    }
+
+    private string GetWindowClass()
+    {
+        var windowClass = Theme.Current.Flyout.Window;
+
+        switch(Placement)
+        {
+            case PanelPlacement.Left:
+            case PanelPlacement.Right:
+                windowClass += $" {Theme.Current.Flyout.WindowVertical}";
+                break;
+            case PanelPlacement.Top:
+            case PanelPlacement.Bottom:
+                windowClass += $" {Theme.Current.Flyout.WindowHorizontal}";
+                break;
+        }
+
+        return windowClass;
+    }
+
+    private string GetPlacementClass()
+    {
+        switch (Placement)
+        {
+            case PanelPlacement.Left:
+                return Theme.Current.Flyout.PlacementLeft;
+            case PanelPlacement.Right:
+                return Theme.Current.Flyout.PlacementRight;
+            case PanelPlacement.Top:
+                return Theme.Current.Flyout.PlacementTop;
+            case PanelPlacement.Bottom:
+                return Theme.Current.Flyout.PlacementBottom;
+        }
+
+        return Theme.Current.Flyout.PlacementLeft;
+    }
+}

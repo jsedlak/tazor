@@ -1,31 +1,34 @@
-﻿@page "/components/fllyout"
-
+﻿@page "/components/flyout"
+@inject IThemeManager Theme
 <PageTitle>Flyout - Tazor Docs</PageTitle>
 
 <PageHead Title="Flyout" />
 
-<p class="leading-loose mb-4">The DataGrid is a Blazor component designed for presenting tabular data in a web application. It offers built-in features for paging and sorting data, enhancing the user experience and making it easier to navigate and analyze large datasets. Users can interact with the DataGrid to view different sections of data, and they can also arrange the data in ascending or descending order based on specific columns for better organization and analysis. This component simplifies the process of creating dynamic, interactive tables in Blazor web applications, providing a convenient way to display and manipulate data.</p>
+<p class="leading-loose mb-4">The Flyout is an alternative to the Dialog component, offering an overlayed panel attached to one of the screen borders instead of floating in the middle of the window.</p>
 
 <TabNav Items=_exampleNavItems @bind-SelectedItem=_selectedExampleNavItem />
 @if (_selectedExampleNavItem?.Key == "demo")
 {
-    <DataGrid Items=_invoices Columns=_invoiceColumns />
+    <select @onchange=HandlePanelPlacementChanged class=@Theme.Current.Forms.SelectInput>
+        @foreach(var val in Enum.GetValues(typeof(PanelPlacement)))
+        {
+            <option selected=@((PanelPlacement)val == _selectedPlacement) value=@val>@Enum.GetName(typeof(PanelPlacement), val)</option>
+        }
+    </select>
+    <Button Clicked=@(() => { _isFlyoutOpen = true; StateHasChanged(); })>Open Flyout</Button>
+    <Flyout Placement=_selectedPlacement Title="Test Flyout" @bind-IsVisible=_isFlyoutOpen>
+        <Content>
+            <p>This is test content!</p>
+        </Content>
+    </Flyout>
 }
 else {
-<CodeBlock Code=@Resources.Examples_DataGrid />
+<CodeBlock Code=@Resources.Examples_Flyout />
 }
 
 @code {
-    private class Invoice
-    {
-        public int Id { get; set; }
-
-        public string Customer { get; set; } = null!;
-
-        public double Amount { get; set; }
-
-        public bool Paid { get; set; }
-    }
+    private bool _isFlyoutOpen;
+    private PanelPlacement _selectedPlacement = PanelPlacement.Left;
 
     private NavItem? _selectedExampleNavItem;
     private IEnumerable<NavItem> _exampleNavItems = new[]
@@ -34,27 +37,9 @@ else {
         new NavItem("Code")
     };
 
-    private IEnumerable<Invoice> _invoices = Enumerable.Empty<Invoice>();
-
-    private IEnumerable<Column<Invoice>> _invoiceColumns = new[]
+    private void HandlePanelPlacementChanged(ChangeEventArgs args)
     {
-        new Column<Invoice> { Title = "Id", Field = m => m.Id },
-        new Column<Invoice> { Title = "Customer", Field = m => m.Customer },
-        new Column<Invoice> { Title = "Amount", Field = m => m.Amount, Format = "C" },
-        new Column<Invoice> { Title = "Paid", Field = m => m.Paid },
-    };
-
-    protected override void OnInitialized()
-    {
-        for (var i = 0; i < 25; i++)
-        {
-            _invoices = _invoices.Append(new Invoice
-                {
-                    Id = i,
-                    Customer = "Customer " + i,
-                    Amount = i * 100,
-                    Paid = i % 2 == 0
-                });
-        }
+        _selectedPlacement = (PanelPlacement)Enum.Parse(typeof(PanelPlacement), args.Value.ToString());
+        StateHasChanged();
     }
 }

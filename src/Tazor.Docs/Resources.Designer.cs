@@ -145,6 +145,15 @@ namespace Tazor.Docs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string Examples_Flyout {
+            get {
+                return ResourceManager.GetString("Examples_Flyout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;Pager @bind-CurrentPage=_currentPage NumberOfVisiblePages=&quot;10&quot; Pages=&quot;500&quot; /&gt;
         ///
         ///@code {
