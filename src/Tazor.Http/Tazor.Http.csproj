@@ -10,7 +10,7 @@
   <PropertyGroup>
     <Authors>John Sedlak</Authors>
     <Description>A tailwind ui library for blazor.</Description>
-    <Version>0.1.0.0</Version>
+    <Version>0.1.0.0-beta</Version>
 
     <!-- PackageProjectUrl is different from the repository URL. It can be a documentation
          website or a website explaining the project -->
