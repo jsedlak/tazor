@@ -1,6 +1,0 @@
-<Switch @bind-IsChecked="@IsChecked" />
-<p>Switch Value: @_isSwitched</p>
-
-@code {
-    private bool _isSwitched = true;
-}

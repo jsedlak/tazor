@@ -1,6 +1,0 @@
-<div class="grid grid-cols-5 gap-2">
-    @foreach(ButtonType bt in Enum.GetValues(typeof(ButtonType)))
-    {
-        <Button Type=@bt>@(Enum.GetName<ButtonType>(bt))</Button>
-    }
-</div>
