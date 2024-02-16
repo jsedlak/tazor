@@ -43,7 +43,7 @@ jobs:
       with:
         include: "*.csproj"
         find: "1.0.0-beta"
-        replace: "${{ steps.version.outputs.version }}-beta"
+        replace: "${{ steps.version.outputs.version }}"
         regex: false
 
     # Create the NuGet package in the folder from the environment variable NuGetDirectory
