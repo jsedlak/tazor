@@ -6,9 +6,6 @@ on:
   push:
     branches:
       - 'main'       # Run the workflow when pushing to the main branch
-  pull_request:
-    branches:
-      - '*'          # Run the workflow for all pull requests
   release:
     types:
       - published    # Run the workflow when a new GitHub release is published
@@ -87,6 +84,21 @@ jobs:
     needs: [ create_nuget ]
     # needs: [ validate_nuget, run_test ]
     steps:
+      - name: Get next version
+        uses: reecetech/version-increment@2023.9.3
+        id: version
+        with:
+          scheme: semver
+          increment: patch
+
+      - name: Update versions
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          include: "*.csproj"
+          find: "1.0.0-beta"
+          replace: "${{ steps.version.outputs.version }}-beta"
+          regex: false
+        
       # Download the NuGet package created in the previous job
       - uses: actions/download-artifact@v3
         with:
