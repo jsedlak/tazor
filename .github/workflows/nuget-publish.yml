@@ -27,10 +27,6 @@ jobs:
       with:
         fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
 
-    # Install the .NET SDK indicated in the global.json file
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-
     - name: Get next version
       uses: reecetech/version-increment@2023.9.3
       id: version
@@ -45,6 +41,10 @@ jobs:
         find: "1.0.0-beta"
         replace: "${{ steps.version.outputs.version }}"
         regex: false
+
+    # Install the .NET SDK indicated in the global.json file
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
 
     # Create the NuGet package in the folder from the environment variable NuGetDirectory
     - run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
@@ -62,3 +62,11 @@ jobs:
         foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
             dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
         }
+
+    - name: Release version
+      uses: softprops/action-gh-release@v1
+      if: ${{ github.ref_name == github.event.repository.default_branch }}
+      with:
+        draft: false
+        prerelease: false
+        tag_name: "${{ steps.version.outputs.VERSION }}"
