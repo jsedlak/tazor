@@ -1,5 +1,6 @@
 @inject IJSRuntime JSRuntime
-<a class="inline-block cursor-pointer text-white" onclick=@(() => OnHandleChange(!IsDarkModeEnabled))>
+@inject IThemeManager Theme
+<a class=@(Theme.Current.Utility.DarkModeSwitch.Link) onclick=@(() => OnHandleChange(!IsDarkModeEnabled))>
     @if (IsDarkModeEnabled)
     {
         @HeroIcons.LightBulb("w-5 h-5")
