@@ -1,0 +1,62 @@
+﻿@inject IThemeManager Theme
+<section 
+    class=@(IsUnfolded ? Theme.Current.Layout.Accordion.FoldContainerSelected : Theme.Current.Layout.Accordion.FoldContainer)>
+    <div 
+        class=@(IsUnfolded ? Theme.Current.Layout.Accordion.FoldHeaderSelected : Theme.Current.Layout.Accordion.FoldHeader)
+        @onclick=@ToggleFold>
+        @Header
+    </div>
+    @if(IsUnfolded)
+    {
+        <div class=@Theme.Current.Layout.Accordion.FoldContent>
+            @Content
+        </div>
+    }
+</section>
+@code {
+    [Parameter]
+    public RenderFragment? Header { get; set; }
+
+    [Parameter]
+    public RenderFragment? Content { get; set; }
+
+    [Parameter]
+    public bool IsUnfolded { get; set; } = false;
+
+    [Parameter]
+    public EventCallback<bool> IsUnfoldedChanged { get; set; }
+
+    [CascadingParameter(Name = "Accordion")]
+    public Accordion? Accordion { get; set; }
+
+    private async Task ToggleFold()
+    {
+        // if there is no parent, we need to self control
+        if (Accordion == null || Accordion.MultiOpen)
+        {
+            IsUnfolded = !IsUnfolded;
+            await IsUnfoldedChanged.InvokeAsync(IsUnfolded);
+        }
+        // otherwise we'll let the parent figure it out
+        else
+        {
+            await Accordion.SelectFold(this);
+        }
+    }
+
+    public async Task UnfoldAsync()
+    {
+        IsUnfolded = true;
+        await IsUnfoldedChanged.InvokeAsync(IsUnfolded);
+
+        StateHasChanged();
+    }
+
+    public async Task FoldAsync()
+    {
+        IsUnfolded = false;
+        await IsUnfoldedChanged.InvokeAsync(IsUnfolded);
+
+        StateHasChanged();
+    }
+}

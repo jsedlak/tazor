@@ -28,5 +28,7 @@ public class TazorTheme : ITheme
 
     public NavigationTheme Navigation { get; set; } = new();
 
+    public LayoutTheme Layout { get; set; } = new();
+
     public bool IsDefault { get; set; }
 }

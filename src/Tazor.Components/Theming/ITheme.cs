@@ -29,4 +29,6 @@ public interface ITheme
     UtilityTheme Utility { get; set; }
 
     NavigationTheme Navigation { get; set; }
+
+    LayoutTheme Layout { get; set; }
 }
