@@ -24,7 +24,9 @@ public interface ITheme
 
     SwitchTheme Switch { get; set; }
 
-    ButtonTheme Button { get; set; }
+    ButtonTheme Button { get; set; } 
 
     UtilityTheme Utility { get; set; }
+
+    NavigationTheme Navigation { get; set; }
 }

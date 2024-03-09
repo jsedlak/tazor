@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Tazor.Extensions;
 
-namespace Tazor.Components.Menus;
+namespace Tazor.Components.Navigation;
 
 public class NavItem
 {

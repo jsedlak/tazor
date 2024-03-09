@@ -1,0 +1,49 @@
+﻿@inject IThemeManager Theme
+<div class=@Theme.Current.Navigation.Breadcrumb.Container>
+    <ul class=@Theme.Current.Navigation.Breadcrumb.List>
+        @foreach (var item in Items)
+        {
+            <li class=@Theme.Current.Navigation.Breadcrumb.ListItem>
+                @if (!string.IsNullOrWhiteSpace(item.Href))
+                {
+                    <a href=@item.Href class=@Theme.Current.Navigation.Breadcrumb.Link>
+                        @(item.LeftIcon)
+                        @(item.Text)
+                        @(item.RightIcon)
+                    </a>
+                }
+                else
+                {
+                    <span class=@Theme.Current.Navigation.Breadcrumb.CurrentItem>
+                        @(item.LeftIcon)
+                        @(item.Text)
+                        @(item.RightIcon)
+                    </span>
+                }
+            </li>
+            @if (item != Items.Last())
+            {
+                <li>
+                    @if (DelimiterFragment != null)
+                    {
+                        @(DelimiterFragment)
+                    }
+                    else
+                    {
+                        @(Delimiter)
+                    }
+                </li>
+            }
+        }
+    </ul>
+</div>
+@code {
+    [Parameter]
+    public IEnumerable<NavItem> Items { get; set; } = Enumerable.Empty<NavItem>();
+
+    [Parameter]
+    public string Delimiter { get; set; } = "/";
+
+    [Parameter]
+    public RenderFragment? DelimiterFragment { get; set; } = null;
+}

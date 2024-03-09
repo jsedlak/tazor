@@ -26,5 +26,7 @@ public class TazorTheme : ITheme
 
     public UtilityTheme Utility { get; set; } = new();
 
+    public NavigationTheme Navigation { get; set; } = new();
+
     public bool IsDefault { get; set; }
 }

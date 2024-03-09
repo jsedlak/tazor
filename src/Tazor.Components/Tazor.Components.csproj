@@ -23,19 +23,15 @@
   <ItemGroup>
     <Compile Remove="Automotive\**" />
     <Compile Remove="Breakpoint\**" />
-    <Compile Remove="Navigation\**" />
     <Compile Remove="OnlineStatus\**" />
     <Content Remove="Automotive\**" />
     <Content Remove="Breakpoint\**" />
-    <Content Remove="Navigation\**" />
     <Content Remove="OnlineStatus\**" />
     <EmbeddedResource Remove="Automotive\**" />
     <EmbeddedResource Remove="Breakpoint\**" />
-    <EmbeddedResource Remove="Navigation\**" />
     <EmbeddedResource Remove="OnlineStatus\**" />
     <None Remove="Automotive\**" />
     <None Remove="Breakpoint\**" />
-    <None Remove="Navigation\**" />
     <None Remove="OnlineStatus\**" />
   </ItemGroup>
 
