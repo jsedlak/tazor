@@ -1,9 +1,9 @@
 ﻿@typeparam TItem
 @inject IThemeManager Theme
-<div class=@Theme.Current.Table.Wrapper>
+<div class=@Theme.Current.DataGrid.Wrapper>
     @if (!HideToolbar)
     {
-        <div class=@Theme.Current.Table.Toolbar>
+        <div class=@Theme.Current.DataGrid.Toolbar>
             <div>
                 @Toolbar
             </div>
@@ -36,24 +36,24 @@
             </div>
         </div>
     }
-    <table class=@Theme.Current.Table.TableElement>
-        <thead class=@Theme.Current.Table.Header>
+    <table class=@Theme.Current.DataGrid.TableElement>
+        <thead class=@Theme.Current.DataGrid.Header>
             <tr>
                 @foreach (var col in Columns)
                 {
                     if (col.IsVisible)
                     {
-                        <th class=@Theme.Current.Table.HeaderCell @onclick=@(() => { HandleSortChange(col); })>
+                        <th class=@Theme.Current.DataGrid.HeaderCell @onclick=@(() => { HandleSortChange(col); })>
                             <div class="flex justify-between items-center">
                                 <span class="inline-block">@col.Title</span>
 
                                 @if (col.Sort == SortDirection.Ascending)
                                 {
-                                    @HeroIcons.BarsArrowUp(Theme.Current.Table.SortingIcon)
+                                    @HeroIcons.BarsArrowUp(Theme.Current.DataGrid.SortingIcon)
                                 }
                                 else if (col.Sort == SortDirection.Descending)
                                 {
-                                    @HeroIcons.BarsArrowDown(Theme.Current.Table.SortingIcon)
+                                    @HeroIcons.BarsArrowDown(Theme.Current.DataGrid.SortingIcon)
                                 }
                             </div>
                         </th>
@@ -62,11 +62,11 @@
 
                 @if (OnEdit != null || OnDelete != null)
                 {
-                    <th class=@Theme.Current.Table.HeaderCell>Actions</th>
+                    <th class=@Theme.Current.DataGrid.HeaderCell>Actions</th>
                 }
             </tr>
         </thead>
-        <tbody class=@Theme.Current.Table.Body>
+        <tbody class=@Theme.Current.DataGrid.Body>
             @{
                 var rowCount = 1;
                 var visibleItems = Items.AsQueryable();
@@ -83,13 +83,13 @@
             }
             @foreach (var item in visibleItems)
             {
-                <tr class=@(rowCount % 2 == 0 ? Theme.Current.Table.EvenRow : Theme.Current.Table.OddRow)>
+                <tr class=@(rowCount % 2 == 0 ? Theme.Current.DataGrid.EvenRow : Theme.Current.DataGrid.OddRow)>
                     @foreach (var col in Columns)
                     {
                         if (col.IsVisible)
                         {
 
-                            <td class=@Theme.Current.Table.Cell>
+                            <td class=@Theme.Current.DataGrid.Cell>
                                 @if (col.Component != null)
                                 {
                                     var componentPropValues = new Dictionary<string, object>();
@@ -128,7 +128,7 @@
 
                     @if (OnEdit != null || OnDelete != null)
                     {
-                        <td class=@Theme.Current.Table.Cell>
+                        <td class=@Theme.Current.DataGrid.Cell>
                             <div class="flex items-center gap-2">
                                 @if (OnEdit != null)
                                 {
@@ -152,7 +152,7 @@
 
                                 @foreach(var ci in AdditionalActions)
                                 {
-                                    <a onclick=@(() => ActionRequested(item, ci)) title=@ci.Title>
+                                    <a onclick=@(() => { if(ActionRequested != null) { ActionRequested(item, ci); } }) title=@ci.Title>
                                         @(ci.Icon)
                                     </a>
                                 }
@@ -165,13 +165,13 @@
         </tbody>
         @if (SummaryRow != SummaryRowMode.Hidden)
         {
-            <tfoot class=@Theme.Current.Table.SummaryRow>
+            <tfoot class=@Theme.Current.DataGrid.SummaryRow>
                 <tr>
                     @foreach (var col in Columns)
                     {
                         if (!col.IsVisible) { continue; }
 
-                        <td class=@Theme.Current.Table.SummaryCell>
+                        <td class=@Theme.Current.DataGrid.SummaryCell>
                             @if (col.Summary != null)
                             {
                                 @col.Summary(SummaryRow == SummaryRowMode.AllItems ? Items : visibleItems)
@@ -183,7 +183,7 @@
             </tfoot>
         }
     </table>
-    <div class=@Theme.Current.Table.Footer>
+    <div class=@Theme.Current.DataGrid.Footer>
         <Pager NumberOfVisiblePages=5 @bind-CurrentPage=@CurrentPage Pages=@((int)Math.Ceiling((double)Items.Count() /
                NumberPerPage)) />
     </div>
@@ -192,7 +192,7 @@
     //[Parameter]
     //public IEnumerable<CommandItem> ItemCommands { get; set; } = Enumerable.Empty<CommandItem>();
     [Parameter]
-    public RenderFragment Toolbar { get; set; }
+    public RenderFragment? Toolbar { get; set; }
 
     [Parameter]
     public int NumberPerPage { get; set; } = 10;
@@ -225,7 +225,7 @@
     public IEnumerable<CommandItem> AdditionalActions { get; set; } = Enumerable.Empty<CommandItem>();
 
     [Parameter]
-    public Action<TItem, CommandItem> ActionRequested { get; set; }
+    public Action<TItem, CommandItem>? ActionRequested { get; set; }
 
     [Parameter]
     public bool HideToolbar { get; set; } = false;

@@ -1,4 +1,5 @@
-﻿<ClickContainer OnClickedOutside="OnHandleClickedOutside">
+﻿@using Tazor.Components.Utility
+<ClickContainer OnClickedOutside="OnHandleClickedOutside">
 <div class=@($"absolute dark:bg-blue-800 shadow p-5 {GetCssClass()}")>
     @ChildContent
 </div>

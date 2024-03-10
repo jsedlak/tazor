@@ -1,5 +1,8 @@
 ﻿namespace Tazor.Components.Theming;
 
+/// <summary>
+/// Provides theming for content
+/// </summary>
 public class ContentTheme
 {
     public string ScreenReader { get; set; } = string.Empty;

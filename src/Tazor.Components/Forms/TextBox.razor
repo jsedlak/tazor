@@ -18,6 +18,12 @@
             await ValueChanged.InvokeAsync(default(TModel));
         }
 
-        await ValueChanged.InvokeAsync((TModel)args.Value);
+        TModel? newValue = default(TModel?);
+        if(args?.Value != null && args.Value is TModel)
+        {
+            newValue = (TModel?)args.Value;
+        }
+
+        await ValueChanged.InvokeAsync(newValue);
     }
 }
