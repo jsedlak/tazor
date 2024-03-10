@@ -1,4 +1,4 @@
-﻿namespace Tazor.Components.Utility;
+﻿namespace Tazor.Components.Layout;
 
 public class CommandDescription
 {

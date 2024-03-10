@@ -1,6 +1,6 @@
 ﻿using Microsoft.JSInterop;
 
-namespace Tazor.Components;
+namespace Tazor.Components.Utility;
 
 public class OnlineStatusInterop : IAsyncDisposable
 {

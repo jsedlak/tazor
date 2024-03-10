@@ -1,4 +1,4 @@
-﻿namespace Tazor.Components;
+﻿namespace Tazor.Components.Utility;
 
 public class BreakpointParams
 {

@@ -1,5 +1,8 @@
 namespace Tazor.Components.Theming;
 
+/// <summary>
+/// Provides the basic theme for the application
+/// </summary>
 public class TazorTheme : ITheme
 {
     public string Name { get; set; } = "Unset Theme Name";
