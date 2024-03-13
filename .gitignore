@@ -4,8 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Hero Icon Files not for redistribution
-hero-icons/solid
-hero-icons/outline
+hero-icons/tmp
+hero-icons/out
 
 # User-specific files
 *.rsuser

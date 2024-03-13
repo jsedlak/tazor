@@ -1,0 +1,2 @@
+            case HeroIconTypes.Micro:
+                return HeroIconsMicro.{Name}(cssClass, widthAndHeight);

@@ -1,0 +1,18 @@
+    /// <summary>
+    /// Returns the {FullName} icon
+    /// </summary>
+    public static MarkupString {Name}(string cssClass = "", string widthAndHeight = "w-5 h-5", HeroIconTypes iconType = HeroIconTypes.Solid)
+    {
+        switch(iconType)
+        {
+            case HeroIconTypes.Outline:
+                return HeroIconsOutline.{Name}(cssClass, widthAndHeight);
+{Micro}
+            case HeroIconTypes.Mini:
+                return HeroIconsMini.{Name}(cssClass, widthAndHeight);
+        }
+
+        return new MarkupString(HeroIconsSolidResources.{Name}.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+

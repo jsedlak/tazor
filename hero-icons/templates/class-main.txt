@@ -1,0 +1,12 @@
+using Microsoft.AspNetCore.Components;
+
+namespace Tazor.Components.Content;
+
+/// <summary>
+/// Provides the all versions of the Hero Icons Library {Version}
+/// </summary>
+public static class HeroIcons
+{
+{Functions}
+}
+

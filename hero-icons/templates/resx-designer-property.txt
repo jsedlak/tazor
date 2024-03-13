@@ -1,0 +1,10 @@
+        /// <summary>
+        ///   Returns the {FullName} icon SVG string
+        /// </summary>
+        internal static string {Name} {
+            get {
+                return ResourceManager.GetString("{Name}", resourceCulture);
+            }
+        }
+
+

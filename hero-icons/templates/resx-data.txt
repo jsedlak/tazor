@@ -1,0 +1,4 @@
+  <data name="{Name}" xml:space="preserve">
+    <value>{Svg}</value>
+  </data>
+

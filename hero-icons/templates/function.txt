@@ -1,0 +1,9 @@
+    /// <summary>
+    /// Returns the {FullName} icon
+    /// </summary>
+    public static MarkupString {Name}(string cssClass = "", string widthAndHeight = "w-5 h-5")
+    {
+        return new MarkupString({ResourceName}.{Name}.Replace("{CssClass}", $"{cssClass} {widthAndHeight}"));
+    }
+
+
