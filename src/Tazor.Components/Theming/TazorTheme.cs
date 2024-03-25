@@ -11,6 +11,11 @@ public class TazorTheme : ITheme
     public string Name { get; set; } = "Unset Theme Name";
 
     /// <summary>
+    /// Gets or Sets the data theme
+    /// </summary>
+    public DataTheme Data { get; set; } = new();
+
+    /// <summary>
     /// Gets or Sets the table theme
     /// </summary>
     public DataGridTheme DataGrid { get; set; } = new();

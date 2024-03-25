@@ -1,0 +1,77 @@
+﻿@inject IThemeManager Theme
+@foreach (var item in Items)
+{
+    var selected = Tree.SelectedItems.Contains(item);
+    var tvTheme = Theme.Current.Data.TreeView;
+
+    <li class=@(selected ? tvTheme.TreeItemSelected : tvTheme.TreeItem)>
+        <div class=@(selected ? tvTheme.TreeItemSelectedContentWrapper : tvTheme.TreeItemContentWrapper)>
+            <a class=@(tvTheme.TreeItemExpandAnchor) @onclick=@(async () => { await OnExpandClicked(item); })>
+                @if (item.IsExpanded)
+                {
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         class=@tvTheme.TreeItemExpandIcon>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                }
+                else
+                {
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         class=@tvTheme.TreeItemExpandIcon>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                }
+            </a>
+
+            <a class=@(selected ? tvTheme.TreeItemSelectedAnchor : tvTheme.TreeItemAnchor)
+               @onclick=@(() => Tree.Select(item))
+               @oncontextmenu=@((args) => HandleContextMenu(item, args))
+               @oncontextmenu:preventDefault="true">
+                <span class="">@(item.Icon)</span>
+                <span class="">@item.Title</span>
+            </a>
+        </div>
+        @if (item.IsExpanded)
+        {
+            <ul class=@tvTheme.TreeItemSubTree>
+                <TreeSection Items=@item.Children />
+            </ul>
+        }
+    </li>
+}
+
+<ContextMenu Left=@_left
+    Top=@_top
+    @bind-IsVisible=@_contextMenuVisible 
+/>
+
+@code {
+    [Parameter]
+    public IEnumerable<ITreeItem> Items { get; set; } = Enumerable.Empty<ITreeItem>();
+
+    [CascadingParameter(Name = "Tree")]
+    public TreeView Tree { get; set; } = null!;
+
+    private int _left = 0;
+    private int _top = 0;
+    private bool _contextMenuVisible = false;
+
+    protected async Task OnExpandClicked(ITreeItem item)
+    {
+        item.IsExpanded = !item.IsExpanded;
+
+        if (item.IsExpanded && Tree.RequestTree != null)
+        {
+            item.Children = await Tree.RequestTree(item);
+        }
+
+        StateHasChanged();
+    }
+
+    protected void HandleContextMenu(ITreeItem item, MouseEventArgs args)
+    {
+        _left = (int)args.ClientX;
+        _top = (int)args.ClientY;
+        _contextMenuVisible = true;
+    }
+}

@@ -1,4 +1,6 @@
-﻿namespace Tazor.Components.Data;
+﻿using Microsoft.AspNetCore.Components;
+
+namespace Tazor.Components.Data;
 
 public enum SummaryRowMode
 {
@@ -6,4 +8,3 @@ public enum SummaryRowMode
     AllItems,
     VisibleItems
 }
-

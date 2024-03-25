@@ -1,0 +1,26 @@
+﻿@typeparam TItem
+@inject IThemeManager Theme
+<div class=@Theme.Current.Data.ListView.Wrapper>
+    <ul class=@Theme.Current.Data.ListView.List>
+        @foreach(var item in Items)
+        {
+            <li class=@Theme.Current.Data.ListView.ListItem>
+                @if(ItemTemplate == null)
+                {
+                    @item?.ToString()
+                }
+                else
+                {
+                    @(ItemTemplate(item))
+                }
+            </li>
+        }
+    </ul>
+</div>
+@code {
+    [Parameter]
+    public IEnumerable<TItem> Items { get; set; } = Enumerable.Empty<TItem>();
+
+    [Parameter]
+    public RenderFragment<TItem>? ItemTemplate { get; set; } = null;
+}
