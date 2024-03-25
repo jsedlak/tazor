@@ -1,12 +1,25 @@
-﻿<div class="flex items-center">    
-    <div class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
-         role="status">
-        <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
-    </div>
-    <span>@Text</span>
+﻿@inject IThemeManager Theme
+<div class=@Theme.Current.Content.Spinner.Wrapper>    
+    @if(Icon != null)
+    {
+        <div class=@Theme.Current.Content.Spinner.SpinnerIcon>@Icon</div>
+    }
+    else 
+    {
+        <div class=@Theme.Current.Content.Spinner.SpinnerDiv
+             role="status">
+        </div>
+    }
+    @if(!string.IsNullOrWhiteSpace(Text)) 
+    {
+        <span class=@Theme.Current.Content.Spinner.Text>@Text</span>
+    }
 </div>
 
 @code {
     [Parameter]
-    public string Text { get; set; } = "Loading...";
+    public string? Text { get; set; } = null;
+
+    [Parameter]
+    public MarkupString? Icon { get; set; } = null;
 }

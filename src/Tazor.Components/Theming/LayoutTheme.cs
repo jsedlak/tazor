@@ -9,4 +9,6 @@ public class LayoutTheme
     /// Gets or Sets accordion theming
     /// </summary>
     public AccordionTheme Accordion { get; set; } = new();
+
+    public OverlayTheme Overlay { get; set; } = new();
 }

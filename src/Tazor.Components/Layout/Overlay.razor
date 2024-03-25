@@ -1,0 +1,18 @@
+﻿@inject IThemeManager Theme
+@if(IsVisible) {
+<div class=@Theme.Current.Layout.Overlay.Wrapper>
+    <div class=@(ContentClass ?? Theme.Current.Layout.Overlay.Content)>
+        @ChildContent
+    </div>
+</div>
+}
+@code {
+    [Parameter]
+    public bool IsVisible { get; set; } = false;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    [Parameter]
+    public string? ContentClass { get; set; } = null;
+}

@@ -5,6 +5,8 @@
 /// </summary>
 public class ContentTheme
 {
+    public SpinnerTheme Spinner { get; set; } = new();
+
     public string ScreenReader { get; set; } = string.Empty;
 
     public string ComponentHeader { get; set; } = string.Empty;
