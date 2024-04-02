@@ -1,0 +1,223 @@
+﻿@typeparam TItem
+@inject IThemeManager Theme
+<ClickContainer 
+    OnClickedOutside=@HandleClickedOutside>
+    @{
+        var cbTheme = Theme.Current.Forms.ComboBox;
+    }
+    <div 
+        class=@cbTheme.Wrapper
+        @onclick=@(() => { _isEditorVisible = true; StateHasChanged(); })>
+        @if (!_isEditorVisible)
+        {
+            <div class=@cbTheme.ViewContainer>
+                @if (SelectedItems.Any())
+                {
+                    <ul class=@cbTheme.ViewList>
+                        @foreach (var item in SelectedItems)
+                        {
+                            <li class=@cbTheme.ViewListItem>
+                                @if (ViewTemplate == null)
+                                {
+                                    @item?.ToString()
+                                }
+                                else
+                                {
+                                    @(ViewTemplate(item))
+                                }
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+        }
+        else 
+        {
+            <div class=@cbTheme.InputContainer>
+                <input 
+                    class=@cbTheme.Input
+                    type="text" 
+                    value=@SearchText 
+                    @ref=@_textboxReference
+                    @oninput=@OnInputChanged
+                    @onkeydown=@OnKeyDown
+                />
+                <a 
+                    class=@cbTheme.DropdownButton
+                    @onclick=@HandleDropDownClicked>
+                    @if(_isDropdownVisible) 
+                    {
+                        @HeroIcons.ChevronUp(cbTheme.DropdownButtonIcon)
+                    }
+                    else 
+                    {
+                        @HeroIcons.ChevronDown(cbTheme.DropdownButtonIcon)
+                    }
+                </a>
+            </div>
+        }
+    
+        @if(_isDropdownVisible) 
+        {
+            <div class=@cbTheme.DropdownContainer>
+                <ul class=@cbTheme.DropdownList>
+                @foreach(var item in _items.Union(SelectedItems))
+                {
+                    <li class=@cbTheme.DropdownItem>
+                        @if(MultiSelect)
+                        {
+                            <input
+                                class=@cbTheme.DropdownCheckbox
+                                type="checkbox" 
+                                checked=@(SelectedItems.Contains(item)) 
+                                onchange=@(async () => await OnCheckChange(item)) 
+                            />
+                        }
+
+                        <div class=@cbTheme.DropdownItemContent>
+                            @if(ResultTemplate == null)
+                            {
+                                @item?.ToString()
+                            }
+                            else
+                            {
+                                @(ResultTemplate(item))
+                            }
+                        </div>
+                    </li>
+                }
+                </ul>
+            </div>
+        }
+    </div>
+</ClickContainer>
+@code {
+    [Parameter]
+    public bool MultiSelect { get; set; } = false;
+
+    [Parameter]
+    public RenderFragment<TItem>? ResultTemplate { get; set; }
+
+    [Parameter]
+    public RenderFragment<TItem>? ViewTemplate { get; set; }
+
+    [Parameter]
+    public string SearchText { get; set; } = string.Empty;
+
+    [Parameter]
+    public EventCallback<string> SearchTextChanged { get; set; }
+
+    [Parameter]
+    public Func<string, Task<IEnumerable<TItem>>>? OnSearch { get; set; }
+
+    [Parameter]
+    public IEnumerable<TItem> SelectedItems { get; set; } = Enumerable.Empty<TItem>();
+
+    [Parameter]
+    public EventCallback<IEnumerable<TItem>> SelectedItemsChanged { get; set; }
+
+    private IEnumerable<TItem> _items = Enumerable.Empty<TItem>();
+
+    private bool _isDropdownVisible = false;
+    private bool _isEditorVisible = true;
+    private ElementReference? _textboxReference;
+
+    private int? _currentIndex = null;
+
+    private async Task OnInputChanged(ChangeEventArgs args)
+    {
+        SearchText = args.Value?.ToString() ?? "";
+        await SearchTextChanged.InvokeAsync(SearchText);
+
+        if(OnSearch != null)
+        {
+            _items = await OnSearch(SearchText);
+            _currentIndex = _items.Any() ? 0 : null;
+        }
+
+        if (_items.Any())
+        {
+            _isDropdownVisible = true;
+        }
+        else
+        {
+            _isDropdownVisible = false;
+        }
+
+        StateHasChanged();
+    }
+
+    private async Task OnCheckChange(TItem item)
+    {
+        if (SelectedItems.Contains(item))
+        {
+            SelectedItems = SelectedItems.Except([item]);
+        }
+        else
+        {
+            SelectedItems = [.. SelectedItems, item];
+        }
+
+        await SelectedItemsChanged.InvokeAsync(SelectedItems);
+
+        StateHasChanged();
+    }
+
+    private async Task OnKeyDown(KeyboardEventArgs args)
+    {
+        if (args.Key == KeyCodes.Escape)
+        {
+            _currentIndex = null;
+            _isDropdownVisible = false;
+        }
+        else if (args.Key == KeyCodes.ArrowDown && _items.Any())
+        {
+            _currentIndex = _currentIndex.GetValueOrDefault(-1) + 1;
+            if (_currentIndex > _items.Count() - 1)
+            {
+                _currentIndex = 0;
+            }
+        }
+        else if (args.Key == KeyCodes.ArrowUp && _items.Any())
+        {
+            _currentIndex = _currentIndex.GetValueOrDefault(0) - 1;
+            if (_currentIndex < 0)
+            {
+                _currentIndex = _items.Count() - 1;
+            }
+        }
+        else if (args.Key == KeyCodes.Enter && _currentIndex != null)
+        {
+            var item = _items.ElementAt(_currentIndex.Value);
+
+            if(item != null)
+            {            
+                await OnCheckChange(item);
+            }
+        }
+
+        //StateHasChanged();
+    }
+
+    private void HandleClickedOutside()
+    {
+        Console.WriteLine("HandleClickedOutside");
+        _isEditorVisible = !SelectedItems.Any();
+        _isDropdownVisible = false;
+        StateHasChanged();
+    }
+
+    private async Task HandleDropDownClicked()
+    {
+        Console.WriteLine("DropDownButton->Click"); 
+        
+        if(OnSearch != null)
+        {
+            _items = await OnSearch(SearchText);
+            _currentIndex = _items.Any() ? 0 : null;
+        }
+
+        _isDropdownVisible = !_isDropdownVisible && _items.Any();
+        StateHasChanged();
+    }
+}

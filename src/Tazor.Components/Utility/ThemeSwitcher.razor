@@ -1,0 +1,18 @@
+﻿@inject IThemeManager ThemeManager
+<select @onchange="OnChange" class=@ThemeManager.Current.Forms.SelectInput>
+    @foreach (var theme in ThemeManager.Themes)
+    {
+        <option selected=@(theme == ThemeManager.Current) value="@theme.Name">@theme.Name</option>
+    }
+</select>
+@code {
+    private async Task OnChange(ChangeEventArgs args)
+    {
+        if(args.Value == null) 
+        { 
+            return;
+        }
+
+        await ThemeManager.SetThemeAsync(args.Value!.ToString());
+    }
+}
