@@ -1,8 +1,8 @@
-﻿@inject IThemeManager Theme
+﻿@inherits TazorBaseComponent
 @foreach (var item in Items)
 {
     var selected = Tree.SelectedItems.Contains(item);
-    var tvTheme = Theme.Current.Data.TreeView;
+    var tvTheme = Theme.Data.TreeView;
 
     <li class=@(selected ? tvTheme.TreeItemSelected : tvTheme.TreeItem)>
         <div class=@(selected ? tvTheme.TreeItemSelectedContentWrapper : tvTheme.TreeItemContentWrapper)>

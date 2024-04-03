@@ -1,10 +1,10 @@
 ﻿@typeparam TItem
-@inject IThemeManager Theme
-<div class=@Theme.Current.Data.ListView.Wrapper>
-    <ul class=@Theme.Current.Data.ListView.List>
+@inherits TazorBaseComponent
+<div class=@Theme.Data.ListView.Wrapper>
+    <ul class=@Theme.Data.ListView.List>
         @foreach(var item in Items)
         {
-            <li class=@Theme.Current.Data.ListView.ListItem>
+            <li class=@Theme.Data.ListView.ListItem>
                 @if(ItemTemplate == null)
                 {
                     @item?.ToString()

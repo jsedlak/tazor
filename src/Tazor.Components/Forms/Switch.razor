@@ -1,5 +1,5 @@
-@inject IThemeManager Theme
-<div class=@Theme.Current.Switch.Wrapper>
+@inherits TazorBaseComponent
+<div class=@Theme.Switch.Wrapper>
     <div @onclick="OnSwitchClicked" class=@_trackClass>
         <div class=@_knobClass></div>
     </div>
@@ -23,8 +23,8 @@
 
     private void UpdateCssClasses()
     {
-        _knobClass = IsChecked ? Theme.Current.Switch.KnobSelected : Theme.Current.Switch.Knob;
-        _trackClass = IsChecked ? Theme.Current.Switch.TrackSelected : Theme.Current.Switch.Track;
+        _knobClass = IsChecked ? Theme.Switch.KnobSelected : Theme.Switch.Knob;
+        _trackClass = IsChecked ? Theme.Switch.TrackSelected : Theme.Switch.Track;
     }
 
     protected override void OnInitialized()

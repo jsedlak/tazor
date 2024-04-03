@@ -1,10 +1,10 @@
-﻿@inject IThemeManager Theme
+﻿@inherits TazorBaseComponent
 @inject NavigationManager Navigation
-<div class=@Theme.Current.TabNav.Wrapper>
+<div class=@Theme.TabNav.Wrapper>
     @foreach (var item in Items)
     {
-        var itemClass = item == SelectedItem ? Theme.Current.TabNav.SelectedItem : Theme.Current.TabNav.Item;
-        var linkClass = item == SelectedItem ? Theme.Current.TabNav.SelectedLink : Theme.Current.TabNav.Link;
+        var itemClass = item == SelectedItem ? Theme.TabNav.SelectedItem : Theme.TabNav.Item;
+        var linkClass = item == SelectedItem ? Theme.TabNav.SelectedLink : Theme.TabNav.Link;
 
         <div class=@itemClass>
             <a class=@linkClass @onclick=@(async () => await HandleTabClicked(item))>

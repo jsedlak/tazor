@@ -1,13 +1,13 @@
-﻿@inject IThemeManager Theme
+﻿@inherits TazorBaseComponent
 @if (IsVisible)
 {
     <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class=@Theme.Current.Flyout.Overlay></div>
+        <div class=@Theme.Flyout.Overlay></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class=@GetPlacementClass()>
                 <div class=@GetWindowClass()>
-                    <div class=@Theme.Current.Flyout.WindowInner>
-                        <header class=@Theme.Current.Flyout.Header>
+                    <div class=@Theme.Flyout.WindowInner>
+                        <header class=@Theme.Flyout.Header>
                             @if (Header != null)
                             {
                                 @Header
@@ -27,10 +27,10 @@
                                 </div>
                             }
                         </header>
-                        <div class=@Theme.Current.Flyout.Content>
+                        <div class=@Theme.Flyout.Content>
                             @Content
                         </div>
-                        <footer class=@Theme.Current.Flyout.Footer>
+                        <footer class=@Theme.Flyout.Footer>
                             @Footer
                         </footer>
                     </div>
@@ -72,17 +72,17 @@
 
     private string GetWindowClass()
     {
-        var windowClass = Theme.Current.Flyout.Window;
+        var windowClass = Theme.Flyout.Window;
 
         switch(Placement)
         {
             case PanelPlacement.Left:
             case PanelPlacement.Right:
-                windowClass += $" {Theme.Current.Flyout.WindowVertical}";
+                windowClass += $" {Theme.Flyout.WindowVertical}";
                 break;
             case PanelPlacement.Top:
             case PanelPlacement.Bottom:
-                windowClass += $" {Theme.Current.Flyout.WindowHorizontal}";
+                windowClass += $" {Theme.Flyout.WindowHorizontal}";
                 break;
         }
 
@@ -94,15 +94,15 @@
         switch (Placement)
         {
             case PanelPlacement.Left:
-                return Theme.Current.Flyout.PlacementLeft;
+                return Theme.Flyout.PlacementLeft;
             case PanelPlacement.Right:
-                return Theme.Current.Flyout.PlacementRight;
+                return Theme.Flyout.PlacementRight;
             case PanelPlacement.Top:
-                return Theme.Current.Flyout.PlacementTop;
+                return Theme.Flyout.PlacementTop;
             case PanelPlacement.Bottom:
-                return Theme.Current.Flyout.PlacementBottom;
+                return Theme.Flyout.PlacementBottom;
         }
 
-        return Theme.Current.Flyout.PlacementLeft;
+        return Theme.Flyout.PlacementLeft;
     }
 }

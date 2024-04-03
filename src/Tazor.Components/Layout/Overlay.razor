@@ -1,7 +1,8 @@
-﻿@inject IThemeManager Theme
-@if(IsVisible) {
-<div class=@Theme.Current.Layout.Overlay.Wrapper>
-    <div class=@(ContentClass ?? Theme.Current.Layout.Overlay.Content)>
+﻿@inherits TazorBaseComponent
+@if(IsVisible) 
+{
+<div class=@Theme.Layout.Overlay.Wrapper>
+    <div class=@(ContentClass ?? Theme.Layout.Overlay.Content)>
         @ChildContent
     </div>
 </div>

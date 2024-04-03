@@ -1,6 +1,6 @@
-﻿@inject IThemeManager Theme
+﻿@inherits TazorBaseComponent
 <CascadingValue Name="Accordion" Value=@this>
-    <div class=@Theme.Current.Layout.Accordion.Container>
+    <div class=@Theme.Layout.Accordion.Container>
         @ChildContent
     </div>
 </CascadingValue>

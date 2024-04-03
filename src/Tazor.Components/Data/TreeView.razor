@@ -1,6 +1,6 @@
-﻿@inject IThemeManager Theme
-<div class=@Theme.Current.Data.TreeView.Wrapper>
-    <ul class=@Theme.Current.Data.TreeView.Tree>
+﻿@inherits TazorBaseComponent
+<div class=@Theme.Data.TreeView.Wrapper>
+    <ul class=@Theme.Data.TreeView.Tree>
         <CascadingValue TValue="TreeView" Name="Tree" Value="this">
             <TreeSection Items=@Items />
         </CascadingValue>

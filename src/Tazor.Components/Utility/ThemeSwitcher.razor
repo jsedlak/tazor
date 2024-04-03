@@ -1,5 +1,6 @@
-﻿@inject IThemeManager ThemeManager
-<select @onchange="OnChange" class=@ThemeManager.Current.Forms.SelectInput>
+﻿@inherits TazorBaseComponent
+@inject IThemeManager ThemeManager
+<select @onchange="OnChange" class=@Theme.Forms.SelectInput>
     @foreach (var theme in ThemeManager.Themes)
     {
         <option selected=@(theme == ThemeManager.Current) value="@theme.Name">@theme.Name</option>

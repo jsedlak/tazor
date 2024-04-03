@@ -1,6 +1,6 @@
 @inject IJSRuntime JSRuntime
-@inject IThemeManager Theme
-<a class=@(Theme.Current.Utility.DarkModeSwitch.Link) onclick=@(() => OnHandleChange(!IsDarkModeEnabled))>
+@inherits TazorBaseComponent
+<a class=@(Theme.Utility.DarkModeSwitch.Link) onclick=@(() => OnHandleChange(!IsDarkModeEnabled))>
     @if (IsDarkModeEnabled)
     {
         @HeroIconsOutline.LightBulb("w-5 h-5")

@@ -1,7 +1,7 @@
-﻿@inject IThemeManager Theme
+﻿@inherits TazorBaseComponent
 <div class=@($"{_cssClass} {Class ?? string.Empty}") role="alert">
     <div class="flex items-center">
-        <div class=@($"flex-shrink-0 {Theme.Current.Content.AlertIcon}")>
+        <div class=@($"flex-shrink-0 {Theme.Content.AlertIcon}")>
             @if (Icon != null)
             {
                 @Icon
@@ -73,7 +73,7 @@
     {
         if (Type == AlertType.Custom)
         {
-            _cssClass = $"{Theme.Current.Content.AlertGlobal} {Class ?? string.Empty}";
+            _cssClass = $"{Theme.Content.AlertGlobal} {Class ?? string.Empty}";
         }
         else
         {
@@ -81,19 +81,19 @@
             switch(Type)
             {
                 case AlertType.Success:
-                    alertClass = Theme.Current.Content.AlertSuccess;
+                    alertClass = Theme.Content.AlertSuccess;
                     break;
                 case AlertType.Error:
-                    alertClass = Theme.Current.Content.AlertError;
+                    alertClass = Theme.Content.AlertError;
                     break;
                 case AlertType.Warning:
-                    alertClass = Theme.Current.Content.AlertWarning;
+                    alertClass = Theme.Content.AlertWarning;
                     break;
                 case AlertType.Info:
-                    alertClass = Theme.Current.Content.AlertInfo;
+                    alertClass = Theme.Content.AlertInfo;
                     break;
             }
-            _cssClass = $"{Theme.Current.Content.AlertGlobal} {alertClass} {Class ?? string.Empty}";
+            _cssClass = $"{Theme.Content.AlertGlobal} {alertClass} {Class ?? string.Empty}";
         }
     }
 }

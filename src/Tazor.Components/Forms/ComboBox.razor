@@ -1,9 +1,9 @@
 ﻿@typeparam TItem
-@inject IThemeManager Theme
+@inherits TazorBaseComponent
 <ClickContainer 
     OnClickedOutside=@HandleClickedOutside>
     @{
-        var cbTheme = Theme.Current.Forms.ComboBox;
+        var cbTheme = Theme.Forms.ComboBox;
     }
     <div 
         class=@cbTheme.Wrapper

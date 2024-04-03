@@ -1,6 +1,6 @@
-﻿@inject IThemeManager Theme
-<div class=@Theme.Current.Pager.Wrapper>
-    <nav class=@Theme.Current.Pager.Nav aria-label="Pagination">
+﻿@inherits TazorBaseComponent
+<div class=@Theme.Pager.Wrapper>
+    <nav class=@Theme.Pager.Nav aria-label="Pagination">
         @{
             var min = CurrentPage - NumberOfVisiblePages / 2;
             var max = CurrentPage + NumberOfVisiblePages / 2;
@@ -22,8 +22,8 @@
 
         @if (max - min > 0)
         {
-            <a @onclick=@(() => ChangePage(CurrentPage - 1)) class=@Theme.Current.Pager.PreviousButton>
-                <span class=@Theme.Current.Pager.NextPreviousText>Previous</span>
+            <a @onclick=@(() => ChangePage(CurrentPage - 1)) class=@Theme.Pager.PreviousButton>
+                <span class=@Theme.Pager.NextPreviousText>Previous</span>
                 @HeroIcons.ChevronLeft("inline-block")
             </a>
 
@@ -37,8 +37,8 @@
             }
 
 
-            <a @onclick=@(() => ChangePage(CurrentPage + 1)) class=@Theme.Current.Pager.NextButton>
-                <span class=@Theme.Current.Pager.NextPreviousText>Next</span>
+            <a @onclick=@(() => ChangePage(CurrentPage + 1)) class=@Theme.Pager.NextButton>
+                <span class=@Theme.Pager.NextPreviousText>Next</span>
                 @HeroIcons.ChevronRight("inline-block")
             </a>
         }
@@ -59,7 +59,7 @@
 
     private string GetPageClass(int pageIndex)
     {
-        return pageIndex == CurrentPage ? Theme.Current.Pager.ButtonActive : Theme.Current.Pager.Button;
+        return pageIndex == CurrentPage ? Theme.Pager.ButtonActive : Theme.Pager.Button;
     }
 
     private async void ChangePage(int pageIndex)

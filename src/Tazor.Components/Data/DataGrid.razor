@@ -1,9 +1,9 @@
 ﻿@typeparam TItem
-@inject IThemeManager Theme
-<div class=@Theme.Current.DataGrid.Wrapper>
+@inherits TazorBaseComponent
+<div class=@Theme.DataGrid.Wrapper>
     @if (!HideToolbar)
     {
-        <div class=@Theme.Current.DataGrid.Toolbar>
+        <div class=@Theme.DataGrid.Toolbar>
             <div>
                 @Toolbar
             </div>
@@ -12,7 +12,7 @@
                     <ClickContainer OnClickedOutside=@(() => { _isColumnPopupOpen = false; StateHasChanged(); })>
                         <a class="cursor-pointer" title="Columns" @onclick=@(() => { _isColumnPopupOpen =
                        !_isColumnPopupOpen; })>
-                            @HeroIcons.TableCells(Theme.Current.Content.Icon)
+                            @HeroIcons.TableCells(Theme.Content.Icon)
                         </a>
                         <div class=@($"top-100 right-0 mt-5 absolute dark:bg-blue-800 shadow p-2 {CetColumnPopupClass()}")>
                             @foreach (var col in Columns)
@@ -36,24 +36,24 @@
             </div>
         </div>
     }
-    <table class=@Theme.Current.DataGrid.TableElement>
-        <thead class=@Theme.Current.DataGrid.Header>
+    <table class=@Theme.DataGrid.TableElement>
+        <thead class=@Theme.DataGrid.Header>
             <tr>
                 @foreach (var col in Columns)
                 {
                     if (col.IsVisible)
                     {
-                        <th class=@Theme.Current.DataGrid.HeaderCell @onclick=@(() => { HandleSortChange(col); })>
+                        <th class=@Theme.DataGrid.HeaderCell @onclick=@(() => { HandleSortChange(col); })>
                             <div class="flex justify-between items-center">
                                 <span class="inline-block">@col.Title</span>
 
                                 @if (col.Sort == SortDirection.Ascending)
                                 {
-                                    @HeroIcons.BarsArrowUp(Theme.Current.DataGrid.SortingIcon)
+                                    @HeroIcons.BarsArrowUp(Theme.DataGrid.SortingIcon)
                                 }
                                 else if (col.Sort == SortDirection.Descending)
                                 {
-                                    @HeroIcons.BarsArrowDown(Theme.Current.DataGrid.SortingIcon)
+                                    @HeroIcons.BarsArrowDown(Theme.DataGrid.SortingIcon)
                                 }
                             </div>
                         </th>
@@ -62,11 +62,11 @@
 
                 @if (OnEdit != null || OnDelete != null)
                 {
-                    <th class=@Theme.Current.DataGrid.HeaderCell>Actions</th>
+                    <th class=@Theme.DataGrid.HeaderCell>Actions</th>
                 }
             </tr>
         </thead>
-        <tbody class=@Theme.Current.DataGrid.Body>
+        <tbody class=@Theme.DataGrid.Body>
             @{
                 var rowCount = 1;
                 var visibleItems = Items.AsQueryable();
@@ -83,13 +83,13 @@
             }
             @foreach (var item in visibleItems)
             {
-                <tr class=@(rowCount % 2 == 0 ? Theme.Current.DataGrid.EvenRow : Theme.Current.DataGrid.OddRow)>
+                <tr class=@(rowCount % 2 == 0 ? Theme.DataGrid.EvenRow : Theme.DataGrid.OddRow)>
                     @foreach (var col in Columns)
                     {
                         if (col.IsVisible)
                         {
 
-                            <td class=@Theme.Current.DataGrid.Cell>
+                            <td class=@Theme.DataGrid.Cell>
                                 @if (col.Component != null)
                                 {
                                     var componentPropValues = new Dictionary<string, object>();
@@ -128,7 +128,7 @@
 
                     @if (OnEdit != null || OnDelete != null)
                     {
-                        <td class=@Theme.Current.DataGrid.Cell>
+                        <td class=@Theme.DataGrid.Cell>
                             <div class="flex items-center gap-2">
                                 @if (OnEdit != null)
                                 {
@@ -165,13 +165,13 @@
         </tbody>
         @if (SummaryRow != SummaryRowMode.Hidden)
         {
-            <tfoot class=@Theme.Current.DataGrid.SummaryRow>
+            <tfoot class=@Theme.DataGrid.SummaryRow>
                 <tr>
                     @foreach (var col in Columns)
                     {
                         if (!col.IsVisible) { continue; }
 
-                        <td class=@Theme.Current.DataGrid.SummaryCell>
+                        <td class=@Theme.DataGrid.SummaryCell>
                             @if (col.Summary != null)
                             {
                                 @col.Summary(SummaryRow == SummaryRowMode.AllItems ? Items : visibleItems)
@@ -183,14 +183,12 @@
             </tfoot>
         }
     </table>
-    <div class=@Theme.Current.DataGrid.Footer>
+    <div class=@Theme.DataGrid.Footer>
         <Pager NumberOfVisiblePages=5 @bind-CurrentPage=@CurrentPage Pages=@((int)Math.Ceiling((double)Items.Count() /
                NumberPerPage)) />
     </div>
 </div>
 @code {
-    //[Parameter]
-    //public IEnumerable<CommandItem> ItemCommands { get; set; } = Enumerable.Empty<CommandItem>();
     [Parameter]
     public RenderFragment? Toolbar { get; set; }
 

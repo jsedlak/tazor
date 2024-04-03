@@ -1,4 +1,4 @@
-﻿@*@inject IThemeManager Theme*@
+﻿@inherits TazorBaseComponent
 <section 
     class=@(IsUnfolded ? Theme.Layout.Accordion.FoldContainerSelected : Theme.Layout.Accordion.FoldContainer)>
     <div 
@@ -14,9 +14,6 @@
     }
 </section>
 @code {
-    [CascadingParameter(Name = "Theme")]
-    public ITheme Theme { get; set; } = null!;
-
     [Parameter]
     public RenderFragment? Header { get; set; }
 
