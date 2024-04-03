@@ -1,5 +1,5 @@
-﻿@inject IThemeManager Theme
-<div class=@($"{Theme.Current.Content.BadgeGlobal} {GetCssClass()}")>
+﻿@inherits TazorBaseComponent
+<div class=@($"{Theme.Content.BadgeGlobal} {GetCssClass()}")>
     @ChildContent
 </div>
 @code {
@@ -17,17 +17,17 @@
         switch(Type)
         {
             case BadgeType.Success:
-                return Theme.Current.Content.BadgeSuccess;
+                return Theme.Content.BadgeSuccess;
             case BadgeType.Info:
-                return Theme.Current.Content.BadgeInfo;
+                return Theme.Content.BadgeInfo;
             case BadgeType.Warning:
-                return Theme.Current.Content.BadgeWarning;
+                return Theme.Content.BadgeWarning;
             case BadgeType.Error:
-                return Theme.Current.Content.BadgeError;
+                return Theme.Content.BadgeError;
             case BadgeType.Custom:
                 return CustomClass;
             default:
-                return Theme.Current.Content.BadgeGlobal;
+                return Theme.Content.BadgeGlobal;
         }
     }
 }

@@ -1,8 +1,27 @@
-﻿@inject IThemeManager Theme
-<pre class=@Theme.Current.Content.CodeBlock>
-    @Code
-</pre>
+﻿@inherits TazorBaseComponent
+@inject IJSRuntime JSRuntime
+<div class=@Theme.Content.CodeBlock.Wrapper>
+    <div class=@Theme.Content.CodeBlock.Header>
+        <h3>@Title</h3>
+        <div>
+            <a title="Copy to Clipboard" @onclick=@OnCopyToClipboard>
+                @HeroIconsOutline.Clipboard()
+            </a>
+        </div>
+    </div>
+    <pre class=@Theme.Content.CodeBlock.Pre>
+        @Code
+    </pre>
+</div>
 @code {
     [Parameter]
     public string Code { get; set; } = null!;
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    private async Task OnCopyToClipboard()
+    {
+        await JSRuntime.InvokeVoidAsync("copyToClipboard", Code);
+    }
 }

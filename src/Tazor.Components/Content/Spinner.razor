@@ -1,18 +1,18 @@
-﻿@inject IThemeManager Theme
-<div class=@Theme.Current.Content.Spinner.Wrapper>    
+﻿@inherits TazorBaseComponent
+<div class=@Theme.Content.Spinner.Wrapper>    
     @if(Icon != null)
     {
-        <div class=@Theme.Current.Content.Spinner.SpinnerIcon>@Icon</div>
+        <div class=@Theme.Content.Spinner.SpinnerIcon>@Icon</div>
     }
     else 
     {
-        <div class=@Theme.Current.Content.Spinner.SpinnerDiv
+        <div class=@Theme.Content.Spinner.SpinnerDiv
              role="status">
         </div>
     }
     @if(!string.IsNullOrWhiteSpace(Text)) 
     {
-        <span class=@Theme.Current.Content.Spinner.Text>@Text</span>
+        <span class=@Theme.Content.Spinner.Text>@Text</span>
     }
 </div>
 

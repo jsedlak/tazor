@@ -31,7 +31,10 @@ public class ContentTheme
 
     public string Icon { get; set; } = string.Empty;
 
-    public string CodeBlock { get; set; } = string.Empty;
+    /// <summary>
+    /// Gets or Sets the code block theme
+    /// </summary>
+    public CodeBlockTheme CodeBlock { get; set; } = new();
 
     public string Section { get; set; } = string.Empty;
 

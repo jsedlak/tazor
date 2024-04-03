@@ -1,14 +1,14 @@
-﻿@inject IThemeManager Theme
+﻿@inherits TazorBaseComponent
 <section 
-    class=@(IsUnfolded ? Theme.Current.Layout.Accordion.FoldContainerSelected : Theme.Current.Layout.Accordion.FoldContainer)>
+    class=@(IsUnfolded ? Theme.Layout.Accordion.FoldContainerSelected : Theme.Layout.Accordion.FoldContainer)>
     <div 
-        class=@(IsUnfolded ? Theme.Current.Layout.Accordion.FoldHeaderSelected : Theme.Current.Layout.Accordion.FoldHeader)
+        class=@(IsUnfolded ? Theme.Layout.Accordion.FoldHeaderSelected : Theme.Layout.Accordion.FoldHeader)
         @onclick=@ToggleFold>
         @Header
     </div>
     @if(IsUnfolded)
     {
-        <div class=@Theme.Current.Layout.Accordion.FoldContent>
+        <div class=@Theme.Layout.Accordion.FoldContent>
             @Content
         </div>
     }

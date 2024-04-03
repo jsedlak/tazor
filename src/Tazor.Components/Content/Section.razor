@@ -1,6 +1,5 @@
-﻿@inject IThemeManager Theme
-
-<div class=@Theme.Current.Content.Section>
+﻿@inherits TazorBaseComponent
+<div class=@Theme.Content.Section>
     @ChildContent
 </div>
 

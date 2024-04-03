@@ -1,8 +1,8 @@
-﻿@inject IThemeManager Theme
+﻿@inherits TazorBaseComponent
 @if (IsVisible)
 {
-    <div class=@Theme.Current.Utility.CommandPalette.Wrapper onclick=@(async () => await HandleClickOutside())>
-        <div class=@Theme.Current.Utility.CommandPalette.Palette @onclick:stopPropagation>
+    <div class=@Theme.Utility.CommandPalette.Wrapper onclick=@(async () => await HandleClickOutside())>
+        <div class=@Theme.Utility.CommandPalette.Palette @onclick:stopPropagation>
             <input type="text"
                    value=@Input
                    autofocus="true"
@@ -10,14 +10,14 @@
             @oninput=@OnInputChanged
             @onkeydown=@OnKeyDown
                    placeholder="Type a command..."
-                   class=@Theme.Current.Utility.CommandPalette.Input />
-            <ul class=@Theme.Current.Utility.CommandPalette.List>
+                   class=@Theme.Utility.CommandPalette.Input />
+            <ul class=@Theme.Utility.CommandPalette.List>
                 @foreach (var cmd in _visibleCommands)
                 {
                     <li onclick=@(async () => await ExecuteAsync(cmd))
-                        class=@(_currentCommandIndex.HasValue && cmd == _visibleCommands[_currentCommandIndex.Value] ? Theme.Current.Utility.CommandPalette.ListItemActive : Theme.Current.Utility.CommandPalette.ListItem)>
-                        <span class=@Theme.Current.Utility.CommandPalette.CommandName>@cmd.Name</span>
-                        <span class=@Theme.Current.Utility.CommandPalette.CommandDescription>@cmd.Describe(Input)</span>
+                        class=@(_currentCommandIndex.HasValue && cmd == _visibleCommands[_currentCommandIndex.Value] ? Theme.Utility.CommandPalette.ListItemActive : Theme.Utility.CommandPalette.ListItem)>
+                        <span class=@Theme.Utility.CommandPalette.CommandName>@cmd.Name</span>
+                        <span class=@Theme.Utility.CommandPalette.CommandDescription>@cmd.Describe(Input)</span>
                     </li>
                 }
             </ul>

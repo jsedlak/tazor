@@ -1,6 +1,6 @@
-@inject IThemeManager Theme
+@inherits TazorBaseComponent
 @inject NavigationManager Navigation
-<a class=@($"{Theme.Current.Button.Global} {GetColorClass()} {GetWidthClass()}") @onclick=@HandleClick>
+<a class=@($"{Theme.Button.Global} {GetColorClass()} {GetWidthClass()}") @onclick=@HandleClick>
     @ChildContent
 </a>
 @code {
@@ -56,52 +56,52 @@
 
         if(Disabled)
         {
-            classNames.Add(Theme.Current.Button.Disabled);
+            classNames.Add(Theme.Button.Disabled);
         }
 
         switch(Type)
         {
             case ButtonType.Default:
-                classNames.Add(Theme.Current.Button.Default);
+                classNames.Add(Theme.Button.Default);
                 break;
             case ButtonType.DefaultOutline:
-                classNames.Add(Theme.Current.Button.DefaultOutline);
+                classNames.Add(Theme.Button.DefaultOutline);
                 break;
             case ButtonType.Primary:
-                classNames.Add(Theme.Current.Button.Primary);
+                classNames.Add(Theme.Button.Primary);
                 break;
             case ButtonType.PrimaryOutline:
-                classNames.Add(Theme.Current.Button.PrimaryOutline);
+                classNames.Add(Theme.Button.PrimaryOutline);
                 break;
             case ButtonType.Success:
-                classNames.Add(Theme.Current.Button.Success);
+                classNames.Add(Theme.Button.Success);
                 break;
             case ButtonType.SuccessOutline:
-                classNames.Add(Theme.Current.Button.SuccessOutline);
+                classNames.Add(Theme.Button.SuccessOutline);
                 break;
             case ButtonType.Warning:
-                classNames.Add(Theme.Current.Button.Warning);
+                classNames.Add(Theme.Button.Warning);
                 break;
             case ButtonType.WarningOutline:
-                classNames.Add(Theme.Current.Button.WarningOutline);
+                classNames.Add(Theme.Button.WarningOutline);
                 break;
             case ButtonType.Error:
-                classNames.Add(Theme.Current.Button.Error);
+                classNames.Add(Theme.Button.Error);
                 break;
             case ButtonType.ErrorOutline:
-                classNames.Add(Theme.Current.Button.ErrorOutline);
+                classNames.Add(Theme.Button.ErrorOutline);
                 break;
             case ButtonType.Info:
-                classNames.Add(Theme.Current.Button.Info);
+                classNames.Add(Theme.Button.Info);
                 break;
             case ButtonType.InfoOutline:
-                classNames.Add(Theme.Current.Button.InfoOutline);
+                classNames.Add(Theme.Button.InfoOutline);
                 break;
             case ButtonType.Link:
-                classNames.Add(Theme.Current.Button.Link);
+                classNames.Add(Theme.Button.Link);
                 break;
             default:
-                classNames.Add(Theme.Current.Button.Default);
+                classNames.Add(Theme.Button.Default);
                 break;
         }
 

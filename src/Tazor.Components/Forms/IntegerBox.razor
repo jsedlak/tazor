@@ -1,5 +1,5 @@
-﻿@inject IThemeManager Theme
-<input type="text" value=@Value onchange=@OnChanged class=@Theme.Current.Forms.TextBox />
+﻿@inherits TazorBaseComponent
+<input type="text" value=@Value onchange=@OnChanged class=@Theme.Forms.TextBox />
 @code {
     [Parameter]
     public int Value { get; set; }

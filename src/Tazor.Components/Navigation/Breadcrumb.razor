@@ -1,12 +1,12 @@
-﻿@inject IThemeManager Theme
-<div class=@Theme.Current.Navigation.Breadcrumb.Container>
-    <ul class=@Theme.Current.Navigation.Breadcrumb.List>
+﻿@inherits TazorBaseComponent
+<div class=@Theme.Navigation.Breadcrumb.Container>
+    <ul class=@Theme.Navigation.Breadcrumb.List>
         @foreach (var item in Items)
         {
-            <li class=@Theme.Current.Navigation.Breadcrumb.ListItem>
+            <li class=@Theme.Navigation.Breadcrumb.ListItem>
                 @if (!string.IsNullOrWhiteSpace(item.Href))
                 {
-                    <a href=@item.Href class=@Theme.Current.Navigation.Breadcrumb.Link>
+                    <a href=@item.Href class=@Theme.Navigation.Breadcrumb.Link>
                         @(item.LeftIcon)
                         @(item.Text)
                         @(item.RightIcon)
@@ -14,7 +14,7 @@
                 }
                 else
                 {
-                    <span class=@Theme.Current.Navigation.Breadcrumb.CurrentItem>
+                    <span class=@Theme.Navigation.Breadcrumb.CurrentItem>
                         @(item.LeftIcon)
                         @(item.Text)
                         @(item.RightIcon)
