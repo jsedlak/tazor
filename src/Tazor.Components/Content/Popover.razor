@@ -1,0 +1,52 @@
+﻿@inherits TazorBaseComponent
+@if (IsOpen)
+{
+    
+        <div class=@(IsOpen ? Theme.Content.Popover.WrapperOpen : Theme.Content.Popover)>
+            @if (!string.IsNullOrWhiteSpace(Title))
+            {
+                <div class=@Theme.Content.Popover.Title
+                >@Title
+                </div>
+            }
+            <div class=@Theme.Content.Popover.Content>
+                @ChildContent
+            </div>
+        </div>
+}
+
+@code {
+    [CascadingParameter(Name = "PopoverContainer")]
+    public PopoverContainer? PopoverContainer { get; set; }
+
+    [Parameter]
+    public bool IsOpen { get; set; } = true;
+
+    [Parameter]
+    public EventCallback<bool> IsOpenChanged { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private async void OnHandleClickedOutside()
+    {
+        IsOpen = false;
+        await IsOpenChanged.InvokeAsync(IsOpen);
+    }
+
+    protected override void OnInitialized()
+    {
+        if (PopoverContainer != null) 
+        {
+            Console.WriteLine("Popover Status Changed");
+            PopoverContainer.PopoverStatusChanged += async (sender, shouldOpen) =>
+            {
+                IsOpen = shouldOpen;
+                await IsOpenChanged.InvokeAsync(IsOpen);
+            };
+        }
+    }
+}

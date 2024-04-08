@@ -5,6 +5,9 @@
 /// </summary>
 public class ContentTheme
 {
+    /// <summary>
+    /// Gets or Sets the spinner theme
+    /// </summary>
     public SpinnerTheme Spinner { get; set; } = new();
 
     public string ScreenReader { get; set; } = string.Empty;
@@ -36,7 +39,20 @@ public class ContentTheme
     /// </summary>
     public CodeBlockTheme CodeBlock { get; set; } = new();
 
+    /// <summary>
+    /// Gets or Sets the popover theme
+    /// </summary>
+    public PopoverTheme Popover { get; set; } = new();
+
+    /// <summary>
+    /// Gets or Sets the CSS classes for the section element
+    /// </summary>
     public string Section { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Gets or Sets the css classes for the lead component
+    /// </summary>
+    public string Lead { get; set; } = string.Empty;
 
     public string Header1 { get; set; } = string.Empty;
 
@@ -55,5 +71,4 @@ public class ContentTheme
     public string BadgeSuccess { get; set; } = string.Empty;
 
     public string BadgeError { get; set; } = string.Empty;
-
 }
