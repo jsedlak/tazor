@@ -1,0 +1,11 @@
+﻿@inject IThemeManager ThemeManager
+<CascadingValue TValue="ITheme" Value="ThemeManager.Themes.First(m => m.Name.Equals(ThemeName, StringComparison.OrdinalIgnoreCase))" Name="Theme">
+    @ChildContent
+</CascadingValue>
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    [Parameter]
+    public string ThemeName { get; set; } = "default";
+}
