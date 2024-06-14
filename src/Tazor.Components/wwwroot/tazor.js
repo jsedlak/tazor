@@ -12,12 +12,17 @@ window.setDarkMode = function (darkMode) {
 };
 
 window.getDarkMode = function () {
-  return (
-    document
-      .getElementsByTagName("html")[0]
-      .getAttribute("class")
-      .indexOf("dark") >= 0
-  );
+    try {
+        return (
+            document
+                .getElementsByTagName("html")[0]
+                .getAttribute("class")
+                .indexOf("dark") >= 0
+        );
+    }
+    catch {
+        return false;
+    }
 };
 
 window.addOnlineStatusListener = function (dotNetRef) {

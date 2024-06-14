@@ -18,9 +18,16 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+        try
         {
-            IsDarkModeEnabled = await JSRuntime.InvokeAsync<bool>("getDarkMode");
+            if (firstRender)
+            {
+                IsDarkModeEnabled = await JSRuntime.InvokeAsync<bool>("getDarkMode");
+            }
+        }
+        catch
+        {
+            Console.WriteLine("Uh oh.");
         }
 
         await base.OnAfterRenderAsync(firstRender);
