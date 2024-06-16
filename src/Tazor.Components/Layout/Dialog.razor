@@ -5,7 +5,7 @@
         <div class=@Theme.Dialog.Overlay></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class=@Theme.Dialog.Placement>
-                <div class=@Theme.Dialog.Window>
+                <div class=@($"{Theme.Dialog.Window} {WindowClass}")>
                     <div class=@Theme.Dialog.WindowInner>
                         <header class=@Theme.Dialog.Header>
                             @if (Header != null)
@@ -57,6 +57,11 @@
 
     [Parameter]
     public RenderFragment Footer { get; set; } = null!;
+    
+    /// <summary>
+    /// Gets or Sets the extra CSS Classes on the window item, ideal for setting width and height attributes
+    /// </summary>
+    [Parameter] public string? WindowClass { get; set; }
 
     [Parameter]
     public bool HideCloseButton { get; set; } = false;
