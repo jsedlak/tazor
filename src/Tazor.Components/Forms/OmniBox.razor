@@ -1,13 +1,15 @@
 @inherits TazorBaseComponent
 @typeparam TItem where TItem : class
-<ClickContainer OnClickedOutside=OnClickedOutside>
-    <div class="bg-white rounded-lg shadow-lg w-10/12" @onclick:stopPropagation>
+<ClickContainer2 OnClickedOutside=OnClickedOutside>
+    <div class="bg-white rounded-lg shadow-lg w-10/12" >
         @if (!_shouldShowTextBox)
         {
             <div
-                @onclick=@(() => { Console.WriteLine("ASDASDA"); _shouldShowTextBox = true; StateHasChanged(); })
-                class="w-full px-4 py-3 mb-4 border-b rounded-b-none rounded-lg focus:outline-none text-gray-800">
-                <div class="pointer-events-none">
+                @onclick=@OnHandleClickViewer
+                @onclick:preventDefault="true"
+                @onclick:stopPropagation="true"
+                class="w-full focus:outline-none px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white">
+                <div>
                 @if (SelectedItem == null)
                 {
                     @PlaceholderTemplate
@@ -23,20 +25,20 @@
         {
             <input type="text"
                    value=@Input
-                   autofocus="true"
                    @ref=@_textboxReference
                    @oninput=@OnInputChanged
                    @onkeydown=@OnKeyDown
+                   autofocus="true"
                    @onkeydown:preventDefault=@_shouldPreventOnKeyDown
                    placeholder="Type a command..."
-                   class="w-full px-4 py-3 mb-4 border-b rounded-b-none rounded-lg focus:outline-none text-gray-800"/>
+                   class="w-full focus:outline-none px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white"/>
             @if (_searchResults.Any())
             {
                 <ul class="list-none">
                     @foreach (var item in _searchResults)
                     {
                         <li onclick=@(async () => await SelectItemAsync(item))
-                            class=@(_currentCommandIndex.HasValue && item == _searchResults[_currentCommandIndex.Value] ? Theme.Utility.CommandPalette.ListItemActive : Theme.Utility.CommandPalette.ListItem)>
+                            class=@(_currentResultIndex.HasValue && item == _searchResults[_currentResultIndex.Value] ? Theme.Utility.CommandPalette.ListItemActive : Theme.Utility.CommandPalette.ListItem)>
                             @(ItemTemplate(item))
                         </li>
                     }
@@ -44,7 +46,7 @@
             }
         }
     </div>
-</ClickContainer>
+</ClickContainer2>
 @code {
     [Parameter] public Func<string, Task<IEnumerable<TItem>>> OnSearch { get; set; } = null!;
 
@@ -62,16 +64,35 @@
     
     [Parameter] public RenderFragment<TItem> SelectedItemTemplate { get; set; }
 
-    private int? _currentCommandIndex = null;
-    private ElementReference? _textboxReference;
-    private bool _shouldPreventOnKeyDown;
+    // store the search results
     private TItem[] _searchResults = [];
+    
+    // store the currently highlighted result
+    private int? _currentResultIndex = null;
+    
+    // whether or not we trap the key down (up & down arrow)
+    private bool _shouldPreventOnKeyDown;
+    
+    // display flags
     private bool _shouldShowTextBox = false;
+    private bool _shouldShowResults = false;
+    
+    // for focusing
+    private ElementReference? _textboxReference;
+    
+    // stupid timer for focusing
+    private Timer? _timer;
 
     private async Task SelectItemAsync(TItem item)
     {
         SelectedItem = item;
+
+        _shouldShowResults = false;
+        _shouldShowTextBox = false;
+        
         await SelectedItemChanged.InvokeAsync(SelectedItem);
+        
+        StateHasChanged();
     }
     
     private async Task OnInputChanged(ChangeEventArgs args)
@@ -82,7 +103,10 @@
 
         // search
         _searchResults = (await OnSearch(Input)).ToArray();
-        _currentCommandIndex = null;
+        _currentResultIndex = null;
+
+        // show the search results
+        _shouldShowResults = true;
 
         StateHasChanged();
     }
@@ -92,34 +116,40 @@
         _shouldPreventOnKeyDown = false;
         if (args.Key == KeyCodes.Escape)
         {
-            _searchResults = [];
-            _currentCommandIndex = null;
+            // reset search index
+            _currentResultIndex = null;
+            
+            // hide the boxes
             _shouldShowTextBox = false;
+            _shouldShowResults = false;
         }
         else if (args.Key == KeyCodes.ArrowDown && _searchResults.Any())
         {
             _shouldPreventOnKeyDown = true;
-            _currentCommandIndex = _currentCommandIndex.GetValueOrDefault(-1) + 1;
-            if (_currentCommandIndex > _searchResults.Length - 1)
+            
+            _currentResultIndex = _currentResultIndex.GetValueOrDefault(-1) + 1;
+            
+            if (_currentResultIndex > _searchResults.Length - 1)
             {
-                _currentCommandIndex = 0;
+                _currentResultIndex = 0;
             }
         }
         else if (args.Key == KeyCodes.ArrowUp && _searchResults.Any())
         {
             _shouldPreventOnKeyDown = true;
-            _currentCommandIndex = _currentCommandIndex.GetValueOrDefault(0) - 1;
-            if (_currentCommandIndex < 0)
+            
+            _currentResultIndex = _currentResultIndex.GetValueOrDefault(0) - 1;
+            
+            if (_currentResultIndex < 0)
             {
-                _currentCommandIndex = _searchResults.Length - 1;
+                _currentResultIndex = _searchResults.Length - 1;
             }
         }
-        else if (args.Key == KeyCodes.Enter && _currentCommandIndex != null)
+        else if (args.Key == KeyCodes.Enter && _currentResultIndex != null)
         {
             _shouldPreventOnKeyDown = true;
-            await SelectItemAsync(_searchResults[_currentCommandIndex.Value]);
-            _searchResults = [];
-            _shouldShowTextBox = false;
+            
+            await SelectItemAsync(_searchResults[_currentResultIndex.Value]);
         }
 
         //StateHasChanged();
@@ -127,12 +157,52 @@
     
     private void OnClickedOutside()
     {
-        return;
-        Console.WriteLine("Nope");
-        _searchResults = [];
-        _currentCommandIndex = null;
+        _currentResultIndex = null;
+        _shouldShowResults = false;
         _shouldShowTextBox = false;
         StateHasChanged();
+    }
+
+    private async Task OnHandleClickViewer()
+    {
+        _shouldShowTextBox = true;
+
+        if (_searchResults.Any())
+        {
+            _shouldShowResults = true;
+        }
+        
+        StateHasChanged();
+
+        if (_timer != null)
+        {
+            _timer.Dispose();
+            _timer = null;
+        }
+        
+        _timer = new System.Threading.Timer(async _ =>  // async void
+        {          
+            await InvokeAsync(FocusTextBox);
+
+            _timer.Dispose();
+            _timer = null;
+        }, null, 0, 16);
+    }
+
+    private async Task FocusTextBox()
+    {
+        await _textboxReference.Value.FocusAsync();
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        Console.WriteLine("Disposing OmniBox");
+        if (_timer != null)
+        {
+            _timer.Dispose();
+            _timer = null;
+        }
     }
 
 }

@@ -82,10 +82,17 @@ window.addResizeListener = function (dotNetRef) {
 window.addClickCheckEvent = function (elementId, dotnetHelper) {
     window.addEventListener("click", (e) => {
         var element = document.getElementById(elementId);
-
+        
         if (!element || !element.contains(e.target)) {
             dotnetHelper.invokeMethodAsync("InvokeClickOutside");
         }
+    });
+}
+
+window.addClickCheckEvent2 = function (elementId, dotnetHelper) {
+    window.addEventListener("click", (e) => {
+        // var element = document.getElementById(elementId);
+        dotnetHelper.invokeMethodAsync("InvokeClick");
     });
 }
 

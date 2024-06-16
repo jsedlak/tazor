@@ -1,0 +1,43 @@
+@inject IJSRuntime JS
+<div id=@ElementId @onmouseover=@HandleMouseOver @onmouseout=@HandleMouseOut>
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public Action? OnClickedOutside { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter] public bool IsMouseOver { get; set; }
+    
+    [Parameter]public EventCallback<bool> IsMouseOverChanged { get; set; }
+    
+    public string ElementId { get; set; } = Guid.NewGuid().ToString();
+
+    private async Task HandleMouseOver()
+    {
+        IsMouseOver = true;
+        await IsMouseOverChanged.InvokeAsync(IsMouseOver);
+    }
+
+    private async Task HandleMouseOut()
+    {
+        IsMouseOver = false;
+        await IsMouseOverChanged.InvokeAsync(IsMouseOver);
+    }
+
+    protected override Task OnInitializedAsync () {
+        JS.InvokeAsync<object>("addClickCheckEvent2", ElementId, DotNetObjectReference.Create(this));
+        return base.OnInitializedAsync ();
+    }
+
+    [JSInvokable]
+    public void InvokeClick () {
+        if (!IsMouseOver)
+        {
+            OnClickedOutside?.Invoke();
+        }
+    }
+}
