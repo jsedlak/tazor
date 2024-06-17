@@ -1,14 +1,14 @@
 @inherits TazorBaseComponent
 @typeparam TItem where TItem : class
 <ClickContainer2 OnClickedOutside=OnClickedOutside>
-    <div class="bg-white rounded-lg shadow-lg w-10/12" >
+    <div class=@Theme.Forms.OmniBox.Wrapper >
         @if (!_shouldShowTextBox)
         {
             <div
                 @onclick=@OnHandleClickViewer
                 @onclick:preventDefault="true"
                 @onclick:stopPropagation="true"
-                class="w-full focus:outline-none px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white">
+                class=@Theme.Forms.OmniBox.Viewer>
                 <div>
                 @if (SelectedItem == null)
                 {
@@ -31,14 +31,14 @@
                    autofocus="true"
                    @onkeydown:preventDefault=@_shouldPreventOnKeyDown
                    placeholder="Type a command..."
-                   class="w-full focus:outline-none px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white"/>
+                   class=@Theme.Forms.OmniBox.Input />
             @if (_searchResults.Any())
             {
-                <ul class="list-none">
+                <ul class="list-none absolute top-100 left-0 max-h-80 overflow-y-auto bg-gray-50 dark:bg-gray-900 dark:text-white z-50">
                     @foreach (var item in _searchResults)
                     {
                         <li onclick=@(async () => await SelectItemAsync(item))
-                            class=@(_currentResultIndex.HasValue && item == _searchResults[_currentResultIndex.Value] ? Theme.Utility.CommandPalette.ListItemActive : Theme.Utility.CommandPalette.ListItem)>
+                            class=@(_currentResultIndex.HasValue && item == _searchResults[_currentResultIndex.Value] ? Theme.Forms.OmniBox.ListItemActive : Theme.Forms.OmniBox.ListItem)>
                             @(ItemTemplate(item))
                         </li>
                     }
