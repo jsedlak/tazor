@@ -1,4 +1,6 @@
 ﻿@typeparam TModel
+@using System.Globalization
+@using System.Reflection
 @inherits TazorBaseComponent
 <input type=@Type value=@Value onchange=@OnChanged class=@Theme.Forms.TextBox />
 @code {
@@ -16,14 +18,33 @@
         if(args == null || args.Value == null)
         {
             await ValueChanged.InvokeAsync(default(TModel));
+            return;
         }
 
-        TModel? newValue = default(TModel?);
-        if(args?.Value != null && args.Value is TModel)
+        var newValue = default(TModel?);
+        
+        // is there a direct compare
+        if(args?.Value is TModel model)
         {
-            newValue = (TModel?)args.Value;
+            newValue = model;
+            await ValueChanged.InvokeAsync(newValue);
+            return;
         }
+        
+        // let's try to parse
+        var parseMethod = typeof(TModel).GetMethods().FirstOrDefault(m => m.Name.Equals("Parse", StringComparison.OrdinalIgnoreCase));
+        if (parseMethod != null)
+        {
+            try
+            {
+                var output = (TModel)parseMethod.Invoke(null, BindingFlags.Static, null, [args.Value.ToString()], CultureInfo.InvariantCulture);
+                await ValueChanged.InvokeAsync(output);
 
-        await ValueChanged.InvokeAsync(newValue);
+            }
+            catch (Exception parseException)
+            {
+                Console.WriteLine($"Could not parse the value: {parseException.Message}");
+            }
+        }
     }
 }
