@@ -60,7 +60,7 @@
                     }
                 }
 
-                @if (OnEdit != null || OnDelete != null)
+                @if (OnEdit != null || OnDelete != null || (AdditionalActions is not null && AdditionalActions.Any()))
                 {
                     <th class=@Theme.DataGrid.HeaderCell>Actions</th>
                 }
@@ -126,7 +126,7 @@
                         }
                     }
 
-                    @if (OnEdit != null || OnDelete != null)
+                    @if (OnEdit != null || OnDelete != null || (AdditionalActions is not null && AdditionalActions.Any()))
                     {
                         <td class=@Theme.DataGrid.Cell>
                             <div class="flex items-center gap-2">
