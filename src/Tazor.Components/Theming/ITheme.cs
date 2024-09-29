@@ -11,6 +11,11 @@ public interface ITheme
     string Name { get; set; }
 
     /// <summary>
+    /// Gets or Sets the app component theme
+    /// </summary>
+    AppTheme App { get; set; }
+
+    /// <summary>
     /// Gets or Sets the data components theming section
     /// </summary>
     DataTheme Data { get; set; }

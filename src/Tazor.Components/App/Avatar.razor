@@ -1,0 +1,11 @@
+﻿@inherits TazorBaseComponent
+<div class="avatar @Theme.App.Avatar">
+    @if(!string.IsNullOrWhiteSpace(Url))
+    {
+        <img src=@Url class=@Theme.App.AvatarImage alt=@(Name ?? "Avatar Image") />
+    }
+    else
+    {
+        <span class=@Theme.App.AvatarInitials>@Name.GetInitials()</span>
+    }
+</div>
