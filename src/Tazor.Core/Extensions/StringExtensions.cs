@@ -38,19 +38,4 @@ public static class StringExtensions
 
         return input.Substring(trim.Length);
     }
-
-    /// <summary>
-    /// Gets the first N letters of each word in the input string.
-    /// </summary>
-    /// <param name="input">The string to parse</param>
-    /// <param name="maxInitials">The number of initials to return</param>
-    /// <returns>Returns initials for a name, e.g. John Doe returns JD</returns>
-    public static string GetInitials(this string input, int maxInitials = 2)
-    {
-        var initials = input.Split([" ", "-", "_"], StringSplitOptions.RemoveEmptyEntries)
-            .Select(x => x[0].ToString().ToUpperInvariant())
-            .Take(maxInitials);
-
-        return string.Join("", initials);
-    }
 }
