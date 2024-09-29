@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Drawing;
 using Tazor.ServiceModel;
 
 namespace Tazor.Components.App;
@@ -26,6 +24,10 @@ public partial class Avatar : TazorBaseComponent
         await base.OnInitializedAsync();
     }
 
+    /// <summary>
+    /// Gets the CSS class appropriate for the supplied size parameter
+    /// </summary>
+    /// <returns>A CSS class string</returns>
     private string GetSizingClass()
     {
         switch (Size)
@@ -63,9 +65,15 @@ public partial class Avatar : TazorBaseComponent
     [Parameter]
     public string? Url { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the size of the avatar
+    /// </summary>
     [Parameter]
     public Sizing Size { get; set; } = Sizing.Medium;
 
+    /// <summary>
+    /// Gets or Sets the custom CSS class to apply to the avatar
+    /// </summary>
     [Parameter]
     public string? CustomSizeClass { get; set; }
 
