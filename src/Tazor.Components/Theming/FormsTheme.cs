@@ -34,4 +34,9 @@ public class FormsTheme
     /// Gets or Sets theming info for the OmniBox component
     /// </summary>
     public OmniBoxTheme OmniBox { get; set; } = new();
+
+    /// <summary>
+    /// Gets or Sets theming info for the Wizard component
+    /// </summary>
+    public WizardTheme Wizard { get; set; } = new();
 }
