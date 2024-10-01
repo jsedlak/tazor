@@ -1,0 +1,264 @@
+﻿{
+  "app": {
+    "avatar": {
+      "wrapper": "rounded-full bg-indigo-400 flex justify-center items-center overflow-hidden",
+      "mage": "",
+      "initials": "text-center block font-bold",
+      "extraSmall": "w-4 h-4 text-xs",
+      "small": "w-6 h-6 text-sm",
+      "medium": "w-10 h-10",
+      "large": "w-20 h-20 text-4xl",
+      "extraLarge": "w-32 h-32 text-6xl"
+    },
+    "notifications": {
+      "containerWrapper": "pointer-events-none fixed inset-0 bg-opacity-75 overflow-y-auto bg-red z-50",
+      "containerWrapperInline": "",
+      "container": "float-right mr-4 pointer-events-auto",
+      "containerInline": "grid grid-cols-3 gap-4",
+      "wrapper": "notification transition-all ease-in-out duration-300 gap-4 border-l-4 shadow-xl rounded my-3 flex items-center justify-between px-4 py-3",
+      "icon": "flex-shrink-0 min-w-10 flex items-center justify-center",
+      "contentWrapper": "flex-grow",
+      "header": "flex items-center justify-between",
+      "title": "font-bold",
+      "closeIcon": "cursor-pointer",
+      "message": "",
+      "wrapperInfo": "bg-blue-100 border-blue-500 text-blue-700 dark:bg-blue-700 dark:border-blue-900 dark:text-white",
+      "wrapperWarning": "bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-700 dark:border-yellow-900 dark:text-white",
+      "wrapperError": "bg-red-100 border-red-500 text-red-700 dark:bg-red-700 dark:border-red-900 dark:text-white",
+      "wrapperSuccess": "bg-green-100 border-green-500 text-green-700 dark:bg-green-700 dark:border-green-900 dark:text-white",
+      "emptyMessageContainer": "flex w-full h-full items-center justify-center p-4",
+      "emptyMessage": "text-2xl opacity-75"
+    },
+    "statCard": {
+      "card": "bg-white rounded shadow-md border-black dark:bg-black dark:border-white",
+      "header": "mb-3 flex px-6 pt-6 justify-between items-center",
+      "title": "flex-shrink-0 opacity-75 font-semibold flex space-x-2 items-center text-sm",
+      "additionalData": "opacity-75 text-sm",
+      "body": "px-6 pb-6",
+      "statistic": "text-4xl",
+      "footer": "bg-gray-100 dark:bg-gray-900 p-3 rounded-b",
+      "note": ""
+    }
+  },
+  "content": {
+    "icon": "inline-block w-5 h-5",
+    "screenReader": "sr-only",
+    "componentHeader": "",
+    "panel": "",
+    "button": "",
+    "buttonInner": "",
+    "alertGlobal": "rounded my-3 flex items-center justify-between border-l-4 px-4 py-3 shadow-md",
+    "alertInfo": "bg-blue-100 border-blue-500 text-blue-700 dark:bg-blue-700 dark:border-blue-900 dark:text-white",
+    "alertWarning": "bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-700 dark:border-yellow-900 dark:text-white",
+    "alertError": "bg-red-100 border-red-500 text-red-700 dark:bg-red-700 dark:border-red-900 dark:text-white",
+    "alertSuccess": "bg-green-100 border-green-500 text-green-700 dark:bg-green-700 dark:border-green-900 dark:text-white",
+    "alertIcon": "mr-2",
+    "lead": "my-2 text-lg leading-loose",
+    "paragraph": "my-3",
+    "section": "mt-2 mb-4",
+    "header1": "text-2xl font-semibold mb-2",
+    "header2": "text-xl font-semibold mb-2",
+    "header3": "text-lg font-semibold mb-2",
+    "header4": "font-semibold mb-2",
+    "badgeGlobal": "inline px-2 py-1 text-xs rounded border font-semibold",
+    "badgeInfo": "bg-blue-600 border-blue-800 text-white",
+    "badgeWarning": "bg-yellow-600 border-yellow-800 text-white",
+    "badgeSuccess": "bg-green-600 border-green-800 text-white",
+    "badgeError": "bg-red-600 border-red-800 text-white",
+    "spinner": {
+      "wrapper": "flex items-center",
+      "spinnerDiv": "inline-block h-5 w-5 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white",
+      "spinnerIcon": "",
+      "text": ""
+    },
+    "codeBlock": {
+      "wrapper": "bg-gray-100 dark:bg-gray-900 rounded my-3 text-sm shadow",
+      "header": "bg-indigo-400 dark:bg-indigo-800 text-white text-sm px-3 py-2 font-mono flex justify-between items-center",
+      "pre": "p-3 text-sm overflow-x-auto"
+    },
+    "popover": {
+      "container": "relative inline-block",
+      "wrapper": "hidden",
+      "wrapperOpen": "left-1/2 -translate-x-1/2 transform absolute z-10 w-48 p-4 mt-2 bg-white dark:bg-indigo-600 rounded-lg shadow-lg",
+      "title": "text-sm font-semibold mb-2",
+      "content": "text-sm"
+    }
+  },
+  "data": {
+    "treeView": {
+      "wrapper": "overflow-x-auto",
+      "tree": "",
+      "treeItem": "whitespace-nowrap ",
+      "treeItemSelected": "whitespace-nowrap",
+      "treeItemContentWrapper": "flex items-center border rounded border-transparent",
+      "treeItemSelectedContentWrapper": "flex items-center border rounded border-blue-800 bg-blue-100 rounded",
+      "treeItemAnchor": "cursor-pointer hover:bg-blue-100 px-2 py-0.5 flex-grow flex items-center gap-1",
+      "treeItemSelectedAnchor": "cursor-pointer hover:bg-blue-100 px-2 py-0.5 flex-grow flex items-center gap-1",
+      "treeItemSubTree": "ml-3",
+      "treeItemExpandAnchor": "cursor-pointer",
+      "treeItemExpandIcon": "w-4 h-4"
+    },
+    "listView": {
+      "wrapper": "mt-3 mb-3 overflow-hidden bg-white shadow-sm ring-1 ring-gray-50 dark:ring-gray-800 rounded dark:bg-gray-700",
+      "list": "list-none divide-y divide-gray-100 dark:divide-gray-900",
+      "listItem": "relative flex items-center px-4 py-4 space-x-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
+    }
+  },
+  "button": {
+    "global": "text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap flex items-center justify-center gap-2",
+    "disabled": "opacity-50 cursor-not-allowed",
+    "default": "bg-indigo-500 hover:bg-indigo-600 text-white",
+    "defaultOutline": "bg-transparent hover:bg-indigo-500 text-indigo-500 dark:text-indigo-100 hover:text-white border border-indigo-500",
+    "primary": "bg-indigo-500 hover:bg-indigo-600 text-white",
+    "primaryOutline": "bg-transparent hover:bg-indigo-500 text-indigo-500 dark:text-indigo-100 hover:text-white border border-indigo-500",
+    "info": "bg-blue-500 hover:bg-blue-600 text-white",
+    "infoOutline": "bg-transparent hover:bg-blue-500 text-blue-500 dark:text-blue-100 hover:text-white border border-blue-500",
+    "warning": "bg-yellow-500 hover:bg-yellow-600 text-white",
+    "warningOutline": "bg-transparent hover:bg-yellow-600 text-yellow-500 dark:text-yellow-200 hover:text-white border border-yellow-500",
+    "error": "bg-red-500 hover:bg-red-600 text-white",
+    "errorOutline": "bg-transparent hover:bg-red-600 text-red-500 dark:text-red-100 hover:text-white border border-red-500",
+    "link": "text-indigo-500 dark:text-indigo-100 underline",
+    "success": "bg-green-500 hover:bg-green-600 text-white",
+    "successOutline": "bg-transparent hover:bg-green-600 text-green-500 dark:text-green-200 hover:text-white border border-green-500"
+  },
+  "dialog": {
+    "window": "relative top-10 mx-auto bg-white dark:bg-gray-800 p-6 rounded shadow-xl",
+    "overlay": "fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full",
+    "placement": "flex items-center min-h-full justify-center p-4 sm:items-center sm:p-0",
+    "windowInner": "",
+    "header": "flex justify-between items-center mb-3 pb-2 border-b border-b-gray-200 dark:border-b-gray-500",
+    "content": "",
+    "footer": "mt-3 flex justify-end items-center gap-4"
+  },
+  "dataGrid": {
+    "wrapper": "min-w-full rounded bg-gray-50 dark:bg-gray-800 overflow-x-auto",
+    "tableElement": "min-w-full",
+    "toolbar": "p-3 flex justify-between items-center",
+    "header": "bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-gray-50",
+    "headerCell": "px-3 py-3.5 text-left text-sm font-semibold cursor-pointer",
+    "body": "divide-y divide-gray-200 bg-white dark:bg-gray-800",
+    "cell": "whitespace-nowrap px-3 py-4 text-sm text-left text-gray-500 dark:text-gray-50",
+    "footer": "p-3",
+    "sortingIcon": "inline-block w-5 h-5 ml-2"
+  },
+  "pager": {
+    "wrapper": "",
+    "nav": "flex items-center gap-2",
+    "previousButton": "py-2 px-3 rounded text-sm cursor-pointer",
+    "nextButton": "py-2 px-3 rounded text-sm cursor-pointer",
+    "buttonActive": "py-2 px-3 rounded text-sm bg-indigo-500 text-white cursor-pointer",
+    "button": "py-2 px-3 rounded text-sm cursor-pointer",
+    "nextPreviousText": "sr-only"
+  },
+  "tabNav": {
+    "wrapper": "flex items-center gap-2 my-2 rounded bg-gray-100 border-t-2 border-gray-100 dark:bg-gray-800 dark:border-gray-800",
+    "selectedItem": "border-b-2 border-indigo-500 cursor-pointer text-sm",
+    "item": "cursor-pointer border-b-2 border-gray-100 text-sm dark:border-gray-800",
+    "selectedLink": "block py-2 px-4",
+    "link": "block py-2 px-4"
+  },
+  "forms": {
+    "label": "text-left block mb-1",
+    "subLabel": "text-sm block text-left mb-1",
+    "textBox": "px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white w-full",
+    "selectInput": "px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white w-full",
+    "comboBox": {
+      "wrapper": "relative px-3 py-2 bg-white dark:bg-gray-800 rounded w-full",
+      "viewContainer": "",
+      "viewList": "flex gap-2 items-center",
+      "viewListItem": "inline-block",
+      "inputContainer": "w-full relative flex justify-end",
+      "input": "w-full bg-transparent outline-none",
+      "dropdownButton": "absolute cursor-pointer",
+      "dropdownButtonIcon": "pointer-events-none",
+      "dropdownContainer": "mt-1 w-full absolute top-100 left-0 bg-gray-900 rounded max-h-96 overflow-y-auto overflow-x-hidden",
+      "dropdownList": "",
+      "dropdownItem": "flex items-center gap-2 px-3 py-2",
+      "dropdownCheckbox": "h-4 w-4",
+      "dropdownItemContent": ""
+    },
+    "omniBox": {
+      "wrapper": "relative bg-white rounded-lg shadow-lg w-full",
+      "viewer": "w-full focus:outline-none px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white",
+      "input": "w-full focus:outline-none px-3 py-2 rounded text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white",
+      "list": "",
+      "listItem": "flex gap-2 items-center py-2 px-4 hover:bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
+      "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800"
+    },
+    "wizard": {
+      "progressWrapper": "flex items-center gap-2",
+      "progressSectionWrapper": "flex-col gap-2 w-full",
+      "progressSectionTitle": "text-xs opacity-50",
+      "progressBarBackground": "rounded-full h-2 bg-gray-200 dark:bg-gray-700 relative w-full",
+      "progressBar": "rounded-full h-2 absolute left-0 top-0 transition ease-in-out duration-300",
+      "progressNotChecked": "bg-indigo-400",
+      "progressValid": "bg-green-500",
+      "progressWarning": "bg-yellow-500",
+      "progressError": "bg-red-500"
+    }
+  },
+  "dropdown": {
+    "button": "",
+    "panel": "",
+    "item": "",
+    "link": ""
+  },
+  "flyout": {
+    "window": "relative bg-white dark:bg-gray-800 p-6 rounded",
+    "windowHorizontal": "min-w-full",
+    "windowVertical": "min-h-full",
+    "overlay": "fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full",
+    "placementTop": "flex min-w-full place-items-start p-4 text-center sm:p-0",
+    "placementLeft": "flex min-h-full justify-start p-4 text-center sm:p-0",
+    "placementRight": "flex min-h-full justify-end p-4 text-center sm:p-0",
+    "placementBottom": "flex min-w-full place-items-end p-4 text-center sm:p-0",
+    "windowInner": "",
+    "header": "flex justify-between items-center mb-3 pb-2 border-b border-b-gray-200 dark:border-b-gray-500",
+    "content": "",
+    "footer": "mt-3 flex justify-end items-center gap-4"
+  },
+  "switch": {
+    "wrapper": "",
+    "track": "bg-gray-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-",
+    "trackSelected": "bg-indigo-500 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-",
+    "knob": "translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out",
+    "knobSelected": "translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+  },
+  "utility": {
+    "commandPalette": {
+      "wrapper": "fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50",
+      "palette": "bg-white rounded-lg shadow-lg w-10/12",
+      "input": "w-full px-4 py-3 mb-4 border-b rounded-b-none rounded-lg focus:outline-none text-gray-800",
+      "list": "list-none",
+      "listItem": "flex gap-2 items-center py-2 px-4 hover:bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
+      "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
+      "commandName": "",
+      "commandDescription": "opacity-75 text-sm"
+    },
+    "darkModeSwitch": {
+      "link": "cursor-pointer"
+    }
+  },
+  "navigation": {
+    "breadcrumb": {
+      "container": "mt-3 mb-3",
+      "list": "flex gap-2 items-center",
+      "listItem": "",
+      "link": ""
+    }
+  },
+  "layout": {
+    "overlay": {
+      "wrapper": "fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full",
+      "content": ""
+    },
+    "accordion": {
+      "container": "",
+      "foldContainer": "border border-indigo-400 dark:border-indigo-800",
+      "foldContainerSelected": "border border-indigo-300 dark:border-indigo-700",
+      "foldHeader": "font-semibold bg-indigo-400 dark:bg-indigo-800 p-3 cursor-pointer",
+      "foldHeaderSelected": "font-semibold bg-indigo-300 dark:bg-indigo-700 p-3 cursor-pointer",
+      "foldContent": "p-3"
+    }
+  }
+}

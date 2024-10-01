@@ -1,0 +1,27 @@
+﻿@inherits TazorBaseComponent
+<div class="stat-card @Theme.App.StatCard.Card">
+    <div class="@Theme.App.StatCard.Header">
+        <h3 class="@Theme.App.StatCard.Title">
+            @Title
+        </h3>
+        @if (AdditionalData != null)
+        {
+            <div class="@Theme.App.StatCard.AdditionalData">
+                @AdditionalData
+            </div>
+        }
+    </div>
+    <div class="@Theme.App.StatCard.Body">
+        <div class="@Theme.App.StatCard.Statistic">
+            @Statistic
+        </div>
+    </div>
+    @if (Note != null)
+    {
+        <div class="@Theme.App.StatCard.Footer">
+            <div class="@Theme.App.StatCard.Note">
+                @Note
+            </div>
+        </div>
+    }
+</div>
