@@ -1,0 +1,46 @@
+﻿@inherits TazorBaseComponent
+<div class=@(GetWrapperClass())>
+    @if (Inline && !NotificationProvider.Notifications.Any() && !string.IsNullOrWhiteSpace(EmptyMessage))
+    {
+        <div class=@Theme.App.Notifications.EmptyMessageContainer>
+            <div class=@Theme.App.Notifications.EmptyMessage>
+                @EmptyMessage
+            </div>
+        </div>
+    }
+    <div class=@(GetContainerClass())>
+        @foreach (var notificationItem in NotificationProvider.Notifications)
+        {
+            <Notification Type=@notificationItem.Type Closed=@(async () => { NotificationProvider.Remove(notificationItem); })>
+                <Icon>
+                    @if(notificationItem.Icon != null)
+                    {
+                        @(notificationItem.Icon)
+                    }
+                    else if (notificationItem.Type == NotificationType.Info)
+                    {
+                        @HeroIcons.InformationCircle("", "w-6 h-6")
+                    }
+                    else if (notificationItem.Type == NotificationType.Success)
+                    {
+                        @HeroIcons.Check("", "w-6 h-6")
+                    }
+                    else if (notificationItem.Type == NotificationType.Warning)
+                    {
+                        @HeroIcons.Bolt("", "w-6 h-6")
+                    }
+                    else if (notificationItem.Type == NotificationType.Error)
+                    {
+                        @HeroIcons.XMark("", "w-6 h-6")
+                    }
+                </Icon>
+                <Title>
+                    @notificationItem.Title
+                </Title>
+                <Message>
+                    @notificationItem.Message
+                </Message>
+            </Notification>
+        }
+    </div>
+</div>

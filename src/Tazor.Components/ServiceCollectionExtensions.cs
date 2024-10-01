@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Tazor.Components.App;
 using Tazor.Components.Utility;
 
 namespace Tazor.Components;
@@ -9,6 +10,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddScoped<OnlineStatusInterop>();
         services.AddScoped<BreakpointInterop>();
+        services.AddSingleton<INotificationProvider, InMemoryNotificationProvider>();
     }
 
     //public static void AddTazorTheme(this IServiceCollection services, string primaryColor, string? secondaryColor = null, Action<IBaseTheme>? configureBase = null, Action<ITazorTheme>? configureTheme = null)

@@ -54,6 +54,8 @@ public class ContentTheme
     /// </summary>
     public string Lead { get; set; } = string.Empty;
 
+    public string Paragraph { get; set; } = string.Empty;
+
     public string Header1 { get; set; } = string.Empty;
 
     public string Header2 { get; set; } = string.Empty;
