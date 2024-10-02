@@ -1,6 +1,10 @@
 ﻿namespace Tazor.Components.Theming;
 
-public sealed class AppTheme
+public class AppTheme
 {
-    public AvatarTheme Avatar { get; set; } = new AvatarTheme();
+    public AvatarTheme Avatar { get; set; } = new();
+
+    public NotificationTheme Notifications { get; set; } = new();
+
+    public StatCardTheme StatCard { get; set; } = new();
 } 

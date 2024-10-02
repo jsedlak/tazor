@@ -1,0 +1,17 @@
+﻿@inherits TazorBaseComponent
+<div class=@Theme.Forms.Wizard.ProgressWrapper>
+    @foreach(var section in Sections)
+    {
+        var bgWidth = string.Format("{0:N2}%", 100.0 / Sections.Count());
+        var fgWidth = string.Format("{0:N2}%", section.Progress);
+        <div class=@Theme.Forms.Wizard.ProgressSectionWrapper>
+            @if(ShowTitles)
+            {
+                <h4 class=@Theme.Forms.Wizard.ProgressSectionTitle>@(section.Title)</h4>
+            }
+            <div class="@Theme.Forms.Wizard.ProgressBarBackground">
+                <div class="@Theme.Forms.Wizard.ProgressBar @(GetColor(section))" style="width:@(fgWidth);">&nbsp;</div>
+            </div>
+        </div>
+    }
+</div>

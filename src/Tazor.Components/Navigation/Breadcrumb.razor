@@ -24,9 +24,9 @@
             @if (item != Items.Last())
             {
                 <li>
-                    @if (DelimiterFragment != null)
+                    @if (DelimiterTemplate != null)
                     {
-                        @(DelimiterFragment)
+                        @(DelimiterTemplate)
                     }
                     else
                     {
@@ -45,5 +45,5 @@
     public string Delimiter { get; set; } = "/";
 
     [Parameter]
-    public RenderFragment? DelimiterFragment { get; set; } = null;
+    public RenderFragment? DelimiterTemplate { get; set; } = null;
 }

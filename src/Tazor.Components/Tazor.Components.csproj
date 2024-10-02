@@ -61,6 +61,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>HeroIconsSolidResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="IncludedThemes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IncludedThemes.resx</DependentUpon>
+    </Compile>
     <Compile Update="TazorIcons.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -76,6 +81,10 @@
     <EmbeddedResource Update="HeroIconsSolidResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>HeroIconsSolidResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="IncludedThemes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IncludedThemes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="TazorIcons.resx">
       <Generator>ResXFileCodeGenerator</Generator>

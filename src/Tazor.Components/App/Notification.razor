@@ -1,0 +1,22 @@
+﻿@inherits TazorBaseComponent
+<div class="@(Theme.App.Notifications.Wrapper) @(GetColorClass())">
+    @if (Icon != null)
+    {
+        <div class=@Theme.App.Notifications.Icon>
+            @Icon
+    </div>
+    }
+    <div class=@Theme.App.Notifications.ContentWrapper>
+        <div class=@Theme.App.Notifications.Header>
+            <h4 class=@Theme.App.Notifications.Title>@Title</h4>
+            <div class=@Theme.App.Notifications.CloseIcon>
+                <a @onclick=@(async () => await Closed.InvokeAsync())>
+                    @HeroIcons.XMark()
+                </a>
+            </div>
+        </div>
+        <div class=@Theme.App.Notifications.Message>
+            @Message
+        </div>
+    </div>
+</div>

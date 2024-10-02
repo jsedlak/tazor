@@ -6,6 +6,21 @@ window.applyTheme = function () {
     }
 }
 
+window.applyCss = function (cssLink) {
+    var linkElements = document.head.getElementsByTagName('link');
+    for (var i = 0; i < linkElements.length; i++) {
+        if (linkElements[i].getAttribute("tag") == "tazor-theme") {
+            linkElements[i].remove();
+        }
+    }
+
+    var link = document.createElement('link');
+    link.href = cssLink;
+    link.rel = 'stylesheet';
+    link.setAttribute("tag", "tazor-theme");
+    document.head.appendChild(link);
+}
+
 window.setDarkMode = function (darkMode) {
     localStorage.theme = darkMode ? "dark" : "light";
     applyTheme();
