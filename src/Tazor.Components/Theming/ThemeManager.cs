@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace Tazor.Components.Theming;
 
@@ -8,6 +9,13 @@ namespace Tazor.Components.Theming;
 /// </summary>
 public class ThemeManager : IThemeManager
 {
+    private readonly IJSRuntime _jsRuntime;
+
+    public ThemeManager(IJSRuntime jsRuntime)
+    {
+        _jsRuntime = jsRuntime;
+    }
+
     /// <summary>
     /// Sets the current theme by looking up the theme by name
     /// </summary>
@@ -25,16 +33,16 @@ public class ThemeManager : IThemeManager
     /// </summary>
     /// <param name="theme">The theme</param>
     /// <returns></returns>
-    public Task SetThemeAsync(ITheme theme)
+    public async Task SetThemeAsync(ITheme theme)
     {
         Current = theme;
+
+        await _jsRuntime.InvokeVoidAsync("applyCss", $"_content/themes/{theme.Name}.css");
 
         if (ThemeChanged != null)
         {
             ThemeChanged.Invoke(this, Current);
         }
-
-        return Task.CompletedTask;
     }
 
     /// <summary>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.JSInterop;
 using System.Text.Json;
 using Tazor.Components.App;
 using Tazor.Components.Theming;
@@ -38,7 +39,8 @@ internal sealed class TazorBuilder : ITazorBuilder
             .With<INotificationProvider>(services => services.AddSingleton<INotificationProvider, InMemoryNotificationProvider>())
             .With<IThemeManager>(services => services.AddSingleton<IThemeManager, ThemeManager>(sp =>
             {
-                return new ThemeManager()
+                var jsruntime = sp.GetRequiredService<IJSRuntime>();
+                return new ThemeManager(jsruntime)
                 {
                     Themes = _themes,
                     Current = _themes.FirstOrDefault(m => m.IsDefault) ?? _themes.FirstOrDefault() ?? new TazorTheme()
