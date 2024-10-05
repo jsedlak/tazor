@@ -3,6 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Tazor.Components.Builder;
 using Tazor.Components.Theming;
 using Tazor.Components.Utility;
+using Tazor.ServiceModel;
+using Tazor.Services;
 
 namespace Tazor.Components;
 
@@ -23,5 +25,12 @@ public static class ServiceCollectionExtensions
 
 
         return builder;
+    }
+
+    public static ITazorBuilder WithGravatars(this ITazorBuilder builder)
+    {
+        return builder.With<IAvatarProvider>(
+            services => services.AddSingleton<IAvatarProvider, GravatarAvatarProvider>()
+        );
     }
 }

@@ -8,6 +8,12 @@ namespace Tazor.Components.Theming;
 public interface IThemeManager
 {
     /// <summary>
+    /// Initializes the theme manager by deploying the default theme
+    /// </summary>
+    /// <returns></returns>
+    Task Initialize();
+
+    /// <summary>
     /// Sets the current theme by looking the name up in the loaded theme list and propagates the changes
     /// </summary>
     /// <param name="themeName"></param>

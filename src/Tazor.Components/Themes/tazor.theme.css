@@ -1,0 +1,19 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.notification {
+  animation: notificationInbound 0.5s;
+}
+
+@keyframes notificationInbound {
+  0% {
+    /*margin-left: 200%;*/
+    opacity: 0;
+  }
+
+  100% {
+    /*margin-left: 0%;*/
+    opacity: 1;
+  }
+}

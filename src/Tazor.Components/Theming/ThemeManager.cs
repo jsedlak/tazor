@@ -17,6 +17,27 @@ public class ThemeManager : IThemeManager
     }
 
     /// <summary>
+    /// Applies the css files to the application
+    /// </summary>
+    /// <param name="cssFiles">The list of css files to set in the head element</param>
+    private ValueTask SetThemeCssFiles(IEnumerable<string> cssFiles)
+    {
+        if(cssFiles is null || !cssFiles.Any())
+        {
+            cssFiles = [];
+        }
+
+        return _jsRuntime.InvokeVoidAsync("applyCss", cssFiles.ToArray());
+    }
+
+    /// <inheritdoc/>
+    public async Task Initialize()
+    {
+        await SetThemeCssFiles(Current.CssFiles);
+    }
+
+
+    /// <summary>
     /// Sets the current theme by looking up the theme by name
     /// </summary>
     /// <param name="themeName">The name of the theme</param>
@@ -36,8 +57,7 @@ public class ThemeManager : IThemeManager
     public async Task SetThemeAsync(ITheme theme)
     {
         Current = theme;
-
-        await _jsRuntime.InvokeVoidAsync("applyCss", $"_content/themes/{theme.Name}.css");
+        await SetThemeCssFiles(theme.CssFiles);
 
         if (ThemeChanged != null)
         {
