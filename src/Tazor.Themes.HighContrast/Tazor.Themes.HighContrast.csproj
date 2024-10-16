@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-	<Target Name="PrepareThemeFiles" BeforeTargets="PrepareForBuild">
+	<Target Name="PrepareThemeFiles" BeforeTargets="PrepareForBuild" Condition=" '$(Configuration)' == 'Debug' ">
 		<Exec Command="npx tailwindcss -i ./Themes/high-contrast.theme.css -o ./wwwroot/high-contrast.theme.css" />
 	</Target>
 
