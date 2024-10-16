@@ -9,8 +9,8 @@
             </a>
         </div>
     </div>
-    <pre class=@Theme.Content.CodeBlock.Pre>
-        @Code
+    <pre class="@Theme.Content.CodeBlock.Pre @(@GetLanguage())" id="@_elementReference">
+        @(Code)
     </pre>
 </div>
 @code {
@@ -18,10 +18,34 @@
     public string Code { get; set; } = null!;
 
     [Parameter]
+    public string? Language { get; set; }
+
+    [Parameter]
     public string? Title { get; set; }
+
+    private Guid _elementReference = Guid.NewGuid();
+
+    private string GetLanguage()
+    {
+        return Language != null ? "language-" + Language : "language-markdown";
+    }
 
     private async Task OnCopyToClipboard()
     {
         await JSRuntime.InvokeVoidAsync("copyToClipboard", Code);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        
+
+        await base.OnInitializedAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("highlight", _elementReference.ToString());
+
+        await base.OnAfterRenderAsync(firstRender);
     }
 }

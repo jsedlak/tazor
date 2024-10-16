@@ -40,11 +40,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Remove="Themes\tazor.theme.css" />
+	  <Content Remove="Themes\tazor.theme.json" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="Themes\tazor.theme.css" />
+	  <None Include="Themes\tazor.theme.json" />
 	</ItemGroup>
 
 

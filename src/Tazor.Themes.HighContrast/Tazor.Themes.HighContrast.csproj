@@ -1,41 +1,94 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<Target Name="PrepareThemeFiles" BeforeTargets="PrepareForBuild">
+		<Exec Command="npx tailwindcss -i ./Themes/high-contrast.theme.css -o ./wwwroot/high-contrast.theme.css" />
+	</Target>
 
-  <ItemGroup>
-    <None Remove="Themes\high-contrast.json" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<EnableDefaultContentItems>false</EnableDefaultContentItems>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="Themes\high-contrast.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
+	<PropertyGroup>
+		<Authors>John Sedlak</Authors>
+		<Description>High Contrast theme for Tazor.</Description>
+		<Version>1.0.0-beta</Version>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Tazor.Components\Tazor.Components.csproj" />
-    <ProjectReference Include="..\Tazor.Core\Tazor.Core.csproj" />
-  </ItemGroup>
+		<!-- PackageProjectUrl is different from the repository URL. It can be a documentation
+         website or a website explaining the project -->
+		<PackageProjectUrl>https://github.com/jsedlak/tazor</PackageProjectUrl>
 
-  <ItemGroup>
-    <Compile Update="ThemeFiles.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ThemeFiles.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+		<!-- A list of tags to help the search engine to understand the content of the package -->
+		<PackageTags>tazor, blazor, tailwind</PackageTags>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="ThemeFiles.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ThemeFiles.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="node_modules\**" />
+	  <EmbeddedResource Remove="node_modules\**" />
+	  <None Remove="node_modules\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="Themes\high-contrast.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="package-lock.json" />
+		<None Remove="package.json" />
+		<None Remove="wwwroot\high-contrast.theme.css" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="package-lock.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+		  <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<Content Include="package.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+		  <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<None Include="Themes\high-contrast.json">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</None>
+		<Content Include="wwwroot\high-contrast.theme.css" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Tazor.Components\Tazor.Components.csproj" />
+		<ProjectReference Include="..\Tazor.Core\Tazor.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="ThemeFiles.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ThemeFiles.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="ThemeFiles.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>ThemeFiles.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Themes\high-contrast.theme.css">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </None>
+	</ItemGroup>
 
 </Project>

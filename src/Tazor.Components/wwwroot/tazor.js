@@ -8,6 +8,7 @@ window.applyTheme = function () {
 
 window.applyCss = function (cssLink) {
     var linkElements = document.head.getElementsByTagName('link');
+    
     for (var i = 0; i < linkElements.length; i++) {
         if (linkElements[i].getAttribute("tag") == "tazor-theme") {
             linkElements[i].remove();
@@ -18,7 +19,13 @@ window.applyCss = function (cssLink) {
     link.href = cssLink;
     link.rel = 'stylesheet';
     link.setAttribute("tag", "tazor-theme");
-    document.head.appendChild(link);
+
+    document.head.prepend(link);
+}
+
+window.highlight = function (id) {
+    const el = document.getElementById(id);
+    Prism.highlightElement(el);
 }
 
 window.setDarkMode = function (darkMode) {

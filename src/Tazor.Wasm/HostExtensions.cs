@@ -13,4 +13,14 @@ public static class HostExtensions
 
         return host;
     }
+
+    public static async Task<WebAssemblyHost> UseTazor(this WebAssemblyHost host, string themeName)
+    {
+        var themeManager = host.Services.GetRequiredService<IThemeManager>();
+        await themeManager.Initialize();
+
+        await themeManager.SetThemeAsync(themeName);
+
+        return host;
+    }
 }
