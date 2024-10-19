@@ -1,5 +1,4 @@
 ﻿@inherits TazorBaseComponent
-@inject IJSRuntime JSRuntime
 <div class=@Theme.Content.CodeBlock.Wrapper>
     <div class=@Theme.Content.CodeBlock.Header>
         <h3>@Title</h3>
@@ -13,39 +12,3 @@
         @(Code)
     </pre>
 </div>
-@code {
-    [Parameter]
-    public string Code { get; set; } = null!;
-
-    [Parameter]
-    public string? Language { get; set; }
-
-    [Parameter]
-    public string? Title { get; set; }
-
-    private Guid _elementReference = Guid.NewGuid();
-
-    private string GetLanguage()
-    {
-        return Language != null ? "language-" + Language : "language-markdown";
-    }
-
-    private async Task OnCopyToClipboard()
-    {
-        await JSRuntime.InvokeVoidAsync("copyToClipboard", Code);
-    }
-
-    protected override async Task OnInitializedAsync()
-    {
-        
-
-        await base.OnInitializedAsync();
-    }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JSRuntime.InvokeVoidAsync("highlight", _elementReference.ToString());
-
-        await base.OnAfterRenderAsync(firstRender);
-    }
-}

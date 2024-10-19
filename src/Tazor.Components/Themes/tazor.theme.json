@@ -10,6 +10,16 @@
       "large": "w-20 h-20 text-4xl",
       "extraLarge": "w-32 h-32 text-6xl"
     },
+    "commandPalette": {
+      "wrapper": "fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50",
+      "palette": "bg-white rounded-lg shadow-lg w-10/12",
+      "input": "w-full px-4 py-3 mb-4 border-b rounded-b-none rounded-lg focus:outline-none text-gray-800",
+      "list": "list-none",
+      "listItem": "flex gap-2 items-center py-2 px-4 hover:bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
+      "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
+      "commandName": "",
+      "commandDescription": "opacity-75 text-sm"
+    },
     "notifications": {
       "containerWrapper": "pointer-events-none fixed inset-0 bg-opacity-75 overflow-y-auto bg-red z-50",
       "containerWrapperInline": "",
@@ -242,16 +252,6 @@
     "knobSelected": "translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
   },
   "utility": {
-    "commandPalette": {
-      "wrapper": "fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50",
-      "palette": "bg-white rounded-lg shadow-lg w-10/12",
-      "input": "w-full px-4 py-3 mb-4 border-b rounded-b-none rounded-lg focus:outline-none text-gray-800",
-      "list": "list-none",
-      "listItem": "flex gap-2 items-center py-2 px-4 hover:bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
-      "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
-      "commandName": "",
-      "commandDescription": "opacity-75 text-sm"
-    },
     "darkModeSwitch": {
       "link": "cursor-pointer"
     }
@@ -273,9 +273,10 @@
       "container": "",
       "foldContainer": "border border-indigo-400 dark:border-indigo-800",
       "foldContainerSelected": "border border-indigo-300 dark:border-indigo-700",
-      "foldHeader": "font-semibold bg-indigo-400 dark:bg-indigo-800 p-3 cursor-pointer",
-      "foldHeaderSelected": "font-semibold bg-indigo-300 dark:bg-indigo-700 p-3 cursor-pointer",
-      "foldContent": "p-3 transition-all"
+      "foldHeader": "font-semibold bg-indigo-400 dark:bg-indigo-800 p-3 cursor-pointer flex gap-4 items-center",
+      "foldHeaderSelected": "font-semibold bg-indigo-300 dark:bg-indigo-700 p-3 cursor-pointer flex gap-4 items-center",
+      "foldContent": "h-0 transition-all overflow-hidden",
+      "foldContentUnfolded": "h-auto p-3 transition-all"
     }
   }
 }

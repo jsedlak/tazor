@@ -1,4 +1,5 @@
-﻿<ClickContainer OnClickedOutside=@(async () => await OnClickedOutside())>
+﻿@inherits TazorBaseComponent
+<ClickContainer OnClickedOutside=@(async () => await OnClickedOutside())>
     @if(IsVisible)
     {
         <div class="block fixed" style=@($"left:{Left}px;top:{Top}px;")>
@@ -32,23 +33,3 @@
         </div>
     }
 </ClickContainer>
-@code {
-    [Parameter]
-    public bool IsVisible { get; set; }
-
-    [Parameter]
-    public EventCallback<bool> IsVisibleChanged { get; set; }
-
-    [Parameter]
-    public int Left { get; set; }
-
-    [Parameter]
-    public int Top { get; set; }
-
-    private async Task OnClickedOutside()
-    {
-        IsVisible = false;
-        await IsVisibleChanged.InvokeAsync(IsVisible);
-        StateHasChanged();
-    }
-}

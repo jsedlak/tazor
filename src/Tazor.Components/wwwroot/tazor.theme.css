@@ -747,6 +747,10 @@ video {
   display: none;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -773,6 +777,10 @@ video {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-full {

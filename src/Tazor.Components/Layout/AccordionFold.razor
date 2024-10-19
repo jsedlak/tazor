@@ -4,59 +4,61 @@
     <div 
         class=@(IsUnfolded ? Theme.Layout.Accordion.FoldHeaderSelected : Theme.Layout.Accordion.FoldHeader)
         @onclick=@ToggleFold>
+        @if(IconPlacement == IconPlacement.Start)
+        {
+            if(IsUnfolded)
+            {
+                if (UnfoldedIconTemplate is not null) 
+                {
+                    @UnfoldedIconTemplate
+                }
+                else
+                {
+                    @HeroIcons.ChevronDown()
+                }
+            }
+            else
+            {
+                if (IconTemplate is not null)
+                {
+                    @IconTemplate
+                }
+                else
+                {
+                    @HeroIcons.ChevronRight()
+                }
+            }
+        }
+        
         @Header
+
+        @if (IconPlacement == IconPlacement.End)
+        {
+            if (IsUnfolded)
+            {
+                if (UnfoldedIconTemplate is not null)
+                {
+                    @UnfoldedIconTemplate
+                }
+                else
+                {
+                    @HeroIcons.ChevronDown()
+                }
+            }
+            else
+            {
+                if (IconTemplate is not null)
+                {
+                    @IconTemplate
+                }
+                else
+                {
+                    @HeroIcons.ChevronRight()
+                }
+            }
+        }
     </div>
-    @if(IsUnfolded)
-    {
-        <div class=@Theme.Layout.Accordion.FoldContent>
-            @Content
-        </div>
-    }
+    <div class="@(GetContentClass())">
+        @Content
+    </div>
 </section>
-@code {
-    [Parameter]
-    public RenderFragment? Header { get; set; }
-
-    [Parameter]
-    public RenderFragment? Content { get; set; }
-
-    [Parameter]
-    public bool IsUnfolded { get; set; } = false;
-
-    [Parameter]
-    public EventCallback<bool> IsUnfoldedChanged { get; set; }
-
-    [CascadingParameter(Name = "Accordion")]
-    public Accordion? Accordion { get; set; }
-
-    private async Task ToggleFold()
-    {
-        // if there is no parent, we need to self control
-        if (Accordion == null || Accordion.MultiOpen)
-        {
-            IsUnfolded = !IsUnfolded;
-            await IsUnfoldedChanged.InvokeAsync(IsUnfolded);
-        }
-        // otherwise we'll let the parent figure it out
-        else
-        {
-            await Accordion.SelectFold(this);
-        }
-    }
-
-    public async Task UnfoldAsync()
-    {
-        IsUnfolded = true;
-        await IsUnfoldedChanged.InvokeAsync(IsUnfolded);
-
-        StateHasChanged();
-    }
-
-    public async Task FoldAsync()
-    {
-        IsUnfolded = false;
-        await IsUnfoldedChanged.InvokeAsync(IsUnfolded);
-
-        StateHasChanged();
-    }
-}

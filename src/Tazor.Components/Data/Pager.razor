@@ -27,15 +27,11 @@
                 @HeroIcons.ChevronLeft("inline-block")
             </a>
 
-
-
-
             @for (var i = min; i <= max; i++)
             {
                 int pageIndex = i;
                 <a @onclick=@(() => ChangePage(pageIndex)) class=@(GetPageClass(i))>@i</a>
             }
-
 
             <a @onclick=@(() => ChangePage(CurrentPage + 1)) class=@Theme.Pager.NextButton>
                 <span class=@Theme.Pager.NextPreviousText>Next</span>
@@ -44,28 +40,3 @@
         }
     </nav>
 </div>
-@code {
-    [Parameter]
-    public int Pages { get; set; }
-
-    [Parameter]
-    public int CurrentPage { get; set; }
-
-    [Parameter]
-    public EventCallback<int> CurrentPageChanged { get; set; }
-
-    [Parameter]
-    public int NumberOfVisiblePages { get; set; } = 5;
-
-    private string GetPageClass(int pageIndex)
-    {
-        return pageIndex == CurrentPage ? Theme.Pager.ButtonActive : Theme.Pager.Button;
-    }
-
-    private async void ChangePage(int pageIndex)
-    {
-        CurrentPage = Math.Clamp(pageIndex, 1, Pages);
-
-        await CurrentPageChanged.InvokeAsync(CurrentPage);
-    }
-}

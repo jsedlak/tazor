@@ -9,4 +9,9 @@ public class AppTheme
     public StatCardTheme StatCard { get; set; } = new();
 
     public PingTheme Ping { get; set; } = new();
+
+    /// <summary>
+    /// Gets or Sets the command palette theme
+    /// </summary>
+    public CommandPaletteTheme CommandPalette { get; set; } = new();
 }
