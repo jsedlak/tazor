@@ -11,7 +11,14 @@ public static class TazorBuilderExtensions
         builder.WithTheme("Visual Studio", () =>
         {
             using var stream = new MemoryStream(ThemeFiles.visual_studio);
-            return JsonSerializer.Deserialize<TazorTheme>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
+
+            // load the theme
+            var theme = JsonSerializer.Deserialize<TazorTheme>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
+
+            // register the css file
+            theme.CssFiles = ["_content/Tazor.Themes.VisualStudio/visual-studio.theme.css"];
+
+            return theme;
         }, false);
 
         return builder;

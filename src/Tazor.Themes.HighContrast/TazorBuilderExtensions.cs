@@ -11,8 +11,15 @@ public static class TazorBuilderExtensions
         builder.WithTheme("High Contrast", () =>
         {
             using var stream = new MemoryStream(ThemeFiles.high_contrast);
-            return JsonSerializer.Deserialize<TazorTheme>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
-        }, false);
+
+            // load the theme from the resource file
+            var theme = JsonSerializer.Deserialize<TazorTheme>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
+
+            // register our css file
+            theme.CssFiles = ["_content/Tazor.Themes.HighContrast/high-contrast.theme.css"];
+
+            return theme;
+        }, isDefault: false);
 
         return builder;
     }

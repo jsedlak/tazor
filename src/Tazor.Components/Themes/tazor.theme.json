@@ -10,6 +10,16 @@
       "large": "w-20 h-20 text-4xl",
       "extraLarge": "w-32 h-32 text-6xl"
     },
+    "commandPalette": {
+      "wrapper": "fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50",
+      "palette": "bg-white rounded-lg shadow-lg w-10/12",
+      "input": "w-full px-4 py-3 mb-4 border-b rounded-b-none rounded-lg focus:outline-none text-gray-800",
+      "list": "list-none",
+      "listItem": "flex gap-2 items-center py-2 px-4 hover:bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
+      "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
+      "commandName": "",
+      "commandDescription": "opacity-75 text-sm"
+    },
     "notifications": {
       "containerWrapper": "pointer-events-none fixed inset-0 bg-opacity-75 overflow-y-auto bg-red z-50",
       "containerWrapperInline": "",
@@ -28,6 +38,10 @@
       "wrapperSuccess": "bg-green-100 border-green-500 text-green-700 dark:bg-green-700 dark:border-green-900 dark:text-white",
       "emptyMessageContainer": "flex w-full h-full items-center justify-center p-4",
       "emptyMessage": "text-2xl opacity-75"
+    },
+    "ping": {
+      "container": "relative overflow-show inline-block",
+      "content": "absolute -top-2 -right-2 px-2 py-1 rounded-full bg-red-400 text-white text-xs"
     },
     "statCard": {
       "card": "bg-gray-100 rounded shadow-md border-gray-400 dark:bg-gray-800 dark:border-gray-600",
@@ -72,7 +86,7 @@
       "text": ""
     },
     "codeBlock": {
-      "wrapper": "bg-gray-100 dark:bg-gray-900 rounded my-3 text-sm shadow",
+      "wrapper": "bg-gray-100 dark:bg-gray-800 rounded my-3 text-sm shadow",
       "header": "bg-indigo-400 dark:bg-indigo-800 text-white text-sm px-3 py-2 font-mono flex justify-between items-center",
       "pre": "p-3 text-sm overflow-x-auto"
     },
@@ -102,10 +116,23 @@
       "wrapper": "mt-3 mb-3 overflow-hidden bg-white shadow-sm ring-1 ring-gray-50 dark:ring-gray-800 rounded dark:bg-gray-700",
       "list": "list-none divide-y divide-gray-100 dark:divide-gray-900",
       "listItem": "relative flex items-center px-4 py-4 space-x-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
+    },
+    "dataGrid": {
+      "container": "",
+      "containerCollapsed": "",
+      "containerExpanded": "fixed z-50 w-full h-full bg-gray-800/50 top-0 left-0 p-6",
+      "tableElement": "min-w-full rounded bg-gray-50 dark:bg-gray-800 overflow-x-auto",
+      "toolbar": "p-3 flex justify-between items-center",
+      "header": "bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-gray-50",
+      "headerCell": "px-3 py-3.5 text-left text-sm font-semibold cursor-pointer",
+      "body": "divide-y divide-gray-200 bg-white dark:bg-gray-800",
+      "cell": "whitespace-nowrap px-3 py-4 text-sm text-left text-gray-500 dark:text-gray-50",
+      "footer": "p-3",
+      "sortingIcon": "inline-block w-5 h-5 ml-2"
     }
   },
   "button": {
-    "global": "text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap flex items-center justify-center gap-2",
+    "global": "transition-colors text-center font-semibold py-2 px-4 rounded cursor-pointer whitespace-nowrap flex items-center justify-center gap-2",
     "disabled": "opacity-50 cursor-not-allowed",
     "default": "bg-indigo-500 hover:bg-indigo-600 text-white",
     "defaultOutline": "bg-transparent hover:bg-indigo-500 text-indigo-500 dark:text-indigo-100 hover:text-white border border-indigo-500",
@@ -225,16 +252,6 @@
     "knobSelected": "translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
   },
   "utility": {
-    "commandPalette": {
-      "wrapper": "fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50",
-      "palette": "bg-white rounded-lg shadow-lg w-10/12",
-      "input": "w-full px-4 py-3 mb-4 border-b rounded-b-none rounded-lg focus:outline-none text-gray-800",
-      "list": "list-none",
-      "listItem": "flex gap-2 items-center py-2 px-4 hover:bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
-      "listItemActive": "flex gap-2 items-center py-2 px-4 bg-gray-100 cursor-pointer text-gray-800 dark:text-white",
-      "commandName": "",
-      "commandDescription": "opacity-75 text-sm"
-    },
     "darkModeSwitch": {
       "link": "cursor-pointer"
     }
@@ -256,9 +273,10 @@
       "container": "",
       "foldContainer": "border border-indigo-400 dark:border-indigo-800",
       "foldContainerSelected": "border border-indigo-300 dark:border-indigo-700",
-      "foldHeader": "font-semibold bg-indigo-400 dark:bg-indigo-800 p-3 cursor-pointer",
-      "foldHeaderSelected": "font-semibold bg-indigo-300 dark:bg-indigo-700 p-3 cursor-pointer",
-      "foldContent": "p-3"
+      "foldHeader": "font-semibold bg-indigo-400 dark:bg-indigo-800 p-3 cursor-pointer flex gap-4 items-center",
+      "foldHeaderSelected": "font-semibold bg-indigo-300 dark:bg-indigo-700 p-3 cursor-pointer flex gap-4 items-center",
+      "foldContent": "h-0 transition-all overflow-hidden",
+      "foldContentUnfolded": "h-auto p-3 transition-all"
     }
   }
 }

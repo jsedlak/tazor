@@ -1,23 +1,2 @@
 ﻿@inherits TazorBaseComponent
 <input type="text" value=@Value onchange=@OnChanged class=@Theme.Forms.TextBox />
-@code {
-    [Parameter]
-    public int Value { get; set; }
-
-    [Parameter]
-    public EventCallback<int> ValueChanged { get; set; }
-
-    private async  Task OnChanged(ChangeEventArgs args)
-    {
-        var val = 0;
-        if(args != null && args.Value != null)
-        {
-            if(!int.TryParse(args.Value.ToString(), out val))
-            {
-                val = 0;
-            }
-        }
-
-        await ValueChanged.InvokeAsync(val);
-    }
-}

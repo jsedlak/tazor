@@ -1,34 +1,6 @@
 @inherits TazorBaseComponent
 <div class=@Theme.Switch.Wrapper>
-    <div @onclick="OnSwitchClicked" class=@_trackClass>
-        <div class=@_knobClass></div>
+    <div @onclick="OnSwitchClicked" class="@(GetTrackClass())">
+        <div class="@(GetKnobClass())"></div>
     </div>
 </div>
-@code {
-    [Parameter]
-    public bool IsChecked { get; set; }
-
-    [Parameter]
-    public EventCallback<bool> IsCheckedChanged { get; set; }
-
-    private string _trackClass = "";
-    private string _knobClass = "";
-
-    private async Task OnSwitchClicked()
-    {
-        IsChecked = !IsChecked;
-        UpdateCssClasses();
-        await IsCheckedChanged.InvokeAsync(IsChecked);
-    }
-
-    private void UpdateCssClasses()
-    {
-        _knobClass = IsChecked ? Theme.Switch.KnobSelected : Theme.Switch.Knob;
-        _trackClass = IsChecked ? Theme.Switch.TrackSelected : Theme.Switch.Track;
-    }
-
-    protected override void OnInitialized()
-    {
-        UpdateCssClasses();
-    }
-}

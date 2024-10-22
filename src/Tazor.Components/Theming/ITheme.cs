@@ -11,6 +11,11 @@ public interface ITheme
     string Name { get; set; }
 
     /// <summary>
+    /// Gets or Sets the css files to be included as part of the theme
+    /// </summary>
+    IEnumerable<string> CssFiles { get; set; }
+
+    /// <summary>
     /// Gets or Sets the app component theme
     /// </summary>
     AppTheme App { get; set; }

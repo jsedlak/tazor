@@ -32,7 +32,9 @@ internal sealed class TazorBuilder : ITazorBuilder
         this.WithTheme("Tazor", () =>
         {
             using var stream = new MemoryStream(IncludedThemes.tazor_theme);
-            return JsonSerializer.Deserialize<TazorTheme>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
+            var theme = JsonSerializer.Deserialize<TazorTheme>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
+            theme.CssFiles = [ "_content/Tazor.Components/tazor.theme.css"];
+            return theme;
         }, true);
 
         return this
@@ -76,14 +78,16 @@ internal sealed class TazorBuilder : ITazorBuilder
     public ITazorBuilder WithNotifications<TProvider>()
         where TProvider : class, INotificationProvider
     {
-
-        return this;
+        return this.With<INotificationProvider>(
+            services => services.AddSingleton<INotificationProvider, TProvider>()
+        );
     }
 
     public ITazorBuilder WithNotifications<TProvider>(Func<IServiceProvider, TProvider> create)
         where TProvider : class, INotificationProvider
     {
-        _services.AddSingleton<INotificationProvider, TProvider>(create);
-        return this;
+        return this.With<INotificationProvider>(
+            services => services.AddSingleton<INotificationProvider, TProvider>(create)
+        );
     }
 }

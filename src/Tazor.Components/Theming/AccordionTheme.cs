@@ -34,4 +34,9 @@ public class AccordionTheme
     /// Gets or Sets the CSS Class for the fold's content
     /// </summary>
     public string FoldContent { get; set; } = "";
+
+    /// <summary>
+    /// Gets or Sets the CSS Class for the fold's content
+    /// </summary>
+    public string FoldContentUnfolded { get; set; } = "";
 }

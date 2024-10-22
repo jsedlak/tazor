@@ -10,6 +10,9 @@ public class TazorTheme : ITheme
     /// </summary>
     public string Name { get; set; } = "Unset Theme Name";
 
+    /// <inheritdoc />
+    public IEnumerable<string> CssFiles { get; set; } = [];
+
     /// <summary>
     /// Gets or Sets the app components theme
     /// </summary>

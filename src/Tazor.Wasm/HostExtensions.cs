@@ -9,9 +9,17 @@ public static class HostExtensions
     public static async Task<WebAssemblyHost> UseTazor(this WebAssemblyHost host)
     {
         var themeManager = host.Services.GetRequiredService<IThemeManager>();
-        var defaultTheme = themeManager.Themes.FirstOrDefault(m => m.IsDefault) ?? themeManager.Themes.FirstOrDefault() ?? new TazorTheme();
+        await themeManager.Initialize();
 
-        await themeManager.SetThemeAsync(defaultTheme);
+        return host;
+    }
+
+    public static async Task<WebAssemblyHost> UseTazor(this WebAssemblyHost host, string themeName)
+    {
+        var themeManager = host.Services.GetRequiredService<IThemeManager>();
+        await themeManager.Initialize();
+
+        await themeManager.SetThemeAsync(themeName);
 
         return host;
     }

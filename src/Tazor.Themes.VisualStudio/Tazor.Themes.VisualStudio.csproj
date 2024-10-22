@@ -1,41 +1,67 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<Target Name="PrepareThemeFiles" BeforeTargets="PrepareForBuild" Condition=" '$(Configuration)' == 'Debug' ">
+		<Exec Command="npx tailwindcss -i ./Themes/visual-studio.theme.css -o ./wwwroot/visual-studio.theme.css" />
+	</Target>
+	
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<EnableDefaultContentItems>false</EnableDefaultContentItems>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Themes\visual-studio.json" />
-  </ItemGroup>
+	<PropertyGroup>
+		<Authors>John Sedlak</Authors>
+		<Description>A Visual Studio theme for Tazor.</Description>
+		<Version>1.0.0-beta</Version>
 
-  <ItemGroup>
-    <Content Include="Themes\visual-studio.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
+		<!-- PackageProjectUrl is different from the repository URL. It can be a documentation
+         website or a website explaining the project -->
+		<PackageProjectUrl>https://github.com/jsedlak/tazor</PackageProjectUrl>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Tazor.Components\Tazor.Components.csproj" />
-    <ProjectReference Include="..\Tazor.Core\Tazor.Core.csproj" />
-  </ItemGroup>
+		<!-- A list of tags to help the search engine to understand the content of the package -->
+		<PackageTags>tazor, blazor, tailwind</PackageTags>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Update="ThemeFiles.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ThemeFiles.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+	<ItemGroup>
+	  <Content Remove="Themes\visual-studio.json" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="ThemeFiles.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ThemeFiles.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="Themes\visual-studio.json">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Tazor.Components\Tazor.Components.csproj" />
+		<ProjectReference Include="..\Tazor.Core\Tazor.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="ThemeFiles.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>ThemeFiles.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="ThemeFiles.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>ThemeFiles.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\" />
+	</ItemGroup>
 
 </Project>

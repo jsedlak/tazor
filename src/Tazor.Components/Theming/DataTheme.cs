@@ -14,4 +14,6 @@ public class DataTheme
     /// Gets or Sets theming for the list view component
     /// </summary>
     public ListViewTheme ListView { get; set; } = new();
+
+    public TemplatedGridTheme DataGrid { get; set; } = new();
 }
