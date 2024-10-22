@@ -3,7 +3,7 @@
 namespace Tazor.Components.Data;
 
 [CascadingTypeParameter(nameof(TItem))]
-public partial class DataGrid<TITem> : TazorBaseComponent 
+public partial class DataGrid<TItem> : TazorBaseComponent 
 {
     private bool _isColumnPopupOpen = false;
 
