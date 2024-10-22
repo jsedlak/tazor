@@ -1,0 +1,26 @@
+﻿@inherits TazorBaseComponent
+@if (IsVisible)
+{
+    <div class=@Theme.App.CommandPalette.Wrapper onclick=@(async () => await HandleClickOutside())>
+        <div class=@Theme.App.CommandPalette.Palette @onclick:stopPropagation>
+            <input type="text"
+                   value=@Input
+                   autofocus="true"
+            @ref=@_textboxReference
+            @oninput=@OnInputChanged
+            @onkeydown=@OnKeyDown
+                   placeholder="Type a command..."
+                   class=@Theme.App.CommandPalette.Input />
+            <ul class=@Theme.App.CommandPalette.List>
+                @foreach (var cmd in _visibleCommands)
+                {
+                    <li onclick=@(async () => await ExecuteAsync(cmd))
+                        class=@(_currentCommandIndex.HasValue && cmd == _visibleCommands[_currentCommandIndex.Value] ? Theme.App.CommandPalette.ListItemActive : Theme.App.CommandPalette.ListItem)>
+                        <span class=@Theme.App.CommandPalette.CommandName>@cmd.Name</span>
+                        <span class=@Theme.App.CommandPalette.CommandDescription>@cmd.Describe(Input)</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+}
