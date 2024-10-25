@@ -5,6 +5,16 @@ namespace Tazor.Components.Data
 {
     public class Column<TItem>
     {
+        public Column()
+        {
+        }
+
+        public Column(string title, Expression<Func<TItem, object>> field)
+        {
+            Title = title;
+            Field = field;
+        }
+
         public string Title { get; set; } = null!;
 
         public Expression<Func<TItem, object>> Field { get; set; } = null!;

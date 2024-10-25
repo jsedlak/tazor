@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Tazor.Components.Builder;
 using Tazor.Components.Theming;
+using Tazor.Components.Layout;
 using Tazor.Components.Utility;
 using Tazor.ServiceModel;
 using Tazor.Services;
@@ -26,11 +27,22 @@ public static class ServiceCollectionExtensions
 
         return builder;
     }
-
+    
     public static ITazorBuilder WithGravatars(this ITazorBuilder builder)
     {
         return builder.With<IAvatarProvider>(
             services => services.AddSingleton<IAvatarProvider, GravatarAvatarProvider>()
         );
     }
+    public static ITazorBuilder WithDragAndDrop(this ITazorBuilder builder)
+    {
+        builder.With<IDragProvider>(services =>
+        {
+            services.AddSingleton<IDragProvider, DefaultDragProvider>();
+            services.AddCascadingValue<IDragProvider>("DragProvider", sp => sp.GetRequiredService<IDragProvider>());
+        });
+
+        return builder;
+    }
+
 }
