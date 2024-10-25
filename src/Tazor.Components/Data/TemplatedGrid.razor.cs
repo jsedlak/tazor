@@ -55,6 +55,17 @@ public partial class TemplatedGrid<TItem> : TazorBaseComponent
         await IsExpandedChanged.InvokeAsync(false);
     }
 
+    private string GetRowClass(int index, TItem item)
+    {
+        var rowClass = index % 2 == 0 ? Theme.Data.DataGrid.EvenRow : Theme.Data.DataGrid.OddRow;
+
+        if (RowClassCallback != null)
+        {
+            rowClass += " " + RowClassCallback(item);
+        }
+        
+        return rowClass;
+    }
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; } = null;
@@ -62,7 +73,12 @@ public partial class TemplatedGrid<TItem> : TazorBaseComponent
     [Parameter]
     public IEnumerable<TItem> Items { get; set; } = null!;
 
+    [Parameter]
     public bool IsExpanded { get; set; } = false;
 
+    [Parameter]
     public EventCallback<bool> IsExpandedChanged { get; set; } = default;
+    
+    [Parameter]
+    public Func<TItem, string>? RowClassCallback { get; set; }
 }

@@ -124,9 +124,9 @@
       "tableElement": "min-w-full rounded bg-gray-50 dark:bg-gray-800 overflow-x-auto",
       "toolbar": "p-3 flex justify-between items-center",
       "header": "bg-gray-50 text-gray-900 dark:bg-gray-700 dark:text-gray-50",
-      "headerCell": "px-3 py-3.5 text-left text-sm font-semibold cursor-pointer",
+      "headerCell": "px-3 py-3.5 text-left font-semibold cursor-pointer",
       "body": "divide-y divide-gray-200 bg-white dark:bg-gray-800",
-      "cell": "whitespace-nowrap px-3 py-4 text-sm text-left text-gray-500 dark:text-gray-50",
+      "cell": "whitespace-nowrap px-3 py-4 text-left text-gray-500 dark:text-gray-50",
       "footer": "p-3",
       "sortingIcon": "inline-block w-5 h-5 ml-2"
     }

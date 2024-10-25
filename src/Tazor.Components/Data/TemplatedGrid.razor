@@ -16,7 +16,7 @@
         </div>
         <table class="@Theme.Data.DataGrid.TableElement">
             <thead class="@Theme.Data.DataGrid.Header">
-                <tr class="">
+                <tr>
                     @foreach (var col in _columns.OrderBy(m => m.Order))
                     {
                         <th class="@Theme.Data.DataGrid.HeaderCell">
@@ -32,8 +32,7 @@
                 @foreach (var item in Items)
                 {
                     count++;
-                    var rowClass = count % 2 == 0 ? Theme.Data.DataGrid.EvenRow : Theme.Data.DataGrid.OddRow;
-                    <tr class="@rowClass">
+                    <tr class="@GetRowClass(count, item)">
                         @foreach (var col in _columns.OrderBy(m => m.Order))
                         {
                             <td class="@Theme.Data.DataGrid.Cell">
