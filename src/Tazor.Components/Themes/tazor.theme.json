@@ -149,7 +149,7 @@
     "successOutline": "bg-transparent hover:bg-green-600 text-green-500 dark:text-green-200 hover:text-white border border-green-500"
   },
   "dialog": {
-    "window": "relative top-10 mx-auto bg-white dark:bg-gray-800 p-6 rounded shadow-xl",
+    "window": "relative top-10 mx-auto bg-white dark:bg-gray-700 p-6 rounded shadow-xl",
     "overlay": "fixed inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full",
     "placement": "flex items-center min-h-full justify-center p-4 sm:items-center sm:p-0",
     "windowInner": "",
