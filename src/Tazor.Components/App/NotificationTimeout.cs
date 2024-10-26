@@ -1,10 +1,13 @@
 ﻿namespace Tazor.Components.App;
 
+/// <summary>
+/// Defines a notification timeout for maintaining an up-to-date list of notifications
+/// </summary>
 internal class NotificationTimeout
 {
-    public NotificationItem Notification { get; set; }
+    internal NotificationItem Notification { get; set; } = null!;
 
-    public DateTimeOffset TimeOut { get; set; } 
+    internal DateTimeOffset TimeOut { get; set; } 
 
-    public DateTimeOffset Added { get; set; }
+    internal DateTimeOffset Added { get; set; }
 }

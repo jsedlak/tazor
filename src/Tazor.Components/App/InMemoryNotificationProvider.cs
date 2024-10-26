@@ -1,15 +1,32 @@
 ﻿namespace Tazor.Components.App;
 
-public class InMemoryNotificationProvider : INotificationProvider, IDisposable
+/// <summary>
+/// Provides notifications from a memory store
+/// </summary>
+public sealed class InMemoryNotificationProvider : INotificationProvider, IDisposable
 {
     private List<NotificationTimeout> _timeouts = new();
     private readonly Timer _timer;
 
+    /// <summary>
+    /// Notifies when notifications have been removed
+    /// </summary>
     public event Action<IEnumerable<NotificationItem>> NotificationsRemoved;
+    
+    /// <summary>
+    /// Notifies when notifications have been added
+    /// </summary>
     public event Action<IEnumerable<NotificationItem>> NotificationsAdded;
-
+    
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public InMemoryNotificationProvider()
     {
+        // Defaults
+        NotificationsRemoved = (_) => { };
+        NotificationsAdded = (_) => { };
+        
         _timer = new Timer(OnTimerTicked, null, 1000, 1000);
     }
 
@@ -20,8 +37,8 @@ public class InMemoryNotificationProvider : INotificationProvider, IDisposable
 
     private void OnTimerTicked(object? state)
     {
-        var expired = _timeouts.Where(t => t.TimeOut <= DateTimeOffset.Now);
-        var expiredNotifications = expired.Select(m => m.Notification);
+        var expired = _timeouts.Where(t => t.TimeOut <= DateTimeOffset.Now).ToArray();
+        var expiredNotifications = expired.Select(m => m.Notification).ToArray();
 
         _timeouts = _timeouts.Except(expired).ToList();
         Notifications = Notifications.Except(expiredNotifications);
@@ -29,11 +46,21 @@ public class InMemoryNotificationProvider : INotificationProvider, IDisposable
         NotificationsRemoved.Invoke(expiredNotifications);
     }
 
+    /// <summary>
+    /// Adds a notification with a timeout
+    /// </summary>
+    /// <param name="notification"></param>
+    /// <param name="durationInSeconds"></param>
     public void Add(NotificationItem notification, double durationInSeconds = 5)
     {
         Add(notification, TimeSpan.FromSeconds(durationInSeconds));
     }
 
+    /// <summary>
+    /// Adds a notification with a timeout
+    /// </summary>
+    /// <param name="notification"></param>
+    /// <param name="duration"></param>
     public void Add(NotificationItem notification, TimeSpan duration)
     {
 
@@ -50,6 +77,10 @@ public class InMemoryNotificationProvider : INotificationProvider, IDisposable
         NotificationsAdded?.Invoke([notification]);
     }
 
+    /// <summary>
+    /// Removes a timeout
+    /// </summary>
+    /// <param name="notification"></param>
     public void Remove(NotificationItem notification)
     {
         var timeout = _timeouts.FirstOrDefault(t => t.Notification == notification);
@@ -61,12 +92,15 @@ public class InMemoryNotificationProvider : INotificationProvider, IDisposable
         }
     }
 
+    /// <summary>
+    /// Disposes of the provider
+    /// </summary>
     public void Dispose()
     {
         Dispose(true);
     }
 
-    protected virtual void Dispose(bool disposing)
+    private void Dispose(bool disposing)
     {
         if (IsDisposed)
         {
@@ -82,7 +116,13 @@ public class InMemoryNotificationProvider : INotificationProvider, IDisposable
         IsDisposed = true;
     }
 
+    /// <summary>
+    /// Gets whether the provider has been disposed
+    /// </summary>
     public bool IsDisposed { get; private set; }
 
+    /// <summary>
+    /// Gets the current list of notifications
+    /// </summary>
     public IEnumerable<NotificationItem> Notifications { get; private set; } = [];
 }

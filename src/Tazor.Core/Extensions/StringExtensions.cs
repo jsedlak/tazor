@@ -2,8 +2,16 @@
 
 namespace Tazor.Extensions;
 
+/// <summary>
+/// Provides common string manipulation methods
+/// </summary>
 public static class StringExtensions
 {
+    /// <summary>
+    /// Replaces all whitespace with dashes and lowercases the string
+    /// </summary>
+    /// <param name="value">The string to be slugified</param>
+    /// <returns>A slug version of the input string</returns>
     public static string ToSlug(this string value)
     {
         return value
@@ -14,6 +22,11 @@ public static class StringExtensions
             .ToLowerInvariant();
     }
 
+    /// <summary>
+    /// Returns a Camel Cased version of the string
+    /// </summary>
+    /// <param name="s">The string to convert</param>
+    /// <returns>A camel cased version of the original string</returns>
     public static string CamelCase(this string s)
     {
         var x = s.Replace("_", "");
@@ -23,20 +36,32 @@ public static class StringExtensions
         return char.ToLower(x[0]) + x.Substring(1);
     }
 
+    /// <summary>
+    /// Returns a pascal cased version of the string
+    /// </summary>
+    /// <param name="s">The string to convert</param>
+    /// <returns>The pascal cased version of the original string</returns>
     public static string PascalCase(this string s)
     {
         var x = CamelCase(s);
         return char.ToUpper(x[0]) + x.Substring(1);
     }
 
+    /// <summary>
+    /// Trims a string from the beginning of another string, removing any leading whitespace 
+    /// </summary>
+    /// <param name="input"></param>
+    /// <param name="trim"></param>
+    /// <returns></returns>
     public static string TrimStart(this string input, string trim)
     {
+        input = input.TrimStart();
         if (!input.StartsWith(trim, StringComparison.OrdinalIgnoreCase))
         {
             return input;
         }
 
-        return input.Substring(trim.Length);
+        return input.Substring(trim.Length).TrimStart();
     }
 
     /// <summary>

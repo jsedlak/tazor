@@ -15,5 +15,8 @@ public class DataTheme
     /// </summary>
     public ListViewTheme ListView { get; set; } = new();
 
+    /// <summary>
+    /// Gets or Sets the data grid theme
+    /// </summary>
     public TemplatedGridTheme DataGrid { get; set; } = new();
 }

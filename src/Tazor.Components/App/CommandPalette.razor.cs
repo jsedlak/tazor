@@ -4,6 +4,9 @@ using Tazor.Components.Layout;
 
 namespace Tazor.Components.App;
 
+/// <summary>
+/// Represents an mechanism for interacting with a pre-determined list of commands from the UI
+/// </summary>
 public partial class CommandPalette : TazorBaseComponent
 {
     private int? _currentCommandIndex = null;
@@ -77,6 +80,7 @@ public partial class CommandPalette : TazorBaseComponent
         StateHasChanged();
     }
 
+    /// <inheritdoc />
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (_textboxReference != null && IsVisible)
@@ -85,18 +89,33 @@ public partial class CommandPalette : TazorBaseComponent
         }
     }
 
+    /// <summary>
+    /// Gets or Sets the list of commands
+    /// </summary>
     [Parameter]
     public IEnumerable<CommandDescription> Commands { get; set; } = Enumerable.Empty<CommandDescription>();
 
+    /// <summary>
+    /// Gets or Sets the current input data
+    /// </summary>
     [Parameter]
     public string Input { get; set; } = "";
 
+    /// <summary>
+    /// Gets or Sets the callback for handling changes to input data
+    /// </summary>
     [Parameter]
     public EventCallback<string> InputChanged { get; set; }
 
+    /// <summary>
+    /// Gets or Sets whether the command palette is visible
+    /// </summary>
     [Parameter]
     public bool IsVisible { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the callback for handling changes to visibility
+    /// </summary>
     [Parameter]
     public EventCallback<bool> IsVisibleChanged { get; set; }
 }

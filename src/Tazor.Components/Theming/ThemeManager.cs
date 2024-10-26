@@ -11,6 +11,10 @@ public class ThemeManager : IThemeManager
 {
     private readonly IJSRuntime _jsRuntime;
 
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="jsRuntime"></param>
     public ThemeManager(IJSRuntime jsRuntime)
     {
         _jsRuntime = jsRuntime;
@@ -22,7 +26,7 @@ public class ThemeManager : IThemeManager
     /// <param name="cssFiles">The list of css files to set in the head element</param>
     private ValueTask SetThemeCssFiles(IEnumerable<string> cssFiles)
     {
-        if(cssFiles is null || !cssFiles.Any())
+        if(!cssFiles.Any())
         {
             cssFiles = [];
         }
@@ -35,8 +39,7 @@ public class ThemeManager : IThemeManager
     {
         await SetThemeCssFiles(Current.CssFiles);
     }
-
-
+    
     /// <summary>
     /// Sets the current theme by looking up the theme by name
     /// </summary>
