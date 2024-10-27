@@ -9,8 +9,16 @@ using Tazor.Services;
 
 namespace Tazor.Components;
 
+/// <summary>
+/// Adds fluent tazor capabilities to the service collection
+/// </summary>
 public static class ServiceCollectionExtensions
 {
+    /// <summary>
+    /// Adds tazor to the application
+    /// </summary>
+    /// <param name="services"></param>
+    /// <returns></returns>
     public static ITazorBuilder AddTazor(this IServiceCollection services)
     {
         var builder = new TazorBuilder(services)
@@ -28,12 +36,23 @@ public static class ServiceCollectionExtensions
         return builder;
     }
     
+    /// <summary>
+    /// Adds the gravatar avatar provider to the tazor engine 
+    /// </summary>
+    /// <param name="builder"></param>
+    /// <returns></returns>
     public static ITazorBuilder WithGravatars(this ITazorBuilder builder)
     {
         return builder.With<IAvatarProvider>(
             services => services.AddSingleton<IAvatarProvider, GravatarAvatarProvider>()
         );
     }
+    
+    /// <summary>
+    /// Adds drag and drop capabilities to tazor
+    /// </summary>
+    /// <param name="builder"></param>
+    /// <returns></returns>
     public static ITazorBuilder WithDragAndDrop(this ITazorBuilder builder)
     {
         builder.With<IDragProvider>(services =>
@@ -44,5 +63,4 @@ public static class ServiceCollectionExtensions
 
         return builder;
     }
-
 }

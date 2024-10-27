@@ -3,6 +3,9 @@ using System.Runtime.CompilerServices;
 
 namespace Tazor.Components.Layout;
 
+/// <summary>
+/// Provides the basic built-in implementation for dragging and dropping elements
+/// </summary>
 public sealed class DefaultDragProvider : IDragProvider
 {
     private object? _draggedObject;
@@ -11,6 +14,7 @@ public sealed class DefaultDragProvider : IDragProvider
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
+    /// <inheritdoc />
     public object? DraggedObject
     {
         get => _draggedObject;
@@ -26,6 +30,7 @@ public sealed class DefaultDragProvider : IDragProvider
         }
     }
 
+    /// <inheritdoc />
     public IDragTarget? DragTarget
     {
         get => _dragTarget;
@@ -41,6 +46,7 @@ public sealed class DefaultDragProvider : IDragProvider
         }
     }
 
+    /// <inheritdoc />
     public IDragSource? DragSource
     {
         get => _dragSource;

@@ -2,6 +2,9 @@
 
 namespace Tazor.Components.Content;
 
+/// <summary>
+/// Provides a large scale page level flyout panel
+/// </summary>
 public partial class Flyout : TazorBaseComponent
 {
     private async Task OnCloseRequested()
@@ -14,59 +17,73 @@ public partial class Flyout : TazorBaseComponent
     {
         var windowClass = Theme.Flyout.Window;
 
-        switch (Placement)
+        windowClass += Placement switch
         {
-            case PanelPlacement.Left:
-            case PanelPlacement.Right:
-                windowClass += $" {Theme.Flyout.WindowVertical}";
-                break;
-            case PanelPlacement.Top:
-            case PanelPlacement.Bottom:
-                windowClass += $" {Theme.Flyout.WindowHorizontal}";
-                break;
-        }
+            PanelPlacement.Left or PanelPlacement.Right => $" {Theme.Flyout.WindowVertical}",
+            PanelPlacement.Top or PanelPlacement.Bottom => $" {Theme.Flyout.WindowHorizontal}",
+            _ => $" {Theme.Flyout.WindowVertical}"
+        };
 
         return windowClass;
     }
 
     private string GetPlacementClass()
     {
-        switch (Placement)
+        return Placement switch
         {
-            case PanelPlacement.Left:
-                return Theme.Flyout.PlacementLeft;
-            case PanelPlacement.Right:
-                return Theme.Flyout.PlacementRight;
-            case PanelPlacement.Top:
-                return Theme.Flyout.PlacementTop;
-            case PanelPlacement.Bottom:
-                return Theme.Flyout.PlacementBottom;
-        }
-
-        return Theme.Flyout.PlacementLeft;
+            PanelPlacement.Left => Theme.Flyout.PlacementLeft,
+            PanelPlacement.Right => Theme.Flyout.PlacementRight,
+            PanelPlacement.Top => Theme.Flyout.PlacementTop,
+            PanelPlacement.Bottom => Theme.Flyout.PlacementBottom,
+            _ => Theme.Flyout.PlacementLeft
+        };
     }
 
+    /// <summary>
+    /// Gets or Sets whether the flyout is visible
+    /// </summary>
     [Parameter]
     public bool IsVisible { get; set; } = false;
 
+    /// <summary>
+    /// Gets or Sets the handler for when the visibility changes
+    /// </summary>
     [Parameter]
     public EventCallback<bool> IsVisibleChanged { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the title of the flyout
+    /// </summary>
     [Parameter]
     public string? Title { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the header rendering
+    /// </summary>
     [Parameter]
     public RenderFragment? Header { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the content rendering
+    /// </summary>
     [Parameter]
     public RenderFragment Content { get; set; } = null!;
 
+    /// <summary>
+    /// Gets or Sets the footer rendering
+    /// </summary>
     [Parameter]
     public RenderFragment Footer { get; set; } = null!;
 
+    /// <summary>
+    /// Gets or Sets the panel placement
+    /// </summary>
     [Parameter]
     public PanelPlacement Placement { get; set; }
 
+    /// <summary>
+    /// Gets or Sets whether the close button should be displayed or hidden
+    /// </summary>
     [Parameter]
     public bool HideCloseButton { get; set; } = false;
 }

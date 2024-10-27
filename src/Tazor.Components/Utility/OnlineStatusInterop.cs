@@ -16,6 +16,10 @@ public class OnlineStatusInterop : IAsyncDisposable
     /// </summary>
     public event EventHandler<bool>? OnlineStatusChanged;
 
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="jsRuntime"></param>
     public OnlineStatusInterop(IJSRuntime jsRuntime)
     {
         _jsRuntime = jsRuntime;

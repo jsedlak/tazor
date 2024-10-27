@@ -2,6 +2,9 @@
 
 namespace Tazor.Components.Content;
 
+/// <summary>
+/// Renders a panel that pops over content
+/// </summary>
 public partial class Popover : TazorBaseComponent
 {
     private async void OnHandleClickedOutside()

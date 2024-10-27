@@ -30,6 +30,9 @@ public sealed class InMemoryNotificationProvider : INotificationProvider, IDispo
         _timer = new Timer(OnTimerTicked, null, 1000, 1000);
     }
 
+    /// <summary>
+    /// Deconstructor
+    /// </summary>
     ~InMemoryNotificationProvider()
     {
         Dispose(false);
