@@ -62,12 +62,28 @@ public partial class ColumnTemplate<TItem> : TazorBaseComponent, IDisposable
     /// </summary>
     [Parameter]
     public RenderFragment Header { get; set; } = null!;
+    
+    public virtual RenderFragment HeaderRendering => b =>
+    {
+        b.OpenElement(0, "th");
+        b.AddAttribute(1, "class", Theme.Data.DataGrid.HeaderCell);
+        b.AddContent(2, Header);
+        b.CloseElement();
+    };
 
     /// <summary>
     /// Gets or Sets the rendering for cells of this column
     /// </summary>
     [Parameter]
     public RenderFragment<TItem> Cell { get; set; } = null!;
+
+    public virtual RenderFragment<TItem> CellRendering => item => b =>
+    {
+        b.OpenElement(0, "td");
+        b.AddAttribute(1, "class", Theme.Data.DataGrid.Cell);
+        b.AddContent(2, Cell(item));
+        b.CloseElement();
+    };
 
     /// <summary>
     /// Gets or Sets the cascaded parent grid
