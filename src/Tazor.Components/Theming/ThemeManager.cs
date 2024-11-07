@@ -1,6 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
+﻿using Microsoft.JSInterop;
 
 namespace Tazor.Components.Theming;
 
@@ -9,13 +7,13 @@ namespace Tazor.Components.Theming;
 /// </summary>
 public class ThemeManager : IThemeManager
 {
-    private readonly IJSRuntime _jsRuntime;
+    private readonly IJSRuntime? _jsRuntime;
 
     /// <summary>
     /// Constructor
     /// </summary>
     /// <param name="jsRuntime"></param>
-    public ThemeManager(IJSRuntime jsRuntime)
+    public ThemeManager(IJSRuntime? jsRuntime = null)
     {
         _jsRuntime = jsRuntime;
     }
@@ -26,6 +24,11 @@ public class ThemeManager : IThemeManager
     /// <param name="cssFiles">The list of css files to set in the head element</param>
     private ValueTask SetThemeCssFiles(IEnumerable<string> cssFiles)
     {
+        if (_jsRuntime is null)
+        {
+            return ValueTask.CompletedTask;
+        }
+
         if(!cssFiles.Any())
         {
             cssFiles = [];
@@ -39,7 +42,7 @@ public class ThemeManager : IThemeManager
     {
         await SetThemeCssFiles(Current.CssFiles);
     }
-    
+
     /// <summary>
     /// Sets the current theme by looking up the theme by name
     /// </summary>

@@ -41,8 +41,8 @@ internal sealed class TazorBuilder : ITazorBuilder
             .With<INotificationProvider>(services => services.AddSingleton<INotificationProvider, InMemoryNotificationProvider>())
             .With<IThemeManager>(services => services.AddSingleton<IThemeManager, ThemeManager>(sp =>
             {
-                var jsruntime = sp.GetRequiredService<IJSRuntime>();
-                return new ThemeManager(jsruntime)
+                var jsRuntime = sp.GetService<IJSRuntime>();
+                return new ThemeManager(jsRuntime)
                 {
                     Themes = _themes,
                     Current = _themes.FirstOrDefault(m => m.IsDefault) ?? _themes.FirstOrDefault() ?? new TazorTheme()
