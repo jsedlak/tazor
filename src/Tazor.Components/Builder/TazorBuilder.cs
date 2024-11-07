@@ -27,7 +27,7 @@ internal sealed class TazorBuilder : ITazorBuilder
         return _services;
     }
 
-    public ITazorBuilder WithDefaults()
+    public ITazorBuilder WithDefaults(bool isServer = false)
     {
         this.WithTheme("Tazor", () =>
         {
@@ -41,7 +41,7 @@ internal sealed class TazorBuilder : ITazorBuilder
             .With<INotificationProvider>(services => services.AddSingleton<INotificationProvider, InMemoryNotificationProvider>())
             .With<IThemeManager>(services => services.AddSingleton<IThemeManager, ThemeManager>(sp =>
             {
-                var jsRuntime = sp.GetService<IJSRuntime>();
+                var jsRuntime = isServer ? null : sp.GetService<IJSRuntime>();
                 return new ThemeManager(jsRuntime)
                 {
                     Themes = _themes,

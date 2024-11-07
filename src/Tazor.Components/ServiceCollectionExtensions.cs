@@ -19,10 +19,30 @@ public static class ServiceCollectionExtensions
     /// </summary>
     /// <param name="services"></param>
     /// <returns></returns>
+    public static ITazorBuilder AddTazorServer(this IServiceCollection services)
+    {
+        return AddTazor(services, true);
+    }
+
+    /// <summary>
+    /// Adds tazor to the application
+    /// </summary>
+    /// <param name="services"></param>
+    /// <returns></returns>
     public static ITazorBuilder AddTazor(this IServiceCollection services)
     {
+        return AddTazor(services, false);
+    }
+
+    /// <summary>
+    /// Adds tazor to the application
+    /// </summary>
+    /// <param name="services"></param>
+    /// <returns></returns>
+    public static ITazorBuilder AddTazor(this IServiceCollection services, bool isServer)
+    {
         var builder = new TazorBuilder(services)
-            .WithDefaults();
+            .WithDefaults(isServer);
 
         services.AddScoped<OnlineStatusInterop>();
         services.AddScoped<BreakpointInterop>();
@@ -32,10 +52,9 @@ public static class ServiceCollectionExtensions
             return new CascadingValueSource<ITheme>("Theme", serviceProvider.GetRequiredService<IThemeManager>().Current, false);
         });
 
-
         return builder;
     }
-    
+
     /// <summary>
     /// Adds the gravatar avatar provider to the tazor engine 
     /// </summary>
