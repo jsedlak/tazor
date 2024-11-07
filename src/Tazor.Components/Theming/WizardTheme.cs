@@ -30,11 +30,23 @@ public class WizardTheme
     /// </summary>
     public string ProgressBar { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Gets or Sets theming for the progress when validity has not yet been checked (default state)
+    /// </summary>
     public string ProgressNotChecked { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Gets or Sets the theming for a valid progress
+    /// </summary>
     public string ProgressValid { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Gets or Sets the theming for a progress with warnings
+    /// </summary>
     public string ProgressWarning { get; set; } = string.Empty; 
 
+    /// <summary>
+    /// Gets or Sets the theming for a progress with errors
+    /// </summary>
     public string ProgressError { get; set; } = string.Empty;
 }

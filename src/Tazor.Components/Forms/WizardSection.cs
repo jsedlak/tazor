@@ -8,7 +8,7 @@ public class WizardSection
     /// <summary>
     /// Gets or Sets the title of the section
     /// </summary>
-    public string Title { get; set; }
+    public string Title { get; set; } = null!;
 
     /// <summary>
     /// Gets or Sets the order of the section in the wizard

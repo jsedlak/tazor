@@ -10,5 +10,8 @@ public class LayoutTheme
     /// </summary>
     public AccordionTheme Accordion { get; set; } = new();
 
+    /// <summary>
+    /// Gets or Sets overlay theming
+    /// </summary>
     public OverlayTheme Overlay { get; set; } = new();
 }

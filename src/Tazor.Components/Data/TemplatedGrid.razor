@@ -4,7 +4,7 @@
     <div class="@Theme.Data.DataGrid.Container @(GetContainerClass())">
         <div>
             <a @onclick="OnToggleExpansionClicked">
-                @if(IsExpanded)
+                @if (IsExpanded)
                 {
                     @HeroIcons.ArrowsPointingIn()
                 }
@@ -16,32 +16,27 @@
         </div>
         <table class="@Theme.Data.DataGrid.TableElement">
             <thead class="@Theme.Data.DataGrid.Header">
-                <tr class="">
-                    @foreach (var col in _columns.OrderBy(m => m.Order))
-                    {
-                        <th class="@Theme.Data.DataGrid.HeaderCell">
-                            @col.Header
-                        </th>
-                    }
-                </tr>
+            <tr>
+                @foreach (var col in _columns.OrderBy(m => m.Order))
+                {
+                    @col.HeaderRendering
+                }
+            </tr>
             </thead>
             <tbody class="@Theme.Data.DataGrid.Body">
-                @{
-                    var count = 0;
-                }
-                @foreach (var item in Items)
-                {
-                    count++;
-                    var rowClass = count % 2 == 0 ? Theme.Data.DataGrid.EvenRow : Theme.Data.DataGrid.OddRow;
-                    <tr class="@rowClass">
-                        @foreach (var col in _columns.OrderBy(m => m.Order))
-                        {
-                            <td class="@Theme.Data.DataGrid.Cell">
-                                @(col.Cell(item))
-                            </td>
-                        }
-                    </tr>
-                }
+            @{
+                var count = 0;
+            }
+            @foreach (var item in Items)
+            {
+                count++;
+                <tr class="@GetRowClass(count, item)">
+                    @foreach (var col in _columns.OrderBy(m => m.Order))
+                    {
+                        @(col.CellRendering(item))
+                    }
+                </tr>
+            }
             </tbody>
         </table>
         @(ChildContent)

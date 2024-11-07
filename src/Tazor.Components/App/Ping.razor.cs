@@ -2,6 +2,9 @@
 
 namespace Tazor.Components.App;
 
+/// <summary>
+/// Provides a ping notification display
+/// </summary>
 public partial class Ping : TazorBaseComponent
 {
     /// <summary>

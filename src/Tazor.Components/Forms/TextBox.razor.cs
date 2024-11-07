@@ -4,12 +4,16 @@ using System.Reflection;
 
 namespace Tazor.Components.Forms;
 
+/// <summary>
+/// Renders a text box
+/// </summary>
+/// <typeparam name="TModel"></typeparam>
 [CascadingTypeParameter(nameof(TModel))]
 public partial class TextBox<TModel> : TazorBaseComponent
 {
     private async Task OnChanged(ChangeEventArgs args)
     {
-        if (args == null || args.Value == null)
+        if (args.Value == null)
         {
             await ValueChanged.InvokeAsync(default(TModel));
             return;
@@ -42,12 +46,21 @@ public partial class TextBox<TModel> : TazorBaseComponent
         }
     }
 
+    /// <summary>
+    /// Gets or Sets the value
+    /// </summary>
     [Parameter]
     public TModel? Value { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the callback for handling when the value changes
+    /// </summary>
     [Parameter]
     public EventCallback<TModel> ValueChanged { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the HTML input type
+    /// </summary>
     [Parameter]
     public string Type { get; set; } = "text";
 }

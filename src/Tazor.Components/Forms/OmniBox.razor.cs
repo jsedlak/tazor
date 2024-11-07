@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Components.Web;
 
 namespace Tazor.Components.Forms;
 
+/// <summary>
+/// Renders a catch-all dropdown component
+/// </summary>
+/// <typeparam name="TItem"></typeparam>
 [CascadingTypeParameter(nameof(TItem))]
 public partial class OmniBox<TItem> : TazorBaseComponent, IDisposable
     where TItem : class
@@ -138,6 +142,9 @@ public partial class OmniBox<TItem> : TazorBaseComponent, IDisposable
         StateHasChanged();
     }
 
+    /// <summary>
+    /// Disposes of the component
+    /// </summary>
     public void Dispose()
     {
         Console.WriteLine("Disposing OmniBox");
@@ -148,19 +155,43 @@ public partial class OmniBox<TItem> : TazorBaseComponent, IDisposable
         }
     }
 
+    /// <summary>
+    /// Gets or Sets the callback for retrieving items when the search has been engaged
+    /// </summary>
     [Parameter] public Func<string, Task<IEnumerable<TItem>>> OnSearch { get; set; } = null!;
 
+    /// <summary>
+    /// Gets or Sets the current text input
+    /// </summary>
     [Parameter] public string Input { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Gets or Sets the callback that handles when the input has changed
+    /// </summary>
     [Parameter] public EventCallback<string> InputChanged { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the selected item
+    /// </summary>
     [Parameter] public TItem? SelectedItem { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the callback that handles when the selected item has changed
+    /// </summary>
     [Parameter] public EventCallback<TItem?> SelectedItemChanged { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the template for rendering items
+    /// </summary>
     [Parameter] public RenderFragment<TItem> ItemTemplate { get; set; } = null!;
 
+    /// <summary>
+    /// Gets or Sets the template for rendering an unselected value
+    /// </summary>
     [Parameter] public RenderFragment? PlaceholderTemplate { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the template for rendering a selected item
+    /// </summary>
     [Parameter] public RenderFragment<TItem> SelectedItemTemplate { get; set; }
 }

@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Components.Web;
 
 namespace Tazor.Components.Forms;
 
+/// <summary>
+/// Renders a combobox dropdown
+/// </summary>
+/// <typeparam name="TItem"></typeparam>
 [CascadingTypeParameter(nameof(TItem))]
 public partial class ComboBox<TItem> : TazorBaseComponent
 {
@@ -13,7 +17,7 @@ public partial class ComboBox<TItem> : TazorBaseComponent
     private ElementReference? _textboxReference;
 
     private int? _currentIndex = null;
-
+    
     private async Task OnInputChanged(ChangeEventArgs args)
     {
         SearchText = args.Value?.ToString() ?? "";
@@ -111,27 +115,51 @@ public partial class ComboBox<TItem> : TazorBaseComponent
         StateHasChanged();
     }
 
+    /// <summary>
+    /// Gets or Sets whether multiple items may be selected
+    /// </summary>
     [Parameter]
     public bool MultiSelect { get; set; } = false;
 
+    /// <summary>
+    /// Gets or Sets how to render the selection
+    /// </summary>
     [Parameter]
     public RenderFragment<TItem>? ResultTemplate { get; set; }
 
+    /// <summary>
+    /// Gets or Sets how to render the view
+    /// </summary>
     [Parameter]
     public RenderFragment<TItem>? ViewTemplate { get; set; }
 
+    /// <summary>
+    /// Gets or Sets current search text
+    /// </summary>
     [Parameter]
     public string SearchText { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Gets or Sets the callback for handling when the search text has changed
+    /// </summary>
     [Parameter]
     public EventCallback<string> SearchTextChanged { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the callback for returning items when the search text has changed
+    /// </summary>
     [Parameter]
     public Func<string, Task<IEnumerable<TItem>>>? OnSearch { get; set; }
 
+    /// <summary>
+    /// Gets or Sets the selected items
+    /// </summary>
     [Parameter]
     public IEnumerable<TItem> SelectedItems { get; set; } = Enumerable.Empty<TItem>();
 
+    /// <summary>
+    /// Gets or Sets the callback for handling when the selection has changed
+    /// </summary>
     [Parameter]
     public EventCallback<IEnumerable<TItem>> SelectedItemsChanged { get; set; }
 }

@@ -2,15 +2,24 @@
 
 namespace Tazor.Http;
 
+/// <summary>
+/// Represents a fluent interface into building HTTP requests with the HttpClient provider
+/// </summary>
 public sealed class HttpRequestBuilder : IHttpRequestCanSetRouting, IHttpRequestCanRequest
 {
     private string _url = "";
     private HttpMethod _method = HttpMethod.Get;
-    private Dictionary<string, string> _headers = new Dictionary<string, string>();
+    
+    private readonly Dictionary<string, string> _headers = new Dictionary<string, string>();
 
-    private HttpClient _client = null!;
+    private readonly HttpClient _client;
     private readonly ISerializer _serializer;
 
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="client"></param>
+    /// <param name="serializer"></param>
     public HttpRequestBuilder(HttpClient client, ISerializer serializer)
     {
         _client = client;
@@ -18,6 +27,8 @@ public sealed class HttpRequestBuilder : IHttpRequestCanSetRouting, IHttpRequest
     }
 
     #region IHttpRequestCanSetRouting
+
+    /// <inheritdoc />
     public IHttpRequestCanRequest WithUrl(HttpMethod method, string url)
     {
         _method = method;
@@ -26,18 +37,24 @@ public sealed class HttpRequestBuilder : IHttpRequestCanSetRouting, IHttpRequest
         return this;
     }
 
+    /// <inheritdoc />
     public IHttpRequestCanRequest WithGet(string url) => WithUrl(HttpMethod.Get, url);
 
+    /// <inheritdoc />
     public IHttpRequestCanRequest WithPost(string url) => WithUrl(HttpMethod.Post, url);
 
+    /// <inheritdoc />
     public IHttpRequestCanRequest WithPut(string url) => WithUrl(HttpMethod.Put, url);
 
+    /// <inheritdoc />
     public IHttpRequestCanRequest WithPatch(string url) => WithUrl(HttpMethod.Patch, url);
 
+    /// <inheritdoc />
     public IHttpRequestCanRequest WithDelete(string url) => WithUrl(HttpMethod.Delete, url);
     #endregion
 
     #region IHttpRequestCanRequest
+    /// <inheritdoc />
     public IHttpRequestCanRequest WithHeaders(IDictionary<string, string> headers)
     {
         foreach(var header in headers)
@@ -48,6 +65,7 @@ public sealed class HttpRequestBuilder : IHttpRequestCanSetRouting, IHttpRequest
         return this;
     }
 
+    /// <inheritdoc />
     public IHttpRequestCanRequest WithHeader(string key, string value)
     {
         _headers.Add(key, value);
@@ -55,6 +73,7 @@ public sealed class HttpRequestBuilder : IHttpRequestCanSetRouting, IHttpRequest
         return this;
     }
 
+    /// <inheritdoc />
     public async Task<TModel?> RequestAsJsonAsync<TModel>()
     {
         using var requestMessage = new HttpRequestMessage(_method, _url);
@@ -70,6 +89,7 @@ public sealed class HttpRequestBuilder : IHttpRequestCanSetRouting, IHttpRequest
         return _serializer.Deserialize<TModel>(content);
     }
 
+    /// <inheritdoc />
     public async Task<TModel?> RequestAsJsonAsync<TInput, TModel>(TInput body)
     {
         if(body == null)
@@ -94,6 +114,7 @@ public sealed class HttpRequestBuilder : IHttpRequestCanSetRouting, IHttpRequest
         return _serializer.Deserialize<TModel>(content);
     }
 
+    /// <inheritdoc />
     public async Task<HttpResponseMessage> RequestAsync()
     {
         using var requestMessage = new HttpRequestMessage(_method, _url);
@@ -106,6 +127,7 @@ public sealed class HttpRequestBuilder : IHttpRequestCanSetRouting, IHttpRequest
         return await _client.SendAsync(requestMessage);
     }
 
+    /// <inheritdoc />
     public async Task<HttpResponseMessage> RequestAsync<TInput>(TInput body)
     {
         if (body == null)

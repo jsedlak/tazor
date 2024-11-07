@@ -1,11 +1,23 @@
 ﻿namespace Tazor.Components.Theming;
 
+/// <summary>
+/// Provides theming for the <see cref="Tazor.Components.DataTemplatedGrid{TItem}"/>
+/// </summary>
 public class TemplatedGridTheme
 {
+    /// <summary>
+    /// Gets or Sets the container CSS classes
+    /// </summary>
     public string Container { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Gets or Sets the container CSS classes when the grid is collapsed
+    /// </summary>
     public string ContainerCollapsed { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Gets or Sets the container CSS classes when the gird is expanded
+    /// </summary>
     public string ContainerExpanded { get; set; } = string.Empty;
 
     /// <summary>
@@ -23,6 +35,9 @@ public class TemplatedGridTheme
     /// </summary>
     public string Header { get; set; } = string.Empty;
 
+    /// <summary>
+    /// Gets or Sets the CSS classes for the header row
+    /// </summary>
     public string HeaderRow { get; set; } = string.Empty;
 
     /// <summary>

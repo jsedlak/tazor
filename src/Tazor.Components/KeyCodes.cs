@@ -1,16 +1,34 @@
 ﻿namespace Tazor.Components;
 
+/// <summary>
+/// Represents codes related to keyboard strikes
+/// </summary>
 public static class KeyCodes
 {
+    /// <summary>
+    /// Arrow Keys - Up
+    /// </summary>
     public static string ArrowUp => "ArrowUp";
 
+    /// <summary>
+    /// Arrow Keys - Down
+    /// </summary>
     public static string ArrowDown => "ArrowDown";
 
+    /// <summary>
+    /// Arrow Keys - Enter
+    /// </summary>
     public static string Enter => "Enter";
 
+    /// <summary>
+    /// Arrow Keys - Escape
+    /// </summary>
     public static string Escape => "Escape";
 
-    private static readonly Dictionary<string, int> _codes = new()
+    /// <summary>
+    /// All Codes
+    /// </summary>
+    public static readonly Dictionary<string, int> Codes = new()
         {
             { "Backspace", 8 },
             { "Tab", 9 },
