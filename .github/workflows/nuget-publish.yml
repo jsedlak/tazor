@@ -5,10 +5,10 @@ on:
   workflow_dispatch: # Allow running the workflow manually from the GitHub UI
   push:
     branches:
-      - 'main'       # Run the workflow when pushing to the main branch
+      - "main" # Run the workflow when pushing to the main branch
   release:
     types:
-      - published    # Run the workflow when a new GitHub release is published
+      - published # Run the workflow when a new GitHub release is published
 
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
@@ -23,50 +23,52 @@ jobs:
   create_nuget:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
 
-    - name: Get next version
-      uses: reecetech/version-increment@2023.9.3
-      id: version
-      with:
-        scheme: semver
-        increment: patch
+      - name: Get next version
+        uses: reecetech/version-increment@2023.9.3
+        id: version
+        with:
+          scheme: semver
+          increment: patch
 
-    - name: Update versions
-      uses: jacobtomlinson/gha-find-replace@v3
-      with:
-        include: "*.csproj"
-        find: "1.0.0-beta"
-        replace: "${{ steps.version.outputs.version }}"
-        regex: false
+      - name: Update versions
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          include: "*.csproj"
+          find: "1.0.0-beta"
+          replace: "${{ steps.version.outputs.version }}"
+          regex: false
 
-    # Install the .NET SDK indicated in the global.json file
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      # Install the .NET SDK indicated in the global.json file
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "9.0.100"
 
-    # Create the NuGet package in the folder from the environment variable NuGetDirectory
-    - run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
+      # Create the NuGet package in the folder from the environment variable NuGetDirectory
+      - run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
 
-    # Publish the NuGet package as an artifact, so they can be used in the following jobs
-    - uses: actions/upload-artifact@v3
-      with:
-        name: nuget
-        if-no-files-found: error
-        retention-days: 7
-        path: ${{ env.NuGetDirectory }}/*.nupkg
+      # Publish the NuGet package as an artifact, so they can be used in the following jobs
+      - uses: actions/upload-artifact@v3
+        with:
+          name: nuget
+          if-no-files-found: error
+          retention-days: 7
+          path: ${{ env.NuGetDirectory }}/*.nupkg
 
-    - name: Publish NuGet package
-      run: |
-        foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
-            dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
-        }
+      - name: Publish NuGet package
+        run: |
+          foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
+              dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          }
 
-    - name: Release version
-      uses: softprops/action-gh-release@v1
-      if: ${{ github.ref_name == github.event.repository.default_branch }}
-      with:
-        draft: false
-        prerelease: false
-        tag_name: "${{ steps.version.outputs.VERSION }}"
+      - name: Release version
+        uses: softprops/action-gh-release@v1
+        if: ${{ github.ref_name == github.event.repository.default_branch }}
+        with:
+          draft: false
+          prerelease: false
+          tag_name: "${{ steps.version.outputs.VERSION }}"
