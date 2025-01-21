@@ -139,6 +139,21 @@ window.copyToClipboard = function (text) {
     fallbackCopyTextToClipboard(text);
 }
 
+
+window.openDialog = function (id) {
+    var dlg = document.getElementById(id);
+    if (dlg) {
+        dlg.showModal();
+    }
+};
+
+window.closeDialog = function (id) {
+    var dlg = document.getElementById(id);
+    if (dlg) {
+        dlg.close();
+    }
+};
+
 function fallbackCopyTextToClipboard(text) {
     var textArea = document.createElement("textarea");
     textArea.value = text;
