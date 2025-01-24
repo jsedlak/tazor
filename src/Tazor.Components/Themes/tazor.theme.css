@@ -244,3 +244,69 @@ pre[class*="language-"] > code[class*="language-"] {
     box-shadow: inset 5px 0 0 #f7d87c;
     z-index: 0;
 }
+
+
+/*********************************************************
+* Dialog
+*/
+dialog {
+    transform: translateY(-20px);
+    /* off stage opacity and default transition styles */
+    /* allow-discrete is a `transition-behavior` */
+    /* on stage styles */
+    /* apply when dialog is shown */
+    /* entering stage styles */
+    /* used on first render when dialog has been */
+    /* cloned and projected into the top-layer */
+}
+
+dialog, dialog::backdrop {
+    transition: display 1s allow-discrete, overlay 1s allow-discrete, opacity 1s, transform 1s;
+    /* time display none/block with the transitions */
+    /* time top-layer projection with the transitions */
+    /* transition opacity */
+    /* transition transforms */
+    /* both dialog and it's backdrop are opacity 0 */
+    /* when not showing */
+    opacity: 0;
+}
+
+dialog[open] {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+dialog[open]::backdrop {
+    opacity: 1;
+}
+
+@starting-style {
+    /* specific transform for dialog and not the backdrop */
+    /* enter stage from 20px below the on stage resting style */
+    dialog[open], dialog[open]::backdrop {
+        opacity: 0;
+    }
+
+    dialog[open] {
+        transform: translateY(20px);
+    }
+}
+
+::backdrop {
+    background: rgba(0,0,0,0.5);
+    /*background-image: radial-gradient(circle at 1px 1px, light-dark(#000 7, #fff 1) 1px, #000 c 0);*/
+    /*background-size: 20px 20px;*/
+}
+
+html {
+    block-size: 100%;
+    color-scheme: dark light;
+}
+
+body {
+    min-block-size: 100%;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    place-content: center;
+    margin: 0;
+}

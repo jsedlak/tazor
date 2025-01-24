@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace Tazor.Components.Layout;
+namespace Tazor.Components.DragAndDrop;
 
 /// <summary>
 /// Provides dragging capabilities to the tazor controls

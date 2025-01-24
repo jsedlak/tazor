@@ -1,4 +1,4 @@
-﻿namespace Tazor.Components.Content;
+﻿namespace Tazor.Components.Layout;
 
 /// <summary>
 /// Provides location information for a panel
@@ -9,17 +9,17 @@ public enum PanelPlacement
     /// Top
     /// </summary>
     Top,
-    
+
     /// <summary>
     /// Left
     /// </summary>
     Left,
-    
+
     /// <summary>
     /// Right
     /// </summary>
     Right,
-    
+
     /// <summary>
     /// Bottom
     /// </summary>

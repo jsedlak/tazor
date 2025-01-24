@@ -1,7 +1,7 @@
-﻿@inherits TazorBaseComponent
-<dialog id="@ReferenceId" closedby="any" class=@Theme.Dialog.Window>
-    <div class=@Theme.Dialog.WindowInner>
-        <header class=@Theme.Dialog.Header>
+﻿@inherits DialogBase
+<dialog id="@ReferenceId" closedby="any" class="@GetWindowClass()">
+    <div class="@GetWindowInnerClass()">
+        <header class=@Theme.Flyout.Header>
             @if (Header != null)
             {
                 @Header
@@ -21,14 +21,11 @@
                 </div>
             }
         </header>
-        <div class=@Theme.Dialog.Content>
+        <div class=@Theme.Flyout.Content>
             @Content
         </div>
-        <footer class=@Theme.Dialog.Footer>
-            @if (Footer is not null)
-            {
-                @(Footer)
-            }
+        <footer class=@Theme.Flyout.Footer>
+            @Footer
         </footer>
     </div>
 </dialog>

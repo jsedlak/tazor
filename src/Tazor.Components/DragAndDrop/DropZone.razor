@@ -1,0 +1,29 @@
+@typeparam TTarget
+@inherits TazorBaseComponent
+<div
+    @ondragenter=@OnDragEnter     
+    @ondragleave=@OnDragLeave
+    dropzone="move"
+    ondragstart="event.dataTransfer.setData('', event.target.id);"
+    @ondragover:preventDefault
+    @ondrop:stopPropagation
+    @ondragenter:stopPropagation
+    @ondragend:stopPropagation
+    @ondragover:stopPropagation
+    @ondragleave:stopPropagation
+    @ondragstart:stopPropagation
+    @ondrop=@OnDragDropped>
+    @{
+        var cls = _dragProvider.DraggedObject != null ? 
+            "border-4 border-dashed p-8 border-gray-400 rounded flex justify-center items-center" : 
+            "";
+    }
+    <div
+        class="@cls">
+        &nbsp;
+        @if (_dragProvider.DraggedObject != null)
+        {
+            <p>Drop to me!</p>
+        }
+    </div>
+</div>

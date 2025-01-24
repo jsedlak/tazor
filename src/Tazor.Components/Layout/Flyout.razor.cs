@@ -1,21 +1,22 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
-namespace Tazor.Components.Content;
+namespace Tazor.Components.Layout;
 
 /// <summary>
 /// Provides a large scale page level flyout panel
 /// </summary>
-public partial class Flyout : TazorBaseComponent
+public partial class Flyout : DialogBase
 {
-    private async Task OnCloseRequested()
+    public Flyout(IJSRuntime jsRuntime)
+        : base(jsRuntime)
     {
-        IsVisible = false;
-        await IsVisibleChanged.InvokeAsync(false);
+
     }
 
     private string GetWindowClass()
     {
-        var windowClass = Theme.Flyout.Window;
+        var windowClass = Theme.Flyout.Window + $" {GetPlacementClass()}";
 
         windowClass += Placement switch
         {
@@ -25,6 +26,20 @@ public partial class Flyout : TazorBaseComponent
         };
 
         return windowClass;
+    }
+
+    private string GetWindowInnerClass()
+    {
+        var windowInnerClass = Theme.Flyout.WindowInner;
+
+        windowInnerClass += Placement switch
+        {
+            PanelPlacement.Left or PanelPlacement.Right => $" {Theme.Flyout.WindowVertical}",
+            PanelPlacement.Top or PanelPlacement.Bottom => $" {Theme.Flyout.WindowHorizontal}",
+            _ => $" {Theme.Flyout.WindowVertical}"
+        };
+
+        return windowInnerClass;
     }
 
     private string GetPlacementClass()
@@ -38,42 +53,6 @@ public partial class Flyout : TazorBaseComponent
             _ => Theme.Flyout.PlacementLeft
         };
     }
-
-    /// <summary>
-    /// Gets or Sets whether the flyout is visible
-    /// </summary>
-    [Parameter]
-    public bool IsVisible { get; set; } = false;
-
-    /// <summary>
-    /// Gets or Sets the handler for when the visibility changes
-    /// </summary>
-    [Parameter]
-    public EventCallback<bool> IsVisibleChanged { get; set; }
-
-    /// <summary>
-    /// Gets or Sets the title of the flyout
-    /// </summary>
-    [Parameter]
-    public string? Title { get; set; }
-
-    /// <summary>
-    /// Gets or Sets the header rendering
-    /// </summary>
-    [Parameter]
-    public RenderFragment? Header { get; set; }
-
-    /// <summary>
-    /// Gets or Sets the content rendering
-    /// </summary>
-    [Parameter]
-    public RenderFragment Content { get; set; } = null!;
-
-    /// <summary>
-    /// Gets or Sets the footer rendering
-    /// </summary>
-    [Parameter]
-    public RenderFragment Footer { get; set; } = null!;
 
     /// <summary>
     /// Gets or Sets the panel placement

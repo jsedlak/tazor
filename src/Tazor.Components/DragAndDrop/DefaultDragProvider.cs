@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Tazor.Components.Layout;
+namespace Tazor.Components.DragAndDrop;
 
 /// <summary>
 /// Provides the basic built-in implementation for dragging and dropping elements

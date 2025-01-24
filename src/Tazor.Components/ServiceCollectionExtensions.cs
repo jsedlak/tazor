@@ -6,6 +6,7 @@ using Tazor.Components.Layout;
 using Tazor.Components.Utility;
 using Tazor.ServiceModel;
 using Tazor.Services;
+using Tazor.Components.DragAndDrop;
 
 namespace Tazor.Components;
 

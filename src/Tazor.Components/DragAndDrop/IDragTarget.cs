@@ -1,12 +1,12 @@
-namespace Tazor.Components.Layout;
+namespace Tazor.Components.DragAndDrop;
 
 /// <summary>
-/// Provides a place for an item to be dragged from
+/// Provides a place to drop an item
 /// </summary>
-public interface IDragSource
+public interface IDragTarget
 {
     /// <summary>
-    /// Handles completing a drag to another object
+    /// Handles dropping an item on the target
     /// </summary>
     /// <param name="draggedObject"></param>
     /// <returns></returns>
