@@ -1589,6 +1589,16 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  place-content: center;
+  margin: 0;
+}
+
 .notification {
   animation: notificationInbound 0.5s;
 }
@@ -1889,19 +1899,6 @@ dialog[open]::backdrop {
   background: rgba(0,0,0,0.5);
   /*background-image: radial-gradient(circle at 1px 1px, light-dark(#000 7, #fff 1) 1px, #000 c 0);*/
   /*background-size: 20px 20px;*/
-}
-
-html {
-  block-size: 100%;
-  color-scheme: dark light;
-}
-
-body {
-  min-block-size: 100%;
-  font-family: system-ui, sans-serif;
-  display: grid;
-  place-content: center;
-  margin: 0;
 }
 
 .hover\:bg-blue-100:hover {
