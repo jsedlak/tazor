@@ -260,7 +260,7 @@ pre[class*="language-"] > code[class*="language-"] {
 /*********************************************************
 * Dialog
 */
-dialog {
+dialog.dialog {
     transform: translateY(-20px);
     /* off stage opacity and default transition styles */
     /* allow-discrete is a `transition-behavior` */
@@ -271,7 +271,7 @@ dialog {
     /* cloned and projected into the top-layer */
 }
 
-dialog, dialog::backdrop {
+dialog.dialog, dialog.dialog::backdrop {
     transition: display 1s allow-discrete, overlay 1s allow-discrete, opacity 1s, transform 1s;
     /* time display none/block with the transitions */
     /* time top-layer projection with the transitions */
@@ -282,29 +282,182 @@ dialog, dialog::backdrop {
     opacity: 0;
 }
 
-dialog[open] {
+dialog.dialog[open] {
     opacity: 1;
     transform: translateY(0px);
 }
 
-dialog[open]::backdrop {
+dialog.dialog[open]::backdrop {
     opacity: 1;
 }
 
 @starting-style {
     /* specific transform for dialog and not the backdrop */
     /* enter stage from 20px below the on stage resting style */
-    dialog[open], dialog[open]::backdrop {
+    dialog.dialog[open], dialog.dialog[open]::backdrop {
         opacity: 0;
     }
 
-    dialog[open] {
+    dialog.dialog[open] {
         transform: translateY(20px);
     }
 }
 
-::backdrop {
-    background: rgba(0,0,0,0.5);
-    /*background-image: radial-gradient(circle at 1px 1px, light-dark(#000 7, #fff 1) 1px, #000 c 0);*/
-    /*background-size: 20px 20px;*/
+.dialog::backdrop {
+    background-color: rgba(0,0,0,0.5);
+    background-image: radial-gradient(circle at 1px 1px, light-dark(#000 7, #fff 1) 1px, #000 c 0);
+    background-size: 20px 20px;
+    background-repeat: repeat;
+}
+
+/*********************************************************
+* Dialog Global
+*/
+dialog {
+    outline: none;
+}
+
+/*********************************************************
+* Dialog
+*/
+dialog.dialog {
+    transform: translateY(-20px);
+    /* off stage opacity and default transition styles */
+    /* allow-discrete is a `transition-behavior` */
+    /* on stage styles */
+    /* apply when dialog is shown */
+    /* entering stage styles */
+    /* used on first render when dialog has been */
+    /* cloned and projected into the top-layer */
+}
+
+dialog.dialog, dialog.dialog::backdrop {
+    transition: display 1s allow-discrete, overlay 1s allow-discrete, opacity 1s, transform 1s;
+    /* time display none/block with the transitions */
+    /* time top-layer projection with the transitions */
+    /* transition opacity */
+    /* transition transforms */
+    /* both dialog and it's backdrop are opacity 0 */
+    /* when not showing */
+    opacity: 0;
+}
+
+dialog.dialog[open] {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+dialog.dialog[open]::backdrop {
+    opacity: 1;
+}
+
+@starting-style {
+    /* specific transform for dialog and not the backdrop */
+    /* enter stage from 20px below the on stage resting style */
+    dialog.dialog[open], dialog.dialog[open]::backdrop {
+        opacity: 0;
+    }
+
+    dialog.dialog[open] {
+        transform: translateY(20px);
+    }
+}
+
+.dialog::backdrop {
+    background-color: rgba(0,0,0,0.5);
+}
+
+/*********************************************************
+* Flyout
+*/
+dialog.flyout {
+    inset: 0;
+    position: fixed;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+dialog.flyout[open] {
+    opacity: 1;
+}
+
+/* LEFT */
+dialog.flyout.flyout-left {
+    margin-right: auto;
+    margin-left: 0;
+    transform: translateX(-100%);
+}
+
+dialog.flyout.flyout-left[open] {
+    transform: translateX(0);
+}
+
+/* RIGHT */
+dialog.flyout.flyout-right {
+    margin-right: 0;
+    margin-left: auto;
+    transform: translateX(100%);
+}
+
+dialog.flyout.flyout-right[open] {
+    transform: translateX(0);
+}
+
+/* TOP */
+dialog.flyout.flyout-top {
+    margin-top: 0;
+    margin-bottom: auto;
+    transform: translateY(-100%);
+}
+
+dialog.flyout.flyout-top[open] {
+    transform: translateY(0);
+}
+
+/* BOTTOM */
+dialog.flyout.flyout-bottom {
+    margin-top: auto;
+    margin-bottom: 0;
+    transform: translateY(100%);
+}
+
+dialog.flyout.flyout-bottom[open] {
+    transform: translateY(0);
+}
+
+.flyout::backdrop {
+    background-color: rgba(0,0,0,0.5);
+}
+
+@starting-style {
+    dialog.flyout {
+        inset: 0;
+        position: fixed;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+    }
+
+    dialog.flyout.flyout-left {
+        margin-right: auto;
+        margin-left: 0;
+        transform: translateX(-100%);
+    }
+
+    dialog.flyout.flyout-right {
+        margin-right: 0;
+        margin-left: auto;
+        transform: translateX(100%);
+    }
+
+    dialog.flyout.flyout-top {
+        margin-top: 0;
+        margin-bottom: auto;
+        transform: translateY(-100%);
+    }
+
+    dialog.flyout.flyout-bottom {
+        margin-top: auto;
+        margin-bottom: 0;
+        transform: translateY(100%);
+    }
 }

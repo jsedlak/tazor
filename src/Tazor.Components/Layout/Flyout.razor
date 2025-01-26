@@ -1,5 +1,5 @@
 ﻿@inherits DialogBase
-<dialog id="@ReferenceId" closedby="any" class="@GetWindowClass()">
+<dialog id="@ReferenceId" closedby="any" class="flyout flyout-@(Placement.ToString().ToLower()) @GetWindowClass()">
     <div class="@GetWindowInnerClass()">
         <header class=@Theme.Flyout.Header>
             @if (Header != null)
