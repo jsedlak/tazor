@@ -82,4 +82,10 @@ public abstract class DialogBase : TazorBaseComponent
     /// </summary>
     [Parameter]
     public Guid ReferenceId { get; set; } = Guid.NewGuid();
+
+    /// <summary>
+    /// Gets or Sets optional additional classing, useful for sizing adjustments
+    /// </summary>
+    [Parameter]
+    public string CustomClass { get; set; } = string.Empty;
 }
