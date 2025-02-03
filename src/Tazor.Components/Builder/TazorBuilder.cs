@@ -33,7 +33,7 @@ internal sealed class TazorBuilder : ITazorBuilder
         {
             using var stream = new MemoryStream(IncludedThemes.tazor_theme);
             var theme = JsonSerializer.Deserialize<TazorTheme>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
-            theme.CssFiles = [ "_content/Tazor.Components/tazor.theme.css"];
+            theme.CssFiles = [ "_content/Tazor.Components/themes/tazor.theme.css"];
             return theme;
         }, true);
 

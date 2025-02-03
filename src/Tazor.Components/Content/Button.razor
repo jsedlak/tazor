@@ -1,4 +1,5 @@
 @inherits TazorBaseComponent
-<a class=@($"{Theme.Button.Global} {GetColorClass()} {GetWidthClass()}") @onclick=@HandleClick>
+@* @($"{Theme.Button.Global} {GetColorClass()} {GetWidthClass()}") *@
+<a class="button @(GetColorClass()) @(GetWidthClass())" @onclick=@HandleClick>
     @ChildContent
 </a>

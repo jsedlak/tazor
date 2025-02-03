@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<Target Name="PrepareThemeFiles" BeforeTargets="PrepareForBuild" Condition=" '$(Configuration)' == 'Debug' ">
-		<Exec Command="npx tailwindcss -i ./Themes/tazor.theme.css -o ./wwwroot/tazor.theme.css" />
+		<Exec Command="npx @tailwindcss/cli -i ./Themes/tazor/tazor.theme.css -o ./wwwroot/themes/tazor.theme.css" />
 	</Target>
 
 	<PropertyGroup>
@@ -40,14 +40,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Remove="package-lock.json" />
-	  <Content Remove="package.json" />
 	  <Content Remove="Themes\tazor.theme.json" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Include="package-lock.json" />
-	  <None Include="package.json" />
 	  <None Include="Themes\tazor.theme.json" />
 	</ItemGroup>
 

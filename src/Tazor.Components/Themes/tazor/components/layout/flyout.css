@@ -1,0 +1,95 @@
+﻿
+/*********************************************************
+* Flyout
+*/
+dialog.flyout {
+    inset: 0;
+    position: fixed;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+dialog.flyout[open] {
+    opacity: 1;
+}
+
+/* LEFT */
+dialog.flyout.flyout-left {
+    margin-right: auto;
+    margin-left: 0;
+    transform: translateX(-100%);
+}
+
+dialog.flyout.flyout-left[open] {
+    transform: translateX(0);
+}
+
+/* RIGHT */
+dialog.flyout.flyout-right {
+    margin-right: 0;
+    margin-left: auto;
+    transform: translateX(100%);
+}
+
+dialog.flyout.flyout-right[open] {
+    transform: translateX(0);
+}
+
+/* TOP */
+dialog.flyout.flyout-top {
+    margin-top: 0;
+    margin-bottom: auto;
+    transform: translateY(-100%);
+}
+
+dialog.flyout.flyout-top[open] {
+    transform: translateY(0);
+}
+
+/* BOTTOM */
+dialog.flyout.flyout-bottom {
+    margin-top: auto;
+    margin-bottom: 0;
+    transform: translateY(100%);
+}
+
+dialog.flyout.flyout-bottom[open] {
+    transform: translateY(0);
+}
+
+.flyout::backdrop {
+    background-color: rgba(0,0,0,0.5);
+}
+
+@starting-style {
+    dialog.flyout {
+        inset: 0;
+        position: fixed;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+    }
+
+    dialog.flyout.flyout-left {
+        margin-right: auto;
+        margin-left: 0;
+        transform: translateX(-100%);
+    }
+
+    dialog.flyout.flyout-right {
+        margin-right: 0;
+        margin-left: auto;
+        transform: translateX(100%);
+    }
+
+    dialog.flyout.flyout-top {
+        margin-top: 0;
+        margin-bottom: auto;
+        transform: translateY(-100%);
+    }
+
+    dialog.flyout.flyout-bottom {
+        margin-top: auto;
+        margin-bottom: 0;
+        transform: translateY(100%);
+    }
+}

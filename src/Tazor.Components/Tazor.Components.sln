@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tazor.Components", "Tazor.Components.csproj", "{D2906BB5-0F8C-2FD8-4A1D-612F000243EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2906BB5-0F8C-2FD8-4A1D-612F000243EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2906BB5-0F8C-2FD8-4A1D-612F000243EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2906BB5-0F8C-2FD8-4A1D-612F000243EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2906BB5-0F8C-2FD8-4A1D-612F000243EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A0B102E-BE3D-4A30-9A00-6C699C492735}
+	EndGlobalSection
+EndGlobal
