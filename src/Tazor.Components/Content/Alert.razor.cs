@@ -12,23 +12,15 @@ public partial class Alert : TazorBaseComponent
     /// <summary>
     /// Initializes the component
     /// </summary>
-    protected override void OnInitialized()
+    private string GetCssClass()
     {
         if (Type == AlertType.Custom)
         {
-            _cssClass = $"{Theme.Content.AlertGlobal} {Class ?? string.Empty}";
+            return Class ?? "";
         }
         else
         {
-            var alertClass = Type switch
-            {
-                AlertType.Success => Theme.Content.AlertSuccess,
-                AlertType.Error => Theme.Content.AlertError,
-                AlertType.Warning => Theme.Content.AlertWarning,
-                AlertType.Info => Theme.Content.AlertInfo,
-                _ => ""
-            };
-            _cssClass = $"{Theme.Content.AlertGlobal} {alertClass} {Class ?? string.Empty}";
+            return $"alert-{Type.ToString().ToLower()}";
         }
     }
 

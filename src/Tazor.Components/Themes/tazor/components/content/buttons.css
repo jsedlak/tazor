@@ -7,7 +7,7 @@
     border-radius: var(--radius-sm);
     cursor: pointer;
     white-space: nowrap;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     gap: calc(var(--spacing) * 2);
@@ -132,6 +132,11 @@
       border-color: var(--color-green-600);
       color: var(--color-green-600);
     }
+  }
+
+  .button-block {
+      display: block;
+      width: 100%;
   }
 
   .button-link {

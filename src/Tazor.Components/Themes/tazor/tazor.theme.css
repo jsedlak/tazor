@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: var(--color-indigo-600);
+  --color-primary-hover: var(--color-indigo-700);
+
+  --color-success: var(--color-green-600);
+  --color-success-hover: var(--color-green-700);
+
+  --color-info: var(--color-blue-600);
+  --color-info-hover: var(--color-blue-700);
+
+  --color-warning: var(--color-orange-600);
+  --color-warning-hover: var(--color-orange-700);
+
+  --color-error: var(--color-red-600);
+  --color-error-hover: var(--color-red-700);
+}
+
 /* Base CSS */
 @import "./base/base.css";
 @import "./base/prism.css";

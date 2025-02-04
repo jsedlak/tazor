@@ -1,7 +1,7 @@
 ﻿@inherits TazorBaseComponent
-<div class=@($"{_cssClass} {Class ?? string.Empty}") role="alert">
-    <div class="flex items-center">
-        <div class=@($"flex-shrink-0 {Theme.Content.AlertIcon}")>
+<div class="alert @(GetCssClass())" role="alert">
+    <div class="alert-columns">
+        <div class="alert-icon-column">
             @if (Icon != null)
             {
                 @Icon
@@ -27,12 +27,12 @@
                 @HeroIcons.QuestionMarkCircle("", "w-6 h-6")
             }
         </div>
-        <div class="ml-4 grow">
+        <div class="alert-content-column">
             @if (!string.IsNullOrWhiteSpace(Title))
             {
                 <div class="text-sm font-semibold">@Title</div>
             }
-            <div class="text-sm">
+            <div class="alert-content">
                 @if (Content != null)
                 {
                     @Content
@@ -40,10 +40,10 @@
             </div>
         </div>
     </div>
-    <div class="text-sm font-medium">
-        @if (LinkContent != null)
-        {
+    @if (LinkContent != null)
+    {
+        <div class="alert-link">
             @LinkContent
-        }
-    </div>
+        </div>
+    }
 </div>
